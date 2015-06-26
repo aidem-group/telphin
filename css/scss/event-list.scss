@@ -1,0 +1,13 @@
+.event-list {
+	&__empty {
+		height: 300px;
+		line-height: 300px;
+		text-align: center;
+
+		&:before {
+			@include font-size(16);
+			content: 'У вас пока что нет ни одного события. Сделайте первый звонок!';
+			vertical-align: middle;
+		}
+	}
+}

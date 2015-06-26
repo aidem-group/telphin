@@ -1,0 +1,105 @@
+.dropdown {
+  display: inline-block;
+  position: relative;
+  pointer-events: all;
+
+  &-toggle { cursor: pointer; }
+
+  &-container {
+    position: absolute;
+    height: 0;
+    bottom: -14px;
+    left: 50%;
+    z-index: 10;
+
+    &__left,
+    &__right {
+      left: auto;
+      right: auto;
+
+      &.open > .dropdown-container_inner {
+        right: 0;
+      }
+    }
+
+    &__left {
+      left: -30px;
+
+      .dropdown-container_inner {
+        &:before,
+        &:after {
+          left: 39px;
+        }
+      }
+    }
+
+    &__right {
+      right: -30px;
+
+      .dropdown-container_inner {
+        &:before,
+        &:after {
+          left: auto;
+          right: 27px;
+        }
+      }
+    }
+
+    &.open > &_inner {
+      @include transition(#{right 0s linear, opacity .2s linear, top .2s linear});
+      left: auto;
+      right: 50%;
+      opacity: 1;
+      top: 0;
+      pointer-events: auto;
+    }
+
+    &__left,
+    &__right {
+      &.open > .dropdown-container_inner {
+        right: 0;
+      }
+    }
+
+    &_inner {
+      @include transition(#{opacity .2s linear, top .2s linear, right 0s linear .2s});
+      @include box-shadow(0px 6px 30px -12px rgba(0, 0, 0, .8));
+      @include border-radius(4px);
+      @include font-size(14);
+      line-height: 1em;
+      position: relative;
+      top: 5px;
+      right: 9999%;
+      padding: 20px;
+      min-width: 240px;
+      text-align: left;
+      border: 1px solid #ddd;
+      background-color: #fff;
+      cursor: auto;
+      opacity: 0;
+      pointer-events: none;
+
+      &:before,
+      &:after {
+        display: block;
+        position: absolute;
+        content: '';
+        bottom: 100%;
+        left: 50%;
+        margin-left: -12px;
+        border-width: 10px 12px;
+        border-style: solid;
+        border-color: transparent;
+      }
+
+      &:before {
+        border-bottom-color: #ddd;
+      }
+
+      &:after {
+        margin-bottom: -1px;
+        border-bottom-color: #fff;
+      }
+    }
+  }
+}

@@ -1,0 +1,557 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"  content="width=device-width">
+	<title></title>
+	<meta name="description" content=""> 
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+<body class="body theme_default">
+	<div class="main-wrapper">
+		<header class="header">
+			<a class="header_logo" href="/">Телфин</a>
+			<div class="header-inner">
+				<div class="header_notices">
+					<a href="#" class="header_notices-item header_notices-item__calls">
+						<span class="header-inner_status">32</span>
+					</a>
+					<a href="#" class="header_notices-item header_notices-item__mail">
+						<span class="header-inner_status error"></span>
+					</a>
+					<a href="#" class="header_notices-item header_notices-item__fax">
+						<span class="header-inner_status">5</span>
+					</a>
+				</div>
+				<a href="#" class="header_btn header_btn-favorite">
+					<span class="header-inner_status">2</span>
+					Избранное
+				</a>
+				<a href="#" class="header_btn header_btn-stat">Статистика</a>
+				<div class="header_btn header_btn-user dropdown">
+					<span class="header_btn-user-status"></span>
+					<span class="header_btn-user-name dropdown-toggle">Константин</span>
+					<div class="dropdown-container">
+                        <div class="dropdown-container_inner">
+                        	<div class="b-tabs">
+                        		<div class="b-tabs_btns">
+                        			<button>Сотрудник</button>
+                            		<button>Настройки входа</button>
+                        		</div>
+                        		<div class="b-tabs_inner">
+                        			<div class="b-tabs_item">
+                        				<div class="form-line">
+                        					<label for="employee_name">Имя и&nbsp;фамилия</label>
+                        					<input type="text" class="text-input" name="employee_name" id="employee_name">
+                        				</div>
+                        				<div class="form-line">
+                        					<label for="employee_num">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+                        					<input type="text" class="text-input" name="employee_num" id="employee_num">
+                        				</div>
+                        				<div class="form-line">
+                        					<label for="employee_queue">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+                        					<select class="select" name="employee_queue" id="employee_queue">
+                        						<option>Без очереди</option>
+                        					</select>
+                        				</div>
+                        				<div class="form-line">
+                        					<label for="employee_email">Электронная почта (для уведомлений и&nbsp;входа в&nbsp;АТС)</label>
+                        					<input type="text" class="text-input" name="employee_email" id="employee_email" value="aksenov@gmail.com">
+                        				</div>
+                        				<div class="form-line">
+                        					<label for="employee_comm">Комментарий о&nbsp;сотруднике</label>
+                        					<textarea name="employee_comm" id="employee_comm"></textarea>
+                        				</div>
+                        				<button class="button focus">Сохранить</button>
+                        			</div>
+                        			<div class="b-tabs_item">
+                        				<div class="form-line">
+                        					<label for="employee_login">Логин</label>
+                        					<input type="text" class="text-input" name="employee_login" id="employee_login" value="aksenov@gmail.com">
+                        				</div>
+                        				<div class="form-line">
+                        					<label for="employee_pass">Пароль для входа в&nbsp;АТС</label>
+                        					<input type="password" class="text-input" name="employee_pass" id="employee_pass">
+                        					<button class="button right">Сменить пароль</button>
+                        				</div>
+                        				<div class="form-line disabled">
+                        					<label for="employee_new-pass">Новый пароль</label>
+                        					<input type="password" class="text-input" name="employee_new-pass" id="employee_new-pass" disabled>
+                        				</div>
+                        				<button class="button focus">Сохранить</button>
+                        			</div>
+                        		</div>
+                        	</div>
+                        </div>
+                    </div>
+				</div>
+				<a href="#" class="header_btn header_btn-settings"></a>
+			</div>
+		</header>
+		<div class="p-main">
+			<div class="p-main_header">
+				<div class="p-main_header-logo">
+					<img src="/dev/img/logo-aidem.jpg" alt="">
+				</div>
+				<h1>Последние события <sup>74</sup></h1>
+				<div class="p-main_header-action table">
+					<div class="search-line row_cell">
+						<input type="text" class="search-line_input" placeholder="Номер телефона, добавочного номера или имя">
+						<button class="search-line_button fa fa-search"></button>
+					</div>
+					<div class="page-switcher row_cell nowrap">
+						<button class="button">Данные</button>
+						<button class="button active">Список событий</button>
+					</div>
+				</div>
+			</div>
+			<div class="b-content">
+				<div class="period-switcher">
+					<input type="radio" name="period-switcher" id="period-switcher_day" checked>
+					<label for="period-switcher_day">Сегодня</label>
+					<input type="radio" name="period-switcher" id="period-switcher_yesterday">
+					<label for="period-switcher_yesterday">Вчера</label>
+					<input type="radio" name="period-switcher" id="period-switcher_week">
+					<label for="period-switcher_week">Неделя</label>
+					<input type="radio" name="period-switcher" id="period-switcher_month">
+					<label for="period-switcher_month">Месяц</label>
+					<input type="radio" name="period-switcher" id="period-switcher_year">
+					<label for="period-switcher_year">Год</label>
+				</div>
+				<div class="date-picker dropdown">
+					<div class="dropdown-toggle"><span class="date-picker_date-text">6 сентября 2014 - 6 сентября 2015</span></div>
+					<div class="dropdown-container">
+						<div class="dropdown-container_inner">
+							<div class="date"></div>
+						</div>
+					</div>
+				</div>
+				<div class="p-main_table">
+					<table>
+						<thead>
+							<tr>
+								<th class="cell_star"></th>
+								<th class="cell_date">Когда</th>
+								<th class="cell_icon"></th>
+								<th class="cell_num">Доб.</th>
+								<th class="cell_source">Источник</th>
+								<th class="cell_queue">Очередь</th>
+								<th class="cell_employee">Сотрудник</th>
+								<th class="cell_from">С номера</th>
+								<th class="cell_to">На номер</th>
+								<th class="cell_record">Запись</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="cell_star">
+									<input type="checkbox" class="checkbox-star" id="star-1"><label for="star-1"></label>
+								</td>
+								<td class="cell_date">
+									<p>22.09.2015</p>
+									<p>09:30</p>
+								</td>
+								<td class="cell_icon">
+									<span class="icon call call__in"></span>
+								</td>
+								<td class="cell_num">111</td>
+								<td class="cell_source">Рабочий</td>
+								<td class="cell_queue">Отдел продаж</td>
+								<td class="cell_employee">Константинопольский Константин</td>
+								<td class="cell_from">
+									<div class="phone-func-place" data-phone="+7 931 354-40-20"></div>
+								</td>
+								<td class="cell_to">
+									<div class="phone-func-place" data-phone="+7 950 244-70-18"></div>
+								</td>
+								<td class="cell_record">
+									<p>00:00<span class="cl_black">:25</span></p>
+									<div>
+										<span class="dropdown">
+											<div class="link dropdown-toggle">
+												<span class="fa fa-play-circle"></span>
+											</div>
+											<div class="dropdown-container">
+												<div class="dropdown-container_inner">
+													<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+												</div>
+											</div>
+										</span>
+										<a href="#" class="fa fa-download"></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="cell_star">
+									<input type="checkbox" class="checkbox-star" id="star-12"><label for="star-2"></label>
+								</td>
+								<td class="cell_date">
+									<p>22.09.2015</p>
+									<p>09:34</p>
+								</td>
+								<td class="cell_icon">
+									<span class="icon voice-mail voice-mail__in"></span>
+								</td>
+								<td class="cell_num">112</td>
+								<td class="cell_source">Рабочий</td>
+								<td class="cell_queue">Доставка</td>
+								<td class="cell_employee">Васильев Сергей</td>
+								<td class="cell_from">
+									<div class="phone-func-place" data-phone="+7 950 244-70-18"></div>
+								</td>
+								<td class="cell_to">
+									<div class="phone-func-place" data-phone="8 800 312-42-12"></div>
+								</td>
+								<td class="cell_record">
+									<p>00:00<span class="cl_black">:42</span></p>
+									<div>
+										<span class="dropdown">
+											<div class="link dropdown-toggle">
+												<span class="fa fa-play-circle"></span>
+											</div>
+											<div class="dropdown-container">
+												<div class="dropdown-container_inner">
+													<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+												</div>
+											</div>
+										</span>
+										<a href="#" class="fa fa-download"></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="cell_star">
+									<input type="checkbox" class="checkbox-star" id="star-3"><label for="star-3"></label>
+								</td>
+								<td class="cell_date">
+									<p>22.09.2015</p>
+									<p>10:02</p>
+								</td>
+								<td class="cell_icon">
+									&nbsp;
+								</td>
+								<td class="cell_num">101</td>
+								<td class="cell_source">Рабочий</td>
+								<td class="cell_queue">Отдел продаж</td>
+								<td class="cell_employee">Якупова Ирина</td>
+								<td class="cell_from">
+									<div class="phone-func-place" data-phone="+7 931 354-40-20" data-missed="true"></div>
+								</td>
+								<td class="cell_to">
+									<div class="phone-func-place" data-phone="+7 950 244-70-18"></div>
+								</td>
+								<td class="cell_record">
+									&nbsp;
+								</td>
+							</tr>
+							<tr>
+								<td class="cell_star">
+									<input type="checkbox" class="checkbox-star" id="star-4"><label for="star-4"></label>
+								</td>
+								<td class="cell_date">
+									<p>22.09.2015</p>
+									<p>10:20</p>
+								</td>
+								<td class="cell_icon">
+									<span class="icon fax fax__in"></span>
+								</td>
+								<td class="cell_num">132</td>
+								<td class="cell_source">Рабочий</td>
+								<td class="cell_queue">Техподдержка</td>
+								<td class="cell_employee">Карпов Артем</td>
+								<td class="cell_from">
+									<div class="phone-func-place" data-phone="8 820 200-11-89"></div>
+								</td>
+								<td class="cell_to">
+									<div class="phone-func-place" data-phone="8 800 312-42-12"></div>
+								</td>
+								<td class="cell_record">
+									<p><span class="cl_black">115 КБ</span></p>
+									<div>
+										<a href="#" class="fa fa-download"></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="cell_star">
+									<input type="checkbox" class="checkbox-star" id="star-5" checked><label for="star-5"></label>
+								</td>
+								<td class="cell_date">
+									<p>22.09.2015</p>
+									<p>10:22</p>
+								</td>
+								<td class="cell_icon">
+									<span class="icon call call__out"></span>
+								</td>
+								<td class="cell_num">111</td>
+								<td class="cell_source">Рабочий</td>
+								<td class="cell_queue">Отдел продаж</td>
+								<td class="cell_employee">Константинопольский Константин</td>
+								<td class="cell_from">
+									<div class="phone-func-place" data-phone="+7 931 354-40-20"></div>
+								</td>
+								<td class="cell_to">
+									<div class="phone-func-place" data-phone="8 800 312-42-12" data-name="Николай Николаевич (Aidem)"></div>
+								</td>
+								<td class="cell_record">
+									<p>00<span class="cl_black">:01:25</span></p>
+									<div>
+										<span class="dropdown">
+											<div class="link dropdown-toggle">
+												<span class="fa fa-play-circle"></span>
+											</div>
+											<div class="dropdown-container">
+												<div class="dropdown-container_inner">
+													<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+												</div>
+											</div>
+										</span>
+										<a href="#" class="fa fa-download"></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="cell_star">
+									<input type="checkbox" class="checkbox-star" id="star-6"><label for="star-6"></label>
+								</td>
+								<td class="cell_date">
+									<p>22.09.2015</p>
+									<p>11:25</p>
+								</td>
+								<td class="cell_icon">
+									<span class="icon fax fax__out"></span>
+								</td>
+								<td class="cell_num">132</td>
+								<td class="cell_source">Рабочий</td>
+								<td class="cell_queue">Техподдержка</td>
+								<td class="cell_employee">Карпов Артем</td>
+								<td class="cell_from">
+									<div class="phone-func-place" data-phone="8 820 200-11-89"></div>
+								</td>
+								<td class="cell_to">
+									<div class="phone-func-place" data-phone="8 800 312-42-12"></div>
+								</td>
+								<td class="cell_record">
+									<p><span class="cl_black">1,7 МБ</span></p>
+									<div>
+										<a href="#" class="fa fa-download"></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="cell_star">
+									<input type="checkbox" class="checkbox-star" id="star-7"><label for="star-7"></label>
+								</td>
+								<td class="cell_date">
+									<p>22.09.2015</p>
+									<p>11:32</p>
+								</td>
+								<td class="cell_icon">
+									<span class="icon call call__in"></span>
+								</td>
+								<td class="cell_num">111</td>
+								<td class="cell_source">Рабочий</td>
+								<td class="cell_queue">Отдел продаж</td>
+								<td class="cell_employee">Константинопольский Константин</td>
+								<td class="cell_from">
+									<div class="phone-func-place" data-phone="+7 931 354-40-20"></div>
+								</td>
+								<td class="cell_to">
+									<div class="phone-func-place" data-phone="+7 950 244-70-18"></div>
+								</td>
+								<td class="cell_record">
+									<p>00:00<span class="cl_black">:25</span></p>
+									<div>
+										<span class="dropdown">
+											<div class="link dropdown-toggle">
+												<span class="fa fa-play-circle"></span>
+											</div>
+											<div class="dropdown-container">
+												<div class="dropdown-container_inner">
+													<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+												</div>
+											</div>
+										</span>
+										<a href="#" class="fa fa-download"></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="cell_star">
+									<input type="checkbox" class="checkbox-star" id="star-8"><label for="star-8"></label>
+								</td>
+								<td class="cell_date">
+									<p>22.09.2015</p>
+									<p>12:03</p>
+								</td>
+								<td class="cell_icon">
+									<span class="icon voice-mail voice-mail__out"></span>
+								</td>
+								<td class="cell_num">112</td>
+								<td class="cell_source">Рабочий</td>
+								<td class="cell_queue">Доставка</td>
+								<td class="cell_employee">Дементьев Сергей</td>
+								<td class="cell_from">
+									<div class="phone-func-place" data-phone="+7 931 354-40-20" data-name="Николай Николаевич (Aidem)"></div>
+								</td>
+								<td class="cell_to">
+									<div class="phone-func-place" data-phone="8 800 312-42-12"></div>
+								</td>
+								<td class="cell_record">
+									<p>00:00<span class="cl_black">:42</span></p>
+									<div>
+										<span class="dropdown">
+											<div class="link dropdown-toggle">
+												<span class="fa fa-play-circle"></span>
+											</div>
+											<div class="dropdown-container">
+												<div class="dropdown-container_inner">
+													<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+												</div>
+											</div>
+										</span>
+										<a href="#" class="fa fa-download"></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="cell_star">
+									<input type="checkbox" class="checkbox-star" id="star-9"><label for="star-9"></label>
+								</td>
+								<td class="cell_date">
+									<p>22.09.2015</p>
+									<p>12:28</p>
+								</td>
+								<td class="cell_icon">
+									&nbsp;
+								</td>
+								<td class="cell_num">141</td>
+								<td class="cell_source">Рабочий</td>
+								<td class="cell_queue">Вне очереди</td>
+								<td class="cell_employee">Андреева Екатерина</td>
+								<td class="cell_from">
+									<div class="phone-func-place" data-phone="+7 931 354-40-20" data-missed="true"></div>
+								</td>
+								<td class="cell_to">
+									<div class="phone-func-place" data-phone="+7 950 244-70-18"></div>
+								</td>
+								<td class="cell_record">
+									&nbsp;
+								</td>
+							</tr>
+							<tr>
+								<td class="cell_star">
+									<input type="checkbox" class="checkbox-star" id="star-10"><label for="star-10"></label>
+								</td>
+								<td class="cell_date">
+									<p>22.09.2015</p>
+									<p>10:20</p>
+								</td>
+								<td class="cell_icon">
+									<span class="icon fax fax__in"></span>
+								</td>
+								<td class="cell_num">132</td>
+								<td class="cell_source">Рабочий</td>
+								<td class="cell_queue">Техподдержка</td>
+								<td class="cell_employee">Карпов Артем</td>
+								<td class="cell_from">
+									<div class="phone-func-place" data-phone="8 820 200-11-89"></div>
+								</td>
+								<td class="cell_to">
+									<div class="phone-func-place" data-phone="8 800 312-42-12"></div>
+								</td>
+								<td class="cell_record">
+									<p><span class="cl_black">115 КБ</span></p>
+									<div>
+										<a href="#" class="fa fa-download"></a>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="pagination">
+					<div class="pagination_inner">
+						<a href="#" class="pagination_item pagination_item__single">В начало</a>
+					</div>
+					<div class="pagination_inner">
+						<a href="#" class="pagination_item"><span class="fa fa-arrow-left"></span></a>
+						<a href="#" class="pagination_item">1</a>
+						<span class="pagination_item current">2</span>
+						<a href="#" class="pagination_item">3</a>
+						<a href="#" class="pagination_item"><span class="fa fa-arrow-right"></span></a>
+					</div>
+					<div class="pagination_inner">
+						<a href="#" class="pagination_item pagination_item__single">В конец</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="disk-space">
+			<div class="disk-space_inner">
+				<a href="#" class="disk-space_item disk-space_item__mod2" style="width: 50%;"><span>Записи звонков</span><span class="disk-space_counter">1534</span></a>
+				<a href="#" class="disk-space_item disk-space_item__mod1" style="width: 1%;"><span class="disk-space_counter">12</span></a>
+				<a href="#" class="disk-space_item disk-space_item__mod1" style="width: 1%;"><span>Голосовая почта</span><span class="disk-space_counter">78</span></a>
+				<div class="disk-space_item disk-space_item__free"><span>Свободное место 57 МБ</span></div>
+			</div>
+		</div>
+		<footer class="footer">
+			<span class="left"><span class="fa fa-copyright"></span> 2015 Виртуальная АТС</span>
+			<span class="left">Коммерческий отдел: (8 812) 123-45-67</span>
+			<span class="left">Техподдержка: (8 812) 765-43-21</span>
+			<a href="http://aidem.ru/" target="_blank" class="right">Сделано в <img src="/img/logo-aidem.png" alt="Aidem — проектирование и дизайн интерфейсов"></a>
+		</footer>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="/js/scripts.js"></script>
+	<script src="/js/jsrender.min.js"></script>
+	<script src="/js/jquery.jplayer.min.js"></script>
+	<script src="/js/jquery.pickmeup.min.js"></script>
+	<script src="/js/jquery.formstyler.min.js"></script>
+	<!-- Templates -->
+	<script id="audioPlayer" type="text/x-jsrender">
+		<div id="jp_container_{{:id}}" class="jp-audio">
+			<div class="jp-duration-line">
+				<span class="jp-current-time"></span>/<span class="jp-duration"></span>
+			</div>
+			<div class="jp-controll-line">
+				<button class="jp-play fa fa-play"></button>
+				<button class="jp-pause fa fa-pause"></button>
+				<div class="jp-seek-bar">
+					<div class="jp-play-bar"></div>
+				</div>
+			</div>
+			<div class="jp-controll-line">
+				<button class="jp-mute fa fa-volume-up"></button>
+				<button class="jp-unmute fa fa-volume-off"></button>
+				<div class="jp-volume-bar">
+					<div class="jp-volume-bar-value"></div>
+				</div>
+			</div>
+		</div>
+	</script>
+	<script id="phoneFunc" type="text/x-jsrender">
+		<div class="phone-func">
+			<input 
+				type="text"
+				id="phone-func_name-input-{{:id}}"
+				class="phone-func_name-input text-input {{if name}}not-empty{{/if}}"
+				value="{{:name}}"
+			>
+			<div class="phone-func_num {{if missed}}cl_red{{/if}}">{{:phone}}</div>
+			{{if name}}
+		      	<div class="phone-func_name">{{:name}}</div>
+		   	{{/if}}
+			<div class="phone-func_btns">
+				<button class="link fa fa-phone"></button>
+				<button class="link icon fax__blue"></button>
+				<button class="link fa fa-list-ul"></button>
+				<label for="phone-func_name-input-{{:id}}" class="link fa fa-user-plus"></label>
+			</div>
+		</div>
+	</script>
+</body>
+</html>

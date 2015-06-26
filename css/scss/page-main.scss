@@ -1,0 +1,40 @@
+.p-main {
+	padding: 26px 10px 40px;
+
+	&_header {
+		position: relative;
+		padding: 6px 20px 0 180px;
+
+		&-logo {
+			@include border-radius(4px);
+			position: absolute;
+			left: 30px;
+			top: 0;
+			border: 1px solid;
+			overflow: hidden;
+			font-size: 0;
+
+			img {
+				max-width: 120px;
+				max-height: 110px;
+			}
+		}
+
+		&-action {
+			@include clearfix;
+
+			.page-switcher { text-align: right; }
+		}
+
+		.search-line { width: 580px; }
+
+		.button {
+			padding: 11px 24px;
+			margin-left: 8px;
+		}
+	}
+
+	&_table {
+		margin: 40px 0 50px;
+	}
+}

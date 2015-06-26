@@ -1,0 +1,55 @@
+.jp {
+	&-audio { width: 360px; }
+
+	&-duration-line {
+		@include font-size(14);
+		text-align: right;
+		margin-bottom: 10px;
+	}
+
+	&-controll-line {
+		position: relative;
+		padding-left: 30px;
+		margin-bottom: 20px;
+		height: 15px;
+
+		&:last-child { margin: 0; }
+	}
+
+	&-play, &-pause,
+	&-mute, &-unmute {
+		position: absolute;
+		left: 0;
+		top: 0;
+		border: 0;
+		outline: none;
+		background: none;
+		text-align: left;
+		float: left;
+		padding: 0;
+		width: 17px;
+		height: 15px;
+		cursor: pointer;
+	}
+
+	&-play, &-pause { @include font-size(16); }
+	&-mute, &-unmute { @include font-size(18); }
+
+	&-volume-bar,
+	&-seek-bar,
+	&-volume-bar-value,
+	&-play-bar {
+		@include border-radius(10px);
+		height: 6px;
+		cursor: pointer;
+	}
+
+	&-volume-bar,
+	&-seek-bar {
+		position: relative;
+		top: 5px;
+		overflow: hidden;
+	}
+
+	&-volume-bar { max-width: 200px; } 
+}

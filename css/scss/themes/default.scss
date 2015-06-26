@@ -1,0 +1,325 @@
+& { background-color: $cl_grey_0; }
+
+a, .link {
+	color: $cl_blue;
+
+	&:hover {
+		color: $cl_orange;
+	}
+}
+
+.button {
+	border-color: $cl_blue;
+	color: $cl_blue;
+
+	&:hover {
+		border-color: $cl_blue_2;
+		color: $cl_blue_2;
+	}
+
+	&.focus {
+		background-color: $cl_blue;
+		border-color: $cl_blue;
+		color: #fff;
+
+		&:hover {
+			background-color: $cl_blue_2;
+			border-color: $cl_blue_2;
+		}
+	}
+
+	&.active {
+		background-color: $cl_yellow;
+		border-color: $cl_yellow;
+		color: #000;
+	}
+}
+
+.text-input, textarea {
+	border-color: #acbbd4;
+
+	&:focus {
+		border-color: #e7b60d;
+	}
+}
+
+.header {
+	background-color: $cl_blue;
+	border-color: #b5c7e9;
+
+	a {
+		color: #fff;
+
+		&:hover { color: #fff; }
+	}
+
+	&-inner_status {
+		color: #000;
+		background-color: $cl_yellow;
+
+		&.error {
+			color: #fff;
+			background-color: $cl_red;
+		}
+	}
+
+	&_notices {
+		&-item {
+			border-color: #fff;
+
+			&:hover { background-color: #8163ac; }
+		}
+	}
+
+	&_btn {
+		border-left-color: #70b3f2;
+
+		&-favorite, &-stat, &-user {
+			&:hover, &.active { background-color: #2980b9; }
+		}
+
+		&-user {
+			&-name {
+				color: #fff;
+
+				&:after {
+					border-right-color: #fff;
+					border-bottom-color: #fff;
+				}
+			}
+
+			&-status {
+				color: #9cffd4;
+				border-color: #9cffd4;
+
+				&:before { background-color: #9cffd4; }
+
+				&.offline {
+					color: $cl_red;
+					border-color: $cl_red;
+
+					&:before { background-color: $cl_red; }
+				}
+			}
+		}
+
+		&-settings { background-color: $cl_yellow; }
+	}
+}
+
+.footer {
+	color: $cl_grey_1;
+
+	.right {
+		color: $cl_grey_1;
+	}
+}
+
+.p-main {
+	&_header {
+		&-logo { border-color: #ddd; }
+	}
+}
+
+.search-line {
+	padding-right: 80px;
+
+	&_input {
+		border-color: #ddd;
+		color: #252525;
+		border-right-color: transparent;
+
+		&:hover {
+			border-color: #7d7d7d;
+			border-right-color: transparent;
+		}
+		&:focus {
+			border-color: #e7b60d;
+			border-right-color: transparent;
+		}
+	}
+
+	&_button {
+		background-color: $cl_blue;
+		color: #fff;
+
+		&:hover {
+			background-color: $cl_blue_2;
+		}
+	}
+}
+
+.b-content { background-color: #fff; }
+
+.page-switcher {
+	.button {
+		margin-bottom: 40px;
+
+		&.active {
+			position: relative;
+
+			&:after {
+				border-color: transparent;
+				border-bottom-color: #fff;
+			}
+		}
+	}
+}
+
+.period-switcher {
+	border-color: $cl_blue;
+
+	input:checked + label {
+		background-color: $cl_blue;
+		color: #fff;
+
+		&:hover {
+			border-color: $cl_blue;
+			color: #fff;
+		}
+	}
+
+	label {
+		background-color: #fff;
+		color: $cl_blue;
+		border-color: $cl_blue;
+
+		&:hover {
+			color: $cl_blue_2;
+			border-color: $cl_blue_2;
+		}
+	}
+}
+
+.disk-space {
+	background-color: #b6bfcd;
+
+	&_inner { background-color: #fff; }
+
+	&_item {
+		border-color: #fff;
+
+		&__free {
+			background-color: #fff;
+			color: $cl_grey_1;
+		}
+
+		&__mod1 {
+			background-color: $cl_blue;
+			color: #fff;
+
+			&:hover { color: #fff; }
+
+			.disk-space_counter {
+				border-color: rgba(255,255,255,.3);
+				color: #fff;
+			}
+		}
+
+		&__mod2 {
+			background-color: $cl_yellow;
+			color: #4b606a;
+
+			&:hover { color: #4b606a; }
+
+			.disk-space_counter {
+				border-color: rgba(0,0,0,.1);
+				color: #4b606a;
+			}
+		}
+	}
+}
+
+.jp {
+	&-duration-line {
+		color: #000;
+	}
+
+	&-current-time,
+	&-duration {
+		color: #9da2ab;
+
+		span { color: #000; }
+	}
+
+	&-play, &-pause,
+	&-mute, &-unmute {
+		color: $cl_blue;
+	}
+
+	&-volume-bar,
+	&-seek-bar {
+		background-color: #b6bfcd;
+	}
+
+	&-volume-bar-value,
+	&-play-bar {
+		background-color: $cl_blue;
+	}
+}
+
+.jq {
+	&-selectbox {
+		&__select {
+			border-color: $cl_blue;
+			background-color: #fff;
+			color: $cl_blue;
+		}
+
+		&__trigger {
+			&-arrow {
+				border-color: transparent;
+				border-right-color: $cl_blue;
+				border-bottom-color: $cl_blue;
+			}
+		}
+	}
+}
+
+.add-new-item {
+	background-color: #ecf3ff;
+	border-color: #b6bfcd;
+
+	&:before,
+	&:after {
+		color: #b6bfcd;
+	}
+}
+
+.last-update {
+	color: $cl_grey_2;
+	
+	&:before { color: $cl_grey_2; }
+}
+
+table {
+	th {
+		color: $cl_grey_1;
+		border-color: #ddd;
+	}
+
+	td { border-color: #ddd; }
+}
+
+.pagination {
+	&_item {
+		color: $cl_blue;
+		border-color: $cl_blue;
+
+		&:hover {
+			color: $cl_blue_2;
+			border-color: $cl_blue_2;
+		}
+
+		&.current {
+			color: #fff;
+			border-color: $cl_blue;
+			background-color: $cl_blue;
+
+			&:hover {
+				color: #fff;
+				border-color: $cl_blue;
+			}
+		}
+	}
+}

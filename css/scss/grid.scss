@@ -1,0 +1,23 @@
+.table {
+  display: table;
+  width: 100%;
+}
+.row { display: table-row; }
+
+.row_cell { display: table-cell; }
+
+@for $i from 1 through 12 {
+  .row_cell-#{$i} {
+    display: table-cell;
+    vertical-align: top;
+    width: $i/12*100%
+  }
+}
+
+@for $i from 1 through 12 {
+  .grid_cell-#{$i} {
+  	@include box-sizing;
+    float: left;
+    width: $i/12*100%
+  }
+}

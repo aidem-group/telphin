@@ -1,0 +1,23 @@
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+p, .body { margin: 0; }
+a, .link { text-decoration: none; }
+.header, .footer { display: block; }
+button, input, textarea { outline: none; }

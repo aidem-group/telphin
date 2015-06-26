@@ -1,0 +1,66 @@
+@mixin font-size( $fs ){
+	font-size: $fs + px;
+	font-size: $fs/$default_font_size + rem;
+}
+
+@mixin grid-indent( $indent: 30 ){
+	margin-left: -$indent + px;
+  	margin-right: -$indent + px;
+
+  	& > div {
+	    @include box-sizing;
+	    padding-left: $indent + px;
+	    padding-right: $indent + px;
+	}
+}
+
+@mixin clearfix(){
+	&:after {
+		display: block;
+		content: '';
+		clear: both;
+	}
+}
+
+@mixin border-radius( $mod ){
+	-webkit-border-radius: $mod;
+	-moz-border-radius: $mod;
+	border-radius: $mod;
+}
+
+@mixin border-radius-single( $corner, $mod ){
+	-webkit-border-#{$corner}-radius: $mod;
+	-moz-border-#{$corner}-radius: $mod;
+	border-#{$corner}-radius: $mod;
+}
+
+@mixin transition( $mod: all .1s linear ){
+	-webkit-transition: $mod;
+	-moz-transition: $mod;
+	transition: $mod;
+}
+
+@mixin box-sizing( $mod: border-box ){
+	-webkit-box-sizing: $mod;
+	-moz-box-sizing: $mod;
+	box-sizing: $mod;
+}
+
+@mixin box-shadow( $mod ){
+	-webkit-box-shadow: $mod;
+	-moz-box-shadow: $mod;
+	box-shadow: $mod;
+}
+
+@mixin transform( $mod ){
+	-webkit-transform: $mod;
+	-moz-transform: $mod;
+	transform: $mod;
+}
+
+@mixin user-select( $mod: none ){
+	-webkit-user-select: $mod;
+	-moz-user-select: $mod;
+	-ms-user-select: $mod;
+	user-select: $mod;
+}

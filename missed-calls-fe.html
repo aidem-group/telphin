@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport"  content="width=device-width">
+      <title></title>
+      <meta name="description" content=""> 
+      <meta name="keywords" content="">
+      <link rel="stylesheet" href="/css/style.css">
+      <link rel="shortcut icon" href="/favicon.ico">
+      <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+<body class="body theme_default">
+      <div class="main-wrapper">
+            <header class="header">
+                  <a class="header_logo" href="/">Телфин</a>
+                  <div class="header-inner">
+                        <div class="header_notices">
+                              <a href="#" class="header_notices-item header_notices-item__calls"></a>
+                              <a href="#" class="header_notices-item header_notices-item__mail"></a>
+                              <a href="#" class="header_notices-item header_notices-item__fax"></a>
+                        </div>
+                        <a href="#" class="header_btn header_btn-favorite">Избранное</a>
+                        <a href="#" class="header_btn header_btn-stat">Статистика</a>
+                        <div class="header_btn header_btn-user dropdown">
+                              <span class="header_btn-user-status"></span>
+                              <span class="header_btn-user-name dropdown-toggle">Константин</span>
+                              <div class="dropdown-container">
+                        <div class="dropdown-container_inner">
+                              <div class="b-tabs">
+                                    <div class="b-tabs_btns">
+                                          <button>Сотрудник</button>
+                                          <button>Настройки входа</button>
+                                    </div>
+                                    <div class="b-tabs_inner">
+                                          <div class="b-tabs_item">
+                                                <div class="form-line">
+                                                      <label for="employee_name">Имя и&nbsp;фамилия</label>
+                                                      <input type="text" class="text-input" name="employee_name" id="employee_name">
+                                                </div>
+                                                <div class="form-line">
+                                                      <label for="employee_num">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+                                                      <input type="text" class="text-input" name="employee_num" id="employee_num">
+                                                </div>
+                                                <div class="form-line">
+                                                      <label for="employee_queue">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+                                                      <select class="select" name="employee_queue" id="employee_queue">
+                                                            <option>Без очереди</option>
+                                                      </select>
+                                                </div>
+                                                <div class="form-line">
+                                                      <label for="employee_email">Электронная почта (для уведомлений и&nbsp;входа в&nbsp;АТС)</label>
+                                                      <input type="text" class="text-input" name="employee_email" id="employee_email" value="aksenov@gmail.com">
+                                                </div>
+                                                <div class="form-line">
+                                                      <label for="employee_comm">Комментарий о&nbsp;сотруднике</label>
+                                                      <textarea name="employee_comm" id="employee_comm"></textarea>
+                                                </div>
+                                                <button class="button focus">Сохранить</button>
+                                          </div>
+                                          <div class="b-tabs_item">
+                                                <div class="form-line">
+                                                      <label for="employee_login">Логин</label>
+                                                      <input type="text" class="text-input" name="employee_login" id="employee_login" value="aksenov@gmail.com">
+                                                </div>
+                                                <div class="form-line">
+                                                      <label for="employee_pass">Пароль для входа в&nbsp;АТС</label>
+                                                      <input type="password" class="text-input" name="employee_pass" id="employee_pass">
+                                                      <button class="button right">Сменить пароль</button>
+                                                </div>
+                                                <div class="form-line disabled">
+                                                      <label for="employee_new-pass">Новый пароль</label>
+                                                      <input type="password" class="text-input" name="employee_new-pass" id="employee_new-pass" disabled>
+                                                </div>
+                                                <button class="button focus">Сохранить</button>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                    </div>
+                        </div>
+                        <a href="#" class="header_btn header_btn-settings"></a>
+                  </div>
+            </header>
+            <div class="p-main p-missed-calls">
+                  <h1>Пропущенные звонки</h1>
+                  <div class="b-content">
+                        <div class="b-unrolling">
+                              <div class="b-unrolling_toggle-wrapper">
+                                    <input type="checkbox" class="checkbox b-unrolling_toggle" id="send-to-email">
+                                    <label for="send-to-email">Отправлять уведомления на почту</label>
+                              </div>
+                              <div class="b-unrolling_inner">
+                                    <div class="email-list">
+                                          Получатели
+                                          <div class="email-list_input">
+                                                <input type="text" class="text-input">
+                                                <button class="fa fa-plus"></button>
+                                          </div>
+                                          <div class="email-list_item">
+                                                <span>aidem@gmail.com</span>
+                                                <button class="fa fa-close"></button>
+                                          </div>
+                                          <div class="email-list_item">
+                                                <span>telphin@gmail.com</span>
+                                                <button class="fa fa-close"></button>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="fe fe__missed-calls"></div>
+                  </div>
+            </div>
+            <footer class="footer">
+                  <span class="left"><span class="fa fa-copyright"></span> 2015 Виртуальная АТС</span>
+                  <span class="left">Коммерческий отдел: (8 812) 123-45-67</span>
+                  <span class="left">Техподдержка: (8 812) 765-43-21</span>
+                  <a href="http://aidem.ru/" target="_blank" class="right">Сделано в <img src="/img/logo-aidem.png" alt="Aidem — проектирование и дизайн интерфейсов"></a>
+            </footer>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src="/js/scripts.js"></script>
+      <script src="/js/jsrender.min.js"></script>
+      <script src="/js/jquery.jplayer.min.js"></script>
+      <script src="/js/jquery.pickmeup.min.js"></script>
+      <script src="/js/jquery.formstyler.min.js"></script>
+      <!-- Templates -->
+      <script id="audioPlayer" type="text/x-jsrender">
+            <div id="jp_container_{{:id}}" class="jp-audio">
+                  <div class="jp-duration-line">
+                        <span class="jp-current-time"></span>/<span class="jp-duration"></span>
+                  </div>
+                  <div class="jp-controll-line">
+                        <button class="jp-play fa fa-play"></button>
+                        <button class="jp-pause fa fa-pause"></button>
+                        <div class="jp-seek-bar">
+                              <div class="jp-play-bar"></div>
+                        </div>
+                  </div>
+                  <div class="jp-controll-line">
+                        <button class="jp-mute fa fa-volume-up"></button>
+                        <button class="jp-unmute fa fa-volume-off"></button>
+                        <div class="jp-volume-bar">
+                              <div class="jp-volume-bar-value"></div>
+                        </div>
+                  </div>
+            </div>
+      </script>
+      <script id="phoneFunc" type="text/x-jsrender">
+            <div class="phone-func">
+                  <input 
+                        type="text"
+                        id="phone-func_name-input-{{:id}}"
+                        class="phone-func_name-input text-input {{if name}}not-empty{{/if}}"
+                        value="{{:name}}"
+                  >
+                  <div class="phone-func_num {{if missed}}cl_red{{/if}}">{{:phone}}</div>
+                  {{if name}}
+                        <div class="phone-func_name">{{:name}}</div>
+                  {{/if}}
+                  <div class="phone-func_btns">
+                        <button class="link fa fa-phone"></button>
+                        <button class="link icon fax__blue"></button>
+                        <button class="link fa fa-list-ul"></button>
+                        <label for="phone-func_name-input-{{:id}}" class="link fa fa-user-plus"></label>
+                  </div>
+            </div>
+      </script>
+</body>
+</html>

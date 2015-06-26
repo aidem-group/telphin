@@ -1,0 +1,268 @@
+.header {
+	height: 72px;
+	border-bottom: 2px solid;
+
+	&_logo {
+		@include font-size(28);
+		display: inline-block;
+		margin: 22px 0 0 40px;
+	}
+
+	&-inner {
+		float: right;
+
+		&_status {
+			@include border-radius(18px);
+			@include font-size(12);
+			display: block;
+			position: absolute;
+			left: -2px;
+			top: -10px;
+			height: 12px;
+			line-height: 1;
+			min-width: 6px;
+			padding: 3px 6px;
+			text-align: center;
+
+			&.error:before { content: '!'; }
+		}
+	}
+
+	&_btn,
+	&_notices {
+		@include font-size(12);
+		@include box-sizing;
+		float: left;
+		height: 72px;
+		line-height: 72px;
+		padding: 0 40px 0 30px;
+	}
+
+	&_btn { border-left: 1px solid; }
+
+	&_notices {
+		@include user-select;
+		padding: 0 8px 0 0;
+
+		&-item {
+			@include border-radius(100%);
+			float: left;
+			position: relative;
+			width: 42px;
+			height: 42px;
+			margin: 13px 7px;
+			border: 2px solid;
+
+			&:before {
+				content: '';
+				display: block;
+				position: relative;
+				background: url('/img/sprite.png') no-repeat;
+			}
+
+			&__calls {
+				&:before {
+					top: 8px;
+					left: 10px;
+					width: 22px;
+					height: 24px;
+					background-position: -71px -34px;
+				}
+			}
+
+			&__mail {
+				&:before {
+					top: 8px;
+					left: 10px;
+					width: 23px;
+					height: 27px;
+					background-position: -94px -34px;
+				}
+			}
+
+			&__fax {
+				&:before {
+					top: 7px;
+					left: 8px;
+					width: 26px;
+					height: 26px;
+					background-position: -118px -34px;
+				}
+			}
+		}
+	}
+
+	&_btn {
+		@include user-select;
+
+		&-favorite, &-stat, &-user, &-settings {
+			position: relative;
+
+			&:before {
+				content: '';
+				background: url('/img/sprite.png') no-repeat;
+			}
+		}
+
+		&-favorite, &-stat, &-user {
+			&:before {
+				display: inline-block;
+				position: relative;
+				top: 8px;
+				margin-right: 10px;
+			}
+		}
+
+		&-favorite {
+			&:before {
+				width: 32px;
+				height: 32px;
+				background-position: -101px 0;
+			}
+
+			&:hover:before { background-position: -134px 0; }
+
+			.header-inner_status {
+				left: 30px;
+				top: 5px;
+			}
+		}
+
+		&-stat {
+			&:before {
+				width: 34px;
+				height: 36px;
+				background-position: -1px -33px;
+			}
+
+			&:hover:before { background-position: -36px -33px; }
+		}
+
+		&-user {
+			position: relative;
+			padding-right: 80px;
+
+			&:before {
+				width: 35px;
+				height: 30px;
+				background-position: -66px -1px;
+			}
+
+			&.active {
+				.header_btn-user-name {
+					&:after {
+						@include transform(rotate(-135deg));
+						top: 0;
+					}
+				}
+			}
+
+			.dropdown-container {
+				bottom: -1px;
+				right: -1px;
+				left: auto; 
+
+				&_inner {
+					&:before {
+						right: 73px;
+						left: auto; 
+					}
+					&:after {
+						right: 72px;
+						left: auto; 
+					}
+				}
+			}
+
+			&-name {
+				display: inline-block;
+				height: 16px;
+				cursor: pointer;
+
+				&:after {
+					@include transition(all .2s linear);
+					@include transform(rotate(45deg));
+					content: '';
+					display: inline-block;
+					position: relative;
+					top: -3px;
+					margin-left: 6px;
+					width: 4px;
+					height: 4px;
+					border: 1px solid transparent;
+				}
+			}
+
+			&-status {
+				@include border-radius(16px);
+				position: absolute;
+				right: 10px;
+				top: 10px;
+				height: 16px;
+				line-height: 16px;
+				padding: 0 4px 0 3px;
+				border: 1px solid;
+				cursor: pointer;
+
+				&:before {
+					@include border-radius(100%);
+					content: '';
+					display: inline-block;
+					width: 10px;
+					height: 10px;
+					margin-right: 2px;
+				}
+
+				&:after {
+					@include font-size(11);
+					content: 'Онлайн';
+					position: relative;
+					top: -1px;
+				}
+
+				&.offline:after { content: 'Офлайн'; }
+			}
+		}
+
+		&-settings {
+			width: 72px;
+			height: 72px;
+			padding: 20px;
+
+			&:before {
+				display: block;
+				width: 32px;
+				height: 32px;
+				background-position: -1px -1px;
+			}
+
+			&:hover:before {
+				background-position: -34px -1px;
+			}
+		}
+	}
+
+	.b-tabs {
+		width: 600px;
+
+		.form-line { margin-bottom: 30px; }
+
+		label {
+			display: block;
+			margin-bottom: 6px;
+		}
+
+		input {
+			width: 400px;
+		}
+
+		.button.focus,
+		.button.right {
+			margin-top: -10px;
+		}
+
+		.disabled {
+			label { opacity: .2; }
+		}
+	}
+}

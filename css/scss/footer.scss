@@ -1,0 +1,30 @@
+.footer {
+	@include box-sizing;
+	@include clearfix;
+	line-height: 90px;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 30px 20px 20px;
+
+	.left, .right {
+		@include font-size(12);
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 1;
+	}
+
+	.left {
+		margin-right: 20px;
+	}
+
+	.right {
+		position: relative;
+		top: -6px;
+		height: 19px;
+
+		img {
+			vertical-align: text-bottom;
+			margin-left: 4px;
+		}
+	}
+}
