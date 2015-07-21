@@ -1,0 +1,537 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"  content="width=device-width">
+	<title></title>
+	<meta name="description" content=""> 
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+<body class="body theme_default">
+	<div class="main-wrapper">
+		<header class="header">
+			<a class="header_logo" href="/">Телфин</a>
+			<div class="header-inner">
+				<div class="header_notices">
+					<a href="#" class="header_notices-item header_notices-item__calls">
+						<span class="header-inner_status">32</span>
+					</a>
+					<a href="#" class="header_notices-item header_notices-item__mail">
+						<span class="header-inner_status error"></span>
+					</a>
+					<a href="#" class="header_notices-item header_notices-item__fax">
+						<span class="header-inner_status">5</span>
+					</a>
+				</div>
+				<a href="#" class="header_btn header_btn-favorite">
+					<span class="header-inner_status">2</span>
+					Избранное
+				</a>
+				<a href="#" class="header_btn header_btn-stat">Статистика</a>
+				<div class="header_btn header_btn-user dropdown">
+					<span class="header_btn-user-status"></span>
+					<span class="header_btn-user-name dropdown-toggle">Константин</span>
+					<div class="dropdown-container">
+                        <div class="dropdown-container_inner">
+                        	<div class="b-tabs">
+                        		<div class="b-tabs_btns">
+                        			<button>Сотрудник</button>
+                            		<button>Настройки входа</button>
+                        		</div>
+                        		<div class="b-tabs_inner">
+                        			<div class="b-tabs_item">
+                        				<div class="form-line">
+                        					<label for="employee_name">Имя и&nbsp;фамилия</label>
+                        					<input type="text" class="text-input" name="employee_name" id="employee_name">
+                        				</div>
+                        				<div class="form-line">
+                        					<label for="employee_num">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+                        					<input type="text" class="text-input" name="employee_num" id="employee_num">
+                        				</div>
+                        				<div class="form-line">
+                        					<label for="employee_queue">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+                        					<select class="select" name="employee_queue" id="employee_queue">
+                        						<option>Без очереди</option>
+                        					</select>
+                        				</div>
+                        				<div class="form-line">
+                        					<label for="employee_email">Электронная почта (для уведомлений и&nbsp;входа в&nbsp;АТС)</label>
+                        					<input type="text" class="text-input" name="employee_email" id="employee_email" value="aksenov@gmail.com">
+                        				</div>
+                        				<div class="form-line">
+                        					<label for="employee_comm">Комментарий о&nbsp;сотруднике</label>
+                        					<textarea name="employee_comm" id="employee_comm"></textarea>
+                        				</div>
+                        				<button class="button focus">Сохранить</button>
+                        			</div>
+                        			<div class="b-tabs_item">
+                        				<div class="form-line">
+                        					<label for="employee_login">Логин</label>
+                        					<input type="text" class="text-input" name="employee_login" id="employee_login" value="aksenov@gmail.com">
+                        				</div>
+                        				<div class="form-line">
+                        					<label for="employee_pass">Пароль для входа в&nbsp;АТС</label>
+                        					<input type="password" class="text-input" name="employee_pass" id="employee_pass">
+                        					<button class="button right">Сменить пароль</button>
+                        				</div>
+                        				<div class="form-line disabled">
+                        					<label for="employee_new-pass">Новый пароль</label>
+                        					<input type="password" class="text-input" name="employee_new-pass" id="employee_new-pass" disabled>
+                        				</div>
+                        				<button class="button focus">Сохранить</button>
+                        			</div>
+                        		</div>
+                        	</div>
+                        </div>
+                    </div>
+				</div>
+				<a href="#" class="header_btn header_btn-settings"></a>
+			</div>
+		</header>
+		<div class="p-main p-black-and-white">
+			<div>
+				<a href="#" class="prev-page fa fa-arrow-left link">Настройки</a>
+			</div>
+			<div class="b-black-and-white clearfix">
+				<div class="grid_cell-6">
+					<div class="b-content">
+						<h1>
+							Черный список <sup>7</sup>
+						</h1>
+						<div>
+							<div class="dropdown">
+								<button class="button dropdown-toggle">Добавить номер телефона</button>
+								<div class="dropdown-container">
+									<div class="dropdown-container_inner">
+										<div class="dd-add-phone">
+											<p class="dd-add-phone_title">
+												Добавить номер телефона
+											</p>
+											<label for="add-phone">Введите номер телефона</label>
+											<input type="text" class="text-input">
+											<button class="button focus">Добавить</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<p class="h3">
+							Номера в черном списке
+						</p>
+						<div class="black-and-white">
+							<table>
+								<tbody>
+									<tr>
+										<td>
+											+ 7 931 123-45-67
+										</td>
+										<td class="cell_comm">
+											Комментарий к телефону
+										</td>
+										<td class="cell_redact">
+											<div class="dropdown">
+												<button class="fa fa-pencil dropdown-toggle"></button>
+												<div class="dropdown-container">
+													<div class="dropdown-container_inner">
+														<div class="dd-white-list-redact">
+															<p class="title">
+																Редактировать номер в черном списке
+															</p>
+															<label for="num-redact">Этот номер в черном списке</label>
+															<input type="text" class="text-input" value="+ 7 931 123-45-67">
+															<label for="redirect-commen">Комментарий</label>
+															<textarea class="">Комментарий к телефону</textarea>
+															<button class="button focus">Сохранить</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td class="cell_delete">
+											<button class="fa fa-close"></button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											8 (812) 765-43-21
+										</td>
+										<td class="cell_comm">
+											&nbsp;
+										</td>
+										<td class="cell_redact">
+											<div class="dropdown">
+												<button class="fa fa-pencil dropdown-toggle"></button>
+												<div class="dropdown-container">
+													<div class="dropdown-container_inner">
+														<div class="dd-white-list-redact">
+															<p class="title">
+																Редактировать номер в черном списке
+															</p>
+															<label for="num-redact">Этот номер в черном списке</label>
+															<input type="text" class="text-input" value="8 (812) 765-43-21">
+															<label for="redirect-commen">Комментарий</label>
+															<textarea class=""></textarea>
+															<button class="button focus">Сохранить</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td class="cell_delete">
+											<button class="fa fa-close"></button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											+ 7 931 123-45-63
+										</td>
+										<td class="cell_comm">
+											&nbsp;
+										</td>
+										<td class="cell_redact">
+											<div class="dropdown">
+												<button class="fa fa-pencil dropdown-toggle"></button>
+												<div class="dropdown-container">
+													<div class="dropdown-container_inner">
+														<div class="dd-white-list-redact">
+															<p class="title">
+																Редактировать номер в черном списке
+															</p>
+															<label for="num-redact">Этот номер в черном списке</label>
+															<input type="text" class="text-input" value="+ 7 931 123-45-63">
+															<label for="redirect-commen">Комментарий</label>
+															<textarea class=""></textarea>
+															<button class="button focus">Сохранить</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td class="cell_delete">
+											<button class="fa fa-close"></button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											+ 7 931 123-45-69
+										</td>
+										<td class="cell_comm">
+											Грубит по телефону
+										</td>
+										<td class="cell_redact">
+											<div class="dropdown">
+												<button class="fa fa-pencil dropdown-toggle"></button>
+												<div class="dropdown-container">
+													<div class="dropdown-container_inner">
+														<div class="dd-white-list-redact">
+															<p class="title">
+																Редактировать номер в черном списке
+															</p>
+															<label for="num-redact">Этот номер в черном списке</label>
+															<input type="text" class="text-input" value="+ 7 931 123-45-69">
+															<label for="redirect-commen">Комментарий</label>
+															<textarea class="">Грубит по телефону</textarea>
+															<button class="button focus">Сохранить</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td class="cell_delete">
+											<button class="fa fa-close"></button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											+ 7 931 123-45-67
+										</td>
+										<td class="cell_comm">
+											&nbsp;
+										</td>
+										<td class="cell_redact">
+											<div class="dropdown">
+												<button class="fa fa-pencil dropdown-toggle"></button>
+												<div class="dropdown-container">
+													<div class="dropdown-container_inner">
+														<div class="dd-white-list-redact">
+															<p class="title">
+																Редактировать номер в черном списке
+															</p>
+															<label for="num-redact">Этот номер в черном списке</label>
+															<input type="text" class="text-input" value="+ 7 931 123-45-67">
+															<label for="redirect-commen">Комментарий</label>
+															<textarea class=""></textarea>
+															<button class="button focus">Сохранить</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td class="cell_delete">
+											<button class="fa fa-close"></button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											+ 7 931 123-45-67
+										</td>
+										<td class="cell_comm">
+											&nbsp;
+										</td>
+										<td class="cell_redact">
+											<div class="dropdown">
+												<button class="fa fa-pencil dropdown-toggle"></button>
+												<div class="dropdown-container">
+													<div class="dropdown-container_inner">
+														<div class="dd-white-list-redact">
+															<p class="title">
+																Редактировать номер в черном списке
+															</p>
+															<label for="num-redact">Этот номер в черном списке</label>
+															<input type="text" class="text-input" value="+ 7 931 123-45-67">
+															<label for="redirect-commen">Комментарий</label>
+															<textarea class=""></textarea>
+															<button class="button focus">Сохранить</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td class="cell_delete">
+											<button class="fa fa-close"></button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<p>
+							Если номер внешнего абонента успешно определен и&nbsp;присутствует в&nbsp;черном списке, то&nbsp;система завершает вызов; при этом внешний абонент слышит сигнал &laquo;Занято&raquo;.
+						</p>
+						<p>
+							Если номера внешнего абонента нет в&nbsp;черном списке, то&nbsp;начинается обслуживание вызова в&nbsp;соответствии с&nbsp;остальными настройками.
+						</p>
+					</div>
+				</div>
+				<div class="grid_cell-6">
+					<div class="b-content">
+						<h1>
+							Белый список <sup>2</sup>
+						</h1>
+						<div>
+							<div class="dropdown">
+								<button class="button dropdown-toggle">Добавить номер телефона</button>
+								<div class="dropdown-container">
+									<div class="dropdown-container_inner">
+										<div class="dd-add-phone">
+											<p class="dd-add-phone_title">
+												Добавить номер телефона
+											</p>
+											<label for="add-phone">Введите номер телефона</label>
+											<input type="text" class="text-input">
+											<div class="redirect-type">
+												<p>
+													Куда перенаправить указанный номер
+												</p>
+												<div>
+													<input type="radio" class="radio" name="redirect-type" id="redirect-type-1"><label for="redirect-type-1">Очередь</label>
+													<select class="select">
+														<option value="1">Отдел продаж</option>
+													</select>
+												</div>
+												<div>
+													<input type="radio" class="radio" name="redirect-type" id="redirect-type-2"><label for="redirect-type-2">Добавочный номер</label>
+													<select class="select">
+														<option value="1">112</option>
+													</select>
+												</div>
+											</div>
+											<button class="button focus">Добавить</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<p class="h3">
+							Номера в черном списке
+						</p>
+						
+						<div class="black-and-white">
+							<table>
+								<tbody>
+									<tr>
+										<td>
+											+ 7 931 123-45-67
+										</td>
+										<td class="cell_redirect">
+											<p>
+												Михаил Федорович (директор СтройВип)
+											</p>
+											<p class="to">
+												<span class="fa fa-share"></span>
+												Добавочный 112
+											</p>
+										</td>
+										<td class="cell_redact">
+											<div class="dropdown">
+												<button class="fa fa-pencil dropdown-toggle"></button>
+												<div class="dropdown-container dropdown-container__top">
+													<div class="dropdown-container_inner">
+														<div class="dd-add-phone">
+															<p class="dd-add-phone_title">
+																Добавить номер телефона
+															</p>
+															<label for="add-phone">Введите номер телефона</label>
+															<input type="text" class="text-input" value="+ 7 931 123-45-67">
+															<div class="redirect-type">
+																<p>
+																	Куда перенаправить указанный номер
+																</p>
+																<div>
+																	<input type="radio" class="radio" name="redirect-type-2" id="redirect-type-21"><label for="redirect-type-21">Очередь</label>
+																	<select class="select">
+																		<option value="1">Отдел продаж</option>
+																	</select>
+																</div>
+																<div>
+																	<input type="radio" class="radio" name="redirect-type-2" id="redirect-type-22" checked><label for="redirect-type-22">Добавочный номер</label>
+																	<select class="select">
+																		<option value="1">112</option>
+																	</select>
+																</div>
+															</div>
+															<label for="redirect-commen">Комментарий</label>
+															<textarea class="">Михаил Федорович (директор СтройВип)</textarea>
+															<button class="button focus">Добавить</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td class="cell_delete">
+											<button class="fa fa-close"></button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											8 (812) 765-43-21
+										</td>
+										<td class="cell_redirect">
+											<p>
+												Алексей Иванов (зам в СтройВип)
+											</p>
+											<p class="to">
+												<span class="fa fa-share"></span>
+												Коммерческий отдел
+											</p>
+										</td>
+										<td class="cell_redact">
+											<div class="dropdown">
+												<button class="fa fa-pencil dropdown-toggle"></button>
+												<div class="dropdown-container dropdown-container__top">
+													<div class="dropdown-container_inner">
+														<div class="dd-add-phone">
+															<p class="dd-add-phone_title">
+																Добавить номер телефона
+															</p>
+															<label for="add-phone">Введите номер телефона</label>
+															<input type="text" class="text-input" value="8 (812) 765-43-21">
+															<div class="redirect-type">
+																<p>
+																	Куда перенаправить указанный номер
+																</p>
+																<div>
+																	<input type="radio" class="radio" name="redirect-type-3" id="redirect-type-31" checked><label for="redirect-type-31">Очередь</label>
+																	<select class="select">
+																		<option value="1">Отдел продаж</option>
+																		<option value="2" selected>Коммерческий отдел</option>
+																	</select>
+																</div>
+																<div>
+																	<input type="radio" class="radio" name="redirect-type-3" id="redirect-type-32"><label for="redirect-type-32">Добавочный номер</label>
+																	<select class="select">
+																		<option value="1">112</option>
+																	</select>
+																</div>
+															</div>
+															<label for="redirect-commen">Комментарий</label>
+															<textarea class="">Алексей Иванов (зам в СтройВип)</textarea>
+															<button class="button focus">Добавить</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td class="cell_delete">
+											<button class="fa fa-close"></button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<p>
+							Если номер внешнего абонента успешно определен и&nbsp;присутствует в&nbsp;белом списке, то&nbsp;система перенаправит звонок в&nbsp;соответствии указанными настройками.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<span class="left"><span class="fa fa-copyright"></span> 2015 Виртуальная АТС</span>
+			<span class="left">Коммерческий отдел: (8 812) 123-45-67</span>
+			<span class="left">Техподдержка: (8 812) 765-43-21</span>
+			<a href="http://aidem.ru/" target="_blank" class="right">Сделано в <img src="/img/logo-aidem.png" alt="Aidem — проектирование и дизайн интерфейсов"></a>
+		</footer>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="/js/scripts.js"></script>
+	<script src="/js/jsrender.min.js"></script>
+	<script src="/js/jquery.jplayer.min.js"></script>
+	<script src="/js/jquery.pickmeup.min.js"></script>
+	<script src="/js/jquery.formstyler.min.js"></script>
+	<!-- Templates -->
+	<script id="audioPlayer" type="text/x-jsrender">
+		<div id="jp_container_{{:id}}" class="jp-audio">
+			<div class="jp-duration-line">
+				<span class="jp-current-time"></span>/<span class="jp-duration"></span>
+			</div>
+			<div class="jp-controll-line">
+				<button class="jp-play fa fa-play"></button>
+				<button class="jp-pause fa fa-pause"></button>
+				<div class="jp-seek-bar">
+					<div class="jp-play-bar"></div>
+				</div>
+			</div>
+			<div class="jp-controll-line">
+				<button class="jp-mute fa fa-volume-up"></button>
+				<button class="jp-unmute fa fa-volume-off"></button>
+				<div class="jp-volume-bar">
+					<div class="jp-volume-bar-value"></div>
+				</div>
+			</div>
+		</div>
+	</script>
+	<script id="phoneFunc" type="text/x-jsrender">
+		<div class="phone-func">
+			<input 
+				type="text"
+				id="phone-func_name-input-{{:id}}"
+				class="phone-func_name-input text-input {{if name}}not-empty{{/if}}"
+				value="{{:name}}"
+			>
+			<div class="phone-func_num {{if missed}}cl_red{{/if}}">{{:phone}}</div>
+			{{if name}}
+		      	<div class="phone-func_name">{{:name}}</div>
+		   	{{/if}}
+			<div class="phone-func_btns">
+				<button class="link fa fa-phone"></button>
+				<button class="link icon fax__blue"></button>
+				<button class="link fa fa-list-ul"></button>
+				<label for="phone-func_name-input-{{:id}}" class="link fa fa-user-plus"></label>
+			</div>
+		</div>
+	</script>
+</body>
+</html>

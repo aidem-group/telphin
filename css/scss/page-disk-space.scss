@@ -1,0 +1,129 @@
+.p-disk-space {
+	
+}
+
+.b-disk-space {
+	padding: 0 20px;
+
+	&_top {
+		.total {
+			@include border-radius(4px);
+			padding: 24px 20px;
+			border: 2px solid #fff;
+
+			.h3 {
+				white-space: nowrap;
+				margin-bottom: 16px;
+			}
+		}
+
+		.row_cell-1,
+		.row_cell_11 {
+			padding-bottom: 40px;
+		}
+
+		.row_cell-11 {
+			padding: 24px 34px 0;
+
+			p {
+				@include font-size(18);
+				line-height: 1.5;
+				margin: 0;
+			}
+		}
+	}
+
+	&_btns {
+		margin-bottom: 60px;
+
+		.button {
+			margin-right: 20px;
+			padding: 6px 10px;
+
+			.fa {
+				@include font-size(24);
+				vertical-align: sub;
+			}
+		}
+	}
+
+	.disk-space {
+		padding: 0;
+		margin-bottom: 22px;
+		background-color: transparent;
+
+		&_inner {
+			margin: 0;
+			min-width: 100%;
+
+			.disk-space_item {
+				&.current {
+					position: relative;
+					overflow: visible;
+
+					&:after {
+						content: '';
+						position: absolute;
+						border-width: 13px;
+						border-style: solid;
+						border-color: transparent;
+						border-bottom-color: #fff;
+						top: 100%;
+						left: 50%;
+						margin-left: -13px;
+					}
+				}
+			}
+		}
+	}
+
+	p {
+		@include font-size(18);
+		margin-bottom: 24px;
+
+		&.h3 {
+			margin: 50px 0 14px;
+
+			&:first-child { margin-top: 0; }
+		}
+
+		span {
+			color: $cl_grey_1;
+		}
+	}
+
+	.checkbox {
+		& + label {
+			@include clearfix;
+			display: inline-block;
+			padding: 10px;
+			padding-left: 36px;
+			margin-left: -10px;
+
+			.month {
+				@include font-size(21);
+				float: left;
+				width: 140px;
+			}
+
+			.stat {
+				@include font-size(18);
+				float: left;
+				width: 500px;
+
+				span {
+					color: $cl_grey_1;
+				}
+			}
+
+			&:before {
+				top: 10px;
+				left: 10px;
+			}
+		}
+
+		&:checked + label {
+			background-color: $cl_yellow;
+		}
+	}
+}

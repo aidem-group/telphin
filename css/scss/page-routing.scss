@@ -1,0 +1,592 @@
+.p-routing {
+	&_about {
+		@include font-size(18);
+		line-height: 1.5;
+		margin-bottom: 30px;
+	}
+
+	.page-switcher {
+		@include grid-indent(10);
+		@include clearfix;
+
+		.button {
+			@include border-radius(4px);
+			@include box-sizing;
+			display: block;
+			position: relative;
+			border-width: 3px;
+			margin-bottom: 20px !important;
+			padding: 40px 16px;
+			height: 230px;
+			color: #000;
+			text-align: left;
+			cursor: pointer;
+			pointer-events: auto !important;
+
+			&:hover { color: #000; }
+
+			&.active:after { bottom: -26px; }
+
+			&.enabled,
+			&.disabled {
+				background-color: #fff;
+				border-style: solid;
+			}
+
+			&.disabled,
+			&.add-new {
+				border-color: $cl_grey_2;
+			}
+
+			&.enabled {
+				border-color: $cl_yellow;
+
+				&:before {
+					@include font-size(12);
+					@include border-radius-single(bottom-left, 5px);
+					content: 'Работает';
+					position: absolute;
+					right: 0;
+					top: -3px;
+					color: #000;
+					padding: 8px;
+					background-color: $cl_yellow;
+				}
+			}
+
+			&.disabled {
+				color: #000 !important;
+
+				&:before {
+					@include font-size(12);
+					@include border-radius-single(bottom-left, 5px);
+					content: 'Выключена';
+					position: absolute;
+					right: -3px;
+					top: -3px;
+					color: #fff;
+					padding: 8px;
+					padding-right: 11px;
+					background-color: $cl_grey_2;
+				}
+
+				&:hover {
+					border-color: $cl_yellow !important;
+				}
+			}
+
+			&.add-new {
+				@include font-size(12);
+				background-color: transparent;
+				border-style: dashed;
+				color: $cl_grey_2;
+				text-align: center;
+				padding: 0;
+
+				&:before {
+					@include font-size(120);
+					content: '\f067';
+					line-height: 1;
+					font-family: FontAwesome;
+					display: block;
+					margin: 50px 0 10px;
+				}
+
+				&:hover {
+					color: #666;
+					border-color: #666;
+				}
+			}
+
+			&-title {
+				@include font-size(18);
+				text-transform: uppercase;
+				margin-bottom: 12px;
+				line-height: 1.2;
+				max-height: 42px;
+				overflow: hidden;
+			}
+
+			&-phones {
+				@include font-size(16);
+				margin-bottom: 12px;
+				line-height: 1.2;
+			}
+
+			&-time {
+				@include font-size(16);
+				position: relative;
+				padding-left: 24px;
+
+				&:before {
+					content: '\f017';
+					position: absolute;
+					left: 0;
+					top: 2px;
+					font-family: FontAwesome;
+				}
+
+				table {
+					td {
+						padding: 0;
+						border: 0;
+
+						&:first-child {
+							padding-right: 8px;
+							padding-bottom : 6px;
+							width: 1%;
+							white-space: nowrap;
+						}
+
+						&:last-child { width: 100%; }
+					}
+				}
+			}
+		}
+	}
+}
+
+.b-routing {
+	.title {
+		@include font-size(28);
+		text-transform: uppercase;
+		margin-bottom: 30px;
+	}
+
+	&_top {
+		margin: -30px -40px 60px;
+		padding: 20px;
+		border-bottom: 1px solid $cl_grey_0;
+
+		&-label {
+			@include border-radius(3px);
+			display: inline-block;
+			padding: 12px 14px;
+			margin-right: 22px;
+			color: #fff;
+
+			&.enabled {
+				background-color: $cl_green;
+			}
+
+			&.disabled {
+				background-color: $cl_red;
+			}
+		}
+
+		&-switch {
+			@include font-size(14);
+			@include border-radius-single(top-right, 34px);
+			@include border-radius-single(bottom-right, 34px);
+			position: relative;
+			color: $cl_blue;
+			background-color: transparent;
+			padding: 6px 14px 6px 0;
+			border: 1px solid $cl_blue;
+			border-left-width: 0;
+			cursor: pointer;
+
+			&:before, &:after {
+				content: '';
+				position: absolute;
+				left: -20px;
+				display: block;
+				border-style: solid;
+				border-color: transparent;
+			}
+
+			&:before {
+				border-right-color: $cl_blue;
+				border-width: 19px 14px;
+				top: -1px;
+				left: -28px;
+			}
+
+			&:after {
+				border-right-color: #fff;
+				border-width: 18px 13px;
+				left: -26px;
+				top: 0;
+			}
+
+			.fa-power-off {
+				@include font-size(24);
+				vertical-align: sub;
+				margin-right: 8px;
+			}
+
+			&:hover {
+				color: #888;
+				border-color: $cl_orange;
+
+				&:before {
+					border-right-color: $cl_orange;
+				}
+			}
+		}
+
+		&-delete {
+			@include font-size(14);
+			@include border-radius(34px);
+			color: $cl_red;
+			border: 1px solid $cl_red;
+			padding: 6px 14px;
+			background-color: transparent;
+			cursor: pointer;
+
+			.fa-trash {
+				@include font-size(24);
+				vertical-align: sub;
+				margin-right: 8px;
+			}
+
+			&:hover {
+				color: #fff;
+				border-color: $cl_red;
+				background-color: $cl_red;
+			}
+		}
+	}
+
+	&_main {
+		border-bottom: 1px solid $cl_grey_0;
+		margin: 0 -40px 50px;
+		padding: 0 40px 30px;
+
+		.row {
+			@include font-size(18);
+
+			&_cell {
+				padding-bottom: 30px;
+
+				.text-input {
+					@include font-size(18);
+					height: 38px;
+					line-height: 36px;
+					padding: 0 10px;
+				}
+				.b-routing_phone-line {
+					margin-bottom: 14px;
+
+					.dropdown {
+						margin-right: 6px;
+
+						&.active {
+							& > .button {
+								background-color: $cl_yellow;
+								border-color: $cl_yellow;
+								color: #000;
+							}
+						}
+
+						.dd-add-phone {
+							@include font-size(16);
+
+							&_title {
+								font-weight: 600;
+								margin-bottom: 30px;
+							}
+
+							.text-input {
+								margin: 10px 0 40px;
+								width: 400px;
+							}
+						}
+					}
+				}
+			}
+
+			&_cell-1 {
+				white-space: nowrap;
+				padding-right: 16px;
+				padding-bottom: 30px;
+
+				label {
+					margin-top: 10px;
+  					display: inline-block;
+					vertical-align: middle;
+				}
+			}
+		}
+
+		.routing-date {
+			.select {
+				margin-right: 10px;
+			}
+
+			&_variables {
+				display: inline-block;
+			}
+
+			&_item {
+				@include border-radius(40px);
+				@include font-size(14);
+				float: left;
+				color: $cl_blue;
+				border: 1px solid $cl_blue;
+				padding: 11px 24px;
+				margin-bottom: 2px;
+			}
+
+			&_time {
+				display: inline-block;
+				margin-left: 26px;
+
+				label {
+					display: inline-block;
+					vertical-align: top;
+					margin-top: 10px;
+				}
+
+				.jq-selectbox__select {
+					min-width: 50px;
+				}
+
+				.select {
+					margin: 0 20px 0 6px;
+					width: 100px;
+				}
+			}
+		}
+	}
+
+	&_schemes > p {
+		@include font-size(16);
+		margin-bottom: 16px;
+	}
+
+	.h3 {
+		@include font-size(21);
+		margin-bottom: 24px;
+	}
+
+	&_schemes,
+	&_schemes-nums {
+		&.adv {
+			padding-left: 40px;
+			margin-bottom: 90px;
+
+			.h3 {
+				.button {
+					margin-top: -7px;
+				}
+			}
+		}
+
+		.btns {
+			label { margin-right: 14px; }
+		}
+
+		.variables {
+			p {
+				@include font-size(16);
+				margin-bottom: 16px;
+			}
+			
+			.table:nth-child(2) {
+				.cell_push-up { display: none; }
+			}
+
+			.table:last-child {
+				.cell_push-down { display: none; }
+			}
+		}
+
+		.adv_type {
+			width: 460px;
+		}
+
+		.table {
+			border-collapse: collapse;
+			margin-bottom: 40px;
+			background-color: #fff;
+		}
+
+		.row {
+			font-size: 0;
+		}
+
+		.row_cell, .row_cell-6 {
+			border: 1px solid $cl_grey_0;
+			vertical-align: middle;
+			white-space: nowrap;
+
+			& > span:not(.dropdown) {
+				@include font-size(16);
+
+				padding: 0 10px;
+
+				&:first-child { padding-left: 18px; }
+			}
+
+			.text-input {
+				@include font-size(16);
+				display: inline-block;
+				width: 54px;
+				text-align: center;
+			}
+
+			.jq-selectbox {
+				min-width: 100%;
+
+				&__select {
+					@include box-sizing;
+					border: 0;
+					background-color: transparent;
+					padding: 20px 18px;
+					width: 100%;
+
+
+					&-text {
+						@include font-size(16);
+						color: #000;
+						max-width: 100%;
+						margin-right: 20px;
+					}
+				}
+			}
+
+			&.empty { width: 100%; }
+
+			&.cell_melody {
+				position: relative;
+
+				.dropdown:not(.select) {
+					position: absolute;
+					right: 40px;
+					top: 16px;
+					z-index: 2;
+					padding-left: 6px;
+					background-color: #fff;
+
+					.dropdown-toggle {
+						@include font-size(24);
+					}
+
+					& > .fa { @include font-size(24); }
+				}
+			}
+
+			&.cell_push-up,
+			&.cell_push-down {
+				vertical-align: middle;
+				width: 40px;
+
+				.fa {
+					@include font-size(24);
+					width: 40px;
+					text-align: center;
+					display: inline-block;
+					border: 0;
+					background-color: transparent;
+					color: $cl_grey_2;
+					cursor: pointer;
+
+					&:hover {
+						color: $cl_blue;
+					}
+				}
+			}
+		}
+
+		&-nums {
+			margin-bottom: 10px;
+
+			.jq-selectbox__select-text { max-width: 130px !important; }
+
+			.b-unrolling {
+				@include transition(all 0s linear);
+				position :relative;
+
+				&.active {
+					.fa-trash {
+						background-color: $cl_yellow;
+					}
+
+					.b-unrolling_toggle-wrapper {
+						background-color: $cl_yellow;
+
+						label {
+							&:after {
+								@include transform(rotate(-135deg));
+								top: 27px;
+							}
+						}
+					}
+				}
+
+				&_toggle-wrapper {
+					@include transition(all 0s linear);
+					@include font-size(16);
+					padding: 0;
+					margin-right: 40px;
+					border: 1px solid $cl_grey_0;
+
+					label {
+						padding: 20px 18px;
+						display: block;
+						cursor: pointer;
+
+						&:after {
+							@include transition(#{top .2s linear, transform .2s linear});
+							@include transform(rotate(45deg));
+							content: '';
+							display: block;
+							position: absolute;
+							width: 4px;
+							height: 4px;
+							border: 1px solid #399efc;
+							border-top-color: transparent;
+							border-left-color: transparent;
+							right: 20px;
+							top: 24px;
+						}
+					}
+				}
+
+				&_inner {
+					@include box-sizing;
+					background-color: #e0ebff;
+					padding: 36px 20px;
+					width: 100%;
+				}
+
+				.fa-trash {
+					@include transition(background 0s linear);
+					@include font-size(24);
+					position: absolute;
+					border: 1px solid $cl_grey_0;
+					background-color: #fff;
+					padding: 16px 10px;
+					color: $cl_grey_2;
+					right: 0;
+					top: 0;
+					cursor: pointer;
+					z-index: 2;
+
+					&:hover {
+						color: $cl_orange;
+					}
+				}
+			}
+		}
+	}
+
+	&_black-and-white {
+		margin: 70px 0 60px;
+		width: 500px;
+
+		p {
+			@include font-size(16);
+			line-height: 1.4;
+		}
+
+		.black-and-white {
+			margin: 20px 0;
+		}
+
+		table {
+			width: auto;
+		}
+	}
+}

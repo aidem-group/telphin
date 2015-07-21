@@ -1,0 +1,1901 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"  content="width=device-width">
+	<title></title>
+	<meta name="description" content=""> 
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+<body class="body theme_default">
+	<div class="main-wrapper">
+		<header class="header">
+			<a class="header_logo" href="/">Телфин</a>
+			<div class="header-inner">
+				<div class="header_notices">
+					<a href="#" class="header_notices-item header_notices-item__calls">
+						<span class="header-inner_status">32</span>
+					</a>
+					<a href="#" class="header_notices-item header_notices-item__mail">
+						<span class="header-inner_status error"></span>
+					</a>
+					<a href="#" class="header_notices-item header_notices-item__fax">
+						<span class="header-inner_status">5</span>
+					</a>
+				</div>
+				<a href="#" class="header_btn header_btn-favorite">
+					<span class="header-inner_status">2</span>
+					Избранное
+				</a>
+				<a href="#" class="header_btn header_btn-stat">Статистика</a>
+				<div class="header_btn header_btn-user dropdown">
+					<span class="header_btn-user-status"></span>
+					<span class="header_btn-user-name dropdown-toggle">Константин</span>
+					<div class="dropdown-container">
+                        <div class="dropdown-container_inner">
+                        	<div class="b-tabs">
+                        		<div class="b-tabs_btns">
+                        			<button>Сотрудник</button>
+                            		<button>Настройки входа</button>
+                        		</div>
+                        		<div class="b-tabs_inner">
+                        			<div class="b-tabs_item">
+                        				<div class="form-line">
+                        					<label for="employee_name">Имя и&nbsp;фамилия</label>
+                        					<input type="text" class="text-input" name="employee_name" id="employee_name">
+                        				</div>
+                        				<div class="form-line">
+                        					<label for="employee_num">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+                        					<input type="text" class="text-input" name="employee_num" id="employee_num">
+                        				</div>
+                        				<div class="form-line">
+                        					<label for="employee_queue">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+                        					<select class="select" name="employee_queue" id="employee_queue">
+                        						<option>Без очереди</option>
+                        					</select>
+                        				</div>
+                        				<div class="form-line">
+                        					<label for="employee_email">Электронная почта (для уведомлений и&nbsp;входа в&nbsp;АТС)</label>
+                        					<input type="text" class="text-input" name="employee_email" id="employee_email" value="aksenov@gmail.com">
+                        				</div>
+                        				<div class="form-line">
+                        					<label for="employee_comm">Комментарий о&nbsp;сотруднике</label>
+                        					<textarea name="employee_comm" id="employee_comm"></textarea>
+                        				</div>
+                        				<button class="button focus">Сохранить</button>
+                        			</div>
+                        			<div class="b-tabs_item">
+                        				<div class="form-line">
+                        					<label for="employee_login">Логин</label>
+                        					<input type="text" class="text-input" name="employee_login" id="employee_login" value="aksenov@gmail.com">
+                        				</div>
+                        				<div class="form-line">
+                        					<label for="employee_pass">Пароль для входа в&nbsp;АТС</label>
+                        					<input type="password" class="text-input" name="employee_pass" id="employee_pass">
+                        					<button class="button right">Сменить пароль</button>
+                        				</div>
+                        				<div class="form-line disabled">
+                        					<label for="employee_new-pass">Новый пароль</label>
+                        					<input type="password" class="text-input" name="employee_new-pass" id="employee_new-pass" disabled>
+                        				</div>
+                        				<button class="button focus">Сохранить</button>
+                        			</div>
+                        		</div>
+                        	</div>
+                        </div>
+                    </div>
+				</div>
+				<a href="#" class="header_btn header_btn-settings"></a>
+			</div>
+		</header>
+		<div class="p-main p-staff">
+			<div>
+				<a href="#" class="prev-page fa fa-arrow-left link">Настройки</a>
+			</div>
+			<div class="p-staff_header">
+				<div class="table">
+					<div class="row_cell-4">
+						<h1>
+							Сотрудники и очереди
+						</h1>
+					</div>
+					<div class="row_cell">
+						<div class="search-line">
+							<input type="text" class="search-line_input" placeholder="Номер телефона, добавочного номера или имя">
+							<button class="search-line_button fa fa-search"></button>
+						</div>
+					</div>
+				</div>
+				<p>
+					2 очереди, 12 сотрудников. Cоздание очередей позволит вам регулировать порядок получения вызова вашими сотрудниками.
+				</p>
+				<div class="dropdown">
+					<button class="button focus dropdown-toggle">Добавить сотрудника</button>
+					<div class="dropdown-container">
+						<div class="dropdown-container_inner">
+							<div class="dd-add">
+								<p class="dd-add_title">
+									Добавление нового сотрудника
+								</p>
+								<div class="dd-add_block">
+									<label class="label text-bold">Укажите имя и фамилию сотрудника</label>
+									<input type="text" class="text-input" placeholder="Например, Константин Константинопольский">
+								</div>
+								<div class="dd-add_block">
+									<label class="label">Присвойте ему внутренний номер (от 2 до 5 цифр)</label>
+									<input type="text" class="text-input">
+								</div>
+								<div class="dd-add_block">
+									<label class="label">Выберите очередь, в которой он работает</label>
+									<select class="select">
+										<option>Не выбрано</option>
+									</select>
+								</div>
+								<div class="dd-add_block">
+									<label class="label">Электронная почта (для  уведомлений и входа в АТС)</label>
+									<input type="text" class="text-input">
+								</div>
+								<div class="dd-add_block">
+									<label class="label">Пароль для входа в АТС</label>
+									<input type="text" class="text-input">
+								</div>
+								<button class="button focus">Продолжить</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="button focus dropdown-toggle">Добавить очередь</button>
+					<div class="dropdown-container">
+						<div class="dropdown-container_inner">
+							<div class="dd-add">
+								<p class="dd-add_title">
+									Добавление новой очереди
+								</p>
+								<div class="dd-add_block">
+									<label class="label">Укажите название очереди</label>
+									<input type="text" class="text-input">
+								</div>
+								<button class="button focus">Добавить</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="b-staff">
+				<p class="h3">
+					Очередь без названия
+				</p>
+				<div class="b-staff_heading">
+					<div class="b-staff_heading-item">
+						<div class="dropdown">
+							<button class="dropdown-toggle">
+								<p>
+									<a href="#">Распределение звонков в очереди</a>
+								</p>
+								<p>
+									Последовательно
+								</p>
+							</button>
+							<div class="dropdown-container">
+								<div class="dropdown-container_inner">
+									<div class="dd-add">
+										<p class="dd-add_title">
+											Принцип распеределения звонков в очереди
+										</p>
+										<div class="dd-add_cols">
+											<div class="dd-add_cols-item">
+												<div class="dd-add_block">
+													<input type="radio" class="radio" name="dd-rout" id="dd-rout-1">
+													<label for="dd-rout-1">
+														<p class="radio-label_title">
+															Последовательно
+														</p>
+														<p class="radio-label_info">
+															Последовательный набор номеров сотрудников.<br>
+															Позволяет направлять звонки в&nbsp;первую очередь наиболее
+															компетентным по&nbsp;тематике обращения сотрудникам.
+														</p>
+													</label>
+												</div>
+												<div class="dd-add_block">
+													<input type="radio" class="radio" name="dd-rout" id="dd-rout-4">
+													<label for="dd-rout-4">
+														<p class="radio-label_title">
+															Одновременно всем
+														</p>
+														<p class="radio-label_info">
+															Вызов поступает одновременно всем свободным операторам.<br>
+															Основная задача, которую решает этот принцип распределения вызовов&nbsp;&mdash; свести к&nbsp;минимуму время ожидания на&nbsp;линии.
+														</p>
+													</label>
+												</div>
+											</div>
+											<div class="dd-add_cols-item">
+												<div class="dd-add_block">
+													<input type="radio" class="radio" name="dd-rout" id="dd-rout-2">
+													<label for="dd-rout-2">
+														<p class="radio-label_title">
+															Случайным образом
+														</p>
+														<p class="radio-label_info">
+															Выбор этого типа распределения звонков позволяет создать равную нагрузку на&nbsp;сотрудников.
+														</p>
+													</label>
+												</div>
+												<div class="dd-add_block">
+													<input type="radio" class="radio" name="dd-rout" id="dd-rout-5">
+													<label for="dd-rout-5">
+														<p class="radio-label_title">
+															Равномерно всем
+														</p>
+														<p class="radio-label_info">
+															Входящий звонок направляется на&nbsp;сотрудника, предыдущий разговор которого с&nbsp;клиентом был раньше, чем у&nbsp;других, затем на&nbsp;второго по&nbsp;списку, и&nbsp;так далее по&nbsp;всем остальным сотрудникам.
+														</p>
+													</label>
+												</div>
+											</div>
+											<div class="dd-add_cols-item">
+												<div class="dd-add_block">
+													<input type="radio" class="radio" name="dd-rout" id="dd-rout-3">
+													<label for="dd-rout-3">
+														<p class="radio-label_title">
+															Параллельно по приоритету
+														</p>
+														<p class="radio-label_info">
+															Cначала одновременно звонят телефоны всех сотрудников, обладающих наивысшей квалификацией.<br>
+															Если никто не&nbsp;поднял трубку, звонки переводятся сотрудникам с&nbsp;меньшей квалификаций и&nbsp;так далее.
+														</p>
+													</label>
+												</div>
+											</div>
+										</div>
+										<button class="button focus">Сохранить</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="b-staff_heading-item">
+						<div class="dropdown">
+							<button class="dropdown-toggle">
+								<p>
+									<a href="#">Удержание вызовов</a>
+								</p>
+								<p>
+									По настройкам АТС
+								</p>
+							</button>
+							<div class="dropdown-container">
+								<div class="dropdown-container_inner">
+									<div class="dd-add">
+										<p class="dd-add_title">
+											Удержание вызовов (постановка вызовов в&nbsp;очередь) позволяет не&nbsp;потерять звонок клиента, если все операторы заняты.
+										</p>
+										<div class="dd-add_block">
+											<input type="radio" class="radio" name="dd-ats" id="dd-ats-1">
+											<label for="dd-ats-1">Использовать общие настройки удержания вызовов АТС</label>
+										</div>
+										<div class="dd-add_block">
+											<input type="radio" class="radio" name="dd-ats" id="dd-ats-2">
+											<label for="dd-ats-2">Использовать специальные настройки удержания для этой очереди</label>
+										</div>
+										<button class="button focus">Сохранить</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="b-staff_heading-item settings">
+						<div class="dropdown">
+							<button class="dropdown-toggle">
+								<p>
+									Общие настройки<br>
+									очереди
+								</p>
+							</button>
+							<div class="dropdown-container">
+								<div class="dropdown-container_inner">
+									<div class="dd-add">
+										<p class="dd-add_title">
+											Параметры очереди
+										</p>
+										<div class="dd-add_block">
+											<label class="label">Название очереди</label>
+											<input type="text" class="text-input" value="Отдел продаж">
+										</div>
+										<div class="dd-add_block">
+											<label class="label">Внутренний номер (от 2 до 5 цифр)</label>
+											<input type="text" class="text-input sub-num-input" value="23">
+										</div>
+										<div class="dd-add_block">
+											<label class="label">Мелодия, во время ожидания оператора</label>
+											<select class="select">
+												<option>Amelie</option>
+											</select>
+											<span class="dropdown">
+												<div class="link dropdown-toggle">
+													<span class="fa fa-play-circle"></span>
+												</div>
+												<div class="dropdown-container">
+													<div class="dropdown-container_inner">
+														<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+													</div>
+												</div>
+											</span>
+										</div>
+										<div class="clearfix">
+											<button class="button focus right">Сохранить</button>
+											<button class="button del right">Удалить очередь</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="b-content">
+					<button class="button focus">Добавить сотрудника</button>
+				</div>
+			</div>
+			<div class="b-staff">
+				<p class="h3">
+					Отдел продаж <sup>6</sup>
+				</p>
+				<div class="b-staff_heading">
+					<div class="b-staff_heading-item">
+						<div class="dropdown">
+							<button class="dropdown-toggle">
+								<p>
+									<a href="#">Распределение звонков в очереди</a>
+								</p>
+								<p>
+									Последовательно
+								</p>
+							</button>
+							<div class="dropdown-container">
+								<div class="dropdown-container_inner">
+									<div class="dd-add">
+										<p class="dd-add_title">
+											Принцип распеределения звонков в очереди
+										</p>
+										<div class="dd-add_cols">
+											<div class="dd-add_cols-item">
+												<div class="dd-add_block">
+													<input type="radio" class="radio" name="dd-rout" id="dd-rout-1">
+													<label for="dd-rout-1">
+														<p class="radio-label_title">
+															Последовательно
+														</p>
+														<p class="radio-label_info">
+															Последовательный набор номеров сотрудников.<br>
+															Позволяет направлять звонки в&nbsp;первую очередь наиболее
+															компетентным по&nbsp;тематике обращения сотрудникам.
+														</p>
+													</label>
+												</div>
+												<div class="dd-add_block">
+													<input type="radio" class="radio" name="dd-rout" id="dd-rout-4">
+													<label for="dd-rout-4">
+														<p class="radio-label_title">
+															Одновременно всем
+														</p>
+														<p class="radio-label_info">
+															Вызов поступает одновременно всем свободным операторам.<br>
+															Основная задача, которую решает этот принцип распределения вызовов&nbsp;&mdash; свести к&nbsp;минимуму время ожидания на&nbsp;линии.
+														</p>
+													</label>
+												</div>
+											</div>
+											<div class="dd-add_cols-item">
+												<div class="dd-add_block">
+													<input type="radio" class="radio" name="dd-rout" id="dd-rout-2">
+													<label for="dd-rout-2">
+														<p class="radio-label_title">
+															Случайным образом
+														</p>
+														<p class="radio-label_info">
+															Выбор этого типа распределения звонков позволяет создать равную нагрузку на&nbsp;сотрудников.
+														</p>
+													</label>
+												</div>
+												<div class="dd-add_block">
+													<input type="radio" class="radio" name="dd-rout" id="dd-rout-5">
+													<label for="dd-rout-5">
+														<p class="radio-label_title">
+															Равномерно всем
+														</p>
+														<p class="radio-label_info">
+															Входящий звонок направляется на&nbsp;сотрудника, предыдущий разговор которого с&nbsp;клиентом был раньше, чем у&nbsp;других, затем на&nbsp;второго по&nbsp;списку, и&nbsp;так далее по&nbsp;всем остальным сотрудникам.
+														</p>
+													</label>
+												</div>
+											</div>
+											<div class="dd-add_cols-item">
+												<div class="dd-add_block">
+													<input type="radio" class="radio" name="dd-rout" id="dd-rout-3">
+													<label for="dd-rout-3">
+														<p class="radio-label_title">
+															Параллельно по приоритету
+														</p>
+														<p class="radio-label_info">
+															Cначала одновременно звонят телефоны всех сотрудников, обладающих наивысшей квалификацией.<br>
+															Если никто не&nbsp;поднял трубку, звонки переводятся сотрудникам с&nbsp;меньшей квалификаций и&nbsp;так далее.
+														</p>
+													</label>
+												</div>
+											</div>
+										</div>
+										<button class="button focus">Сохранить</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="b-staff_heading-item">
+						<div class="dropdown">
+							<button class="dropdown-toggle">
+								<p>
+									<a href="#">Удержание вызовов</a>
+								</p>
+								<p>
+									По настройкам АТС
+								</p>
+							</button>
+							<div class="dropdown-container">
+								<div class="dropdown-container_inner">
+									<div class="dd-add">
+										<p class="dd-add_title">
+											Удержание вызовов (постановка вызовов в&nbsp;очередь) позволяет не&nbsp;потерять звонок клиента, если все операторы заняты.
+										</p>
+										<div class="dd-add_block">
+											<input type="radio" class="radio" name="dd-ats" id="dd-ats-1">
+											<label for="dd-ats-1">Использовать общие настройки удержания вызовов АТС</label>
+										</div>
+										<div class="dd-add_block">
+											<input type="radio" class="radio" name="dd-ats" id="dd-ats-2">
+											<label for="dd-ats-2">Использовать специальные настройки удержания для этой очереди</label>
+										</div>
+										<button class="button focus">Сохранить</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="b-staff_heading-item settings">
+						<div class="dropdown">
+							<button class="dropdown-toggle">
+								<p>
+									Общие настройки<br>
+									очереди
+								</p>
+							</button>
+							<div class="dropdown-container">
+								<div class="dropdown-container_inner">
+									<div class="dd-add">
+										<p class="dd-add_title">
+											Параметры очереди
+										</p>
+										<div class="dd-add_block">
+											<label class="label">Название очереди</label>
+											<input type="text" class="text-input" value="Отдел продаж">
+										</div>
+										<div class="dd-add_block">
+											<label class="label">Внутренний номер (от 2 до 5 цифр)</label>
+											<input type="text" class="text-input sub-num-input" value="23">
+										</div>
+										<div class="dd-add_block">
+											<label class="label">Мелодия, во время ожидания оператора</label>
+											<select class="select">
+												<option>Amelie</option>
+											</select>
+											<span class="dropdown">
+												<div class="link dropdown-toggle">
+													<span class="fa fa-play-circle"></span>
+												</div>
+												<div class="dropdown-container">
+													<div class="dropdown-container_inner">
+														<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+													</div>
+												</div>
+											</span>
+										</div>
+										<div class="clearfix">
+											<button class="button focus right">Сохранить</button>
+											<button class="button del right">Удалить очередь</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="b-content">
+					<table>
+						<thead>
+							<th class="cell_staff-stat">Статус</th>
+							<th class="cell_staff-sub-num">Доб.</th>
+							<th>Имя</th>
+							<th>Рабочий</th>
+							<th>Личный</th>
+							<th></th>
+							<th class="cell_staff-sub-num">Комментарий</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="cell_staff-stat">
+									<span class="icon online-circle"></span>
+								</td>
+								<td class="cell_staff-sub-num">
+									<span class="cl_blue">111</span>
+								</td>
+								<td>
+									<div class="dropdown">
+										<button class="link dropdown-toggle">Аксенов Владимир</button>
+										<div class="dropdown-container">
+											<div class="dropdown-container_inner">
+												<div class="b-tabs">
+					                        		<div class="b-tabs_btns">
+					                        			<button>Сотрудник</button>
+					                            		<button>Настройки входа</button>
+					                        		</div>
+					                        		<div class="b-tabs_inner">
+					                        			<div class="b-tabs_item">
+					                        				<div class="form-line">
+					                        					<label for="employee_name">Имя и&nbsp;фамилия</label>
+					                        					<input type="text" class="text-input" name="employee_name" id="employee_name">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_num">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+					                        					<input type="text" class="text-input" name="employee_num" id="employee_num">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_queue">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+					                        					<select class="select" name="employee_queue" id="employee_queue">
+					                        						<option>Без очереди</option>
+					                        					</select>
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_email">Электронная почта (для уведомлений и&nbsp;входа в&nbsp;АТС)</label>
+					                        					<input type="text" class="text-input" name="employee_email" id="employee_email" value="aksenov@gmail.com">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_comm">Комментарий о&nbsp;сотруднике</label>
+					                        					<textarea name="employee_comm" id="employee_comm"></textarea>
+					                        				</div>
+					                        				<button class="button focus">Сохранить</button>
+					                        			</div>
+					                        			<div class="b-tabs_item">
+					                        				<div class="form-line">
+					                        					<label for="employee_login">Логин</label>
+					                        					<input type="text" class="text-input" name="employee_login" id="employee_login" value="aksenov@gmail.com">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_pass">Пароль для входа в&nbsp;АТС</label>
+					                        					<input type="password" class="text-input" name="employee_pass" id="employee_pass">
+					                        					<button class="button right">Сменить пароль</button>
+					                        				</div>
+					                        				<div class="form-line disabled">
+					                        					<label for="employee_new-pass">Новый пароль</label>
+					                        					<input type="password" class="text-input" name="employee_new-pass" id="employee_new-pass" disabled>
+					                        				</div>
+					                        				<button class="button focus">Сохранить</button>
+					                        			</div>
+					                        		</div>
+					                        	</div>
+											</div>
+										</div>
+									</div>
+								</td>
+								<td>
+									123-45-67
+								</td>
+								<td>
+									<span class="nowrap">+7 931 354-40-20</span>
+								</td>
+								<td>
+									<a href="#">Статистика</a>
+								</td>
+								<td class="cell_staff-comm">
+									&nbsp;
+								</td>
+							</tr>
+							<tr>
+								<td class="cell_staff-stat">
+									<span class="icon online-circle"></span>
+								</td>
+								<td class="cell_staff-sub-num">
+									<span class="cl_blue">112</span>
+								</td>
+								<td>
+									<div class="dropdown">
+										<button class="link dropdown-toggle">Васильев Иван</button>
+										<div class="dropdown-container">
+											<div class="dropdown-container_inner">
+												<div class="b-tabs">
+					                        		<div class="b-tabs_btns">
+					                        			<button>Сотрудник</button>
+					                            		<button>Настройки входа</button>
+					                        		</div>
+					                        		<div class="b-tabs_inner">
+					                        			<div class="b-tabs_item">
+					                        				<div class="form-line">
+					                        					<label for="employee_name">Имя и&nbsp;фамилия</label>
+					                        					<input type="text" class="text-input" name="employee_name" id="employee_name">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_num">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+					                        					<input type="text" class="text-input" name="employee_num" id="employee_num">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_queue">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+					                        					<select class="select" name="employee_queue" id="employee_queue">
+					                        						<option>Без очереди</option>
+					                        					</select>
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_email">Электронная почта (для уведомлений и&nbsp;входа в&nbsp;АТС)</label>
+					                        					<input type="text" class="text-input" name="employee_email" id="employee_email" value="aksenov@gmail.com">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_comm">Комментарий о&nbsp;сотруднике</label>
+					                        					<textarea name="employee_comm" id="employee_comm"></textarea>
+					                        				</div>
+					                        				<button class="button focus">Сохранить</button>
+					                        			</div>
+					                        			<div class="b-tabs_item">
+					                        				<div class="form-line">
+					                        					<label for="employee_login">Логин</label>
+					                        					<input type="text" class="text-input" name="employee_login" id="employee_login" value="aksenov@gmail.com">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_pass">Пароль для входа в&nbsp;АТС</label>
+					                        					<input type="password" class="text-input" name="employee_pass" id="employee_pass">
+					                        					<button class="button right">Сменить пароль</button>
+					                        				</div>
+					                        				<div class="form-line disabled">
+					                        					<label for="employee_new-pass">Новый пароль</label>
+					                        					<input type="password" class="text-input" name="employee_new-pass" id="employee_new-pass" disabled>
+					                        				</div>
+					                        				<button class="button focus">Сохранить</button>
+					                        			</div>
+					                        		</div>
+					                        	</div>
+											</div>
+										</div>
+									</div>
+								</td>
+								<td>
+									765-43-21
+								</td>
+								<td>
+									<span class="nowrap">+7 931 354-40-20</span>
+								</td>
+								<td>
+									<a href="#">Статистика</a>
+								</td>
+								<td class="cell_staff-comm">
+									Новичек, проверить 22 статистику
+								</td>
+							</tr>
+							<tr>
+								<td class="cell_staff-stat">
+									<span class="icon online-circle"></span>
+								</td>
+								<td class="cell_staff-sub-num">
+									<span class="cl_blue">113</span>
+								</td>
+								<td>
+									<div class="dropdown">
+										<button class="link dropdown-toggle">Сергеев Владимир</button>
+										<div class="dropdown-container">
+											<div class="dropdown-container_inner">
+												<div class="b-tabs">
+					                        		<div class="b-tabs_btns">
+					                        			<button>Сотрудник</button>
+					                            		<button>Настройки входа</button>
+					                        		</div>
+					                        		<div class="b-tabs_inner">
+					                        			<div class="b-tabs_item">
+					                        				<div class="form-line">
+					                        					<label for="employee_name">Имя и&nbsp;фамилия</label>
+					                        					<input type="text" class="text-input" name="employee_name" id="employee_name">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_num">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+					                        					<input type="text" class="text-input" name="employee_num" id="employee_num">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_queue">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+					                        					<select class="select" name="employee_queue" id="employee_queue">
+					                        						<option>Без очереди</option>
+					                        					</select>
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_email">Электронная почта (для уведомлений и&nbsp;входа в&nbsp;АТС)</label>
+					                        					<input type="text" class="text-input" name="employee_email" id="employee_email" value="aksenov@gmail.com">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_comm">Комментарий о&nbsp;сотруднике</label>
+					                        					<textarea name="employee_comm" id="employee_comm"></textarea>
+					                        				</div>
+					                        				<button class="button focus">Сохранить</button>
+					                        			</div>
+					                        			<div class="b-tabs_item">
+					                        				<div class="form-line">
+					                        					<label for="employee_login">Логин</label>
+					                        					<input type="text" class="text-input" name="employee_login" id="employee_login" value="aksenov@gmail.com">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_pass">Пароль для входа в&nbsp;АТС</label>
+					                        					<input type="password" class="text-input" name="employee_pass" id="employee_pass">
+					                        					<button class="button right">Сменить пароль</button>
+					                        				</div>
+					                        				<div class="form-line disabled">
+					                        					<label for="employee_new-pass">Новый пароль</label>
+					                        					<input type="password" class="text-input" name="employee_new-pass" id="employee_new-pass" disabled>
+					                        				</div>
+					                        				<button class="button focus">Сохранить</button>
+					                        			</div>
+					                        		</div>
+					                        	</div>
+											</div>
+										</div>
+									</div>
+								</td>
+								<td>
+									<span class="icon warning"></span>
+								</td>
+								<td>
+									<span class="nowrap">+7 931 354-40-20</span>
+								</td>
+								<td>
+									<a href="#">Статистика</a>
+								</td>
+								<td class="cell_staff-comm">
+									&nbsp;
+								</td>
+							</tr>
+							<tr>
+								<td class="cell_staff-stat">
+									<span class="icon online-circle"></span>
+								</td>
+								<td class="cell_staff-sub-num">
+									<span class="cl_blue">114</span>
+								</td>
+								<td>
+									<div class="dropdown">
+										<button class="link dropdown-toggle">Аксенов Владимир</button>
+										<div class="dropdown-container">
+											<div class="dropdown-container_inner">
+												<div class="b-tabs">
+					                        		<div class="b-tabs_btns">
+					                        			<button>Сотрудник</button>
+					                            		<button>Настройки входа</button>
+					                        		</div>
+					                        		<div class="b-tabs_inner">
+					                        			<div class="b-tabs_item">
+					                        				<div class="form-line">
+					                        					<label for="employee_name">Имя и&nbsp;фамилия</label>
+					                        					<input type="text" class="text-input" name="employee_name" id="employee_name">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_num">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+					                        					<input type="text" class="text-input" name="employee_num" id="employee_num">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_queue">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+					                        					<select class="select" name="employee_queue" id="employee_queue">
+					                        						<option>Без очереди</option>
+					                        					</select>
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_email">Электронная почта (для уведомлений и&nbsp;входа в&nbsp;АТС)</label>
+					                        					<input type="text" class="text-input" name="employee_email" id="employee_email" value="aksenov@gmail.com">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_comm">Комментарий о&nbsp;сотруднике</label>
+					                        					<textarea name="employee_comm" id="employee_comm"></textarea>
+					                        				</div>
+					                        				<button class="button focus">Сохранить</button>
+					                        			</div>
+					                        			<div class="b-tabs_item">
+					                        				<div class="form-line">
+					                        					<label for="employee_login">Логин</label>
+					                        					<input type="text" class="text-input" name="employee_login" id="employee_login" value="aksenov@gmail.com">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_pass">Пароль для входа в&nbsp;АТС</label>
+					                        					<input type="password" class="text-input" name="employee_pass" id="employee_pass">
+					                        					<button class="button right">Сменить пароль</button>
+					                        				</div>
+					                        				<div class="form-line disabled">
+					                        					<label for="employee_new-pass">Новый пароль</label>
+					                        					<input type="password" class="text-input" name="employee_new-pass" id="employee_new-pass" disabled>
+					                        				</div>
+					                        				<button class="button focus">Сохранить</button>
+					                        			</div>
+					                        		</div>
+					                        	</div>
+											</div>
+										</div>
+									</div>
+								</td>
+								<td>
+									123-45-67
+								</td>
+								<td>
+									<span class="nowrap">+7 931 354-40-20</span>
+								</td>
+								<td>
+									<a href="#">Статистика</a>
+								</td>
+								<td class="cell_staff-comm">
+									&nbsp;
+								</td>
+							</tr>
+							<tr>
+								<td class="cell_staff-stat">
+									<span class="icon offline-circle"></span>
+								</td>
+								<td class="cell_staff-sub-num">
+									<span class="cl_blue">115</span>
+								</td>
+								<td>
+									<div class="dropdown">
+										<button class="link dropdown-toggle">Артем Карпов</button>
+										<div class="dropdown-container">
+											<div class="dropdown-container_inner">
+												<div class="b-tabs">
+					                        		<div class="b-tabs_btns">
+					                        			<button>Сотрудник</button>
+					                            		<button>Настройки входа</button>
+					                        		</div>
+					                        		<div class="b-tabs_inner">
+					                        			<div class="b-tabs_item">
+					                        				<div class="form-line">
+					                        					<label for="employee_name">Имя и&nbsp;фамилия</label>
+					                        					<input type="text" class="text-input" name="employee_name" id="employee_name">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_num">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+					                        					<input type="text" class="text-input" name="employee_num" id="employee_num">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_queue">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+					                        					<select class="select" name="employee_queue" id="employee_queue">
+					                        						<option>Без очереди</option>
+					                        					</select>
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_email">Электронная почта (для уведомлений и&nbsp;входа в&nbsp;АТС)</label>
+					                        					<input type="text" class="text-input" name="employee_email" id="employee_email" value="aksenov@gmail.com">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_comm">Комментарий о&nbsp;сотруднике</label>
+					                        					<textarea name="employee_comm" id="employee_comm"></textarea>
+					                        				</div>
+					                        				<button class="button focus">Сохранить</button>
+					                        			</div>
+					                        			<div class="b-tabs_item">
+					                        				<div class="form-line">
+					                        					<label for="employee_login">Логин</label>
+					                        					<input type="text" class="text-input" name="employee_login" id="employee_login" value="aksenov@gmail.com">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_pass">Пароль для входа в&nbsp;АТС</label>
+					                        					<input type="password" class="text-input" name="employee_pass" id="employee_pass">
+					                        					<button class="button right">Сменить пароль</button>
+					                        				</div>
+					                        				<div class="form-line disabled">
+					                        					<label for="employee_new-pass">Новый пароль</label>
+					                        					<input type="password" class="text-input" name="employee_new-pass" id="employee_new-pass" disabled>
+					                        				</div>
+					                        				<button class="button focus">Сохранить</button>
+					                        			</div>
+					                        		</div>
+					                        	</div>
+											</div>
+										</div>
+									</div>
+								</td>
+								<td>
+									765-43-21
+								</td>
+								<td>
+									<span class="nowrap">+7 931 354-40-20</span>
+								</td>
+								<td>
+									<a href="#">Статистика</a>
+								</td>
+								<td class="cell_staff-comm">
+									&nbsp;
+								</td>
+							</tr>
+							<tr>
+								<td class="cell_staff-stat">
+									<span class="icon offline-circle"></span>
+								</td>
+								<td class="cell_staff-sub-num">
+									<span class="icon error"></span>
+								</td>
+								<td>
+									<div class="dropdown">
+										<button class="link dropdown-toggle">Аксенов Владимир</button>
+										<div class="dropdown-container">
+											<div class="dropdown-container_inner">
+												<div class="b-tabs">
+					                        		<div class="b-tabs_btns">
+					                        			<button>Сотрудник</button>
+					                            		<button>Настройки входа</button>
+					                        		</div>
+					                        		<div class="b-tabs_inner">
+					                        			<div class="b-tabs_item">
+					                        				<div class="form-line">
+					                        					<label for="employee_name">Имя и&nbsp;фамилия</label>
+					                        					<input type="text" class="text-input" name="employee_name" id="employee_name">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_num">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+					                        					<input type="text" class="text-input" name="employee_num" id="employee_num">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_queue">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+					                        					<select class="select" name="employee_queue" id="employee_queue">
+					                        						<option>Без очереди</option>
+					                        					</select>
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_email">Электронная почта (для уведомлений и&nbsp;входа в&nbsp;АТС)</label>
+					                        					<input type="text" class="text-input" name="employee_email" id="employee_email" value="aksenov@gmail.com">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_comm">Комментарий о&nbsp;сотруднике</label>
+					                        					<textarea name="employee_comm" id="employee_comm"></textarea>
+					                        				</div>
+					                        				<button class="button focus">Сохранить</button>
+					                        			</div>
+					                        			<div class="b-tabs_item">
+					                        				<div class="form-line">
+					                        					<label for="employee_login">Логин</label>
+					                        					<input type="text" class="text-input" name="employee_login" id="employee_login" value="aksenov@gmail.com">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_pass">Пароль для входа в&nbsp;АТС</label>
+					                        					<input type="password" class="text-input" name="employee_pass" id="employee_pass">
+					                        					<button class="button right">Сменить пароль</button>
+					                        				</div>
+					                        				<div class="form-line disabled">
+					                        					<label for="employee_new-pass">Новый пароль</label>
+					                        					<input type="password" class="text-input" name="employee_new-pass" id="employee_new-pass" disabled>
+					                        				</div>
+					                        				<button class="button focus">Сохранить</button>
+					                        			</div>
+					                        		</div>
+					                        	</div>
+											</div>
+										</div>
+									</div>
+								</td>
+								<td>
+									<span class="icon warning"></span>
+								</td>
+								<td>
+									<span class="icon warning"></span>
+								</td>
+								<td>
+									<a href="#">Статистика</a>
+								</td>
+								<td class="cell_staff-comm">
+									Тестовый аккаунт
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="b-staff">
+				<p class="h3">
+					Техподдержка <sup>4</sup>
+				</p>
+				<div class="b-staff_heading">
+					<div class="b-staff_heading-item">
+						<div class="dropdown">
+							<button class="dropdown-toggle">
+								<p>
+									<a href="#">Распределение звонков в очереди</a>
+								</p>
+								<p>
+									Последовательно
+								</p>
+							</button>
+							<div class="dropdown-container">
+								<div class="dropdown-container_inner">
+									<div class="dd-add">
+										<p class="dd-add_title">
+											Принцип распеределения звонков в очереди
+										</p>
+										<div class="dd-add_cols">
+											<div class="dd-add_cols-item">
+												<div class="dd-add_block">
+													<input type="radio" class="radio" name="dd-rout" id="dd-rout-1">
+													<label for="dd-rout-1">
+														<p class="radio-label_title">
+															Последовательно
+														</p>
+														<p class="radio-label_info">
+															Последовательный набор номеров сотрудников.<br>
+															Позволяет направлять звонки в&nbsp;первую очередь наиболее
+															компетентным по&nbsp;тематике обращения сотрудникам.
+														</p>
+													</label>
+												</div>
+												<div class="dd-add_block">
+													<input type="radio" class="radio" name="dd-rout" id="dd-rout-4">
+													<label for="dd-rout-4">
+														<p class="radio-label_title">
+															Одновременно всем
+														</p>
+														<p class="radio-label_info">
+															Вызов поступает одновременно всем свободным операторам.<br>
+															Основная задача, которую решает этот принцип распределения вызовов&nbsp;&mdash; свести к&nbsp;минимуму время ожидания на&nbsp;линии.
+														</p>
+													</label>
+												</div>
+											</div>
+											<div class="dd-add_cols-item">
+												<div class="dd-add_block">
+													<input type="radio" class="radio" name="dd-rout" id="dd-rout-2">
+													<label for="dd-rout-2">
+														<p class="radio-label_title">
+															Случайным образом
+														</p>
+														<p class="radio-label_info">
+															Выбор этого типа распределения звонков позволяет создать равную нагрузку на&nbsp;сотрудников.
+														</p>
+													</label>
+												</div>
+												<div class="dd-add_block">
+													<input type="radio" class="radio" name="dd-rout" id="dd-rout-5">
+													<label for="dd-rout-5">
+														<p class="radio-label_title">
+															Равномерно всем
+														</p>
+														<p class="radio-label_info">
+															Входящий звонок направляется на&nbsp;сотрудника, предыдущий разговор которого с&nbsp;клиентом был раньше, чем у&nbsp;других, затем на&nbsp;второго по&nbsp;списку, и&nbsp;так далее по&nbsp;всем остальным сотрудникам.
+														</p>
+													</label>
+												</div>
+											</div>
+											<div class="dd-add_cols-item">
+												<div class="dd-add_block">
+													<input type="radio" class="radio" name="dd-rout" id="dd-rout-3">
+													<label for="dd-rout-3">
+														<p class="radio-label_title">
+															Параллельно по приоритету
+														</p>
+														<p class="radio-label_info">
+															Cначала одновременно звонят телефоны всех сотрудников, обладающих наивысшей квалификацией.<br>
+															Если никто не&nbsp;поднял трубку, звонки переводятся сотрудникам с&nbsp;меньшей квалификаций и&nbsp;так далее.
+														</p>
+													</label>
+												</div>
+											</div>
+										</div>
+										<button class="button focus">Сохранить</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="b-staff_heading-item">
+						<div class="dropdown">
+							<button class="dropdown-toggle">
+								<p>
+									<a href="#">Удержание вызовов</a>
+								</p>
+								<p>
+									По настройкам АТС
+								</p>
+							</button>
+							<div class="dropdown-container">
+								<div class="dropdown-container_inner">
+									<div class="dd-add">
+										<p class="dd-add_title">
+											Удержание вызовов (постановка вызовов в&nbsp;очередь) позволяет не&nbsp;потерять звонок клиента, если все операторы заняты.
+										</p>
+										<div class="dd-add_block">
+											<input type="radio" class="radio" name="dd-ats" id="dd-ats-1">
+											<label for="dd-ats-1">Использовать общие настройки удержания вызовов АТС</label>
+										</div>
+										<div class="dd-add_block">
+											<input type="radio" class="radio" name="dd-ats" id="dd-ats-2">
+											<label for="dd-ats-2">Использовать специальные настройки удержания для этой очереди</label>
+										</div>
+										<button class="button focus">Сохранить</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="b-staff_heading-item settings">
+						<div class="dropdown">
+							<button class="dropdown-toggle">
+								<p>
+									Общие настройки<br>
+									очереди
+								</p>
+							</button>
+							<div class="dropdown-container">
+								<div class="dropdown-container_inner">
+									<div class="dd-add">
+										<p class="dd-add_title">
+											Параметры очереди
+										</p>
+										<div class="dd-add_block">
+											<label class="label">Название очереди</label>
+											<input type="text" class="text-input" value="Отдел продаж">
+										</div>
+										<div class="dd-add_block">
+											<label class="label">Внутренний номер (от 2 до 5 цифр)</label>
+											<input type="text" class="text-input sub-num-input" value="23">
+										</div>
+										<div class="dd-add_block">
+											<label class="label">Мелодия, во время ожидания оператора</label>
+											<select class="select">
+												<option>Amelie</option>
+											</select>
+											<span class="dropdown">
+												<div class="link dropdown-toggle">
+													<span class="fa fa-play-circle"></span>
+												</div>
+												<div class="dropdown-container">
+													<div class="dropdown-container_inner">
+														<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+													</div>
+												</div>
+											</span>
+										</div>
+										<div class="clearfix">
+											<button class="button focus right">Сохранить</button>
+											<button class="button del right">Удалить очередь</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="b-content">
+					<table>
+						<thead>
+							<th class="cell_staff-stat">Статус</th>
+							<th class="cell_staff-sub-num">Доб.</th>
+							<th>Имя</th>
+							<th>Рабочий</th>
+							<th>Личный</th>
+							<th></th>
+							<th class="cell_staff-sub-num">Комментарий</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="cell_staff-stat">
+									<span class="icon online-circle"></span>
+								</td>
+								<td class="cell_staff-sub-num">
+									<span class="cl_blue">111</span>
+								</td>
+								<td>
+									<div class="dropdown">
+										<button class="link dropdown-toggle">Аксенов Владимир</button>
+										<div class="dropdown-container">
+											<div class="dropdown-container_inner">
+												<div class="b-tabs">
+					                        		<div class="b-tabs_btns">
+					                        			<button>Сотрудник</button>
+					                            		<button>Настройки входа</button>
+					                        		</div>
+					                        		<div class="b-tabs_inner">
+					                        			<div class="b-tabs_item">
+					                        				<div class="form-line">
+					                        					<label for="employee_name">Имя и&nbsp;фамилия</label>
+					                        					<input type="text" class="text-input" name="employee_name" id="employee_name">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_num">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+					                        					<input type="text" class="text-input" name="employee_num" id="employee_num">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_queue">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+					                        					<select class="select" name="employee_queue" id="employee_queue">
+					                        						<option>Без очереди</option>
+					                        					</select>
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_email">Электронная почта (для уведомлений и&nbsp;входа в&nbsp;АТС)</label>
+					                        					<input type="text" class="text-input" name="employee_email" id="employee_email" value="aksenov@gmail.com">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_comm">Комментарий о&nbsp;сотруднике</label>
+					                        					<textarea name="employee_comm" id="employee_comm"></textarea>
+					                        				</div>
+					                        				<button class="button focus">Сохранить</button>
+					                        			</div>
+					                        			<div class="b-tabs_item">
+					                        				<div class="form-line">
+					                        					<label for="employee_login">Логин</label>
+					                        					<input type="text" class="text-input" name="employee_login" id="employee_login" value="aksenov@gmail.com">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_pass">Пароль для входа в&nbsp;АТС</label>
+					                        					<input type="password" class="text-input" name="employee_pass" id="employee_pass">
+					                        					<button class="button right">Сменить пароль</button>
+					                        				</div>
+					                        				<div class="form-line disabled">
+					                        					<label for="employee_new-pass">Новый пароль</label>
+					                        					<input type="password" class="text-input" name="employee_new-pass" id="employee_new-pass" disabled>
+					                        				</div>
+					                        				<button class="button focus">Сохранить</button>
+					                        			</div>
+					                        		</div>
+					                        	</div>
+											</div>
+										</div>
+									</div>
+								</td>
+								<td>
+									123-45-67
+								</td>
+								<td>
+									<span class="nowrap">+7 931 354-40-20</span>
+								</td>
+								<td>
+									<a href="#">Статистика</a>
+								</td>
+								<td class="cell_staff-comm">
+									&nbsp;
+								</td>
+							</tr>
+							<tr>
+								<td class="cell_staff-stat">
+									<span class="icon online-circle"></span>
+								</td>
+								<td class="cell_staff-sub-num">
+									<span class="cl_blue">112</span>
+								</td>
+								<td>
+									<div class="dropdown">
+										<button class="link dropdown-toggle">Васильев Иван</button>
+										<div class="dropdown-container">
+											<div class="dropdown-container_inner">
+												<div class="b-tabs">
+					                        		<div class="b-tabs_btns">
+					                        			<button>Сотрудник</button>
+					                            		<button>Настройки входа</button>
+					                        		</div>
+					                        		<div class="b-tabs_inner">
+					                        			<div class="b-tabs_item">
+					                        				<div class="form-line">
+					                        					<label for="employee_name">Имя и&nbsp;фамилия</label>
+					                        					<input type="text" class="text-input" name="employee_name" id="employee_name">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_num">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+					                        					<input type="text" class="text-input" name="employee_num" id="employee_num">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_queue">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+					                        					<select class="select" name="employee_queue" id="employee_queue">
+					                        						<option>Без очереди</option>
+					                        					</select>
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_email">Электронная почта (для уведомлений и&nbsp;входа в&nbsp;АТС)</label>
+					                        					<input type="text" class="text-input" name="employee_email" id="employee_email" value="aksenov@gmail.com">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_comm">Комментарий о&nbsp;сотруднике</label>
+					                        					<textarea name="employee_comm" id="employee_comm"></textarea>
+					                        				</div>
+					                        				<button class="button focus">Сохранить</button>
+					                        			</div>
+					                        			<div class="b-tabs_item">
+					                        				<div class="form-line">
+					                        					<label for="employee_login">Логин</label>
+					                        					<input type="text" class="text-input" name="employee_login" id="employee_login" value="aksenov@gmail.com">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_pass">Пароль для входа в&nbsp;АТС</label>
+					                        					<input type="password" class="text-input" name="employee_pass" id="employee_pass">
+					                        					<button class="button right">Сменить пароль</button>
+					                        				</div>
+					                        				<div class="form-line disabled">
+					                        					<label for="employee_new-pass">Новый пароль</label>
+					                        					<input type="password" class="text-input" name="employee_new-pass" id="employee_new-pass" disabled>
+					                        				</div>
+					                        				<button class="button focus">Сохранить</button>
+					                        			</div>
+					                        		</div>
+					                        	</div>
+											</div>
+										</div>
+									</div>
+								</td>
+								<td>
+									765-43-21
+								</td>
+								<td>
+									<span class="nowrap">+7 931 354-40-20</span>
+								</td>
+								<td>
+									<a href="#">Статистика</a>
+								</td>
+								<td class="cell_staff-comm">
+									Новичек, проверить 22 статистику
+								</td>
+							</tr>
+							<tr>
+								<td class="cell_staff-stat">
+									<span class="icon online-circle"></span>
+								</td>
+								<td class="cell_staff-sub-num">
+									<span class="cl_blue">113</span>
+								</td>
+								<td>
+									<div class="dropdown">
+										<button class="link dropdown-toggle">Сергеев Владимир</button>
+										<div class="dropdown-container">
+											<div class="dropdown-container_inner">
+												<div class="b-tabs">
+					                        		<div class="b-tabs_btns">
+					                        			<button>Сотрудник</button>
+					                            		<button>Настройки входа</button>
+					                        		</div>
+					                        		<div class="b-tabs_inner">
+					                        			<div class="b-tabs_item">
+					                        				<div class="form-line">
+					                        					<label for="employee_name">Имя и&nbsp;фамилия</label>
+					                        					<input type="text" class="text-input" name="employee_name" id="employee_name">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_num">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+					                        					<input type="text" class="text-input" name="employee_num" id="employee_num">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_queue">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+					                        					<select class="select" name="employee_queue" id="employee_queue">
+					                        						<option>Без очереди</option>
+					                        					</select>
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_email">Электронная почта (для уведомлений и&nbsp;входа в&nbsp;АТС)</label>
+					                        					<input type="text" class="text-input" name="employee_email" id="employee_email" value="aksenov@gmail.com">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_comm">Комментарий о&nbsp;сотруднике</label>
+					                        					<textarea name="employee_comm" id="employee_comm"></textarea>
+					                        				</div>
+					                        				<button class="button focus">Сохранить</button>
+					                        			</div>
+					                        			<div class="b-tabs_item">
+					                        				<div class="form-line">
+					                        					<label for="employee_login">Логин</label>
+					                        					<input type="text" class="text-input" name="employee_login" id="employee_login" value="aksenov@gmail.com">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_pass">Пароль для входа в&nbsp;АТС</label>
+					                        					<input type="password" class="text-input" name="employee_pass" id="employee_pass">
+					                        					<button class="button right">Сменить пароль</button>
+					                        				</div>
+					                        				<div class="form-line disabled">
+					                        					<label for="employee_new-pass">Новый пароль</label>
+					                        					<input type="password" class="text-input" name="employee_new-pass" id="employee_new-pass" disabled>
+					                        				</div>
+					                        				<button class="button focus">Сохранить</button>
+					                        			</div>
+					                        		</div>
+					                        	</div>
+											</div>
+										</div>
+									</div>
+								</td>
+								<td>
+									<span class="icon warning"></span>
+								</td>
+								<td>
+									<span class="nowrap">+7 931 354-40-20</span>
+								</td>
+								<td>
+									<a href="#">Статистика</a>
+								</td>
+								<td class="cell_staff-comm">
+									&nbsp;
+								</td>
+							</tr>
+							<tr>
+								<td class="cell_staff-stat">
+									<span class="icon online-circle"></span>
+								</td>
+								<td class="cell_staff-sub-num">
+									<span class="cl_blue">114</span>
+								</td>
+								<td>
+									<div class="dropdown">
+										<button class="link dropdown-toggle">Аксенов Владимир</button>
+										<div class="dropdown-container">
+											<div class="dropdown-container_inner">
+												<div class="b-tabs">
+					                        		<div class="b-tabs_btns">
+					                        			<button>Сотрудник</button>
+					                            		<button>Настройки входа</button>
+					                        		</div>
+					                        		<div class="b-tabs_inner">
+					                        			<div class="b-tabs_item">
+					                        				<div class="form-line">
+					                        					<label for="employee_name">Имя и&nbsp;фамилия</label>
+					                        					<input type="text" class="text-input" name="employee_name" id="employee_name">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_num">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+					                        					<input type="text" class="text-input" name="employee_num" id="employee_num">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_queue">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+					                        					<select class="select" name="employee_queue" id="employee_queue">
+					                        						<option>Без очереди</option>
+					                        					</select>
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_email">Электронная почта (для уведомлений и&nbsp;входа в&nbsp;АТС)</label>
+					                        					<input type="text" class="text-input" name="employee_email" id="employee_email" value="aksenov@gmail.com">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_comm">Комментарий о&nbsp;сотруднике</label>
+					                        					<textarea name="employee_comm" id="employee_comm"></textarea>
+					                        				</div>
+					                        				<button class="button focus">Сохранить</button>
+					                        			</div>
+					                        			<div class="b-tabs_item">
+					                        				<div class="form-line">
+					                        					<label for="employee_login">Логин</label>
+					                        					<input type="text" class="text-input" name="employee_login" id="employee_login" value="aksenov@gmail.com">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_pass">Пароль для входа в&nbsp;АТС</label>
+					                        					<input type="password" class="text-input" name="employee_pass" id="employee_pass">
+					                        					<button class="button right">Сменить пароль</button>
+					                        				</div>
+					                        				<div class="form-line disabled">
+					                        					<label for="employee_new-pass">Новый пароль</label>
+					                        					<input type="password" class="text-input" name="employee_new-pass" id="employee_new-pass" disabled>
+					                        				</div>
+					                        				<button class="button focus">Сохранить</button>
+					                        			</div>
+					                        		</div>
+					                        	</div>
+											</div>
+										</div>
+									</div>
+								</td>
+								<td>
+									123-45-67
+								</td>
+								<td>
+									<span class="nowrap">+7 931 354-40-20</span>
+								</td>
+								<td>
+									<a href="#">Статистика</a>
+								</td>
+								<td class="cell_staff-comm">
+									&nbsp;
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="b-staff">
+				<p class="h3">
+					Сотрудники вне очереди <sup>2</sup>
+				</p>
+				<div class="b-staff_heading">
+					<div class="b-staff_heading-item">
+						<div class="dropdown">
+							<button class="dropdown-toggle">
+								<p>
+									<a href="#">Распределение звонков в очереди</a>
+								</p>
+								<p>
+									Последовательно
+								</p>
+							</button>
+							<div class="dropdown-container">
+								<div class="dropdown-container_inner">
+									<div class="dd-add">
+										<p class="dd-add_title">
+											Принцип распеределения звонков в очереди
+										</p>
+										<div class="dd-add_cols">
+											<div class="dd-add_cols-item">
+												<div class="dd-add_block">
+													<input type="radio" class="radio" name="dd-rout" id="dd-rout-1">
+													<label for="dd-rout-1">
+														<p class="radio-label_title">
+															Последовательно
+														</p>
+														<p class="radio-label_info">
+															Последовательный набор номеров сотрудников.<br>
+															Позволяет направлять звонки в&nbsp;первую очередь наиболее
+															компетентным по&nbsp;тематике обращения сотрудникам.
+														</p>
+													</label>
+												</div>
+												<div class="dd-add_block">
+													<input type="radio" class="radio" name="dd-rout" id="dd-rout-4">
+													<label for="dd-rout-4">
+														<p class="radio-label_title">
+															Одновременно всем
+														</p>
+														<p class="radio-label_info">
+															Вызов поступает одновременно всем свободным операторам.<br>
+															Основная задача, которую решает этот принцип распределения вызовов&nbsp;&mdash; свести к&nbsp;минимуму время ожидания на&nbsp;линии.
+														</p>
+													</label>
+												</div>
+											</div>
+											<div class="dd-add_cols-item">
+												<div class="dd-add_block">
+													<input type="radio" class="radio" name="dd-rout" id="dd-rout-2">
+													<label for="dd-rout-2">
+														<p class="radio-label_title">
+															Случайным образом
+														</p>
+														<p class="radio-label_info">
+															Выбор этого типа распределения звонков позволяет создать равную нагрузку на&nbsp;сотрудников.
+														</p>
+													</label>
+												</div>
+												<div class="dd-add_block">
+													<input type="radio" class="radio" name="dd-rout" id="dd-rout-5">
+													<label for="dd-rout-5">
+														<p class="radio-label_title">
+															Равномерно всем
+														</p>
+														<p class="radio-label_info">
+															Входящий звонок направляется на&nbsp;сотрудника, предыдущий разговор которого с&nbsp;клиентом был раньше, чем у&nbsp;других, затем на&nbsp;второго по&nbsp;списку, и&nbsp;так далее по&nbsp;всем остальным сотрудникам.
+														</p>
+													</label>
+												</div>
+											</div>
+											<div class="dd-add_cols-item">
+												<div class="dd-add_block">
+													<input type="radio" class="radio" name="dd-rout" id="dd-rout-3">
+													<label for="dd-rout-3">
+														<p class="radio-label_title">
+															Параллельно по приоритету
+														</p>
+														<p class="radio-label_info">
+															Cначала одновременно звонят телефоны всех сотрудников, обладающих наивысшей квалификацией.<br>
+															Если никто не&nbsp;поднял трубку, звонки переводятся сотрудникам с&nbsp;меньшей квалификаций и&nbsp;так далее.
+														</p>
+													</label>
+												</div>
+											</div>
+										</div>
+										<button class="button focus">Сохранить</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="b-staff_heading-item">
+						<div class="dropdown">
+							<button class="dropdown-toggle">
+								<p>
+									<a href="#">Удержание вызовов</a>
+								</p>
+								<p>
+									По настройкам АТС
+								</p>
+							</button>
+							<div class="dropdown-container">
+								<div class="dropdown-container_inner">
+									<div class="dd-add">
+										<p class="dd-add_title">
+											Удержание вызовов (постановка вызовов в&nbsp;очередь) позволяет не&nbsp;потерять звонок клиента, если все операторы заняты.
+										</p>
+										<div class="dd-add_block">
+											<input type="radio" class="radio" name="dd-ats" id="dd-ats-1">
+											<label for="dd-ats-1">Использовать общие настройки удержания вызовов АТС</label>
+										</div>
+										<div class="dd-add_block">
+											<input type="radio" class="radio" name="dd-ats" id="dd-ats-2">
+											<label for="dd-ats-2">Использовать специальные настройки удержания для этой очереди</label>
+										</div>
+										<button class="button focus">Сохранить</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="b-staff_heading-item settings">
+						<div class="dropdown">
+							<button class="dropdown-toggle">
+								<p>
+									Общие настройки<br>
+									очереди
+								</p>
+							</button>
+							<div class="dropdown-container">
+								<div class="dropdown-container_inner">
+									<div class="dd-add">
+										<p class="dd-add_title">
+											Параметры очереди
+										</p>
+										<div class="dd-add_block">
+											<label class="label">Название очереди</label>
+											<input type="text" class="text-input" value="Отдел продаж">
+										</div>
+										<div class="dd-add_block">
+											<label class="label">Внутренний номер (от 2 до 5 цифр)</label>
+											<input type="text" class="text-input sub-num-input" value="23">
+										</div>
+										<div class="dd-add_block">
+											<label class="label">Мелодия, во время ожидания оператора</label>
+											<select class="select">
+												<option>Amelie</option>
+											</select>
+											<span class="dropdown">
+												<div class="link dropdown-toggle">
+													<span class="fa fa-play-circle"></span>
+												</div>
+												<div class="dropdown-container">
+													<div class="dropdown-container_inner">
+														<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+													</div>
+												</div>
+											</span>
+										</div>
+										<div class="clearfix">
+											<button class="button focus right">Сохранить</button>
+											<button class="button del right">Удалить очередь</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="b-content">
+					<table>
+						<thead>
+							<th class="cell_staff-stat">Статус</th>
+							<th class="cell_staff-sub-num">Доб.</th>
+							<th>Имя</th>
+							<th>Рабочий</th>
+							<th>Личный</th>
+							<th></th>
+							<th class="cell_staff-sub-num">Комментарий</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="cell_staff-stat">
+									<span class="icon online-circle"></span>
+								</td>
+								<td class="cell_staff-sub-num">
+									<span class="cl_blue">111</span>
+								</td>
+								<td>
+									<div class="dropdown">
+										<button class="link dropdown-toggle">Аксенов Владимир</button>
+										<div class="dropdown-container">
+											<div class="dropdown-container_inner">
+												<div class="b-tabs">
+					                        		<div class="b-tabs_btns">
+					                        			<button>Сотрудник</button>
+					                            		<button>Настройки входа</button>
+					                        		</div>
+					                        		<div class="b-tabs_inner">
+					                        			<div class="b-tabs_item">
+					                        				<div class="form-line">
+					                        					<label for="employee_name">Имя и&nbsp;фамилия</label>
+					                        					<input type="text" class="text-input" name="employee_name" id="employee_name">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_num">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+					                        					<input type="text" class="text-input" name="employee_num" id="employee_num">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_queue">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+					                        					<select class="select" name="employee_queue" id="employee_queue">
+					                        						<option>Без очереди</option>
+					                        					</select>
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_email">Электронная почта (для уведомлений и&nbsp;входа в&nbsp;АТС)</label>
+					                        					<input type="text" class="text-input" name="employee_email" id="employee_email" value="aksenov@gmail.com">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_comm">Комментарий о&nbsp;сотруднике</label>
+					                        					<textarea name="employee_comm" id="employee_comm"></textarea>
+					                        				</div>
+					                        				<button class="button focus">Сохранить</button>
+					                        			</div>
+					                        			<div class="b-tabs_item">
+					                        				<div class="form-line">
+					                        					<label for="employee_login">Логин</label>
+					                        					<input type="text" class="text-input" name="employee_login" id="employee_login" value="aksenov@gmail.com">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_pass">Пароль для входа в&nbsp;АТС</label>
+					                        					<input type="password" class="text-input" name="employee_pass" id="employee_pass">
+					                        					<button class="button right">Сменить пароль</button>
+					                        				</div>
+					                        				<div class="form-line disabled">
+					                        					<label for="employee_new-pass">Новый пароль</label>
+					                        					<input type="password" class="text-input" name="employee_new-pass" id="employee_new-pass" disabled>
+					                        				</div>
+					                        				<button class="button focus">Сохранить</button>
+					                        			</div>
+					                        		</div>
+					                        	</div>
+											</div>
+										</div>
+									</div>
+								</td>
+								<td>
+									123-45-67
+								</td>
+								<td>
+									<span class="nowrap">+7 931 354-40-20</span>
+								</td>
+								<td>
+									<a href="#">Статистика</a>
+								</td>
+								<td class="cell_staff-comm">
+									&nbsp;
+								</td>
+							</tr>
+							<tr>
+								<td class="cell_staff-stat">
+									<span class="icon online-circle"></span>
+								</td>
+								<td class="cell_staff-sub-num">
+									<span class="cl_blue">112</span>
+								</td>
+								<td>
+									<div class="dropdown">
+										<button class="link dropdown-toggle">Васильев Иван</button>
+										<div class="dropdown-container">
+											<div class="dropdown-container_inner">
+												<div class="b-tabs">
+					                        		<div class="b-tabs_btns">
+					                        			<button>Сотрудник</button>
+					                            		<button>Настройки входа</button>
+					                        		</div>
+					                        		<div class="b-tabs_inner">
+					                        			<div class="b-tabs_item">
+					                        				<div class="form-line">
+					                        					<label for="employee_name">Имя и&nbsp;фамилия</label>
+					                        					<input type="text" class="text-input" name="employee_name" id="employee_name">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_num">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+					                        					<input type="text" class="text-input" name="employee_num" id="employee_num">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_queue">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+					                        					<select class="select" name="employee_queue" id="employee_queue">
+					                        						<option>Без очереди</option>
+					                        					</select>
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_email">Электронная почта (для уведомлений и&nbsp;входа в&nbsp;АТС)</label>
+					                        					<input type="text" class="text-input" name="employee_email" id="employee_email" value="aksenov@gmail.com">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_comm">Комментарий о&nbsp;сотруднике</label>
+					                        					<textarea name="employee_comm" id="employee_comm"></textarea>
+					                        				</div>
+					                        				<button class="button focus">Сохранить</button>
+					                        			</div>
+					                        			<div class="b-tabs_item">
+					                        				<div class="form-line">
+					                        					<label for="employee_login">Логин</label>
+					                        					<input type="text" class="text-input" name="employee_login" id="employee_login" value="aksenov@gmail.com">
+					                        				</div>
+					                        				<div class="form-line">
+					                        					<label for="employee_pass">Пароль для входа в&nbsp;АТС</label>
+					                        					<input type="password" class="text-input" name="employee_pass" id="employee_pass">
+					                        					<button class="button right">Сменить пароль</button>
+					                        				</div>
+					                        				<div class="form-line disabled">
+					                        					<label for="employee_new-pass">Новый пароль</label>
+					                        					<input type="password" class="text-input" name="employee_new-pass" id="employee_new-pass" disabled>
+					                        				</div>
+					                        				<button class="button focus">Сохранить</button>
+					                        			</div>
+					                        		</div>
+					                        	</div>
+											</div>
+										</div>
+									</div>
+								</td>
+								<td>
+									765-43-21
+								</td>
+								<td>
+									<span class="nowrap">+7 931 354-40-20</span>
+								</td>
+								<td>
+									<a href="#">Статистика</a>
+								</td>
+								<td class="cell_staff-comm">
+									Новичек, проверить 22 статистику
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<span class="left"><span class="fa fa-copyright"></span> 2015 Виртуальная АТС</span>
+			<span class="left">Коммерческий отдел: (8 812) 123-45-67</span>
+			<span class="left">Техподдержка: (8 812) 765-43-21</span>
+			<a href="http://aidem.ru/" target="_blank" class="right">Сделано в <img src="/img/logo-aidem.png" alt="Aidem — проектирование и дизайн интерфейсов"></a>
+		</footer>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="/js/scripts.js"></script>
+	<script src="/js/jsrender.min.js"></script>
+	<script src="/js/jquery.jplayer.min.js"></script>
+	<script src="/js/jquery.pickmeup.min.js"></script>
+	<script src="/js/jquery.formstyler.min.js"></script>
+	<!-- Templates -->
+	<script id="audioPlayer" type="text/x-jsrender">
+		<div id="jp_container_{{:id}}" class="jp-audio">
+			<div class="jp-duration-line">
+				<span class="jp-current-time"></span>/<span class="jp-duration"></span>
+			</div>
+			<div class="jp-controll-line">
+				<button class="jp-play fa fa-play"></button>
+				<button class="jp-pause fa fa-pause"></button>
+				<div class="jp-seek-bar">
+					<div class="jp-play-bar"></div>
+				</div>
+			</div>
+			<div class="jp-controll-line">
+				<button class="jp-mute fa fa-volume-up"></button>
+				<button class="jp-unmute fa fa-volume-off"></button>
+				<div class="jp-volume-bar">
+					<div class="jp-volume-bar-value"></div>
+				</div>
+			</div>
+		</div>
+	</script>
+	<script id="phoneFunc" type="text/x-jsrender">
+		<div class="phone-func">
+			<input 
+				type="text"
+				id="phone-func_name-input-{{:id}}"
+				class="phone-func_name-input text-input {{if name}}not-empty{{/if}}"
+				value="{{:name}}"
+			>
+			<div class="phone-func_num {{if missed}}cl_red{{/if}}">{{:phone}}</div>
+			{{if name}}
+		      	<div class="phone-func_name">{{:name}}</div>
+		   	{{/if}}
+			<div class="phone-func_btns">
+				<button class="link fa fa-phone"></button>
+				<button class="link icon fax__blue"></button>
+				<button class="link fa fa-list-ul"></button>
+				<label for="phone-func_name-input-{{:id}}" class="link fa fa-user-plus"></label>
+			</div>
+		</div>
+	</script>
+</body>
+</html>

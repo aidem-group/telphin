@@ -13,8 +13,8 @@ a, .link {
 	color: $cl_blue;
 
 	&:hover {
-		border-color: $cl_blue_2;
-		color: $cl_blue_2;
+		border-color: $cl_orange;
+		color: #888;
 	}
 
 	&.focus {
@@ -23,8 +23,9 @@ a, .link {
 		color: #fff;
 
 		&:hover {
-			background-color: $cl_blue_2;
-			border-color: $cl_blue_2;
+			background-color: $cl_yellow;
+			border-color: $cl_yellow;
+			color: #666;
 		}
 	}
 
@@ -32,6 +33,22 @@ a, .link {
 		background-color: $cl_yellow;
 		border-color: $cl_yellow;
 		color: #000;
+	}
+
+	&.disabled {
+		color: $cl_grey_2 !important;
+		border-color: $cl_grey_2 !important;
+	}
+
+	&.del {
+		color: $cl_red;
+		border-color: $cl_red;
+
+		&:hover {
+			color: #fff;
+			background-color: $cl_red;
+			border-color: $cl_red;
+		}
 	}
 }
 
@@ -67,7 +84,7 @@ a, .link {
 		&-item {
 			border-color: #fff;
 
-			&:hover { background-color: #8163ac; }
+			&:hover { background-color: $cl_blue_2; }
 		}
 	}
 
@@ -89,10 +106,11 @@ a, .link {
 			}
 
 			&-status {
-				color: #9cffd4;
-				border-color: #9cffd4;
+				color: $cl_green;
+				border-color: $cl_green;
+				background-color: #fff;
 
-				&:before { background-color: #9cffd4; }
+				&:before { background-color: $cl_green; }
 
 				&.offline {
 					color: $cl_red;
@@ -136,6 +154,7 @@ a, .link {
 		&:focus {
 			border-color: #e7b60d;
 			border-right-color: transparent;
+			background-color: #fff;
 		}
 	}
 
@@ -144,7 +163,8 @@ a, .link {
 		color: #fff;
 
 		&:hover {
-			background-color: $cl_blue_2;
+			background-color: $cl_yellow;
+			color: #666;
 		}
 	}
 }
@@ -185,8 +205,8 @@ a, .link {
 		border-color: $cl_blue;
 
 		&:hover {
-			color: $cl_blue_2;
-			border-color: $cl_blue_2;
+			color: #888;
+			border-color: $cl_orange;
 		}
 	}
 }
@@ -273,6 +293,32 @@ a, .link {
 				border-bottom-color: $cl_blue;
 			}
 		}
+
+		&:hover {
+			.jq-selectbox__select {
+				border-color: $cl_orange;
+			}
+
+			.jq-selectbox__select-text,
+			.jq-selectbox__trigger-arrow {
+				color: #888;
+				border-right-color: #888;
+				border-bottom-color: #888;
+			}
+		}
+
+		&.opened {
+			.jq-selectbox__select {
+				border-color: $cl_orange;
+			}
+
+			.jq-selectbox__select-text,
+			.jq-selectbox__trigger-arrow {
+				color: #888;
+				border-right-color: #888;
+				border-bottom-color: #888;
+			}
+		}
 	}
 }
 
@@ -307,8 +353,8 @@ table {
 		border-color: $cl_blue;
 
 		&:hover {
-			color: $cl_blue_2;
-			border-color: $cl_blue_2;
+			color: #888;
+			border-color: $cl_orange;
 		}
 
 		&.current {

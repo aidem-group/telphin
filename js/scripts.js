@@ -5,12 +5,25 @@ $(function(){
 
 	$('.dropdown-toggle').on('click', dropdown);
 	$('.header_btn-user-status').on('click', function(){$(this).toggleClass('offline');});
+    $('#routing-date').on('change', selectRoutingPeriod);
     $(document).on('click', 'a[href*=#]', anchorLinksHandler);
     $(document).on('click', '.b-unrolling_toggle', unrollingBlock);
 
     $('.select').styler();
     $('.date').pickmeup({flat: true, mode: 'range', calendars: 2});
 });
+
+function selectRoutingPeriod()
+{
+    var self = $(this);
+    var parent = self.closest('.routing-date');
+    var variables = parent.find('.routing-date_variables > div');
+
+    variables
+        .addClass('hidden')
+        .eq(self.val() - 1)
+        .removeClass('hidden');
+}
 
 function unrollingBlock()
 {
@@ -23,6 +36,7 @@ function unrollingBlock()
     if(block.hasClass('active')){
         block.removeClass('active').css('min-height', 0);
     } else {
+        $('.b-unrolling').removeClass('active').css('min-height', 0);
         block.addClass('active').css('min-height', unrollHeight);
     }
 }
@@ -120,9 +134,16 @@ function dropdown()
     var toggle = $(this);
     var wrapper = toggle.parent();
     var container = toggle.siblings('.dropdown-container');
+    var block = container.children();
+    var blockH = block.outerHeight();
 
-    var left = wrapper.offset().left + wrapper.outerWidth()/2;
-    var right = $('.main-wrapper').innerWidth() - left
+    var pageSize = {
+        width: $('.main-wrapper').innerWidth(),
+        height: $('.main-wrapper').innerHeight()
+    }
+
+    var left = wrapper.offset().left - $('.main-wrapper').offset().left + wrapper.outerWidth()/2;
+    var right = pageSize.width - left
     var containerHalfWidth = container.outerWidth()/2;
 
     if(!container.hasClass('proc')){
@@ -142,11 +163,19 @@ function dropdown()
         container.addClass('dropdown-container__right');
     }
 
+    if(container.offset().top + blockH > pageSize.height){
+        container.addClass('on-top');
+        block.css({top: -blockH});
+    }
+
     if(container.hasClass('open')) {
         wrapper.removeClass('active');
         container.removeClass('open');
     } else {
-        $('.dropdown-container.open').removeClass('open');
+        if(toggle.parents('.dropdown').length == 1){
+            $('.dropdown-container.open').removeClass('open');
+            $('.dropdown.active').removeClass('active');
+        }
         wrapper.toggleClass('active');
         container.addClass('proc').toggleClass('open');
     }

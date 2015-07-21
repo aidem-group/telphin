@@ -1,0 +1,153 @@
+.p-staff {
+	&_header {
+		margin-bottom: 60px;
+
+		& > p {
+			@include font-size(18);
+			margin-bottom: 24px;
+		}
+
+		.table { margin-bottom: 24px; }
+
+		.row_cell-4,
+		.row_cell {
+			white-space: nowrap;
+			padding: 0 20px;
+			border-bottom: 1px solid #fff;
+		}
+
+		.search-line { width: 100%; }
+
+		.dropdown { margin-right: 10px; }
+	}
+}
+
+.staff_btns {
+	@include clearfix;
+
+	a {
+		display: inline-block;
+		margin-bottom: 10px;
+	}
+}
+
+.staff.row {
+	@media all and (max-width: 1199px) {
+		.row_cell-1 { display: none; }
+	}
+}
+
+.b-staff {
+	padding: 0 40px;
+	margin-bottom: 70px;
+
+	&_heading {
+		@include clearfix;
+		margin-bottom: 10px;
+
+		&-item {
+			float: left;
+			margin-right: 10px;
+
+			&.settings {
+				float: right;
+				margin-right: 0;
+
+				& > .dropdown {
+					& > .dropdown-toggle {
+						position: relative;
+						padding-left: 56px;
+						color: $cl_blue;
+
+						&:before {
+							content: '';
+							display: block;
+							position: absolute;
+							width: 32px;
+							height: 32px;
+							background: url("/img/sprite.png") no-repeat;
+							left: 12px;
+							top: 13px;
+							background-position: -111px -63px;
+						}
+					}
+
+					&.active {
+						.dropdown-toggle {
+							color: #444;
+							background-color: $cl_yellow;
+
+							&:before {
+								background-position: -1px -1px;
+							}
+						}
+					}
+				}
+			}
+
+			p {
+				margin-bottom: 0;
+				line-height: 1.4;
+			}
+
+			& > .dropdown {
+				& > .dropdown-toggle {
+					@include border-radius(4px);
+					@include font-size(14);
+					text-align: left;
+					background-color: 0;
+					padding: 10px 14px;
+					background-color: #fff;
+					border: 0;
+				}
+
+				&.active {
+					& > .dropdown-toggle {
+						background-color: $cl_yellow;
+					}
+				}
+			}
+
+		}
+	}
+
+	.b-content {
+		table {
+			td {
+				@include font-size(16);
+				padding-top: 14px;
+				padding-bottom: 14px;
+				width: 10%;
+
+				.dropdown {
+					& > .dropdown-toggle {
+						@include font-size(16);
+						text-align: left;
+						white-space: nowrap;
+					}
+				}
+
+				.icon {
+					vertical-align: middle;
+				}
+			}
+
+			.cell_staff-stat,
+			.cell_staff-sub-num {
+				width: 1%;
+			}
+
+			.cell_staff-stat {
+				text-align: center;
+			}
+
+			.cell_staff-comm {
+				width: 30%;
+			}
+
+			.b-tabs {
+				width: 600px;
+			}
+		}
+	}
+}

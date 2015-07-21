@@ -1,6 +1,5 @@
 .header {
 	height: 72px;
-	border-bottom: 2px solid;
 
 	&_logo {
 		@include font-size(28);
@@ -146,6 +145,8 @@
 				width: 35px;
 				height: 30px;
 				background-position: -66px -1px;
+				float: left;
+				margin-top: 10px;
 			}
 
 			&.active {
@@ -176,7 +177,10 @@
 
 			&-name {
 				display: inline-block;
+				float: left;
 				height: 16px;
+				line-height: 16px;
+				margin-top: 26px;
 				cursor: pointer;
 
 				&:after {
@@ -237,32 +241,32 @@
 			}
 
 			&:hover:before {
-				background-position: -34px -1px;
+				background-position: -111px -96px;
 			}
 		}
 	}
+}
 
-	.b-tabs {
-		width: 600px;
+.b-tabs {
+	width: 600px;
 
-		.form-line { margin-bottom: 30px; }
+	.form-line { margin-bottom: 30px; }
 
-		label {
-			display: block;
-			margin-bottom: 6px;
-		}
+	label {
+		display: block;
+		margin-bottom: 6px;
+	}
 
-		input {
-			width: 400px;
-		}
+	input {
+		width: 400px;
+	}
 
-		.button.focus,
-		.button.right {
-			margin-top: -10px;
-		}
+	.button.focus,
+	.button.right {
+		margin-top: -10px;
+	}
 
-		.disabled {
-			label { opacity: .2; }
-		}
+	.disabled {
+		label { opacity: .2; }
 	}
 }

@@ -1,0 +1,159 @@
+﻿.p-settings {
+	padding-bottom: 0;
+}
+
+.b-settings {
+	@include clearfix;
+	margin: -5px;
+	margin-top: -16px;
+
+	.row > div {
+		padding: 5px;
+
+		& > a {
+			color: #000;
+		}
+	}
+
+	.num-circle {
+		@include border-radius(20px);
+		@include font-size(12);
+		display: inline-block;
+		text-align: center;
+		vertical-align: text-bottom;
+		min-width: 18px;
+		height: 18px;
+		line-height: 18px;
+		border: 1px solid #ddd;
+		margin-left: 4px;
+	}
+
+	.row_cell-6 {
+		.type-1 {
+			.b-settings_body {
+				padding-bottom: 14px;
+				border-bottom: 1px solid $cl_grey_0;
+			}
+
+			.dep {
+				margin-bottom: 10px;
+
+				.icon {
+					position: relative;
+					top: 2px;
+				}
+
+				.tel {
+					margin: 0 10px;
+				}
+			}
+		}
+	}
+
+	.b-content {
+		@include clearfix;
+		@include box-sizing;
+		margin-bottom: 10px;
+		padding: 26px;
+
+		&.type-1 {
+			height: 572px;
+		}
+
+		&.type-2 {
+			min-height: 214px;
+
+			&-1 {
+				min-height: 280px;
+			}
+
+			a {
+				margin-right: 12px;
+
+				&:not(.button) {
+					display: inline-block;
+					position: relative;
+					top: 2px;
+				}
+			}
+		}
+
+		&.type-3 {
+			position: relative;
+			height: 130px;
+
+			p {
+				@include font-size(14);
+				line-height: 1.4;
+				position:relative;
+				width: 150px;
+				z-index: 2;
+			}
+
+			.right {
+				position: absolute;
+				bottom: 0;
+				right: 10px;
+				z-index: 1;
+			}
+		}
+
+		&:last-child { margin: 0; }
+
+		.staff {
+			& > div {
+				padding: 0;
+
+				&.row_cell-1 {
+					a {
+						@include border-radius(3px);
+						overflow: hidden;
+						display: block;
+						margin-bottom: 10px;
+					}
+				}
+			}
+
+			.button {
+				margin-bottom: 10px;
+			}
+
+			&_btns {
+				text-align: right;
+				padding-top: 30px;
+			}
+		}
+	}
+
+	&_title {
+		padding-bottom: 16px;
+		border-bottom: 1px solid $cl_grey_0;
+
+		a {
+			@include font-size(23);
+			line-height: 1.1;
+			margin-bottom: 10px;
+			text-transform: uppercase;
+			display: inline-block;
+		}
+
+		p {
+			@include font-size(16);
+			margin-bottom: 10px;
+		}
+	}
+
+	&_body {
+		padding-top: 16px;
+
+		p {
+			@include font-size(16);
+			line-height: 1.4;
+			margin-bottom: 14px;
+		}
+
+		.question {
+			margin-bottom: 13px;
+		}
+	}
+}
