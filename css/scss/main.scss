@@ -58,6 +58,7 @@ h4, .h4 {
 	margin-bottom: 8px;
 }
 
+select { display: none; }
 
 .text-bold { font-weight: 600; }
 .text-italic { font-style: italic; }
@@ -77,6 +78,7 @@ h4, .h4 {
 .cl_orange { color: $cl_orange; }
 .cl_yellow { color: $cl_yellow; }
 .cl_red { color: $cl_red; }
+.cl_green { color: $cl_green; }
 
 .prev-page {
 	display: inline-block;
@@ -749,7 +751,7 @@ table {
 
 		.fa {
 			color: #0abc6f;
-			top: 5px;
+			top: 3px;
 		}
 	}
 
@@ -765,7 +767,7 @@ table {
 
 		.fa {
 			color: #df4d41;
-			top: 6px;
+			top: 4px;
 			padding: 0;
 			width: auto;
 		}
@@ -792,16 +794,16 @@ table {
 	&.active {
 		.dropdown-toggle {
 			border-color: $cl_orange;
-			color: #888;
+			color: $cl_orange;
 
 			&:after {
-				border-right-color: #888;
-				border-bottom-color: #888;
+				border-right-color: $cl_orange;
+				border-bottom-color: $cl_orange;
 			}
 		}
 
 		.date-picker_date-text {
-			color: #888;
+			color: $cl_orange;
 		}
 	}
 
@@ -831,15 +833,15 @@ table {
 
 		&:hover {
 			border-color: $cl_orange;
-			color: #888;
+			color: $cl_orange;
 
 			&:after {
-				border-right-color: #888;
-				border-bottom-color: #888;
+				border-right-color: $cl_orange;
+				border-bottom-color: $cl_orange;
 			}
 
 			.date-picker_date-text {
-				color: #888;
+				color: $cl_orange;
 			}
 		}
 	}
@@ -865,6 +867,7 @@ table {
 
 .dd-add {
 	@include font-size(16);
+	position: relative;
 	min-width: 400px;
 	padding-right: 40px;
 
@@ -912,7 +915,21 @@ table {
 	}
 
 	&_block {
+		position: relative;
 		margin-bottom: 30px;
+
+		&.wrong-input {
+			.text-input {
+				border-color: $cl_red;
+			}
+
+			.wrong-input_text {
+				@include font-size(14);
+				display: inline-block;
+				margin-top: 8px;
+				color: $cl_red;
+			}
+		}
 
 		.sub-num-input {
 			width: 100px;
@@ -931,6 +948,8 @@ table {
 			.fa {
 				@include font-size(24);
 				color: $cl_blue;
+
+				&:hover { color: $cl_orange; }
 			}
 		}
 
@@ -961,6 +980,53 @@ table {
 						line-height: 1.4;
 					}
 				}
+			}
+		}
+	}
+
+	&__confirm {
+		width: 500px;
+		padding-right: 0;
+
+		p {
+			line-height: 1.4;
+			margin-bottom: 8px;
+		}
+
+		.dd-add_block {
+			margin-bottom: 20px;
+		}
+
+		.b-btns {
+			a, .buttons { @include font-size(14); }
+
+			a {
+				display: inline-block;
+				height: 36px;
+				line-height: 36px;
+				float: right;
+				margin-top: 30px;
+			}
+
+			.button { margin-right: 14px; }
+		}
+
+		.bottom {
+			@include border-radius(0 0 4px 4px);
+			position: relative;
+			margin: 30px -20px -20px;
+			padding: 30px 60px 30px 20px;
+			background-color: $cl_grey_2;
+
+			&:before {
+				content: '';
+				position: absolute;
+				right: 76px;
+				bottom: 100%;
+				border-width: 15px 18px;
+				border-style: solid;
+				border-color: transparent;
+				border-bottom-color: $cl_grey_2;
 			}
 		}
 	}

@@ -11,7 +11,17 @@ $(function(){
 
     $('.select').styler();
     $('.date').pickmeup({flat: true, mode: 'range', calendars: 2});
+    $('.add-new-person').on('submit', checkPersonData);
 });
+
+function checkPersonData()
+{
+    var template = $.templates("#personAdded");
+    var htmlOutput = template.render({});
+    $(this).parent().replaceWith(htmlOutput);
+
+    return false;
+}
 
 function selectRoutingPeriod()
 {
@@ -57,23 +67,19 @@ function initPhoneFunc()
 
 function initTabsBlock()
 {
-    var block = {};
-    var buttons = {};
-    var tabs = {};
-
     $('.b-tabs').each(function(){
-        block = $(this);
-        buttons = block.children('.b-tabs_btns').children();
-        tabs = block.children('.b-tabs_inner').children('.b-tabs_item');
+        var block = $(this);
+        var buttons = block.children('.b-tabs_btns').children();
+        var tabs = block.find('.b-tabs_item');
 
         buttons.bind('click', function(){
-            changeTab($(this).index());
+            changeTab(buttons, tabs, $(this).index());
         });
 
-        changeTab(0);
+        changeTab(buttons, tabs, 0);
     });
 
-    function changeTab( index )
+    function changeTab( buttons, tabs, index )
     {
         buttons
             .removeClass('button active')

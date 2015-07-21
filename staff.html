@@ -120,29 +120,32 @@
 								<p class="dd-add_title">
 									Добавление нового сотрудника
 								</p>
-								<div class="dd-add_block">
-									<label class="label text-bold">Укажите имя и фамилию сотрудника</label>
-									<input type="text" class="text-input" placeholder="Например, Константин Константинопольский">
-								</div>
-								<div class="dd-add_block">
-									<label class="label">Присвойте ему внутренний номер (от 2 до 5 цифр)</label>
-									<input type="text" class="text-input">
-								</div>
-								<div class="dd-add_block">
-									<label class="label">Выберите очередь, в которой он работает</label>
-									<select class="select">
-										<option>Не выбрано</option>
-									</select>
-								</div>
-								<div class="dd-add_block">
-									<label class="label">Электронная почта (для  уведомлений и входа в АТС)</label>
-									<input type="text" class="text-input">
-								</div>
-								<div class="dd-add_block">
-									<label class="label">Пароль для входа в АТС</label>
-									<input type="text" class="text-input">
-								</div>
-								<button class="button focus">Продолжить</button>
+								<form method="POST" action="" class="add-new-person">
+									<div class="dd-add_block">
+										<label class="label text-bold">Укажите имя и фамилию сотрудника</label>
+										<input type="text" class="text-input" name="name" placeholder="Например, Константин Константинопольский">
+									</div>
+									<div class="dd-add_block wrong-input">
+										<label class="label">Присвойте ему внутренний номер (от 2 до 5 цифр)</label>
+										<input type="text" class="text-input" name="sub-num">
+										<span class="wrong-input_text">Такой номер уже занят</span>
+									</div>
+									<div class="dd-add_block">
+										<label class="label">Выберите очередь, в которой он работает</label>
+										<select class="select" name="queue">
+											<option>Не выбрано</option>
+										</select>
+									</div>
+									<div class="dd-add_block">
+										<label class="label">Электронная почта (для  уведомлений и входа в АТС)</label>
+										<input type="text" class="text-input" name="mail">
+									</div>
+									<div class="dd-add_block">
+										<label class="label">Пароль для входа в АТС</label>
+										<input type="password" class="text-input" name="password">
+									</div>
+									<button class="button focus" type="submit">Продолжить</button>
+								</form>
 							</div>
 						</div>
 					</div>
@@ -338,7 +341,43 @@
 					</div>
 				</div>
 				<div class="b-content">
-					<button class="button focus">Добавить сотрудника</button>
+					<div class="dropdown">
+						<button class="button focus dropdown-toggle">Добавить сотрудника</button>
+						<div class="dropdown-container">
+							<div class="dropdown-container_inner">
+								<div class="dd-add">
+									<p class="dd-add_title">
+										Добавление нового сотрудника
+									</p>
+									<form method="POST" action="" class="add-new-person">
+										<div class="dd-add_block">
+											<label class="label text-bold">Укажите имя и фамилию сотрудника</label>
+											<input type="text" class="text-input" name="name" placeholder="Например, Константин Константинопольский">
+										</div>
+										<div class="dd-add_block">
+											<label class="label">Присвойте ему внутренний номер (от 2 до 5 цифр)</label>
+											<input type="text" class="text-input" name="sub-num">
+										</div>
+										<div class="dd-add_block">
+											<label class="label">Выберите очередь, в которой он работает</label>
+											<select class="select" name="queue">
+												<option>Не выбрано</option>
+											</select>
+										</div>
+										<div class="dd-add_block">
+											<label class="label">Электронная почта (для  уведомлений и входа в АТС)</label>
+											<input type="text" class="text-input" name="mail">
+										</div>
+										<div class="dd-add_block">
+											<label class="label">Пароль для входа в АТС</label>
+											<input type="password" class="text-input" name="password">
+										</div>
+										<button class="button focus" type="submit">Продолжить</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="b-staff">
@@ -995,6 +1034,43 @@
 							</tr>
 						</tbody>
 					</table>
+					<div class="dropdown">
+						<button class="button focus dropdown-toggle">Добавить сотрудника</button>
+						<div class="dropdown-container">
+							<div class="dropdown-container_inner">
+								<div class="dd-add">
+									<p class="dd-add_title">
+										Добавление нового сотрудника
+									</p>
+									<form method="POST" action="" class="add-new-person">
+										<div class="dd-add_block">
+											<label class="label text-bold">Укажите имя и фамилию сотрудника</label>
+											<input type="text" class="text-input" name="name" placeholder="Например, Константин Константинопольский">
+										</div>
+										<div class="dd-add_block">
+											<label class="label">Присвойте ему внутренний номер (от 2 до 5 цифр)</label>
+											<input type="text" class="text-input" name="sub-num">
+										</div>
+										<div class="dd-add_block">
+											<label class="label">Выберите очередь, в которой он работает</label>
+											<select class="select" name="queue">
+												<option>Не выбрано</option>
+											</select>
+										</div>
+										<div class="dd-add_block">
+											<label class="label">Электронная почта (для  уведомлений и входа в АТС)</label>
+											<input type="text" class="text-input" name="mail">
+										</div>
+										<div class="dd-add_block">
+											<label class="label">Пароль для входа в АТС</label>
+											<input type="password" class="text-input" name="password">
+										</div>
+										<button class="button focus" type="submit">Продолжить</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="b-staff">
@@ -1495,6 +1571,43 @@
 							</tr>
 						</tbody>
 					</table>
+					<div class="dropdown">
+						<button class="button focus dropdown-toggle">Добавить сотрудника</button>
+						<div class="dropdown-container">
+							<div class="dropdown-container_inner">
+								<div class="dd-add">
+									<p class="dd-add_title">
+										Добавление нового сотрудника
+									</p>
+									<form method="POST" action="" class="add-new-person">
+										<div class="dd-add_block">
+											<label class="label text-bold">Укажите имя и фамилию сотрудника</label>
+											<input type="text" class="text-input" name="name" placeholder="Например, Константин Константинопольский">
+										</div>
+										<div class="dd-add_block">
+											<label class="label">Присвойте ему внутренний номер (от 2 до 5 цифр)</label>
+											<input type="text" class="text-input" name="sub-num">
+										</div>
+										<div class="dd-add_block">
+											<label class="label">Выберите очередь, в которой он работает</label>
+											<select class="select" name="queue">
+												<option>Не выбрано</option>
+											</select>
+										</div>
+										<div class="dd-add_block">
+											<label class="label">Электронная почта (для  уведомлений и входа в АТС)</label>
+											<input type="text" class="text-input" name="mail">
+										</div>
+										<div class="dd-add_block">
+											<label class="label">Пароль для входа в АТС</label>
+											<input type="password" class="text-input" name="password">
+										</div>
+										<button class="button focus" type="submit">Продолжить</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="b-staff">
@@ -1839,6 +1952,43 @@
 							</tr>
 						</tbody>
 					</table>
+					<div class="dropdown">
+						<button class="button focus dropdown-toggle">Добавить сотрудника</button>
+						<div class="dropdown-container">
+							<div class="dropdown-container_inner">
+								<div class="dd-add">
+									<p class="dd-add_title">
+										Добавление нового сотрудника
+									</p>
+									<form method="POST" action="" class="add-new-person">
+										<div class="dd-add_block">
+											<label class="label text-bold">Укажите имя и фамилию сотрудника</label>
+											<input type="text" class="text-input" name="name" placeholder="Например, Константин Константинопольский">
+										</div>
+										<div class="dd-add_block">
+											<label class="label">Присвойте ему внутренний номер (от 2 до 5 цифр)</label>
+											<input type="text" class="text-input" name="sub-num">
+										</div>
+										<div class="dd-add_block">
+											<label class="label">Выберите очередь, в которой он работает</label>
+											<select class="select" name="queue">
+												<option>Не выбрано</option>
+											</select>
+										</div>
+										<div class="dd-add_block">
+											<label class="label">Электронная почта (для  уведомлений и входа в АТС)</label>
+											<input type="text" class="text-input" name="mail">
+										</div>
+										<div class="dd-add_block">
+											<label class="label">Пароль для входа в АТС</label>
+											<input type="password" class="text-input" name="password">
+										</div>
+										<button class="button focus" type="submit">Продолжить</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -1846,7 +1996,7 @@
 			<span class="left"><span class="fa fa-copyright"></span> 2015 Виртуальная АТС</span>
 			<span class="left">Коммерческий отдел: (8 812) 123-45-67</span>
 			<span class="left">Техподдержка: (8 812) 765-43-21</span>
-			<a href="http://aidem.ru/" target="_blank" class="right">Сделано в <img src="/img/logo-aidem.png" alt="Aidem — проектирование и дизайн интерфейсов"></a>
+			<a href="http://aidem.ru/" target="_blank" class="right">Design by <img src="/img/logo-aidem.png" alt="Aidem — проектирование и дизайн интерфейсов"></a>
 		</footer>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -1894,6 +2044,44 @@
 				<button class="link icon fax__blue"></button>
 				<button class="link fa fa-list-ul"></button>
 				<label for="phone-func_name-input-{{:id}}" class="link fa fa-user-plus"></label>
+			</div>
+		</div>
+	</script>
+	<script id="personAdded" type="text/x-jsrender">
+		<div class="dd-add dd-add__confirm">
+			<p class="dd-add_title cl_green">
+				Новый сотрудник добавлен!
+			</p>
+			<div class="dd-add_block">
+				<p>
+					Для приема и совершения звонков создана  учетная<br>
+					запись SIP : <span class="text-bold">nikolay@aidem.telphin.ru</span>
+				</p>
+			</div>
+			<div class="dd-add_block">
+				<p>
+					Для входа в АТС
+				</p>
+				<p>
+					Логин: <span class="text-bold">nikolay@gmail.com</span><br>
+					Пароль: <span class="text-bold">322fdkjg</span>
+				</p>
+			</div>
+			<div class="dd-add_block">
+				<p>
+					Домен: <span class="text-bold">aidem.telphin.ru</span><br>
+					Порт: <span class="text-bold">5000</span>
+				</p>
+			</div>
+			<div class="b-btns">
+				<button class="button focus">Сохранить Pdf</button>
+				<button class="button focus">Распечатать</button>
+				<a href="#">Страница сотрудника</a>
+			</div>
+			<div class="bottom">
+			<p>
+				На&nbsp;странице сотрудника в&nbsp;любое время можно отредактировать указанные данные и&nbsp;внести дополнительные настройки.
+			</p>
 			</div>
 		</div>
 	</script>

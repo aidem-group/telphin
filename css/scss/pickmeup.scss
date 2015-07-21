@@ -124,6 +124,10 @@
         top: 0;
         color: transparent !important;
 
+        &:hover:before {
+            color: $cl_orange;
+          }
+
         &:before {
           @include font-size(16);
           font-family: FontAwesome;

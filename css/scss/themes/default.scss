@@ -14,7 +14,7 @@ a, .link {
 
 	&:hover {
 		border-color: $cl_orange;
-		color: #888;
+		color: $cl_orange;
 	}
 
 	&.focus {
@@ -205,7 +205,7 @@ a, .link {
 		border-color: $cl_blue;
 
 		&:hover {
-			color: #888;
+			color: $cl_orange;
 			border-color: $cl_orange;
 		}
 	}
@@ -301,9 +301,9 @@ a, .link {
 
 			.jq-selectbox__select-text,
 			.jq-selectbox__trigger-arrow {
-				color: #888;
-				border-right-color: #888;
-				border-bottom-color: #888;
+				color: $cl_orange;
+				border-right-color: $cl_orange;
+				border-bottom-color: $cl_orange;
 			}
 		}
 
@@ -314,9 +314,9 @@ a, .link {
 
 			.jq-selectbox__select-text,
 			.jq-selectbox__trigger-arrow {
-				color: #888;
-				border-right-color: #888;
-				border-bottom-color: #888;
+				color: $cl_orange;
+				border-right-color: $cl_orange;
+				border-bottom-color: $cl_orange;
 			}
 		}
 	}
@@ -353,7 +353,7 @@ table {
 		border-color: $cl_blue;
 
 		&:hover {
-			color: #888;
+			color: $cl_orange;
 			border-color: $cl_orange;
 		}
 

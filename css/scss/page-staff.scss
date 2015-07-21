@@ -49,6 +49,8 @@
 			float: left;
 			margin-right: 10px;
 
+
+
 			&.settings {
 				float: right;
 				margin-right: 0;
@@ -99,6 +101,10 @@
 					padding: 10px 14px;
 					background-color: #fff;
 					border: 0;
+
+					a:hover {
+						color: $cl_blue;
+					}
 				}
 
 				&.active {
@@ -113,6 +119,8 @@
 
 	.b-content {
 		table {
+			margin-bottom: 20px;
+
 			td {
 				@include font-size(16);
 				padding-top: 14px;

@@ -20,6 +20,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0); }
+  .fa:before {
+    font-family: FontAwesome !important; }
 
 /* makes the font 33% larger relative to the icon container */
 .fa-lg {
@@ -2044,6 +2046,9 @@ h4, .h4 {
   font-size: 1.6rem;
   margin-bottom: 8px; }
 
+select {
+  display: none; }
+
 .text-bold {
   font-weight: 600; }
 
@@ -2096,6 +2101,9 @@ h4, .h4 {
 
 .cl_red {
   color: #df4d41; }
+
+.cl_green {
+  color: #0abc6f; }
 
 .prev-page {
   display: inline-block;
@@ -2686,7 +2694,7 @@ table {
     padding-right: 26px; }
   .email-list_input .fa {
     color: #0abc6f;
-    top: 5px; }
+    top: 3px; }
   .email-list_item {
     padding-right: 14px; }
     .email-list_item span {
@@ -2697,7 +2705,7 @@ table {
       font-weight: 600; }
     .email-list_item .fa {
       color: #df4d41;
-      top: 6px;
+      top: 4px;
       padding: 0;
       width: auto; }
 
@@ -2714,12 +2722,12 @@ table {
     top: 17px; }
   .date-picker.active .dropdown-toggle {
     border-color: #e7b60d;
-    color: #888; }
+    color: #e7b60d; }
     .date-picker.active .dropdown-toggle:after {
-      border-right-color: #888;
-      border-bottom-color: #888; }
+      border-right-color: #e7b60d;
+      border-bottom-color: #e7b60d; }
   .date-picker.active .date-picker_date-text {
-    color: #888; }
+    color: #e7b60d; }
   .date-picker .dropdown-toggle {
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
@@ -2749,12 +2757,12 @@ table {
       top: 14px; }
     .date-picker .dropdown-toggle:hover {
       border-color: #e7b60d;
-      color: #888; }
+      color: #e7b60d; }
       .date-picker .dropdown-toggle:hover:after {
-        border-right-color: #888;
-        border-bottom-color: #888; }
+        border-right-color: #e7b60d;
+        border-bottom-color: #e7b60d; }
       .date-picker .dropdown-toggle:hover .date-picker_date-text {
-        color: #888; }
+        color: #e7b60d; }
   .date-picker_date-text {
     font-size: 14px;
     font-size: 1.4rem;
@@ -2775,6 +2783,7 @@ table {
 .dd-add {
   font-size: 16px;
   font-size: 1.6rem;
+  position: relative;
   min-width: 400px;
   padding-right: 40px; }
   .dd-add_title {
@@ -2809,7 +2818,16 @@ table {
       .dd-add_cols-item label {
         height: 142px; }
   .dd-add_block {
+    position: relative;
     margin-bottom: 30px; }
+    .dd-add_block.wrong-input .text-input {
+      border-color: #df4d41; }
+    .dd-add_block.wrong-input .wrong-input_text {
+      font-size: 14px;
+      font-size: 1.4rem;
+      display: inline-block;
+      margin-top: 8px;
+      color: #df4d41; }
     .dd-add_block .sub-num-input {
       width: 100px; }
     .dd-add_block .dropdown:not(.select) {
@@ -2823,6 +2841,8 @@ table {
         font-size: 24px;
         font-size: 2.4rem;
         color: #399efc; }
+        .dd-add_block .dropdown-toggle .fa:hover {
+          color: #e7b60d; }
     .dd-add_block .label {
       display: block;
       margin-bottom: 10px;
@@ -2841,6 +2861,42 @@ table {
           font-size: 14px;
           font-size: 1.4rem;
           line-height: 1.4; }
+  .dd-add__confirm {
+    width: 500px;
+    padding-right: 0; }
+    .dd-add__confirm p {
+      line-height: 1.4;
+      margin-bottom: 8px; }
+    .dd-add__confirm .dd-add_block {
+      margin-bottom: 20px; }
+    .dd-add__confirm .b-btns a, .dd-add__confirm .b-btns .buttons {
+      font-size: 14px;
+      font-size: 1.4rem; }
+    .dd-add__confirm .b-btns a {
+      display: inline-block;
+      height: 36px;
+      line-height: 36px;
+      float: right;
+      margin-top: 30px; }
+    .dd-add__confirm .b-btns .button {
+      margin-right: 14px; }
+    .dd-add__confirm .bottom {
+      -webkit-border-radius: 0 0 4px 4px;
+      -moz-border-radius: 0 0 4px 4px;
+      border-radius: 0 0 4px 4px;
+      position: relative;
+      margin: 30px -20px -20px;
+      padding: 30px 60px 30px 20px;
+      background-color: #b6bfcd; }
+      .dd-add__confirm .bottom:before {
+        content: '';
+        position: absolute;
+        right: 76px;
+        bottom: 100%;
+        border-width: 15px 18px;
+        border-style: solid;
+        border-color: transparent;
+        border-bottom-color: #b6bfcd; }
 
 .question {
   font-size: 14px;
@@ -3242,6 +3298,9 @@ table {
       position: absolute;
       top: 0;
       color: transparent !important; }
+      .pickmeup .pmu-instance .pmu-prev:hover:before,
+      .pickmeup .pmu-instance .pmu-next:hover:before {
+        color: #e7b60d; }
       .pickmeup .pmu-instance .pmu-prev:before,
       .pickmeup .pmu-instance .pmu-next:before {
         font-size: 16px;
@@ -3516,6 +3575,9 @@ table {
       position: absolute;
       top: 0;
       color: transparent !important; }
+      .pickmeup .pmu-instance .pmu-prev:hover:before,
+      .pickmeup .pmu-instance .pmu-next:hover:before {
+        color: #e7b60d; }
       .pickmeup .pmu-instance .pmu-prev:before,
       .pickmeup .pmu-instance .pmu-next:before {
         font-size: 16px;
@@ -3611,7 +3673,7 @@ table {
   color: #399efc; }
   .theme_default .button:hover {
     border-color: #e7b60d;
-    color: #888; }
+    color: #e7b60d; }
   .theme_default .button.focus {
     background-color: #399efc;
     border-color: #399efc;
@@ -3732,7 +3794,7 @@ table {
     color: #399efc;
     border-color: #399efc; }
     .theme_default .period-switcher label:hover {
-      color: #888;
+      color: #e7b60d;
       border-color: #e7b60d; }
 
 .theme_default .disk-space {
@@ -3798,18 +3860,18 @@ table {
 
 .theme_default .jq-selectbox:hover .jq-selectbox__select-text,
 .theme_default .jq-selectbox:hover .jq-selectbox__trigger-arrow {
-  color: #888;
-  border-right-color: #888;
-  border-bottom-color: #888; }
+  color: #e7b60d;
+  border-right-color: #e7b60d;
+  border-bottom-color: #e7b60d; }
 
 .theme_default .jq-selectbox.opened .jq-selectbox__select {
   border-color: #e7b60d; }
 
 .theme_default .jq-selectbox.opened .jq-selectbox__select-text,
 .theme_default .jq-selectbox.opened .jq-selectbox__trigger-arrow {
-  color: #888;
-  border-right-color: #888;
-  border-bottom-color: #888; }
+  color: #e7b60d;
+  border-right-color: #e7b60d;
+  border-bottom-color: #e7b60d; }
 
 .theme_default .add-new-item {
   background-color: #ecf3ff;
@@ -3834,7 +3896,7 @@ table {
   color: #399efc;
   border-color: #399efc; }
   .theme_default .pagination_item:hover {
-    color: #888;
+    color: #e7b60d;
     border-color: #e7b60d; }
   .theme_default .pagination_item.current {
     color: #fff;
@@ -5245,27 +5307,31 @@ table {
         padding: 10px 14px;
         background-color: #fff;
         border: 0; }
+        .b-staff_heading-item > .dropdown > .dropdown-toggle a:hover {
+          color: #399efc; }
       .b-staff_heading-item > .dropdown.active > .dropdown-toggle {
         background-color: #fcec39; }
-  .b-staff .b-content table td {
-    font-size: 16px;
-    font-size: 1.6rem;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    width: 10%; }
-    .b-staff .b-content table td .dropdown > .dropdown-toggle {
+  .b-staff .b-content table {
+    margin-bottom: 20px; }
+    .b-staff .b-content table td {
       font-size: 16px;
       font-size: 1.6rem;
-      text-align: left;
-      white-space: nowrap; }
-    .b-staff .b-content table td .icon {
-      vertical-align: middle; }
-  .b-staff .b-content table .cell_staff-stat,
-  .b-staff .b-content table .cell_staff-sub-num {
-    width: 1%; }
-  .b-staff .b-content table .cell_staff-stat {
-    text-align: center; }
-  .b-staff .b-content table .cell_staff-comm {
-    width: 30%; }
-  .b-staff .b-content table .b-tabs {
-    width: 600px; }
+      padding-top: 14px;
+      padding-bottom: 14px;
+      width: 10%; }
+      .b-staff .b-content table td .dropdown > .dropdown-toggle {
+        font-size: 16px;
+        font-size: 1.6rem;
+        text-align: left;
+        white-space: nowrap; }
+      .b-staff .b-content table td .icon {
+        vertical-align: middle; }
+    .b-staff .b-content table .cell_staff-stat,
+    .b-staff .b-content table .cell_staff-sub-num {
+      width: 1%; }
+    .b-staff .b-content table .cell_staff-stat {
+      text-align: center; }
+    .b-staff .b-content table .cell_staff-comm {
+      width: 30%; }
+    .b-staff .b-content table .b-tabs {
+      width: 600px; }
