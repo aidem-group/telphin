@@ -8,6 +8,7 @@ $(function(){
     $('#routing-date').on('change', selectRoutingPeriod);
     $(document).on('click', 'a[href*=#]', anchorLinksHandler);
     $(document).on('click', '.b-unrolling_toggle', unrollingBlock);
+    $('.b-filters_switcher').on('click', function(){ $(this).parent().toggleClass('short'); });
 
     $('.select').styler();
     $('.date').pickmeup({flat: true, mode: 'range', calendars: 2});
@@ -44,10 +45,15 @@ function unrollingBlock()
     var unrollHeight = wrapper.outerHeight() + hiddenBlock.outerHeight();
 
     if(block.hasClass('active')){
-        block.removeClass('active').css('min-height', 0);
+        hiddenBlock.css('z-index', 1);
+        block.removeClass('active').css({overflow: 'hidden', 'min-height': 0});
     } else {
         $('.b-unrolling').removeClass('active').css('min-height', 0);
         block.addClass('active').css('min-height', unrollHeight);
+        setTimeout(function(){
+            block.addClass('active').css('overflow', 'visible');
+            hiddenBlock.css('z-index', 2);
+        }, 200);
     }
 }
 
@@ -69,7 +75,7 @@ function initTabsBlock()
 {
     $('.b-tabs').each(function(){
         var block = $(this);
-        var buttons = block.children('.b-tabs_btns').children();
+        var buttons = block.find('.b-tabs_btns').children();
         var tabs = block.find('.b-tabs_item');
 
         buttons.bind('click', function(){
@@ -169,7 +175,8 @@ function dropdown()
         container.addClass('dropdown-container__right');
     }
 
-    if(container.offset().top + blockH > pageSize.height){
+    if(container.offset().top + blockH > pageSize.height
+            && container.offset().top - blockH > 0){
         container.addClass('on-top');
         block.css({top: -blockH});
     }

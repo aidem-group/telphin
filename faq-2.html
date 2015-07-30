@@ -97,122 +97,21 @@
 			</div>
 			<div class="p-ats_top">
 				<h1>
-					Настройки АТС
+					Руководство по работе
 				</h1>
 				<div class="page-switcher row_cell nowrap">
-					<button class="button">Исходящие и входящие</button>
-					<button class="button">Входящие на экране телефона</button>
-					<button class="button">Голосовая почта</button>
-					<button class="button active">Факсы</button>
-					<button class="button">Общие настройки</button>
+					<button class="button">Вопросы и ответы</button>
+					<button class="button active">Справочник</button>
+					<button class="button">Задать вопрос</button>
 				</div>
 			</div>
-			<div class="b-ats b-ats-3">
-				<div class="b-content">
-					<div class="b-ats_block">
-						<p class="h3">
-							Мелодия перед запуском обнаружения факса
-						</p>
-						<p>
-							Установите мелодию, которая будет подставлена в&nbsp;схему маршрутизации при добавлении нового факса по&nbsp;умолчанию.	В&nbsp;разделе &laquo;<a href="#">Маршрутизация</a>&raquo; для каждого факса можно настроить отдельную мелодию.
-						</p>
-					</div>
-					<div class="b-ats_block__melody">
-						<select class="select">
-							<option value="1">Оставьте ваше сообщение после сигнала</option>
-						</select>
-						<span class="dropdown">
-							<div class="link dropdown-toggle">
-								<span class="fa fa-play-circle"></span>
-							</div>
-							<div class="dropdown-container">
-								<div class="dropdown-container_inner">
-									<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
-								</div>
-							</div>
-						</span>
-						<input type="file" class="hidden" id="melody-upload">
-						<label class="link" for="melody-upload">
-							<span class="fa fa-upload"></span>
-						</label>
-					</div>
-					<div class="b-ats_block">
-						<p class="h3">
-							После получения факса
-						</p>
-						<p>
-							АТС сохраняет факсы по&nbsp;умолчанию в&nbsp;облачном хранилище. Они доступны в&nbsp;разделе &laquo;<a href="#">Факсы</a>&raquo;. Ниже перечислены дополнительные действия, которые будет совершать АТС при получении факсов.
-						</p>
-					</div>
-					<div class="b-ats_block__emails">
-						<div class="email-list">
-                              Введите адрес электронной почты
-                              <div class="email-list_input">
-                                    <input type="text" class="text-input" value="Sergey@yandex.ru">
-                                    <button class="fa fa-plus"></button>
-                              </div>
-                              <div class="email-list_block">
-	                              <div class="email-list_item">
-	                                    <span>aidem@gmail.com</span>
-	                                    <button class="fa fa-close"></button>
-	                              </div>
-	                              <div class="email-list_item">
-	                                    <span>telphin@gmail.com</span>
-	                                    <button class="fa fa-close"></button>
-	                              </div>
-	                          </div>
-                        </div>
-					</div>
-					<div class="b-ats_block b-ats_block_radio-selectors">
-						<p class="title">
-							На указанный адрес:
-						</p>
-						<p>
-							<input type="radio" class="radio" name="filter-1" id="filter-1-1">
-							<label for="filter-1-1">Высылать уведомление</label>
-						</p>
-						<p>
-							<input type="radio" class="radio" name="filter-1" id="filter-1-2">
-							<label for="filter-1-2">Высылать сообщение как вложение</label>
-						</p>
-						<p>
-							<input type="radio" class="radio" name="filter-1" id="filter-1-3">
-							<label for="filter-1-3">Удалять из хранилища и высылать сообщение как вложение</label>
-						</p>
-						<p>
-							<input type="radio" class="radio" name="filter-1" id="filter-1-4">
-							<label for="filter-1-4">Не высылать уведомление</label>
-						</p>
-					</div>
-					<div class="b-ats_block b-ats_block__addit">
-						<p class="h3">
-							Дополнительные возможности
-						</p>
-						<div>
-							<input type="checkbox" class="checkbox" name="addit" id="addit-1">
-							<label for="addit-1">
-								<p>
-									Возможность приема факса во время разговора с помощью #0
-								</p>
-								<p class="addit-hint">
-									Если включен, то сотрудники могут принять факс во время разговора с помощью #0
-								</p>
-							</label>
-						</div>
-						<div>
-							<input type="checkbox" class="checkbox" name="addit" id="addit-2" checked>
-							<label for="addit-2">
-								<p>
-									Отправлять копию факса принявшему его сотруднику
-								</p>
-								<p class="addit-hint">
-									При включении этой настройки факсы, принятые сотрудником с помощью #0 во время разговора, дублируются на адрес электронной почты сотрудника
-								</p>
-							</label>
-						</div>
-					</div>
-					<button class="button focus">Сохранить</button>
-				</div>
+			<div class="b-content b-faq">
+				<p class="b-faq_about">
+					Для подробного знакомства с работой АТС “Телфин” воспользуйтесь справочником. Откройте его в любом PDF-редакторе. 
+				</p>
+				<p class="b-faq_about">
+					<a href="#"><span class="fa fa-book"></span>&nbsp;&nbsp;Скачать справочник “Работа с АТС Телфин” (1,5 МБ)</a>
+				</p>
 			</div>
 		</div>
 		<footer class="footer">

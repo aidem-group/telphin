@@ -35,7 +35,8 @@ a, .link {
 		color: #000;
 	}
 
-	&.disabled {
+	&.disabled,
+	&:disabled {
 		color: $cl_grey_2 !important;
 		border-color: $cl_grey_2 !important;
 	}
@@ -84,7 +85,7 @@ a, .link {
 		&-item {
 			border-color: #fff;
 
-			&:hover { background-color: $cl_blue_2; }
+			&:hover { background-color: #2086E4; }
 		}
 	}
 
@@ -92,7 +93,7 @@ a, .link {
 		border-left-color: #70b3f2;
 
 		&-favorite, &-stat, &-user {
-			&:hover, &.active { background-color: #2980b9; }
+			&:hover, &.active { background-color: #2086E4; }
 		}
 
 		&-user {

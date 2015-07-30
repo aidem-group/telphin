@@ -62,6 +62,7 @@ select { display: none; }
 
 .text-bold { font-weight: 600; }
 .text-italic { font-style: italic; }
+.text-center { text-align: center; }
 .left { float: left; }
 .right { float: right; }
 .clearfix { @include clearfix; }
@@ -109,8 +110,8 @@ select { display: none; }
 	&.active {
 		cursor: default;
 	}
-
-	&.disabled {
+	
+	&:disabled {
 		pointer-events: none;
 	}
 }
@@ -280,15 +281,25 @@ textarea {
 	label {
 		@include transition;
 		@include font-size(14);
-		display: inline-block;
+		display: inline-block !important;
 		position: relative;
 		height: 36px;
 		line-height: 36px;
 		padding: 0 14px;
 		border: 1px solid;
-		margin-left: -1px;
+		margin: 0 !important;
+		margin-left: -1px !important;
 		cursor: pointer;
 		z-index: 1;
+
+		span {
+			display: inline-block;
+			position: relative;
+			top: -2px;
+			text-align: center;
+			vertical-align: middle;
+			line-height: 14px;
+		}
 
 		&:last-child { @include border-radius(0 40px40px 0); }
 
@@ -299,9 +310,21 @@ textarea {
 }
 
 .b-tabs {
-	&_btns { margin-bottom: 20px; }
+	&_btns {
+		@include clearfix;
+		margin-bottom: 20px;
+
+		button {
+			font-family: $ff_roboto;
+			line-height: 1;
+			float: left;
+			min-width: auto;
+			margin: 0 !important;
+		}
+	}
 
 	&_item {
+		@include clearfix;
 		display: none;
 
 		&.current { display: block; }
@@ -327,6 +350,7 @@ textarea {
 	&__favourites:before { content: 'У вас пока не отобрано ни одного события.'; }
 	&__missed-calls:before { content: 'У вас пока нет ни одного пропущенного звонка.'; }
 	&__voice-mail:before { content: 'У вас пока нет ни одного голосового сообщения.'; }
+	&__stats:before { content: 'Нет данных за выбранный период. Попробуйте выбрать другую дату.'; }
 
 	&__graphs {
 		height: 20px;
@@ -367,6 +391,7 @@ textarea {
 
 .last-update {
 	@include font-size(14);
+	margin-top: 40px;
 
 	&:before {
 		@include font-size(13);
@@ -444,6 +469,10 @@ table {
 			margin-bottom: 4px;
 			color: $cl_grey_1;
 		}
+
+		.dropdown {
+			& > .link { padding: 0 !important; }
+		}
 	}
 
 	.cell_record {
@@ -496,6 +525,7 @@ table {
 		@include transition(#{opacity .1s linear, left .1s linear});
 		@include box-sizing;
 		position: absolute;
+		width: 100% !important;
 		top: 0;
 		left: 0;
 		height: 32px;
@@ -564,6 +594,11 @@ table {
 		white-space: nowrap;
 		text-align: center;
 		opacity: 0;
+
+		.link {
+			display: inline-block !important;
+			padding: 0 !important;
+		}
 	}
 
 	.fa, .icon {
@@ -574,6 +609,8 @@ table {
 	.fa {
 		@include font-size(24);
 	}
+
+	.link { padding: 0 !important; }
 }
 
 .pagination {
@@ -726,7 +763,7 @@ table {
 		vertical-align: middle;
 		height: 26px;
 		line-height: 26px;
-		margin: 0 8px;
+		margin-right: 8px;
 
 		.fa {
 			position: absolute;
@@ -743,7 +780,17 @@ table {
 		}
 	}
 
+	&_label {
+		margin-right: 8px;
+	}
+
+	&_block {
+		display: block;
+	}
+
 	&_input {
+		margin-bottom: 8px;
+
 		input {
 			@include font-size(14);
 			padding-right: 26px;
@@ -751,7 +798,7 @@ table {
 
 		.fa {
 			color: #0abc6f;
-			top: 3px;
+			top: 5px;
 		}
 	}
 
@@ -767,7 +814,7 @@ table {
 
 		.fa {
 			color: #df4d41;
-			top: 4px;
+			top: 5px;
 			padding: 0;
 			width: auto;
 		}

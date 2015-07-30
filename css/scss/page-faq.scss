@@ -1,0 +1,69 @@
+.b-faq {
+	&_about {
+		@include font-size(16);
+		margin-bottom: 60px;
+	}
+
+	&_form {
+		@include font-size(14);
+		@include clearfix;
+		width: 400px;
+
+		&-line {
+			margin-bottom: 14px;
+
+			&:first-child { margin-bottom: 8px; }
+
+			label {
+				color: $cl_grey_2;
+				float: left;
+				width: 50px;
+				line-height: 26px;
+				vertical-align: middle;
+			}
+
+			.text-input { width: 350px; }
+
+			textarea { min-height: 100px; }
+		}
+
+		.button {
+			float: right;
+		}
+	}
+}
+
+.faq {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	li {
+		@include font-size(20);
+		margin-bottom: 30px;
+
+		&:last-child { margin: 0; }
+	}
+
+	&_answer {
+		@include font-size(16);
+		line-height: 1.4;
+		display: none;
+		margin-top: 10px;
+
+		p {
+			margin-bottom: 10px;
+		}
+	}
+
+	input[type="checkbox"]:checked {
+		& + label {
+			color: #000;
+		}
+
+		& ~ .faq_answer {
+			@include font-size(16);
+			display: block;
+		}
+	}
+}

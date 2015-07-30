@@ -23,24 +23,24 @@
     }
 
     &__left {
-      left: 0;
+      left: -20px;
 
       & > .dropdown-container_inner {
         &:before,
         &:after {
-          left: 39px;
+          left: 20px;
         }
       }
     }
 
     &__right {
-      right: 0;
+      right: -20px;
 
       & > .dropdown-container_inner {
         &:before,
         &:after {
           left: auto;
-          right: 27px;
+          right: 20px;
         }
       }
     }
@@ -116,6 +116,12 @@
         margin-bottom: -1px;
         border-bottom-color: #fff;
       }
+    }
+  }
+
+  &.active {
+    .dropdown-toggle.link {
+      color: $cl_orange;
     }
   }
 }

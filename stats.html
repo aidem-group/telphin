@@ -1,0 +1,1598 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"  content="width=device-width">
+	<title></title>
+	<meta name="description" content=""> 
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+<body class="body theme_default">
+	<div class="main-wrapper">
+		<header class="header">
+			<a class="header_logo" href="/">Телфин</a>
+			<div class="header-inner">
+				<div class="header_notices">
+					<a href="#" class="header_notices-item header_notices-item__calls">
+						<span class="header-inner_status">32</span>
+					</a>
+					<a href="#" class="header_notices-item header_notices-item__mail">
+						<span class="header-inner_status error"></span>
+					</a>
+					<a href="#" class="header_notices-item header_notices-item__fax">
+						<span class="header-inner_status">5</span>
+					</a>
+				</div>
+				<a href="#" class="header_btn header_btn-favorite">
+					<span class="header-inner_status">2</span>
+					Избранное
+				</a>
+				<a href="#" class="header_btn header_btn-stat">Статистика</a>
+				<div class="header_btn header_btn-user dropdown">
+					<span class="header_btn-user-status"></span>
+					<span class="header_btn-user-name dropdown-toggle">Константин</span>
+					<div class="dropdown-container">
+                        <div class="dropdown-container_inner">
+                        	<div class="b-tabs">
+                        		<div class="b-tabs_btns">
+                        			<button>Сотрудник</button>
+                            		<button>Настройки входа</button>
+                        		</div>
+                        		<div class="b-tabs_inner">
+                        			<div class="b-tabs_item">
+                        				<div class="form-line">
+                        					<label for="employee_name">Имя и&nbsp;фамилия</label>
+                        					<input type="text" class="text-input" name="employee_name" id="employee_name">
+                        				</div>
+                        				<div class="form-line">
+                        					<label for="employee_num">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+                        					<input type="text" class="text-input" name="employee_num" id="employee_num">
+                        				</div>
+                        				<div class="form-line">
+                        					<label for="employee_queue">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+                        					<select class="select" name="employee_queue" id="employee_queue">
+                        						<option>Без очереди</option>
+                        					</select>
+                        				</div>
+                        				<div class="form-line">
+                        					<label for="employee_email">Электронная почта (для уведомлений и&nbsp;входа в&nbsp;АТС)</label>
+                        					<input type="text" class="text-input" name="employee_email" id="employee_email" value="aksenov@gmail.com">
+                        				</div>
+                        				<div class="form-line">
+                        					<label for="employee_comm">Комментарий о&nbsp;сотруднике</label>
+                        					<textarea name="employee_comm" id="employee_comm"></textarea>
+                        				</div>
+                        				<button class="button focus">Сохранить</button>
+                        			</div>
+                        			<div class="b-tabs_item">
+                        				<div class="form-line">
+                        					<label for="employee_login">Логин</label>
+                        					<input type="text" class="text-input" name="employee_login" id="employee_login" value="aksenov@gmail.com">
+                        				</div>
+                        				<div class="form-line">
+                        					<label for="employee_pass">Пароль для входа в&nbsp;АТС</label>
+                        					<input type="password" class="text-input" name="employee_pass" id="employee_pass">
+                        					<button class="button right">Сменить пароль</button>
+                        				</div>
+                        				<div class="form-line disabled">
+                        					<label for="employee_new-pass">Новый пароль</label>
+                        					<input type="password" class="text-input" name="employee_new-pass" id="employee_new-pass" disabled>
+                        				</div>
+                        				<button class="button focus">Сохранить</button>
+                        			</div>
+                        		</div>
+                        	</div>
+                        </div>
+                    </div>
+				</div>
+				<a href="#" class="header_btn header_btn-settings"></a>
+			</div>
+		</header>
+		<div class="p-main p-stats">
+			<div class="p-stats_header">
+				<h1>
+					Статистика
+				</h1>
+				<p>
+					Статистика будет полезна вам для повышения эффективности работы персонала и&nbsp;планирования работы компании.
+				</p>
+			</div>
+			<div class="b-content b-stats b-filters">
+				<button class="b-filters_switcher">
+					<span class="fa fa-expand"></span>
+					<span class="fa fa-minus"></span>
+				</button>
+				<div class="hide-on-compress">
+					<h3>
+						Фильтры
+					</h3>
+					<p>
+						Создайте ваши персональные настройки, и&nbsp;применяйте их&nbsp;за&nbsp;1 клик. Добавьте фильтр на&nbsp;главную страницу.
+					</p>
+				</div>
+				<div class="stats-switcher">
+					<div class="grid_cell-3">
+						<div class="dropdown">
+							<button class="dropdown-toggle">
+								<p class="h3">
+									Мой самый нужный фильтр 1
+								</p>
+								<div class="hide-on-compress">
+									<p class="text-bold">
+										Очереди
+									</p>
+									<p>
+										Техподдержка
+									</p>
+									<p>
+										Принятые вызовы
+									</p>
+									<p>
+										Сегодня
+									</p>
+								</div>
+							</button>
+							<div class="dropdown-container">
+								<div class="dropdown-container_inner">
+									<div class="dd-filter-redact">
+										<div class="b-tabs">
+											<div class="row">
+												<div class="row_cell-1">
+													<label for="stats-filter-name" class="label nowrap">Название фильтра</label>
+												</div>
+												<div class="row_cell-1">
+													<input type="text" class="text-input" id="stats-filter-name" value="Мой самый нужный фильтр 1">
+												</div>
+												<div class="row_cell-10">
+													<span class="cl_grey_2 nowrap">Осталось 10 символов</span>
+												</div>
+											</div>
+											<div class="row">
+												<div class="row_cell-1">
+													<span class="label nowrap">Раздел статистики</span>
+												</div>
+												<div class="row_cell-10">
+													<div class="b-tabs_btns">
+														<button class="b-tabs_btns-item button">Номер</button>
+														<button class="b-tabs_btns-item button">Сотрудник</button>
+														<button class="b-tabs_btns-item button">Очереди</button>
+														<button class="b-tabs_btns-item button">Журнал</button>
+													</div>
+												</div>
+												<div class="row_cell-1">
+													&nbsp;
+												</div>
+											</div>
+											<div class="b-tabs_inner b-stats">
+												<div class="b-tabs_item">
+													<div class="b-stats_line">
+														<div class="left">
+															<div class="period-switcher">
+																<input type="radio" name="period-switcher-10" id="period-switcher_day-10" checked>
+																<label for="period-switcher_day-10">Сегодня</label>
+																<input type="radio" name="period-switcher-10" id="period-switcher_yesterday-10">
+																<label for="period-switcher_yesterday-10">Вчера</label>
+																<input type="radio" name="period-switcher-10" id="period-switcher_week-10">
+																<label for="period-switcher_week-10">Неделя</label>
+																<input type="radio" name="period-switcher-10" id="period-switcher_month-10">
+																<label for="period-switcher_month-10">Месяц</label>
+																<input type="radio" name="period-switcher-10" id="period-switcher_year-10">
+																<label for="period-switcher_year-10">Год</label>
+															</div>
+															<div class="date-picker dropdown">
+																<div class="dropdown-toggle"><span class="date-picker_date-text">6 сентября 2014 - 6 сентября 2015</span></div>
+																<div class="dropdown-container">
+																	<div class="dropdown-container_inner">
+																		<div class="date"></div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="b-stats_line">
+														<div class="left">
+															<label>Номер</label>
+															<select class="select">
+																<option>Все</option>
+																<option class="dark" selected>+ 7 950 244-70-18</option>
+															</select>
+														</div>
+													</div>
+													<div class="b-stats_line">
+														<div class="left">
+															<label>Тип вызова</label>
+															<select class="select select-call-type">
+																<option class="incoming">Входящие</option>
+																<option class="answered">Принятые</option>
+																<option class="missed">Непринятые</option>
+																<option class="outgoing">Исходящие</option>
+															</select>
+														</div>
+													</div>
+												</div>
+												<div class="b-tabs_item">
+													<div class="b-stats_line">
+														<div class="left">
+															<div class="period-switcher">
+																<input type="radio" name="period-switcher-11" id="period-switcher_day-11" checked>
+																<label for="period-switcher_day-11">Сегодня</label>
+																<input type="radio" name="period-switcher-11" id="period-switcher_yesterday-11">
+																<label for="period-switcher_yesterday-11">Вчера</label>
+																<input type="radio" name="period-switcher-11" id="period-switcher_week-11">
+																<label for="period-switcher_week-11">Неделя</label>
+																<input type="radio" name="period-switcher-11" id="period-switcher_month-11">
+																<label for="period-switcher_month-11">Месяц</label>
+																<input type="radio" name="period-switcher-11" id="period-switcher_year-11">
+																<label for="period-switcher_year-11">Год</label>
+															</div>
+															<div class="date-picker dropdown">
+																<div class="dropdown-toggle"><span class="date-picker_date-text">6 сентября 2014 - 6 сентября 2015</span></div>
+																<div class="dropdown-container">
+																	<div class="dropdown-container_inner">
+																		<div class="date"></div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="b-stats_line">
+														<div class="left">
+															<label>Сотрудник</label>
+															<select class="select">
+																<option>Константинопольский Константин</option>
+															</select>
+														</div>
+													</div>
+													<div class="b-stats_line">
+														<div class="b-stats_duration-line left">
+															<label>Продолжительность</label>
+															<input type="text" class="text-input">
+															&mdash;
+															<input type="text" class="text-input">
+															<select class="select">
+																<option>Секунд</option>
+																<option>Минут</option>
+															</select>
+														</div>
+													</div>
+													<div class="b-stats_line">
+														<div class="left">
+															<label>Тип вызова</label>
+															<select class="select select-call-type">
+																<option class="incoming">Входящие</option>
+																<option class="answered">Принятые</option>
+																<option class="missed">Непринятые</option>
+																<option class="outgoing">Исходящие</option>
+															</select>
+														</div>
+													</div>
+												</div>
+												<div class="b-tabs_item">
+													<div class="b-stats_line">
+														<div class="left">
+															<div class="period-switcher">
+																<input type="radio" name="period-switcher-12" id="period-switcher_day-12" checked>
+																<label for="period-switcher_day-12">Сегодня</label>
+																<input type="radio" name="period-switcher-12" id="period-switcher_yesterday-12">
+																<label for="period-switcher_yesterday-12">Вчера</label>
+																<input type="radio" name="period-switcher-12" id="period-switcher_week-12">
+																<label for="period-switcher_week-12">Неделя</label>
+																<input type="radio" name="period-switcher-12" id="period-switcher_month-12">
+																<label for="period-switcher_month-12">Месяц</label>
+																<input type="radio" name="period-switcher-12" id="period-switcher_year-12">
+																<label for="period-switcher_year-12">Год</label>
+															</div>
+															<div class="date-picker dropdown">
+																<div class="dropdown-toggle"><span class="date-picker_date-text">6 сентября 2014 - 6 сентября 2015</span></div>
+																<div class="dropdown-container">
+																	<div class="dropdown-container_inner">
+																		<div class="date"></div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="b-stats_line">
+														<div class="left">
+															<label>Очередь</label>
+															<select class="select">
+																<option>Отдел продаж</option>
+															</select>
+														</div>
+													</div>
+													<div class="b-stats_line">
+														<div class="left">
+															<label>Тип вызова</label>
+															<select class="select select-call-type">
+																<option class="incoming">Входящие</option>
+																<option class="answered">Принятые</option>
+																<option class="missed">Непринятые</option>
+																<option class="outgoing">Исходящие</option>
+															</select>
+														</div>
+													</div>
+													<div class="b-stats_line">
+														<div class="left">
+															<div class="period-switcher">
+																<input type="radio" name="period-switcher-13" id="period-switcher_day-13" checked>
+																<label for="period-switcher_day-13">Количество звонков</label>
+																<input type="radio" name="period-switcher-13" id="period-switcher_yesterday-13">
+																<label for="period-switcher_yesterday-13">Распределение нагрузки</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="b-tabs_item">
+													<div class="b-stats_line">
+														<div class="left">
+															<div class="period-switcher">
+																<input type="radio" name="period-switcher-14" id="period-switcher_day-14" checked>
+																<label for="period-switcher_day-14">Сегодня</label>
+																<input type="radio" name="period-switcher-14" id="period-switcher_yesterday-14">
+																<label for="period-switcher_yesterday-14">Вчера</label>
+																<input type="radio" name="period-switcher-14" id="period-switcher_week-14">
+																<label for="period-switcher_week-14">Неделя</label>
+																<input type="radio" name="period-switcher-14" id="period-switcher_month-14">
+																<label for="period-switcher_month-14">Месяц</label>
+																<input type="radio" name="period-switcher-14" id="period-switcher_year-14">
+																<label for="period-switcher_year-14">Год</label>
+															</div>
+															<div class="date-picker dropdown">
+																<div class="dropdown-toggle"><span class="date-picker_date-text">6 сентября 2014 - 6 сентября 2015</span></div>
+																<div class="dropdown-container">
+																	<div class="dropdown-container_inner">
+																		<div class="date"></div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="b-stats_line">
+														<div class="left">
+															<label>Номер</label>
+															<select class="select">
+																<option>Все</option>
+																<option>+ 7 950 244-70-18</option>
+															</select>
+														</div>
+													</div>
+													<div class="b-stats_line">
+														<div class="left">
+															<label>Сотрудник</label>
+															<select class="select">
+																<option>Константинопольский Константин</option>
+															</select>
+														</div>
+													</div>
+													<div class="b-stats_line">
+														<div class="b-stats_duration-line left">
+															<label>Продолжительность</label>
+															<input type="text" class="text-input">
+															&mdash;
+															<input type="text" class="text-input">
+															<select class="select">
+																<option>Секунд</option>
+																<option>Минут</option>
+															</select>
+														</div>
+													</div>
+													<div class="b-stats_line">
+														<div class="left">
+															<label>Очередь</label>
+															<select class="select">
+																<option>Отдел продаж</option>
+															</select>
+														</div>
+													</div>
+													<div class="b-stats_line">
+														<div class="left">
+															<label>Добавочный</label>
+															<select class="select">
+																<option>Все</option>
+															</select>
+														</div>
+													</div>
+													<div class="b-stats_line">
+														<div class="left">
+															<label>Тип вызова</label>
+															<select class="select select-call-type">
+																<option class="incoming">Входящие</option>
+																<option class="answered">Принятые</option>
+																<option class="missed">Непринятые</option>
+																<option class="outgoing">Исходящие</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="b-unrolling">
+											<div class="b-unrolling_toggle-wrapper">
+											    <input type="checkbox" class="checkbox b-unrolling_toggle" id="send-to-email">
+											    <label for="send-to-email">Отправлять отчет</label>
+											</div>
+											<div class="b-unrolling_inner">
+												<div class="row">
+													<div class="row_cell-1">
+														<label>Получатель</label>
+													</div>
+													<div class="row_cell-11">
+														<div class="email-list">
+															<div class="email-list_input">
+															    <input type="text" class="text-input">
+															    <button class="fa fa-plus"></button>
+															</div>
+															<div class="email-list_block">
+															  	<div class="email-list_item">
+															        <span>aidem@gmail.com</span>
+															        <button class="fa fa-close"></button>
+															  	</div>
+															  	<div class="email-list_item">
+															        <span>telphin@gmail.com</span>
+															        <button class="fa fa-close"></button>
+															  	</div>
+															</div>
+													    </div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="row_cell-1">
+														<label>Отправка</label>
+													</div>
+													<div class="row_cell-11">
+																	<div class="routing-date">
+																		<select class="select" id="routing-date">
+																			<option value="1">Раз в неделю</option>
+																			<option value="2">Ежедневно</option>
+																			<option value="3">По будням</option>
+																			<option value="4">По выходным</option>
+																		</select>
+																		<div class="routing-date_variables">
+																			<select class="select" id="routing-date_day">
+																				<option value="1">Понедельник</option>
+																				<option value="2">Вторник</option>
+																				<option value="3">Среда</option>
+																				<option value="4">Четверг</option>
+																				<option value="5">Пятница</option>
+																				<option value="6">Суббота</option>
+																				<option value="7">Воскресение</option>
+																			</select>
+																			<div class="routing-date_item hidden">
+																				Пн.&ndash;Вс.
+																			</div>
+																			<div class="routing-date_item hidden">
+																				Пн.&ndash;Пт.
+																			</div>
+																			<div class="routing-date_item hidden">
+																				Сб.&ndash;Вск.
+																			</div>
+																		</div>
+																		<div class="routing-date_time">
+																			<select class="select" id="routing-date_time-from">
+																				<option value="1">01:00</option>
+																				<option value="2">02:00</option>
+																				<option value="3">03:00</option>
+																				<option value="4">04:00</option>
+																				<option value="5">05:00</option>
+																				<option value="6">06:00</option>
+																				<option value="7">07:00</option>
+																				<option value="8">08:00</option>
+																				<option value="9">09:00</option>
+																				<option value="10">10:00</option>
+																				<option value="11">11:00</option>
+																				<option value="12">12:00</option>
+																				<option value="13">13:00</option>
+																				<option value="14">14:00</option>
+																				<option value="15">15:00</option>
+																				<option value="16">16:00</option>
+																				<option value="17">17:00</option>
+																				<option value="18">18:00</option>
+																				<option value="19">19:00</option>
+																				<option value="20">20:00</option>
+																				<option value="21">21:00</option>
+																				<option value="22">22:00</option>
+																				<option value="23">23:00</option>
+																				<option value="24">00:00</option>
+																			</select>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="row">
+																<div class="row_cell-1">
+																	<label>Формат</label>
+																</div>
+																<div class="row_cell-11">
+																	<input type="radio" class="radio" name="doc-format" id="pdf-format">
+																	<label for="pdf-format">вложение pdf</label>
+																	<input type="radio" class="radio" name="doc-format" id="invest-format">
+																	<label for="invest-format">в теле письма</label>
+																</div>
+															</div>
+														</div>
+									                </div>
+										<div class="dd-filter-redact_bottom clearfix">
+											<div class="left">
+												<button class="button del">
+													<span class="fa fa-trash"></span>
+													Удалить фильтр
+												</button>
+											</div>
+											<div class="right">
+												<input type="checkbox" class="checkbox" name="show-on-main-page" id="show-on-main-page">
+												<label for="show-on-main-page">Показывать на&nbsp;главной странице</label>
+												<button class="button focus">Создать</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid_cell-3">
+						<a href="#" class="add-new-filter"></a>
+					</div>
+				</div>
+			</div>
+			<div class="b-tabs b-stats">
+				<div class="b-tabs_btns">
+					<button class="b-tabs_btns-item">Номер</button>
+					<button class="b-tabs_btns-item">Сотрудники</button>
+					<button class="b-tabs_btns-item">Очереди</button>
+					<button class="b-tabs_btns-item">Журнал</button>
+				</div>
+				<div class="b-tabs_inner b-content">
+					<div class="b-tabs_item">
+						<div class="b-stats_get-btns">
+							<button class="link right">
+								<span class="fa fa-download" title="Скачать отчет"></span>
+							</button>
+							<div class="dropdown right">
+								<div class="dropdown-toggle link">
+									<span class="fa fa-envelope" title="Отправить отчет по Email"></span>
+								</div>
+								<div class="dropdown-container">
+									<div class="dropdown-container_inner">
+										<div class="dd-get-stats">
+											<div class="row">
+												<div class="row_cell-1">
+													&nbsp;
+												</div>
+												<div class="row_cell-11">
+													<p class="h3">
+														Отправка отчета по&nbsp;EMAIL
+													</p>
+												</div>
+											</div>
+											<div class="row">
+												<div class="row_cell-1">
+													<label for="get-stats_to">Кому</label>
+												</div>
+												<div class="row_cell-11">
+													<input type="text" class="text-input" id="get-stats_to" value="aidem@gmail.com, telphin@yandex.ru">
+												</div>
+											</div>
+											<div class="row">
+												<div class="row_cell-1">
+													<label for="get-stats_subj">Тема</label>
+												</div>
+												<div class="row_cell-11">
+													<input type="text" class="text-input" id="get-stats_subj" value="Отчет по номеру АТС Телфин за 22.09.2015">
+												</div>
+											</div>
+											<textarea></textarea>
+											<div class="clearfix">
+												<button class="button focus right">Отправить</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="b-stats_line">
+							<div class="left">
+								<label>Номер</label>
+								<select class="select">
+									<option>Все</option>
+									<option>+ 7 950 244-70-18</option>
+								</select>
+							</div>
+							<div class="left">
+								<div class="period-switcher">
+									<input type="radio" name="period-switcher" id="period-switcher_day" checked>
+									<label for="period-switcher_day">Сегодня</label>
+									<input type="radio" name="period-switcher" id="period-switcher_yesterday">
+									<label for="period-switcher_yesterday">Вчера</label>
+									<input type="radio" name="period-switcher" id="period-switcher_week">
+									<label for="period-switcher_week">Неделя</label>
+									<input type="radio" name="period-switcher" id="period-switcher_month">
+									<label for="period-switcher_month">Месяц</label>
+									<input type="radio" name="period-switcher" id="period-switcher_year">
+									<label for="period-switcher_year">Год</label>
+								</div>
+								<div class="date-picker dropdown">
+									<div class="dropdown-toggle"><span class="date-picker_date-text">6 сентября 2014 - 6 сентября 2015</span></div>
+									<div class="dropdown-container">
+										<div class="dropdown-container_inner">
+											<div class="date"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="b-chart table">
+							<div class="row_cell-1">
+								<p class="h3">
+									Количество звонков
+								</p>
+								<img src="/dev/img/graph-1.png" alt="">
+							</div>
+							<div class="row_cell-11">
+								<div class="b-chart_legend">
+									<div class="b-chart_legend-item">
+										<button class="call-all current">
+											Всего звонков
+											<span>148</span>
+										</button>
+									</div>
+									<div class="b-chart_legend-item">
+										<button class="call-incoming">
+											Входящие
+											<span>95</span>
+										</button>
+										<div class="b-chart_legend-item">
+											<button class="call-answered">
+												Принятые
+												<span>91</span>
+											</button>
+										</div>
+										<div class="b-chart_legend-item">
+											<button class="call-missed">
+												Непринятые
+												<span>4</span>
+											</button>
+										</div>
+									</div>
+									<div class="b-chart_legend-item">
+										<button class="call-outgoing">
+											Исходящие
+											<span>53</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="last-update">
+							Время последнего обработанного системой события - 8 мин. 41 сек. назад
+						</div>
+					</div>
+					<div class="b-tabs_item">
+						<div class="b-stats_get-btns">
+							<button class="link right">
+								<span class="fa fa-download" title="Скачать отчет"></span>
+							</button>
+							<div class="dropdown right">
+								<div class="dropdown-toggle link">
+									<span class="fa fa-envelope" title="Отправить отчет по Email"></span>
+								</div>
+								<div class="dropdown-container">
+									<div class="dropdown-container_inner">
+										<div class="dd-get-stats">
+											<div class="row">
+												<div class="row_cell-1">
+													&nbsp;
+												</div>
+												<div class="row_cell-11">
+													<p class="h3">
+														Отправка отчета по&nbsp;EMAIL
+													</p>
+												</div>
+											</div>
+											<div class="row">
+												<div class="row_cell-1">
+													<label for="get-stats_to">Кому</label>
+												</div>
+												<div class="row_cell-11">
+													<input type="text" class="text-input" id="get-stats_to" value="aidem@gmail.com, telphin@yandex.ru">
+												</div>
+											</div>
+											<div class="row">
+												<div class="row_cell-1">
+													<label for="get-stats_subj">Тема</label>
+												</div>
+												<div class="row_cell-11">
+													<input type="text" class="text-input" id="get-stats_subj" value="Отчет по номеру АТС Телфин за 22.09.2015">
+												</div>
+											</div>
+											<textarea></textarea>
+											<div class="clearfix">
+												<button class="button focus right">Отправить</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="b-stats_line">
+							<div class="left">
+								<label>Сотрудник</label>
+								<select class="select">
+									<option>Константинопольский Константин</option>
+								</select>
+							</div>
+							<div class="left">
+								<div class="period-switcher">
+									<input type="radio" name="period-switcher2" id="period-switcher_day2" checked>
+									<label for="period-switcher_day2">Сегодня</label>
+									<input type="radio" name="period-switcher2" id="period-switcher_yesterday2">
+									<label for="period-switcher_yesterday2">Вчера</label>
+									<input type="radio" name="period-switcher2" id="period-switcher_week2">
+									<label for="period-switcher_week2">Неделя</label>
+									<input type="radio" name="period-switcher2" id="period-switcher_month2">
+									<label for="period-switcher_month2">Месяц</label>
+									<input type="radio" name="period-switcher2" id="period-switcher_year2">
+									<label for="period-switcher_year2">Год</label>
+								</div>
+								<div class="date-picker dropdown">
+									<div class="dropdown-toggle"><span class="date-picker_date-text">6 сентября 2014 - 6 сентября 2015</span></div>
+									<div class="dropdown-container">
+										<div class="dropdown-container_inner">
+											<div class="date"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="b-stats_line">
+							<div class="b-stats_duration-line left">
+								<label>Продолжительность</label>
+								<input type="text" class="text-input">
+								&mdash;
+								<input type="text" class="text-input">
+								<select class="select">
+									<option>Секунд</option>
+									<option>Минут</option>
+								</select>
+							</div>
+						</div>
+						<div class="b-chart table">
+							<div class="row_cell-1">
+								<p class="h3">
+									Количество звонков
+								</p>
+								<img src="/dev/img/graph-1.png" alt="">
+								<p class="h3">
+									Длительность вызовов
+								</p>
+							</div>
+							<div class="row_cell-11">
+								<div class="b-chart_legend">
+									<div class="b-chart_legend-item">
+										<button class="call-all current">
+											Всего звонков
+											<span>148</span>
+										</button>
+										<div class="b-chart_legend-info">
+											<p>
+												<span class="text-bold">140</span> В очереди<br>
+											</p>
+											<p>
+												<span class="text-bold">8</span> Личные
+											</p>
+										</div>
+									</div>
+									<div class="b-chart_legend-item">
+										<button class="call-incoming">
+											Входящие
+											<span>95</span>
+										</button>
+										<div class="b-chart_legend-info">
+											<p>
+												<span class="text-bold">90</span> В очереди<br>
+											</p>
+											<p>
+												<span class="text-bold">5</span> Личные
+											</p>
+										</div>
+										<div class="b-chart_legend-item">
+											<button class="call-answered">
+												Принятые
+												<span>91</span>
+											</button>
+											<div class="b-chart_legend-info">
+												<p>
+													<span class="text-bold">90</span> В очереди<br>
+												</p>
+												<p>
+													<span class="text-bold">1</span> Личные
+												</p>
+											</div>
+										</div>
+										<div class="b-chart_legend-item">
+											<button class="call-missed">
+												Непринятые
+												<span>4</span>
+											</button>
+											<div class="b-chart_legend-info">
+												<p>
+													<span class="text-bold">0</span> В очереди<br>
+												</p>
+												<p>
+													<span class="text-bold">1</span> Личные
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="b-chart_legend-item">
+										<button class="call-outgoing">
+											Исходящие
+											<span>53</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="duration-info">
+							<div class="row">
+								<div class="row_cell-1">
+									<p class="duration-info_label">
+										Средняя длительность
+									</p>
+									<p class="duration-info_time">
+										<span>00</span>:<span>02</span>:<span>05</span>
+									</p>
+								</div>
+								<div class="row_cell-11">
+									<div class="period-switcher">
+										<input type="radio" name="dur" id="dur-1" checked>
+										<label for="dur-1">Принятые</label>
+										<input type="radio" name="dur" id="dur-2">
+										<label for="dur-2">Исходящие</label>
+										<input type="radio" name="dur" id="dur-3">
+										<label for="dur-3">Ожидание принятых</label>
+										<input type="radio" name="dur" id="dur-4">
+										<label for="dur-4">Ожидание пропущенных</label>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="row_cell-1">
+									<p class="duration-info_label">
+										Общая длительность
+									</p>
+									<p class="duration-info_time">
+										<span>287</span>:<span>02</span>:<span>05</span>
+									</p>
+								</div>
+								<div class="row_cell-11">
+									<div class="period-switcher">
+										<input type="radio" name="dur2" id="dur-5" checked>
+										<label for="dur-5">Входящие</label>
+										<input type="radio" name="dur2" id="dur-6">
+										<label for="dur-6">Исходящие</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="last-update">
+							Время последнего обработанного системой события - 8 мин. 41 сек. назад
+						</div>
+					</div>
+					<div class="b-tabs_item">
+						<div class="b-stats_get-btns">
+							<button class="link right">
+								<span class="fa fa-download" title="Скачать отчет"></span>
+							</button>
+							<div class="dropdown right">
+								<div class="dropdown-toggle link">
+									<span class="fa fa-envelope" title="Отправить отчет по Email"></span>
+								</div>
+								<div class="dropdown-container">
+									<div class="dropdown-container_inner">
+										<div class="dd-get-stats">
+											<div class="row">
+												<div class="row_cell-1">
+													&nbsp;
+												</div>
+												<div class="row_cell-11">
+													<p class="h3">
+														Отправка отчета по&nbsp;EMAIL
+													</p>
+												</div>
+											</div>
+											<div class="row">
+												<div class="row_cell-1">
+													<label for="get-stats_to">Кому</label>
+												</div>
+												<div class="row_cell-11">
+													<input type="text" class="text-input" id="get-stats_to" value="aidem@gmail.com, telphin@yandex.ru">
+												</div>
+											</div>
+											<div class="row">
+												<div class="row_cell-1">
+													<label for="get-stats_subj">Тема</label>
+												</div>
+												<div class="row_cell-11">
+													<input type="text" class="text-input" id="get-stats_subj" value="Отчет по номеру АТС Телфин за 22.09.2015">
+												</div>
+											</div>
+											<textarea></textarea>
+											<div class="clearfix">
+												<button class="button focus right">Отправить</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="b-stats_line">
+							<div class="left">
+								<label>Очередь</label>
+								<select class="select">
+									<option>Отдел продаж</option>
+								</select>
+							</div>
+							<div class="left">
+								<div class="period-switcher">
+									<input type="radio" name="period-switcher3" id="period-switcher_day3" checked>
+									<label for="period-switcher_day3">Сегодня</label>
+									<input type="radio" name="period-switcher3" id="period-switcher_yesterday3">
+									<label for="period-switcher_yesterday3">Вчера</label>
+									<input type="radio" name="period-switcher3" id="period-switcher_week3">
+									<label for="period-switcher_week3">Неделя</label>
+									<input type="radio" name="period-switcher3" id="period-switcher_month3">
+									<label for="period-switcher_month3">Месяц</label>
+									<input type="radio" name="period-switcher3" id="period-switcher_year3">
+									<label for="period-switcher_year3">Год</label>
+								</div>
+								<div class="date-picker dropdown">
+									<div class="dropdown-toggle"><span class="date-picker_date-text">6 сентября 2014 - 6 сентября 2015</span></div>
+									<div class="dropdown-container">
+										<div class="dropdown-container_inner">
+											<div class="date"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="b-chart table">
+							<div class="row_cell-1">
+								<p class="h3">
+									Распределение нагрузки
+									<a href="#">Количество звонков</a>
+								</p>
+								<img src="/dev/img/graph-2.png" alt="">
+								<p class="h3">
+									Длительность вызовов
+								</p>
+							</div>
+							<div class="row_cell-11">
+								<div class="b-chart_legend">
+									<div class="b-chart_legend-item">
+										<button class="call-all current">
+											Всего звонков
+											<span>148</span>
+										</button>
+									</div>
+									<div class="b-chart_legend-item">
+										<button class="call-incoming">
+											Входящие
+											<span>95</span>
+										</button>
+										<div class="b-chart_legend-item">
+											<button class="call-answered">
+												Принятые
+												<span>91</span>
+											</button>
+										</div>
+										<div class="b-chart_legend-item">
+											<button class="call-missed">
+												Непринятые
+												<span>4</span>
+											</button>
+										</div>
+									</div>
+									<div class="b-chart_legend-item">
+										<button class="call-outgoing">
+											Исходящие
+											<span>53</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="duration-info">
+							<div class="row">
+								<div class="row_cell-1">
+									<p class="duration-info_label">
+										Средняя длительность
+									</p>
+									<p class="duration-info_time">
+										<span>00</span>:<span>02</span>:<span>05</span>
+									</p>
+								</div>
+								<div class="row_cell-11">
+									<div class="period-switcher">
+										<input type="radio" name="dur22" id="dur-12" checked>
+										<label for="dur-12">Принятые</label>
+										<input type="radio" name="dur22" id="dur-22">
+										<label for="dur-22">Исходящие</label>
+										<input type="radio" name="dur22" id="dur-32">
+										<label for="dur-32">Ожидание принятых</label>
+										<input type="radio" name="dur22" id="dur-42">
+										<label for="dur-42">Ожидание пропущенных</label>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="row_cell-1">
+									<p class="duration-info_label">
+										Общая длительность
+									</p>
+									<p class="duration-info_time">
+										<span>287</span>:<span>02</span>:<span>05</span>
+									</p>
+								</div>
+								<div class="row_cell-11">
+									<div class="period-switcher">
+										<input type="radio" name="dur23" id="dur-23" checked>
+										<label for="dur-23">Входящие</label>
+										<input type="radio" name="dur23" id="dur-24">
+										<label for="dur-24">Исходящие</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="last-update">
+							Время последнего обработанного системой события - 8 мин. 41 сек. назад
+						</div>
+					</div>
+					<div class="b-tabs_item">
+						<div class="b-stats_get-btns">
+							<button class="link right">
+								<span class="fa fa-download" title="Скачать отчет"></span>
+							</button>
+							<div class="dropdown right">
+								<div class="dropdown-toggle link">
+									<span class="fa fa-envelope" title="Отправить отчет по Email"></span>
+								</div>
+								<div class="dropdown-container">
+									<div class="dropdown-container_inner">
+										<div class="dd-get-stats">
+											<div class="row">
+												<div class="row_cell-1">
+													&nbsp;
+												</div>
+												<div class="row_cell-11">
+													<p class="h3">
+														Отправка отчета по&nbsp;EMAIL
+													</p>
+												</div>
+											</div>
+											<div class="row">
+												<div class="row_cell-1">
+													<label for="get-stats_to">Кому</label>
+												</div>
+												<div class="row_cell-11">
+													<input type="text" class="text-input" id="get-stats_to" value="aidem@gmail.com, telphin@yandex.ru">
+												</div>
+											</div>
+											<div class="row">
+												<div class="row_cell-1">
+													<label for="get-stats_subj">Тема</label>
+												</div>
+												<div class="row_cell-11">
+													<input type="text" class="text-input" id="get-stats_subj" value="Отчет по номеру АТС Телфин за 22.09.2015">
+												</div>
+											</div>
+											<textarea></textarea>
+											<div class="clearfix">
+												<button class="button focus right">Отправить</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="b-stats_line">
+							<div class="left">
+								<label>Номер</label>
+								<select class="select">
+									<option>Все</option>
+								</select>
+							</div>
+							<div class="left">
+								<div class="period-switcher">
+									<input type="radio" name="period-switcher4" id="period-switcher_day4" checked>
+									<label for="period-switcher_day4">Сегодня</label>
+									<input type="radio" name="period-switcher4" id="period-switcher_yesterday4">
+									<label for="period-switcher_yesterday4">Вчера</label>
+									<input type="radio" name="period-switcher4" id="period-switcher_week4">
+									<label for="period-switcher_week4">Неделя</label>
+									<input type="radio" name="period-switcher4" id="period-switcher_month4">
+									<label for="period-switcher_month4">Месяц</label>
+									<input type="radio" name="period-switcher4" id="period-switcher_year4">
+									<label for="period-switcher_year4">Год</label>
+								</div>
+								<div class="date-picker dropdown">
+									<div class="dropdown-toggle"><span class="date-picker_date-text">6 сентября 2014 - 6 сентября 2015</span></div>
+									<div class="dropdown-container">
+										<div class="dropdown-container_inner">
+											<div class="date"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="b-stats_line">
+							<div class="left">
+								<label>Сотрудник</label>
+								<select class="select">
+									<option>Константинопольский Константин</option>
+								</select>
+							</div>
+							<div class="b-stats_duration-line left">
+								<label>Продолжительность</label>
+								<input type="text" class="text-input">
+								&mdash;
+								<input type="text" class="text-input">
+								<select class="select">
+									<option>Секунд</option>
+									<option>Минут</option>
+								</select>
+							</div>
+						</div>
+						<div class="b-stats_line">
+							<div class="left">
+								<label>Очередь</label>
+								<select class="select">
+									<option>Все</option>
+								</select>
+							</div>
+							<div class="left">
+								<label>Добавочный</label>
+								<select class="select">
+									<option>Все</option>
+								</select>
+							</div>
+						</div>
+						<div class="b-stats_line">
+							<div class="left">
+								<label>Тип вызова</label>
+								<select class="select">
+									<option>Все</option>
+								</select>
+							</div>
+							<div class="right">
+								<button class="button" disabled>
+									<span class="fa fa-repeat"></span>
+									Сбросить все
+								</button>
+							</div>
+						</div>
+						<p class="h3 text-center">
+							Журнал звонков
+						</p>
+						<div class="p-main_table">
+							<table>
+								<thead>
+									<tr>
+										<th class="cell_star"></th>
+										<th class="cell_date">Когда</th>
+										<th class="cell_icon"></th>
+										<th class="cell_num">Доб.</th>
+										<th class="cell_source">Источник</th>
+										<th class="cell_queue">Очередь</th>
+										<th class="cell_employee">Сотрудник</th>
+										<th class="cell_from">С номера</th>
+										<th class="cell_to">На номер</th>
+										<th class="cell_record">Запись</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="cell_star">
+											<input type="checkbox" class="checkbox-star" id="star-1"><label for="star-1"></label>
+										</td>
+										<td class="cell_date">
+											<p>22.09.2015</p>
+											<p>09:30</p>
+										</td>
+										<td class="cell_icon">
+											<span class="icon call call__in"></span>
+										</td>
+										<td class="cell_num">111</td>
+										<td class="cell_source">Рабочий</td>
+										<td class="cell_queue">Отдел продаж</td>
+										<td class="cell_employee">Константинопольский Константин</td>
+										<td class="cell_from">
+											<div class="phone-func-place" data-phone="+7 931 354-40-20"></div>
+										</td>
+										<td class="cell_to">
+											<div class="phone-func-place" data-phone="+7 950 244-70-18"></div>
+										</td>
+										<td class="cell_record">
+											<p>00:00<span class="cl_black">:25</span></p>
+											<div>
+												<span class="dropdown">
+													<div class="link dropdown-toggle">
+														<span class="fa fa-play-circle"></span>
+													</div>
+													<div class="dropdown-container">
+														<div class="dropdown-container_inner">
+															<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+														</div>
+													</div>
+												</span>
+												<a href="#" class="fa fa-download"></a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="cell_star">
+											<input type="checkbox" class="checkbox-star" id="star-12"><label for="star-2"></label>
+										</td>
+										<td class="cell_date">
+											<p>22.09.2015</p>
+											<p>09:34</p>
+										</td>
+										<td class="cell_icon">
+											<span class="icon voice-mail voice-mail__in"></span>
+										</td>
+										<td class="cell_num">112</td>
+										<td class="cell_source">Рабочий</td>
+										<td class="cell_queue">Доставка</td>
+										<td class="cell_employee">Васильев Сергей</td>
+										<td class="cell_from">
+											<div class="phone-func-place" data-phone="+7 950 244-70-18"></div>
+										</td>
+										<td class="cell_to">
+											<div class="phone-func-place" data-phone="8 800 312-42-12"></div>
+										</td>
+										<td class="cell_record">
+											<p>00:00<span class="cl_black">:42</span></p>
+											<div>
+												<span class="dropdown">
+													<div class="link dropdown-toggle">
+														<span class="fa fa-play-circle"></span>
+													</div>
+													<div class="dropdown-container">
+														<div class="dropdown-container_inner">
+															<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+														</div>
+													</div>
+												</span>
+												<a href="#" class="fa fa-download"></a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="cell_star">
+											<input type="checkbox" class="checkbox-star" id="star-3"><label for="star-3"></label>
+										</td>
+										<td class="cell_date">
+											<p>22.09.2015</p>
+											<p>10:02</p>
+										</td>
+										<td class="cell_icon">
+											&nbsp;
+										</td>
+										<td class="cell_num">101</td>
+										<td class="cell_source">Рабочий</td>
+										<td class="cell_queue">Отдел продаж</td>
+										<td class="cell_employee">Якупова Ирина</td>
+										<td class="cell_from">
+											<div class="phone-func-place" data-phone="+7 931 354-40-20" data-missed="true"></div>
+										</td>
+										<td class="cell_to">
+											<div class="phone-func-place" data-phone="+7 950 244-70-18"></div>
+										</td>
+										<td class="cell_record">
+											&nbsp;
+										</td>
+									</tr>
+									<tr>
+										<td class="cell_star">
+											<input type="checkbox" class="checkbox-star" id="star-4"><label for="star-4"></label>
+										</td>
+										<td class="cell_date">
+											<p>22.09.2015</p>
+											<p>10:20</p>
+										</td>
+										<td class="cell_icon">
+											<span class="icon fax fax__in"></span>
+										</td>
+										<td class="cell_num">132</td>
+										<td class="cell_source">Рабочий</td>
+										<td class="cell_queue">Техподдержка</td>
+										<td class="cell_employee">Карпов Артем</td>
+										<td class="cell_from">
+											<div class="phone-func-place" data-phone="8 820 200-11-89"></div>
+										</td>
+										<td class="cell_to">
+											<div class="phone-func-place" data-phone="8 800 312-42-12"></div>
+										</td>
+										<td class="cell_record">
+											<p><span class="cl_black">115 КБ</span></p>
+											<div>
+												<a href="#" class="fa fa-download"></a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="cell_star">
+											<input type="checkbox" class="checkbox-star" id="star-5" checked><label for="star-5"></label>
+										</td>
+										<td class="cell_date">
+											<p>22.09.2015</p>
+											<p>10:22</p>
+										</td>
+										<td class="cell_icon">
+											<span class="icon call call__out"></span>
+										</td>
+										<td class="cell_num">111</td>
+										<td class="cell_source">Рабочий</td>
+										<td class="cell_queue">Отдел продаж</td>
+										<td class="cell_employee">Константинопольский Константин</td>
+										<td class="cell_from">
+											<div class="phone-func-place" data-phone="+7 931 354-40-20"></div>
+										</td>
+										<td class="cell_to">
+											<div class="phone-func-place" data-phone="8 800 312-42-12" data-name="Николай Николаевич (Aidem)"></div>
+										</td>
+										<td class="cell_record">
+											<p>00<span class="cl_black">:01:25</span></p>
+											<div>
+												<span class="dropdown">
+													<div class="link dropdown-toggle">
+														<span class="fa fa-play-circle"></span>
+													</div>
+													<div class="dropdown-container">
+														<div class="dropdown-container_inner">
+															<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+														</div>
+													</div>
+												</span>
+												<a href="#" class="fa fa-download"></a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="cell_star">
+											<input type="checkbox" class="checkbox-star" id="star-6"><label for="star-6"></label>
+										</td>
+										<td class="cell_date">
+											<p>22.09.2015</p>
+											<p>11:25</p>
+										</td>
+										<td class="cell_icon">
+											<span class="icon fax fax__out"></span>
+										</td>
+										<td class="cell_num">132</td>
+										<td class="cell_source">Рабочий</td>
+										<td class="cell_queue">Техподдержка</td>
+										<td class="cell_employee">Карпов Артем</td>
+										<td class="cell_from">
+											<div class="phone-func-place" data-phone="8 820 200-11-89"></div>
+										</td>
+										<td class="cell_to">
+											<div class="phone-func-place" data-phone="8 800 312-42-12"></div>
+										</td>
+										<td class="cell_record">
+											<p><span class="cl_black">1,7 МБ</span></p>
+											<div>
+												<a href="#" class="fa fa-download"></a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="cell_star">
+											<input type="checkbox" class="checkbox-star" id="star-7"><label for="star-7"></label>
+										</td>
+										<td class="cell_date">
+											<p>22.09.2015</p>
+											<p>11:32</p>
+										</td>
+										<td class="cell_icon">
+											<span class="icon call call__in"></span>
+										</td>
+										<td class="cell_num">111</td>
+										<td class="cell_source">Рабочий</td>
+										<td class="cell_queue">Отдел продаж</td>
+										<td class="cell_employee">Константинопольский Константин</td>
+										<td class="cell_from">
+											<div class="phone-func-place" data-phone="+7 931 354-40-20"></div>
+										</td>
+										<td class="cell_to">
+											<div class="phone-func-place" data-phone="+7 950 244-70-18"></div>
+										</td>
+										<td class="cell_record">
+											<p>00:00<span class="cl_black">:25</span></p>
+											<div>
+												<span class="dropdown">
+													<div class="link dropdown-toggle">
+														<span class="fa fa-play-circle"></span>
+													</div>
+													<div class="dropdown-container">
+														<div class="dropdown-container_inner">
+															<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+														</div>
+													</div>
+												</span>
+												<a href="#" class="fa fa-download"></a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="cell_star">
+											<input type="checkbox" class="checkbox-star" id="star-8"><label for="star-8"></label>
+										</td>
+										<td class="cell_date">
+											<p>22.09.2015</p>
+											<p>12:03</p>
+										</td>
+										<td class="cell_icon">
+											<span class="icon voice-mail voice-mail__out"></span>
+										</td>
+										<td class="cell_num">112</td>
+										<td class="cell_source">Рабочий</td>
+										<td class="cell_queue">Доставка</td>
+										<td class="cell_employee">Дементьев Сергей</td>
+										<td class="cell_from">
+											<div class="phone-func-place" data-phone="+7 931 354-40-20" data-name="Николай Николаевич (Aidem)"></div>
+										</td>
+										<td class="cell_to">
+											<div class="phone-func-place" data-phone="8 800 312-42-12"></div>
+										</td>
+										<td class="cell_record">
+											<p>00:00<span class="cl_black">:42</span></p>
+											<div>
+												<span class="dropdown">
+													<div class="link dropdown-toggle">
+														<span class="fa fa-play-circle"></span>
+													</div>
+													<div class="dropdown-container">
+														<div class="dropdown-container_inner">
+															<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+														</div>
+													</div>
+												</span>
+												<a href="#" class="fa fa-download"></a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="cell_star">
+											<input type="checkbox" class="checkbox-star" id="star-9"><label for="star-9"></label>
+										</td>
+										<td class="cell_date">
+											<p>22.09.2015</p>
+											<p>12:28</p>
+										</td>
+										<td class="cell_icon">
+											&nbsp;
+										</td>
+										<td class="cell_num">141</td>
+										<td class="cell_source">Рабочий</td>
+										<td class="cell_queue">Вне очереди</td>
+										<td class="cell_employee">Андреева Екатерина</td>
+										<td class="cell_from">
+											<div class="phone-func-place" data-phone="+7 931 354-40-20" data-missed="true"></div>
+										</td>
+										<td class="cell_to">
+											<div class="phone-func-place" data-phone="+7 950 244-70-18"></div>
+										</td>
+										<td class="cell_record">
+											&nbsp;
+										</td>
+									</tr>
+									<tr>
+										<td class="cell_star">
+											<input type="checkbox" class="checkbox-star" id="star-10"><label for="star-10"></label>
+										</td>
+										<td class="cell_date">
+											<p>22.09.2015</p>
+											<p>10:20</p>
+										</td>
+										<td class="cell_icon">
+											<span class="icon fax fax__in"></span>
+										</td>
+										<td class="cell_num">132</td>
+										<td class="cell_source">Рабочий</td>
+										<td class="cell_queue">Техподдержка</td>
+										<td class="cell_employee">Карпов Артем</td>
+										<td class="cell_from">
+											<div class="phone-func-place" data-phone="8 820 200-11-89"></div>
+										</td>
+										<td class="cell_to">
+											<div class="phone-func-place" data-phone="8 800 312-42-12"></div>
+										</td>
+										<td class="cell_record">
+											<p><span class="cl_black">115 КБ</span></p>
+											<div>
+												<a href="#" class="fa fa-download"></a>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="pagination">
+							<div class="pagination_inner">
+								<a href="#" class="pagination_item pagination_item__single">В начало</a>
+							</div>
+							<div class="pagination_inner">
+								<a href="#" class="pagination_item"><span class="fa fa-arrow-left"></span></a>
+								<a href="#" class="pagination_item">1</a>
+								<span class="pagination_item current">2</span>
+								<a href="#" class="pagination_item">3</a>
+								<a href="#" class="pagination_item"><span class="fa fa-arrow-right"></span></a>
+							</div>
+							<div class="pagination_inner">
+								<a href="#" class="pagination_item pagination_item__single">В конец</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<span class="left"><span class="fa fa-copyright"></span> 2015 Виртуальная АТС</span>
+			<span class="left">Коммерческий отдел: (8 812) 123-45-67</span>
+			<span class="left">Техподдержка: (8 812) 765-43-21</span>
+			<a href="http://aidem.ru/" target="_blank" class="right">Design by <img src="/img/logo-aidem.png" alt="Aidem — проектирование и дизайн интерфейсов"></a>
+		</footer>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="/js/scripts.js"></script>
+	<script src="/js/jsrender.min.js"></script>
+	<script src="/js/jquery.jplayer.min.js"></script>
+	<script src="/js/jquery.pickmeup.min.js"></script>
+	<script src="/js/jquery.formstyler.min.js"></script>
+	<!-- Templates -->
+	<script id="audioPlayer" type="text/x-jsrender">
+		<div id="jp_container_{{:id}}" class="jp-audio">
+			<div class="jp-duration-line">
+				<span class="jp-current-time"></span>/<span class="jp-duration"></span>
+			</div>
+			<div class="jp-controll-line">
+				<button class="jp-play fa fa-play"></button>
+				<button class="jp-pause fa fa-pause"></button>
+				<div class="jp-seek-bar">
+					<div class="jp-play-bar"></div>
+				</div>
+			</div>
+			<div class="jp-controll-line">
+				<button class="jp-mute fa fa-volume-up"></button>
+				<button class="jp-unmute fa fa-volume-off"></button>
+				<div class="jp-volume-bar">
+					<div class="jp-volume-bar-value"></div>
+				</div>
+			</div>
+		</div>
+	</script>
+	<script id="phoneFunc" type="text/x-jsrender">
+		<div class="phone-func">
+			<input 
+				type="text"
+				id="phone-func_name-input-{{:id}}"
+				class="phone-func_name-input text-input {{if name}}not-empty{{/if}}"
+				value="{{:name}}"
+			>
+			<div class="phone-func_num {{if missed}}cl_red{{/if}}">{{:phone}}</div>
+			{{if name}}
+		      	<div class="phone-func_name">{{:name}}</div>
+		   	{{/if}}
+			<div class="phone-func_btns">
+				<button class="link fa fa-phone"></button>
+				<button class="link icon fax__blue"></button>
+				<button class="link fa fa-list-ul"></button>
+				<label for="phone-func_name-input-{{:id}}" class="link fa fa-user-plus"></label>
+			</div>
+		</div>
+	</script>
+</body>
+</html>

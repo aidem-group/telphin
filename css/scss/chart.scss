@@ -1,6 +1,12 @@
 .b-chart {
 	margin: 40px 0 60px;
 
+	.row_cell-1 {
+		width: 100%;
+
+		img { width: 100%; }
+	}
+
 	&_legend {
 		padding-left: 60px;
 
@@ -20,11 +26,20 @@
 				border: 0;
 				color: $cl_grey_2;
 				cursor: pointer;
+				min-width: 90px;
 
 				&.current, &:hover {
 					color: #000;
 					
 					&:before { opacity: 1; }
+
+					& + .b-chart_legend-info {
+						color: #000;
+					}
+				}
+
+				& + .b-chart_legend-info {
+					color: $cl_grey_2;
 				}
 
 				&:before {
@@ -52,6 +67,14 @@
 					&-outgoing:before { background-color: $cl_yellow; }
 				}
 			}
+		}
+
+		&-info {
+			display: inline-block;
+			position: relative;
+			vertical-align: top;
+			top: 14px;
+			margin-left: 26px;
 		}
 	}
 }
