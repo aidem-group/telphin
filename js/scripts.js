@@ -2,6 +2,7 @@ $(function(){
     initPlayers();
     initTabsBlock();
     initPhoneFunc();
+    initCallForwarding();
 
 	$('.dropdown-toggle').on('click', dropdown);
 	$('.header_btn-user-status').on('click', function(){$(this).toggleClass('offline');});
@@ -10,10 +11,103 @@ $(function(){
     $(document).on('click', '.b-unrolling_toggle', unrollingBlock);
     $('.b-filters_switcher').on('click', function(){ $(this).parent().toggleClass('short'); });
 
+    $('.call-forwarding-period_period-select').on('change', selectCallForwardingPeriod);
+    $('.call-forwarding-time_checkbox').on('change', callForwardingTime);
+    $('.call-forwarding_btns-item .close-btn, .delete-scheme-line').on('click', showDeleteBlockCallForwarding);
+    $('.call-forwarding-scenario_radio').on('change', callForwardingScenarioSelect);
+    $('.call-forwarding_switcher-label').on('click', callForwardingEnableSwitch);
+    $('.call-forwarding_btns-item').on('click', callForwardingSwitch);
+
     $('.select').styler();
     $('.date').pickmeup({flat: true, mode: 'range', calendars: 2});
     $('.add-new-person').on('submit', checkPersonData);
+    $('.phone-mask').mask('7-999-999-99-99');
 });
+
+function callForwardingSwitch()
+{
+    var obj = $(this);
+    var cell = obj.closest('td');
+    var parent = obj.closest('.dd-call-forwarding_main');
+    var items = parent.find('.call-forwarding_blocks-item');
+
+    cell
+        .addClass('current')
+        .siblings()
+        .removeClass('current');
+
+    items
+        .removeClass('current')
+        .eq(cell.index())
+        .addClass('current');
+}
+
+function callForwardingEnableSwitch()
+{
+    var obj = $(this);
+    var parent = obj.closest('.dd-call-forwarding_main');
+    var item = obj.closest('.call-forwarding_blocks-item');
+    var block = obj.closest('.call-forwarding_inner');
+    var buttons = parent.find('.call-forwarding_btns-item');
+
+    block.toggleClass('disabled');
+    buttons.eq(item.index()).toggleClass('disabled');
+}
+
+function callForwardingScenarioSelect()
+{
+    var obj = $(this);
+    var parent = obj.closest('.call-forwarding-scenario');
+    var blocks = parent.find('.call-forwarding-scenario_scheme');
+
+    blocks
+        .removeClass('selected')
+        .eq(obj.val())
+        .addClass('selected');
+}
+
+function showDeleteBlockCallForwarding()
+{
+    var obj = $(this);
+    var parent = obj.closest('.dd-call-forwarding_main');
+    var deleteBlock = parent.find('.call-forwarding_delete-block');
+    var closeButtons = deleteBlock.find('.button');
+
+    deleteBlock.show();
+    closeButtons.bind('click', function(){ deleteBlock.hide(); });
+}
+
+function callForwardingTime()
+{
+    var obj = $(this);
+    var parent = obj.closest('.call-forwarding-time');
+    var block = parent.find('.call-forwarding-time_block');
+
+    obj.prop('checked') ? block.addClass('disabled') : block.removeClass('disabled');
+}
+
+function selectCallForwardingPeriod()
+{
+    var obj = $(this);
+    var parent = obj.closest('.call-forwarding-period');
+    var periods = parent.find('.call-forwarding-period_period-selected');
+
+    periods
+        .removeClass('selected')
+        .eq(obj.val())
+        .addClass('selected');
+}
+
+function initCallForwarding()
+{
+    $('.dd-call-forwarding').each(function(i){
+        var obj = $(this);
+        var mainBlock = obj.find('.dd-call-forwarding_main');
+        var firstExpirienceBlock = obj.find('.dd-call-forwarding_fe');
+
+        obj.find('.enable-call-forwarding').bind('click', function(){ obj.addClass('enabled'); });
+    });
+}
 
 function checkPersonData()
 {

@@ -580,6 +580,7 @@
 					                        		<div class="b-tabs_btns">
 					                        			<button>Сотрудник</button>
 					                            		<button>Настройки входа</button>
+					                            		<button>Настройка переадресации</button>
 					                        		</div>
 					                        		<div class="b-tabs_inner">
 					                        			<div class="b-tabs_item">
@@ -622,6 +623,1689 @@
 					                        					<input type="password" class="text-input" name="employee_new-pass" id="employee_new-pass" disabled>
 					                        				</div>
 					                        				<button class="button focus">Сохранить</button>
+					                        			</div>
+					                        			<div class="b-tabs_item">
+					                        				<div class="dd-call-forwarding">
+																<div class="dd-call-forwarding_fe">
+																	<p>
+																		<button class="button button__big-icon enable-call-forwarding">
+											    							<span class="fa fa-power-off"></span>
+											    							Включить
+											    						</button>
+																	</p>
+																	<p>
+																		Здесь можно настроить переадресацию на&nbsp;мобильный, а&nbsp;также на&nbsp;любые другие телефоны, указать длительность звонка и&nbsp;настроить переадресацию на&nbsp;голосовую почту.
+																	</p>
+																</div>
+																<div class="dd-call-forwarding_main">
+																	<div class="call-forwarding_btns">
+																		<table>
+											    							<tr>
+											    								<td class="current">
+											    									<div class="call-forwarding_btns-item">
+											    										<span class="text"><span class="fa fa-power-off"></span> Пн-Вс  10:00–18:00</span>
+											    										<button class="close-btn"><span class="fa fa-close"></span></button>
+											    									</div>
+											    								</td>
+											    								<td>
+											    									<div class="call-forwarding_btns-item disabled">
+											    										<span class="text"><span class="fa fa-power-off"></span> Пн-Вс  10:00–18:00</span>
+											    										<button class="close-btn"><span class="fa fa-close"></span></button>
+											    									</div>
+											    								</td>
+											    								<td>
+											    									<div class="call-forwarding_btns-item add-new">
+											    										<span class="text">
+											    											<span class="fa fa-plus"></span>
+											    											Добавить интервал
+											    										</span>
+											    									</div>
+											    								</td>
+											    								<td style="width: 25%;">&nbsp;</td>
+											    							</tr>
+											    						</table>
+																	</div>
+																	<div class="call-forwarding_blocks">
+																		<div class="call-forwarding_blocks-item current">
+																			<div class="call-forwarding_inner">
+																				<div class="call-forwarding_action">
+																					Переадресовывать
+																					<input type="radio" class="call-forwarding_action-radio" name="call-forwarding_action-radio-0" id="call-forwarding_action-radio-0_0" checked>
+																					<label class="call-forwarding_action-label button" for="call-forwarding_action-radio-0_0">Всегда</label>
+																					или, если рабочий номер
+																					<input type="radio" class="call-forwarding_action-radio" name="call-forwarding_action-radio-0" id="call-forwarding_action-radio-0_1">
+																					<label class="call-forwarding_action-label button" for="call-forwarding_action-radio-0_1">Не отвечает</label>
+																					<input type="radio" class="call-forwarding_action-radio" name="call-forwarding_action-radio-0" id="call-forwarding_action-radio-0_2">
+																					<label class="call-forwarding_action-label button" for="call-forwarding_action-radio-0_2">Занят</label>
+																				</div>
+																				<p class="call-forwarding_desc-title">
+																					Время работы
+																				</p>
+																				<div class="call-forwarding-period">
+																					<div class="table">
+																						<div class="row_cell-1">
+																							<select class="select call-forwarding-period_period-select">
+																								<option value="0">Ежедневно</option>
+																								<option value="1">Раз в неделю</option>
+																								<option value="2">По будням</option>
+																								<option value="3">По выходным</option>
+																								<option value="4">Интервал</option>
+																								<option value="5">Разные дни</option>
+																							</select>
+																						</div>
+																						<div class="row_cell-11">
+																							<div class="call-forwarding-period_period-selected selected">
+																								<span class="routing-date_item">
+																									Пн.–Вс.
+																								</span>
+																							</div>
+																							<div class="call-forwarding-period_period-selected">
+																								<select class="select">
+																									<option value="1">Понедельник</option>
+																									<option value="2">Вторник</option>
+																									<option value="3">Среда</option>
+																									<option value="4">Четверг</option>
+																									<option value="5">Пятница</option>
+																									<option value="6">Суббота</option>
+																									<option value="7">Воскресение</option>
+																								</select>
+																							</div>
+																							<div class="call-forwarding-period_period-selected">
+																								<span class="routing-date_item">
+																									Пн.–Пт.
+																								</span>
+																							</div>
+																							<div class="call-forwarding-period_period-selected">
+																								<span class="routing-date_item">
+																									Сб.–Вск.
+																								</span>
+																							</div>
+																							<div class="call-forwarding-period_period-selected">
+																								c
+																								<input type="text" class="text-input">
+																								по
+																								<input type="text" class="text-input">
+																								<select class="select">
+																									<option value="1">января</option>
+																									<option value="1">февраля</option>
+																									<option value="1">марта</option>
+																									<option value="1">апреля</option>
+																									<option value="1">мая</option>
+																									<option value="1">июня</option>
+																									<option value="1">июля</option>
+																									<option value="1">августа</option>
+																									<option value="1">сентября</option>
+																									<option value="1">октября</option>
+																									<option value="1">ноября</option>
+																									<option value="1">декабря</option>
+																								</select>
+																							</div>
+																							<div class="call-forwarding-period_period-selected">
+																								<input type="text" class="text-input text-input__alternate-days">
+																								<div class="right cl_grey_1">
+																									Формат заполнения: 01.01, 07.01, 12.01
+																								</div>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="call-forwarding-time">
+																					<div class="call-forwarding-time_block">
+																						<label for="routing-date_time-from">с</label>
+																						<select class="select" id="routing-date_time-from">
+																							<option value="1">01:00</option>
+																							<option value="2">02:00</option>
+																							<option value="3">03:00</option>
+																							<option value="4">04:00</option>
+																							<option value="5">05:00</option>
+																							<option value="6">06:00</option>
+																							<option value="7">07:00</option>
+																							<option value="8">08:00</option>
+																							<option value="9">09:00</option>
+																							<option value="10">10:00</option>
+																							<option value="11">11:00</option>
+																							<option value="12">12:00</option>
+																							<option value="13">13:00</option>
+																							<option value="14">14:00</option>
+																							<option value="15">15:00</option>
+																							<option value="16">16:00</option>
+																							<option value="17">17:00</option>
+																							<option value="18">18:00</option>
+																							<option value="19">19:00</option>
+																							<option value="20">20:00</option>
+																							<option value="21">21:00</option>
+																							<option value="22">22:00</option>
+																							<option value="23">23:00</option>
+																							<option value="24">00:00</option>
+																						</select>
+																						<label for="routing-date_time-to" id="routing-date_time-to">до</label>
+																						<select class="select">
+																							<option value="1">01:00</option>
+																							<option value="2">02:00</option>
+																							<option value="3">03:00</option>
+																							<option value="4">04:00</option>
+																							<option value="5">05:00</option>
+																							<option value="6">06:00</option>
+																							<option value="7">07:00</option>
+																							<option value="8">08:00</option>
+																							<option value="9">09:00</option>
+																							<option value="10">10:00</option>
+																							<option value="11">11:00</option>
+																							<option value="12">12:00</option>
+																							<option value="13">13:00</option>
+																							<option value="14">14:00</option>
+																							<option value="15">15:00</option>
+																							<option value="16">16:00</option>
+																							<option value="17">17:00</option>
+																							<option value="18">18:00</option>
+																							<option value="19">19:00</option>
+																							<option value="20">20:00</option>
+																							<option value="21">21:00</option>
+																							<option value="22">22:00</option>
+																							<option value="23">23:00</option>
+																							<option value="24">00:00</option>
+																						</select>
+																					</div>
+																					или
+																					<input type="checkbox" class="checkbox call-forwarding-time_checkbox" id="num-1">
+																					<label class="call-forwarding-time_label" for="num-1">круглосуточно</label>
+																				</div>
+																				<p class="call-forwarding_desc-title">
+																					Звонок переадресовывается
+																				</p>
+																				<div class="call-forwarding-scenario">
+																					<div class="call-forwarding-scenario_variables">
+																						<input type="radio" class="radio call-forwarding-scenario_radio" name="call-forwarding-scenario-0" id="call-forwarding-scenario-0_1" value="0" checked>
+																						<label class="call-forwarding-scenario_label" for="call-forwarding-scenario-0_1">
+																							<p class="radio-label_title">
+																								Одновременно
+																							</p>
+																							<p class="radio-label_info">
+																								Все указанные телефоны будут звонить одновременно
+																							</p>
+																						</label>
+																						<input type="radio" class="radio call-forwarding-scenario_radio" name="call-forwarding-scenario-0" id="call-forwarding-scenario-0_2" value="1">
+																						<label class="call-forwarding-scenario_label" for="call-forwarding-scenario-0_2">
+																							<p class="radio-label_title">
+																								По-очереди
+																							</p>
+																							<p class="radio-label_info">
+																								Звонок переходит от одного телефона к другому
+																							</p>
+																						</label>
+																						<input type="radio" class="radio call-forwarding-scenario_radio" name="call-forwarding-scenario-0" id="call-forwarding-scenario-0_3" value="2">
+																						<label class="call-forwarding-scenario_label" for="call-forwarding-scenario-0_3">
+																							<p class="radio-label_title">
+																								Каскадно
+																							</p>
+																							<p class="radio-label_info">
+																								Постепенное увеличение количества звонящих телефонов
+																							</p>
+																						</label>
+																					</div>
+																					<div class="call-forwarding-scenario_schemes">
+																						<div class="call-forwarding-scenario_scheme selected">
+																							<div class="table">
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Звонить
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<button class="add-new-scheme-1 button focus">Добавить</button>
+																									</div>
+																									<div class="row_cell">
+																										<button class="delete-scheme-line">
+																											<span class="fa fa-trash"></span>
+																										</button>
+																									</div>
+																								</div>
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										и на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<button class="add-new-scheme-1 button focus">Добавить</button>
+																									</div>
+																									<div class="row_cell">
+																										<button class="delete-scheme-line">
+																											<span class="fa fa-trash"></span>
+																										</button>
+																									</div>
+																								</div>
+																							</div>
+																						</div>
+																						<div class="call-forwarding-scenario_scheme call-forwarding-scenario_scheme__queue">
+																							<div class="table">
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Сначала звонить
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<div class="scheme-line-buttons">
+																											<button class="delete-scheme-line">
+																												<span class="fa fa-trash"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-down"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-up"></span>
+																											</button>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Затем звонить
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<div class="scheme-line-buttons">
+																											<button class="delete-scheme-line">
+																												<span class="fa fa-trash"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-down"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-up"></span>
+																											</button>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Затем звонить
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<div class="scheme-line-buttons">
+																											<button class="delete-scheme-line">
+																												<span class="fa fa-trash"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-down"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-up"></span>
+																											</button>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Затем звонить
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<div class="scheme-line-buttons">
+																											<button class="delete-scheme-line">
+																												<span class="fa fa-trash"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-down"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-up"></span>
+																											</button>
+																										</div>
+																									</div>
+																								</div>
+																							</div>
+																							<div class="right">
+																								<button class="add-new-scheme-1 button focus">Добавить</button>
+																							</div>
+																							<p class="call-forwarding_desc-title">
+																								После прекращения всех вызовов
+																							</p>
+																							<input type="checkbox" class="checkbox" id="call-forwarding-send-to-voice-mail-1">
+																							<label for="call-forwarding-send-to-voice-mail-1">Отправлять на голосовую почту</label>
+																						</div>
+																						<div class="call-forwarding-scenario_scheme call-forwarding-scenario_scheme__cascade">
+																							<div class="table">
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Сначала звонить
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<div class="scheme-line-buttons">
+																											<button class="delete-scheme-line">
+																												<span class="fa fa-trash"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-down"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-up"></span>
+																											</button>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Затем дублировать
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<div class="scheme-line-buttons">
+																											<button class="delete-scheme-line">
+																												<span class="fa fa-trash"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-down"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-up"></span>
+																											</button>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Затем дублировать
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<div class="scheme-line-buttons">
+																											<button class="delete-scheme-line">
+																												<span class="fa fa-trash"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-down"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-up"></span>
+																											</button>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Затем дублировать
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<div class="scheme-line-buttons">
+																											<button class="delete-scheme-line">
+																												<span class="fa fa-trash"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-down"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-up"></span>
+																											</button>
+																										</div>
+																									</div>
+																								</div>
+																							</div>
+																							<div class="right">
+																								<button class="add-new-scheme-1 button focus">Добавить</button>
+																							</div>
+																							<p class="call-forwarding_desc-title">
+																								После прекращения всех вызовов
+																							</p>
+																							<input type="checkbox" class="checkbox" id="call-forwarding-send-to-voice-mail-2">
+																							<label for="call-forwarding-send-to-voice-mail-2">Отправлять на голосовую почту</label>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="call-forwarding_delete-block">
+																					<div class="content">
+																						<p>
+																							Вы уверены, что хотите удалить вкладку?
+																						</p>
+																						<p>
+																							<button class="button focus">Да</button>
+																							<button class="button focus">Нет</button>
+																						</p>
+																					</div>
+																				</div>
+																				<div class="call-forwarding_disable-block">
+																					<div class="call-forwarding_switcher">
+																						<button class="call-forwarding_switcher-label">Включить</button>
+																						<span class="call-forwarding_switcher-status">Не работает</span>
+																					</div>
+																				</div>
+																				<div class="call-forwarding_switcher">
+																					<button class="call-forwarding_switcher-label">Выключить</button>
+																					<span class="call-forwarding_switcher-status">Работает</span>
+																				</div>
+																			</div>
+																			<button class="button focus save-button">Сохранить</button>
+																		</div>
+																		<div class="call-forwarding_blocks-item">
+																			<div class="call-forwarding_inner disabled">
+																				<div class="call-forwarding_action">
+																					Переадресовывать
+																					<input type="radio" class="call-forwarding_action-radio" name="call-forwarding_action-radio-1" id="call-forwarding_action-radio-1_0" checked>
+																					<label class="call-forwarding_action-label button" for="call-forwarding_action-radio-1_0">Всегда</label>
+																					или, если рабочий номер
+																					<input type="radio" class="call-forwarding_action-radio" name="call-forwarding_action-radio-1" id="call-forwarding_action-radio-1_1">
+																					<label class="call-forwarding_action-label button" for="call-forwarding_action-radio-1_1">Не отвечает</label>
+																					<input type="radio" class="call-forwarding_action-radio" name="call-forwarding_action-radio-1" id="call-forwarding_action-radio-1_2">
+																					<label class="call-forwarding_action-label button" for="call-forwarding_action-radio-1_2">Занят</label>
+																				</div>
+																				<p class="call-forwarding_desc-title">
+																					Время работы
+																				</p>
+																				<div class="call-forwarding-period">
+																					<div class="table">
+																						<div class="row_cell-1">
+																							<select class="select call-forwarding-period_period-select">
+																								<option value="0">Ежедневно</option>
+																								<option value="1">Раз в неделю</option>
+																								<option value="2">По будням</option>
+																								<option value="3">По выходным</option>
+																								<option value="4">Интервал</option>
+																								<option value="5">Разные дни</option>
+																							</select>
+																						</div>
+																						<div class="row_cell-11">
+																							<div class="call-forwarding-period_period-selected selected">
+																								<span class="routing-date_item">
+																									Пн.–Вс.
+																								</span>
+																							</div>
+																							<div class="call-forwarding-period_period-selected">
+																								<select class="select">
+																									<option value="1">Понедельник</option>
+																									<option value="2">Вторник</option>
+																									<option value="3">Среда</option>
+																									<option value="4">Четверг</option>
+																									<option value="5">Пятница</option>
+																									<option value="6">Суббота</option>
+																									<option value="7">Воскресение</option>
+																								</select>
+																							</div>
+																							<div class="call-forwarding-period_period-selected">
+																								<span class="routing-date_item">
+																									Пн.–Пт.
+																								</span>
+																							</div>
+																							<div class="call-forwarding-period_period-selected">
+																								<span class="routing-date_item">
+																									Сб.–Вск.
+																								</span>
+																							</div>
+																							<div class="call-forwarding-period_period-selected">
+																								c
+																								<input type="text" class="text-input">
+																								по
+																								<input type="text" class="text-input">
+																								<select class="select">
+																									<option value="1">января</option>
+																									<option value="1">февраля</option>
+																									<option value="1">марта</option>
+																									<option value="1">апреля</option>
+																									<option value="1">мая</option>
+																									<option value="1">июня</option>
+																									<option value="1">июля</option>
+																									<option value="1">августа</option>
+																									<option value="1">сентября</option>
+																									<option value="1">октября</option>
+																									<option value="1">ноября</option>
+																									<option value="1">декабря</option>
+																								</select>
+																							</div>
+																							<div class="call-forwarding-period_period-selected">
+																								<input type="text" class="text-input text-input__alternate-days">
+																								<div class="right cl_grey_1">
+																									Формат заполнения: 01.01, 07.01, 12.01
+																								</div>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="call-forwarding-time">
+																					<div class="call-forwarding-time_block">
+																						<label for="routing-date_time-from">с</label>
+																						<select class="select" id="routing-date_time-from">
+																							<option value="1">01:00</option>
+																							<option value="2">02:00</option>
+																							<option value="3">03:00</option>
+																							<option value="4">04:00</option>
+																							<option value="5">05:00</option>
+																							<option value="6">06:00</option>
+																							<option value="7">07:00</option>
+																							<option value="8">08:00</option>
+																							<option value="9">09:00</option>
+																							<option value="10">10:00</option>
+																							<option value="11">11:00</option>
+																							<option value="12">12:00</option>
+																							<option value="13">13:00</option>
+																							<option value="14">14:00</option>
+																							<option value="15">15:00</option>
+																							<option value="16">16:00</option>
+																							<option value="17">17:00</option>
+																							<option value="18">18:00</option>
+																							<option value="19">19:00</option>
+																							<option value="20">20:00</option>
+																							<option value="21">21:00</option>
+																							<option value="22">22:00</option>
+																							<option value="23">23:00</option>
+																							<option value="24">00:00</option>
+																						</select>
+																						<label for="routing-date_time-to" id="routing-date_time-to">до</label>
+																						<select class="select">
+																							<option value="1">01:00</option>
+																							<option value="2">02:00</option>
+																							<option value="3">03:00</option>
+																							<option value="4">04:00</option>
+																							<option value="5">05:00</option>
+																							<option value="6">06:00</option>
+																							<option value="7">07:00</option>
+																							<option value="8">08:00</option>
+																							<option value="9">09:00</option>
+																							<option value="10">10:00</option>
+																							<option value="11">11:00</option>
+																							<option value="12">12:00</option>
+																							<option value="13">13:00</option>
+																							<option value="14">14:00</option>
+																							<option value="15">15:00</option>
+																							<option value="16">16:00</option>
+																							<option value="17">17:00</option>
+																							<option value="18">18:00</option>
+																							<option value="19">19:00</option>
+																							<option value="20">20:00</option>
+																							<option value="21">21:00</option>
+																							<option value="22">22:00</option>
+																							<option value="23">23:00</option>
+																							<option value="24">00:00</option>
+																						</select>
+																					</div>
+																					или
+																					<input type="checkbox" class="checkbox call-forwarding-time_checkbox" id="num-2">
+																					<label class="call-forwarding-time_label" for="num-2">круглосуточно</label>
+																				</div>
+																				<p class="call-forwarding_desc-title">
+																					Звонок переадресовывается
+																				</p>
+																				<div class="call-forwarding-scenario">
+																					<div class="call-forwarding-scenario_variables">
+																						<input type="radio" class="radio call-forwarding-scenario_radio" name="call-forwarding-scenario-1" id="call-forwarding-scenario-1_1" value="0" checked>
+																						<label class="call-forwarding-scenario_label" for="call-forwarding-scenario-1_1">
+																							<p class="radio-label_title">
+																								Одновременно
+																							</p>
+																							<p class="radio-label_info">
+																								Все указанные телефоны будут звонить одновременно
+																							</p>
+																						</label>
+																						<input type="radio" class="radio call-forwarding-scenario_radio" name="call-forwarding-scenario-1" id="call-forwarding-scenario-1_2" value="1">
+																						<label class="call-forwarding-scenario_label" for="call-forwarding-scenario-1_2">
+																							<p class="radio-label_title">
+																								По-очереди
+																							</p>
+																							<p class="radio-label_info">
+																								Звонок переходит от одного телефона к другому
+																							</p>
+																						</label>
+																						<input type="radio" class="radio call-forwarding-scenario_radio" name="call-forwarding-scenario-1" id="call-forwarding-scenario-1_3" value="2">
+																						<label class="call-forwarding-scenario_label" for="call-forwarding-scenario-1_3">
+																							<p class="radio-label_title">
+																								Каскадно
+																							</p>
+																							<p class="radio-label_info">
+																								Постепенное увеличение количества звонящих телефонов
+																							</p>
+																						</label>
+																					</div>
+																					<div class="call-forwarding-scenario_schemes">
+																						<div class="call-forwarding-scenario_scheme selected">
+																							<div class="table">
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Звонить
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<button class="add-new-scheme-1 button focus">Добавить</button>
+																									</div>
+																									<div class="row_cell">
+																										<button class="delete-scheme-line">
+																											<span class="fa fa-trash"></span>
+																										</button>
+																									</div>
+																								</div>
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										и на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<button class="add-new-scheme-1 button focus">Добавить</button>
+																									</div>
+																									<div class="row_cell">
+																										<button class="delete-scheme-line">
+																											<span class="fa fa-trash"></span>
+																										</button>
+																									</div>
+																								</div>
+																							</div>
+																						</div>
+																						<div class="call-forwarding-scenario_scheme call-forwarding-scenario_scheme__queue">
+																							<div class="table">
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Сначала звонить
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<div class="scheme-line-buttons">
+																											<button class="delete-scheme-line">
+																												<span class="fa fa-trash"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-down"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-up"></span>
+																											</button>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Затем звонить
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<div class="scheme-line-buttons">
+																											<button class="delete-scheme-line">
+																												<span class="fa fa-trash"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-down"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-up"></span>
+																											</button>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Затем звонить
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<div class="scheme-line-buttons">
+																											<button class="delete-scheme-line">
+																												<span class="fa fa-trash"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-down"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-up"></span>
+																											</button>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Затем звонить
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<div class="scheme-line-buttons">
+																											<button class="delete-scheme-line">
+																												<span class="fa fa-trash"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-down"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-up"></span>
+																											</button>
+																										</div>
+																									</div>
+																								</div>
+																							</div>
+																							<div class="right">
+																								<button class="add-new-scheme-1 button focus">Добавить</button>
+																							</div>
+																							<p class="call-forwarding_desc-title">
+																								После прекращения всех вызовов
+																							</p>
+																							<input type="checkbox" class="checkbox" id="call-forwarding-send-to-voice-mail-1">
+																							<label for="call-forwarding-send-to-voice-mail-1">Отправлять на голосовую почту</label>
+																						</div>
+																						<div class="call-forwarding-scenario_scheme call-forwarding-scenario_scheme__cascade">
+																							<div class="table">
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Сначала звонить
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<div class="scheme-line-buttons">
+																											<button class="delete-scheme-line">
+																												<span class="fa fa-trash"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-down"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-up"></span>
+																											</button>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Затем дублировать
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<div class="scheme-line-buttons">
+																											<button class="delete-scheme-line">
+																												<span class="fa fa-trash"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-down"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-up"></span>
+																											</button>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Затем дублировать
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<div class="scheme-line-buttons">
+																											<button class="delete-scheme-line">
+																												<span class="fa fa-trash"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-down"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-up"></span>
+																											</button>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Затем дублировать
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<div class="scheme-line-buttons">
+																											<button class="delete-scheme-line">
+																												<span class="fa fa-trash"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-down"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-up"></span>
+																											</button>
+																										</div>
+																									</div>
+																								</div>
+																							</div>
+																							<div class="right">
+																								<button class="add-new-scheme-1 button focus">Добавить</button>
+																							</div>
+																							<p class="call-forwarding_desc-title">
+																								После прекращения всех вызовов
+																							</p>
+																							<input type="checkbox" class="checkbox" id="call-forwarding-send-to-voice-mail-2">
+																							<label for="call-forwarding-send-to-voice-mail-2">Отправлять на голосовую почту</label>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="call-forwarding_delete-block">
+																					<div class="content">
+																						<p>
+																							Вы уверены, что хотите удалить вкладку?
+																						</p>
+																						<p>
+																							<button class="button focus">Да</button>
+																							<button class="button focus">Нет</button>
+																						</p>
+																					</div>
+																				</div>
+																				<div class="call-forwarding_disable-block">
+																					<div class="call-forwarding_switcher">
+																						<button class="call-forwarding_switcher-label">Включить</button>
+																						<span class="call-forwarding_switcher-status">Не работает</span>
+																					</div>
+																				</div>
+																				<div class="call-forwarding_switcher">
+																					<button class="call-forwarding_switcher-label">Выключить</button>
+																					<span class="call-forwarding_switcher-status">Работает</span>
+																				</div>
+																			</div>
+																			<button class="button focus save-button">Сохранить</button>
+																		</div>
+																		<div class="call-forwarding_blocks-item">
+																			<div class="call-forwarding_inner">
+																				<div class="call-forwarding_action">
+																					Переадресовывать
+																					<input type="radio" class="call-forwarding_action-radio" name="call-forwarding_action-radio-2" id="call-forwarding_action-radio-2_0" checked>
+																					<label class="call-forwarding_action-label button" for="call-forwarding_action-radio-2_0">Всегда</label>
+																					или, если рабочий номер
+																					<input type="radio" class="call-forwarding_action-radio" name="call-forwarding_action-radio-2" id="call-forwarding_action-radio-2_1">
+																					<label class="call-forwarding_action-label button" for="call-forwarding_action-radio-2_1">Не отвечает</label>
+																					<input type="radio" class="call-forwarding_action-radio" name="call-forwarding_action-radio-2" id="call-forwarding_action-radio-2_2">
+																					<label class="call-forwarding_action-label button" for="call-forwarding_action-radio-2_2">Занят</label>
+																				</div>
+																				<p class="call-forwarding_desc-title">
+																					Время работы
+																				</p>
+																				<div class="call-forwarding-period">
+																					<div class="table">
+																						<div class="row_cell-1">
+																							<select class="select call-forwarding-period_period-select">
+																								<option value="0">Ежедневно</option>
+																								<option value="1">Раз в неделю</option>
+																								<option value="2">По будням</option>
+																								<option value="3">По выходным</option>
+																								<option value="4">Интервал</option>
+																								<option value="5">Разные дни</option>
+																							</select>
+																						</div>
+																						<div class="row_cell-11">
+																							<div class="call-forwarding-period_period-selected selected">
+																								<span class="routing-date_item">
+																									Пн.–Вс.
+																								</span>
+																							</div>
+																							<div class="call-forwarding-period_period-selected">
+																								<select class="select">
+																									<option value="1">Понедельник</option>
+																									<option value="2">Вторник</option>
+																									<option value="3">Среда</option>
+																									<option value="4">Четверг</option>
+																									<option value="5">Пятница</option>
+																									<option value="6">Суббота</option>
+																									<option value="7">Воскресение</option>
+																								</select>
+																							</div>
+																							<div class="call-forwarding-period_period-selected">
+																								<span class="routing-date_item">
+																									Пн.–Пт.
+																								</span>
+																							</div>
+																							<div class="call-forwarding-period_period-selected">
+																								<span class="routing-date_item">
+																									Сб.–Вск.
+																								</span>
+																							</div>
+																							<div class="call-forwarding-period_period-selected">
+																								c
+																								<input type="text" class="text-input">
+																								по
+																								<input type="text" class="text-input">
+																								<select class="select">
+																									<option value="1">января</option>
+																									<option value="1">февраля</option>
+																									<option value="1">марта</option>
+																									<option value="1">апреля</option>
+																									<option value="1">мая</option>
+																									<option value="1">июня</option>
+																									<option value="1">июля</option>
+																									<option value="1">августа</option>
+																									<option value="1">сентября</option>
+																									<option value="1">октября</option>
+																									<option value="1">ноября</option>
+																									<option value="1">декабря</option>
+																								</select>
+																							</div>
+																							<div class="call-forwarding-period_period-selected">
+																								<input type="text" class="text-input text-input__alternate-days">
+																								<div class="right cl_grey_1">
+																									Формат заполнения: 01.01, 07.01, 12.01
+																								</div>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="call-forwarding-time">
+																					<div class="call-forwarding-time_block">
+																						<label for="routing-date_time-from">с</label>
+																						<select class="select" id="routing-date_time-from">
+																							<option value="1">01:00</option>
+																							<option value="2">02:00</option>
+																							<option value="3">03:00</option>
+																							<option value="4">04:00</option>
+																							<option value="5">05:00</option>
+																							<option value="6">06:00</option>
+																							<option value="7">07:00</option>
+																							<option value="8">08:00</option>
+																							<option value="9">09:00</option>
+																							<option value="10">10:00</option>
+																							<option value="11">11:00</option>
+																							<option value="12">12:00</option>
+																							<option value="13">13:00</option>
+																							<option value="14">14:00</option>
+																							<option value="15">15:00</option>
+																							<option value="16">16:00</option>
+																							<option value="17">17:00</option>
+																							<option value="18">18:00</option>
+																							<option value="19">19:00</option>
+																							<option value="20">20:00</option>
+																							<option value="21">21:00</option>
+																							<option value="22">22:00</option>
+																							<option value="23">23:00</option>
+																							<option value="24">00:00</option>
+																						</select>
+																						<label for="routing-date_time-to" id="routing-date_time-to">до</label>
+																						<select class="select">
+																							<option value="1">01:00</option>
+																							<option value="2">02:00</option>
+																							<option value="3">03:00</option>
+																							<option value="4">04:00</option>
+																							<option value="5">05:00</option>
+																							<option value="6">06:00</option>
+																							<option value="7">07:00</option>
+																							<option value="8">08:00</option>
+																							<option value="9">09:00</option>
+																							<option value="10">10:00</option>
+																							<option value="11">11:00</option>
+																							<option value="12">12:00</option>
+																							<option value="13">13:00</option>
+																							<option value="14">14:00</option>
+																							<option value="15">15:00</option>
+																							<option value="16">16:00</option>
+																							<option value="17">17:00</option>
+																							<option value="18">18:00</option>
+																							<option value="19">19:00</option>
+																							<option value="20">20:00</option>
+																							<option value="21">21:00</option>
+																							<option value="22">22:00</option>
+																							<option value="23">23:00</option>
+																							<option value="24">00:00</option>
+																						</select>
+																					</div>
+																					или
+																					<input type="checkbox" class="checkbox call-forwarding-time_checkbox" id="num-3">
+																					<label class="call-forwarding-time_label" for="num-3">круглосуточно</label>
+																				</div>
+																				<p class="call-forwarding_desc-title">
+																					Звонок переадресовывается
+																				</p>
+																				<div class="call-forwarding-scenario">
+																					<div class="call-forwarding-scenario_variables">
+																						<input type="radio" class="radio call-forwarding-scenario_radio" name="call-forwarding-scenario-2" id="call-forwarding-scenario-2_1" value="0" checked>
+																						<label class="call-forwarding-scenario_label" for="call-forwarding-scenario-2_1">
+																							<p class="radio-label_title">
+																								Одновременно
+																							</p>
+																							<p class="radio-label_info">
+																								Все указанные телефоны будут звонить одновременно
+																							</p>
+																						</label>
+																						<input type="radio" class="radio call-forwarding-scenario_radio" name="call-forwarding-scenario-2" id="call-forwarding-scenario-2_2" value="1">
+																						<label class="call-forwarding-scenario_label" for="call-forwarding-scenario-2_2">
+																							<p class="radio-label_title">
+																								По-очереди
+																							</p>
+																							<p class="radio-label_info">
+																								Звонок переходит от одного телефона к другому
+																							</p>
+																						</label>
+																						<input type="radio" class="radio call-forwarding-scenario_radio" name="call-forwarding-scenario-2" id="call-forwarding-scenario-2_3" value="2">
+																						<label class="call-forwarding-scenario_label" for="call-forwarding-scenario-2_3">
+																							<p class="radio-label_title">
+																								Каскадно
+																							</p>
+																							<p class="radio-label_info">
+																								Постепенное увеличение количества звонящих телефонов
+																							</p>
+																						</label>
+																					</div>
+																					<div class="call-forwarding-scenario_schemes">
+																						<div class="call-forwarding-scenario_scheme selected">
+																							<div class="table">
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Звонить
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<button class="add-new-scheme-1 button focus">Добавить</button>
+																									</div>
+																									<div class="row_cell">
+																										<button class="delete-scheme-line">
+																											<span class="fa fa-trash"></span>
+																										</button>
+																									</div>
+																								</div>
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										и на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<button class="add-new-scheme-1 button focus">Добавить</button>
+																									</div>
+																									<div class="row_cell">
+																										<button class="delete-scheme-line">
+																											<span class="fa fa-trash"></span>
+																										</button>
+																									</div>
+																								</div>
+																							</div>
+																						</div>
+																						<div class="call-forwarding-scenario_scheme call-forwarding-scenario_scheme__queue">
+																							<div class="table">
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Сначала звонить
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<div class="scheme-line-buttons">
+																											<button class="delete-scheme-line">
+																												<span class="fa fa-trash"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-down"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-up"></span>
+																											</button>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Затем звонить
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<div class="scheme-line-buttons">
+																											<button class="delete-scheme-line">
+																												<span class="fa fa-trash"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-down"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-up"></span>
+																											</button>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Затем звонить
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<div class="scheme-line-buttons">
+																											<button class="delete-scheme-line">
+																												<span class="fa fa-trash"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-down"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-up"></span>
+																											</button>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Затем звонить
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<div class="scheme-line-buttons">
+																											<button class="delete-scheme-line">
+																												<span class="fa fa-trash"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-down"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-up"></span>
+																											</button>
+																										</div>
+																									</div>
+																								</div>
+																							</div>
+																							<div class="right">
+																								<button class="add-new-scheme-1 button focus">Добавить</button>
+																							</div>
+																							<p class="call-forwarding_desc-title">
+																								После прекращения всех вызовов
+																							</p>
+																							<input type="checkbox" class="checkbox" id="call-forwarding-send-to-voice-mail-1">
+																							<label for="call-forwarding-send-to-voice-mail-1">Отправлять на голосовую почту</label>
+																						</div>
+																						<div class="call-forwarding-scenario_scheme call-forwarding-scenario_scheme__cascade">
+																							<div class="table">
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Сначала звонить
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<div class="scheme-line-buttons">
+																											<button class="delete-scheme-line">
+																												<span class="fa fa-trash"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-down"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-up"></span>
+																											</button>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Затем дублировать
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<div class="scheme-line-buttons">
+																											<button class="delete-scheme-line">
+																												<span class="fa fa-trash"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-down"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-up"></span>
+																											</button>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Затем дублировать
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<div class="scheme-line-buttons">
+																											<button class="delete-scheme-line">
+																												<span class="fa fa-trash"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-down"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-up"></span>
+																											</button>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="row">
+																									<div class="row_cell row_cell-1">
+																										Затем дублировать
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<select class="select">
+																											<option value="10">10 сек</option>
+																											<option value="20">20 сек</option>
+																											<option value="30">30 сек</option>
+																											<option value="40">40 сек</option>
+																											<option value="50">50 сек</option>
+																											<option value="60">60 сек</option>
+																										</select>
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										на номер
+																									</div>
+																									<div class="row_cell row_cell-1">
+																										<input type="text" class="text-input phone-mask" placeholder="Например, 7-700-400-20-20">
+																									</div>
+																									<div class="row_cell">
+																										<div class="scheme-line-buttons">
+																											<button class="delete-scheme-line">
+																												<span class="fa fa-trash"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-down"></span>
+																											</button>
+																											<button class="move-scheme-line">
+																												<span class="fa fa-arrow-up"></span>
+																											</button>
+																										</div>
+																									</div>
+																								</div>
+																							</div>
+																							<div class="right">
+																								<button class="add-new-scheme-1 button focus">Добавить</button>
+																							</div>
+																							<p class="call-forwarding_desc-title">
+																								После прекращения всех вызовов
+																							</p>
+																							<input type="checkbox" class="checkbox" id="call-forwarding-send-to-voice-mail-2">
+																							<label for="call-forwarding-send-to-voice-mail-2">Отправлять на голосовую почту</label>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="call-forwarding_delete-block">
+																					<div class="content">
+																						<p>
+																							Вы уверены, что хотите удалить вкладку?
+																						</p>
+																						<p>
+																							<button class="button focus">Да</button>
+																							<button class="button focus">Нет</button>
+																						</p>
+																					</div>
+																				</div>
+																			</div>
+																			<button class="button focus save-button">Сохранить</button>
+																		</div>
+																	</div>
+																</div>
+															</div>
 					                        			</div>
 					                        		</div>
 					                        	</div>
@@ -2005,11 +3689,12 @@
 	<script src="/js/jquery.jplayer.min.js"></script>
 	<script src="/js/jquery.pickmeup.min.js"></script>
 	<script src="/js/jquery.formstyler.min.js"></script>
+	<script src="/js/jquery.maskedinput.min.js"></script>
 	<!-- Templates -->
 	<script id="audioPlayer" type="text/x-jsrender">
 		<div id="jp_container_{{:id}}" class="jp-audio">
 			<div class="jp-duration-line">
-				<span class="jp-current-time"></span>/<span class="jp-duration"></span>
+				<span class="jp-current-period"></span>/<span class="jp-duration"></span>
 			</div>
 			<div class="jp-controll-line">
 				<button class="jp-play fa fa-play"></button>
