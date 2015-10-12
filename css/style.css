@@ -5833,7 +5833,7 @@ table {
     display: inline-block; }
   .dd-call-forwarding .save-button {
     margin-top: 20px !important; }
-  .dd-call-forwarding .button.right {
+  .dd-call-forwarding .right .button.focus {
     margin-top: 0 !important; }
   .dd-call-forwarding .button__big-icon {
     padding-top: 6px;
