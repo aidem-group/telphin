@@ -4,6 +4,10 @@
 
 	label {
 		display: inline-block;
+
+		&:before {
+			top: 0 !important;
+		}
 	}
 
 	.save-button {

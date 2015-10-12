@@ -5831,6 +5831,8 @@ table {
   width: 740px; }
   .dd-call-forwarding label {
     display: inline-block; }
+    .dd-call-forwarding label:before {
+      top: 0 !important; }
   .dd-call-forwarding .save-button {
     margin-top: 20px !important; }
   .dd-call-forwarding .right .button.focus {
