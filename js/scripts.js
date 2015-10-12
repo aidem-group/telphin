@@ -13,7 +13,7 @@ $(function(){
 
     $('.call-forwarding-period_period-select').on('change', selectCallForwardingPeriod);
     $('.call-forwarding-time_checkbox').on('change', callForwardingTime);
-    $('.call-forwarding_btns-item .close-btn, .delete-scheme-line').on('click', showDeleteBlockCallForwarding);
+    $('.call-forwarding_btns-item .close-btn').on('click', showDeleteBlockCallForwarding);
     $('.call-forwarding-scenario_radio').on('change', callForwardingScenarioSelect);
     $('.call-forwarding_switcher-label').on('click', callForwardingEnableSwitch);
     $('.call-forwarding_btns-item').on('click', callForwardingSwitch);
