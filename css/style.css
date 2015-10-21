@@ -4196,8 +4196,7 @@ table {
         background-position: -111px -96px; }
 
 .b-tabs {
-  min-width: 600px;
-  max-width: 740px; }
+  min-width: 600px; }
   .b-tabs .form-line {
     margin-bottom: 30px; }
   .b-tabs label {
@@ -4647,9 +4646,8 @@ table {
       background-color: #df4d41; }
 
 .b-routing_main {
-  border-bottom: 1px solid #ecf3ff;
-  margin: 0 -40px 50px;
-  padding: 0 40px 30px; }
+  margin: 0 -40px 0;
+  padding: 0 40px 20px; }
   .b-routing_main .row {
     font-size: 18px;
     font-size: 1.8rem; }
@@ -5845,10 +5843,27 @@ table {
       font-size: 24px;
       font-size: 2.4rem;
       vertical-align: sub; }
-  .dd-call-forwarding.enabled .dd-call-forwarding_fe {
+  .dd-call-forwarding.enabled .dd-call-forwarding_fe,
+  .dd-call-forwarding__routing .dd-call-forwarding_fe {
     display: none; }
-  .dd-call-forwarding.enabled .dd-call-forwarding_main {
+  .dd-call-forwarding.enabled .dd-call-forwarding_main,
+  .dd-call-forwarding__routing .dd-call-forwarding_main {
     display: block; }
+  .dd-call-forwarding__routing {
+    width: auto;
+    margin: 0 -40px 0;
+    padding-top: 26px; }
+    .dd-call-forwarding__routing .call-forwarding_btns {
+      padding-left: 40px; }
+    .dd-call-forwarding__routing .call-forwarding_inner {
+      border: 0;
+      padding: 40px 40px 0;
+      border-top: 2px solid #fcec39; }
+    .dd-call-forwarding__routing .call-forwarding_delete-block .content {
+      vertical-align: top;
+      margin-top: 120px; }
+    .dd-call-forwarding__routing .call-forwarding-time {
+      margin: 0; }
   .dd-call-forwarding_fe {
     margin-top: 20px;
     text-align: center; }
@@ -5891,11 +5906,14 @@ table {
   padding: 0 !important;
   height: 34px;
   border: 0;
-  width: 25% !important; }
+  width: 185px !important; }
+  .call-forwarding_btns td:last-child {
+    width: auto !important; }
   .call-forwarding_btns td.current .call-forwarding_btns-item {
     border-color: #fcec39;
+    background-color: #fff;
     cursor: default;
-    z-index: 3; }
+    z-index: 1; }
 
 .call-forwarding_btns-item {
   -webkit-border-top-left-radius: 8px;
@@ -5963,14 +5981,16 @@ table {
   .call-forwarding_btns-item.disabled .fa-power-off {
     color: #b6bfcd; }
 
-.call-forwarding_blocks-item {
-  position: relative;
-  display: none;
-  z-index: 2; }
-  .call-forwarding_blocks-item.current {
-    display: block; }
-  .call-forwarding_blocks-item .save-button {
-    margin: 20px 0 0 20px; }
+.call-forwarding_blocks {
+  margin-top: -2px; }
+  .call-forwarding_blocks-item {
+    position: relative;
+    display: none;
+    z-index: 0; }
+    .call-forwarding_blocks-item.current {
+      display: block; }
+    .call-forwarding_blocks-item .save-button {
+      margin: 20px 0 0 20px; }
 
 .call-forwarding_inner {
   position: relative;
@@ -6245,3 +6265,19 @@ table {
       border-color: #666; }
     .call-forwarding-scenario_scheme .row_cell .button {
       height: 40px; }
+
+.forwarding-table {
+  display: table;
+  width: 100%; }
+  .forwarding-table_cell {
+    display: table-cell !important;
+    vertical-align: top;
+    padding-bottom: 56px; }
+    .forwarding-table_cell.call-forwarding_desc-title {
+      font-size: 18px;
+      font-size: 1.8rem;
+      color: #000;
+      white-space: nowrap;
+      width: 1%;
+      padding-top: 9px;
+      padding-right: 16px; }

@@ -269,10 +269,13 @@ function dropdown()
         container.addClass('dropdown-container__right');
     }
 
-    if(container.offset().top + blockH > pageSize.height
-            && container.offset().top - blockH > 0){
-        container.addClass('on-top');
-        block.css({top: -blockH});
+    if(container.offset().top + blockH > pageSize.height){
+        if(container.offset().top - blockH > 0){
+            container.addClass('on-top');
+            block.css({top: -blockH});
+        } else {
+            $('.footer').css('margin-top', container.offset().top + blockH - pageSize.height + 40);
+        }
     }
 
     if(container.hasClass('open')) {

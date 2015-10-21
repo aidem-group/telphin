@@ -215,176 +215,204 @@
 								</div>
 							</div>
 						</div>
-						<div class="row">
-							<div class="row_cell-1">
-								<label for="routing-date">Для номеров:</label>
-							</div>
-							<div class="row_cell">
-								<div class="routing-date">
-									<select class="select" id="routing-date">
-										<option value="1">Раз в неделю</option>
-										<option value="2">Ежедневно</option>
-										<option value="3">По будням</option>
-										<option value="4">По выходным</option>
-									</select>
-									<div class="routing-date_variables">
-										<select class="select" id="routing-date_day">
-											<option value="1">Понедельник</option>
-											<option value="2">Вторник</option>
-											<option value="3">Среда</option>
-											<option value="4">Четверг</option>
-											<option value="5">Пятница</option>
-											<option value="6">Суббота</option>
-											<option value="7">Воскресение</option>
-										</select>
-										<div class="routing-date_item hidden">
-											Пн.&ndash;Вс.
-										</div>
-										<div class="routing-date_item hidden">
-											Пн.&ndash;Пт.
-										</div>
-										<div class="routing-date_item hidden">
-											Сб.&ndash;Вск.
-										</div>
-									</div>
-									<div class="routing-date_time">
-										<label for="routing-date_time-from">с</label>
-										<select class="select" id="routing-date_time-from">
-											<option value="1">01:00</option>
-											<option value="2">02:00</option>
-											<option value="3">03:00</option>
-											<option value="4">04:00</option>
-											<option value="5">05:00</option>
-											<option value="6">06:00</option>
-											<option value="7">07:00</option>
-											<option value="8">08:00</option>
-											<option value="9">09:00</option>
-											<option value="10">10:00</option>
-											<option value="11">11:00</option>
-											<option value="12">12:00</option>
-											<option value="13">13:00</option>
-											<option value="14">14:00</option>
-											<option value="15">15:00</option>
-											<option value="16">16:00</option>
-											<option value="17">17:00</option>
-											<option value="18">18:00</option>
-											<option value="19">19:00</option>
-											<option value="20">20:00</option>
-											<option value="21">21:00</option>
-											<option value="22">22:00</option>
-											<option value="23">23:00</option>
-											<option value="24">00:00</option>
-										</select>
-										<label for="routing-date_time-to" id="routing-date_time-to">до</label>
-										<select class="select">
-											<option value="1">01:00</option>
-											<option value="2">02:00</option>
-											<option value="3">03:00</option>
-											<option value="4">04:00</option>
-											<option value="5">05:00</option>
-											<option value="6">06:00</option>
-											<option value="7">07:00</option>
-											<option value="8">08:00</option>
-											<option value="9">09:00</option>
-											<option value="10">10:00</option>
-											<option value="11">11:00</option>
-											<option value="12">12:00</option>
-											<option value="13">13:00</option>
-											<option value="14">14:00</option>
-											<option value="15">15:00</option>
-											<option value="16">16:00</option>
-											<option value="17">17:00</option>
-											<option value="18">18:00</option>
-											<option value="19">19:00</option>
-											<option value="20">20:00</option>
-											<option value="21">21:00</option>
-											<option value="22">22:00</option>
-											<option value="23">23:00</option>
-											<option value="24">00:00</option>
-										</select>
-									</div>
-								</div>
-							</div>
-						</div>
 					</div>
-					<div class="b-routing_schemes">
-						<p class="title">
-							Схемы работы
-						</p>
-						<p class="h3">
-							Звонок поступил
-						</p>
-						<div class="table">
-							<div class="row">
-								<div class="row_cell">
-									<select class="select">
-										<option value="1">Включить мелодию</option>
-										<option value="2">Не включать мелодию</option>
-									</select>
-								</div>
-								<div class="row_cell cell_melody">
-									<select class="select">
-										<option value="1">Voice welcome</option>
-										<option value="2">Amelie</option>
-										<option value="3">Sympho</option>
-									</select>
-									<span class="dropdown">
-										<div class="link dropdown-toggle">
-											<span class="fa fa-play-circle"></span>
-										</div>
-										<div class="dropdown-container">
-											<div class="dropdown-container_inner">
-												<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+					<p class="title">
+						Схемы работы
+					</p>
+
+					<div class="dd-call-forwarding dd-call-forwarding__routing">
+						<div class="dd-call-forwarding_main">
+							<div class="call-forwarding_btns">
+								<table>
+	    							<tr>
+	    								<td class="current">
+	    									<div class="call-forwarding_btns-item">
+	    										<span class="text"><span class="fa fa-power-off"></span> Пн-Вс  10:00–18:00</span>
+	    										<button class="close-btn"><span class="fa fa-close"></span></button>
+	    									</div>
+	    								</td>
+	    								<td>
+	    									<div class="call-forwarding_btns-item disabled">
+	    										<span class="text"><span class="fa fa-power-off"></span> Пн-Вс  10:00–18:00</span>
+	    										<button class="close-btn"><span class="fa fa-close"></span></button>
+	    									</div>
+	    								</td>
+	    								<td>
+	    									<div class="call-forwarding_btns-item add-new">
+	    										<span class="text">
+	    											<span class="fa fa-plus"></span>
+	    											Добавить интервал
+	    										</span>
+	    									</div>
+	    								</td>
+	    							</tr>
+	    						</table>
+							</div>
+							<div class="call-forwarding_blocks">
+								<div class="call-forwarding_blocks-item current">
+									<div class="call-forwarding_inner">
+										<div class="forwarding-table">
+											<div class="forwarding-table_cell call-forwarding_desc-title">
+												Время работы:
+											</div>
+											<div class="forwarding-table_cell">
+												<div class="call-forwarding-period">
+													<div class="table">
+														<div class="row_cell-1">
+															<select class="select call-forwarding-period_period-select">
+																<option value="0">Ежедневно</option>
+																<option value="1">Раз в неделю</option>
+																<option value="2">По будням</option>
+																<option value="3">По выходным</option>
+																<option value="4">Интервал</option>
+																<option value="5">Разные дни</option>
+															</select>
+														</div>
+														<div class="row_cell-11">
+															<div class="call-forwarding-period_period-selected selected">
+																<span class="routing-date_item">
+																	Пн.–Вс.
+																</span>
+															</div>
+															<div class="call-forwarding-period_period-selected">
+																<select class="select">
+																	<option value="1">Понедельник</option>
+																	<option value="2">Вторник</option>
+																	<option value="3">Среда</option>
+																	<option value="4">Четверг</option>
+																	<option value="5">Пятница</option>
+																	<option value="6">Суббота</option>
+																	<option value="7">Воскресение</option>
+																</select>
+															</div>
+															<div class="call-forwarding-period_period-selected">
+																<span class="routing-date_item">
+																	Пн.–Пт.
+																</span>
+															</div>
+															<div class="call-forwarding-period_period-selected">
+																<span class="routing-date_item">
+																	Сб.–Вск.
+																</span>
+															</div>
+															<div class="call-forwarding-period_period-selected">
+																c
+																<input type="text" class="text-input">
+																по
+																<input type="text" class="text-input">
+																<select class="select">
+																	<option value="1">января</option>
+																	<option value="1">февраля</option>
+																	<option value="1">марта</option>
+																	<option value="1">апреля</option>
+																	<option value="1">мая</option>
+																	<option value="1">июня</option>
+																	<option value="1">июля</option>
+																	<option value="1">августа</option>
+																	<option value="1">сентября</option>
+																	<option value="1">октября</option>
+																	<option value="1">ноября</option>
+																	<option value="1">декабря</option>
+																</select>
+															</div>
+															<div class="call-forwarding-period_period-selected">
+																<input type="text" class="text-input text-input__alternate-days">
+																<div class="right cl_grey_1">
+																	Формат заполнения: 01.01, 07.01, 12.01
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="call-forwarding-time">
+													<div class="call-forwarding-time_block">
+														<label for="routing-date_time-from">с</label>
+														<select class="select" id="routing-date_time-from">
+															<option value="1">01:00</option>
+															<option value="2">02:00</option>
+															<option value="3">03:00</option>
+															<option value="4">04:00</option>
+															<option value="5">05:00</option>
+															<option value="6">06:00</option>
+															<option value="7">07:00</option>
+															<option value="8">08:00</option>
+															<option value="9">09:00</option>
+															<option value="10">10:00</option>
+															<option value="11">11:00</option>
+															<option value="12">12:00</option>
+															<option value="13">13:00</option>
+															<option value="14">14:00</option>
+															<option value="15">15:00</option>
+															<option value="16">16:00</option>
+															<option value="17">17:00</option>
+															<option value="18">18:00</option>
+															<option value="19">19:00</option>
+															<option value="20">20:00</option>
+															<option value="21">21:00</option>
+															<option value="22">22:00</option>
+															<option value="23">23:00</option>
+															<option value="24">00:00</option>
+														</select>
+														<label for="routing-date_time-to" id="routing-date_time-to">до</label>
+														<select class="select">
+															<option value="1">01:00</option>
+															<option value="2">02:00</option>
+															<option value="3">03:00</option>
+															<option value="4">04:00</option>
+															<option value="5">05:00</option>
+															<option value="6">06:00</option>
+															<option value="7">07:00</option>
+															<option value="8">08:00</option>
+															<option value="9">09:00</option>
+															<option value="10">10:00</option>
+															<option value="11">11:00</option>
+															<option value="12">12:00</option>
+															<option value="13">13:00</option>
+															<option value="14">14:00</option>
+															<option value="15">15:00</option>
+															<option value="16">16:00</option>
+															<option value="17">17:00</option>
+															<option value="18">18:00</option>
+															<option value="19">19:00</option>
+															<option value="20">20:00</option>
+															<option value="21">21:00</option>
+															<option value="22">22:00</option>
+															<option value="23">23:00</option>
+															<option value="24">00:00</option>
+														</select>
+													</div>
+													или
+													<input type="checkbox" class="checkbox call-forwarding-time_checkbox" id="any-time">
+													<label class="call-forwarding-time_label" for="any-time">круглосуточно</label>
+												</div>
 											</div>
 										</div>
-									</span>
-								</div>
-								<div class="row_cell">
-									<select class="select">
-										<option value="1">Не ожидать окончания</option>
-										<option value="2">Ожидать окончания</option>
-									</select>
-								</div>
-								<div class="row_cell">
-									<select class="select">
-										<option value="1">Не проигрывать в цикле</option>
-										<option value="2">Воспроизводить в цикле</option>
-									</select>
-								</div>
-							</div>
-						</div>
-						<div class="b-routing_schemes adv">
-							<div class="adv_type">
-								<div class="table">
-									<div class="row">
-										<div class="row_cell-6">
-											<select class="select">
-												<option value="1">Цифровое меню (IVR)</option>
-											</select>
+										<div class="call-forwarding_delete-block">
+											<div class="content">
+												<p>
+													Вы уверены, что хотите удалить вкладку?
+												</p>
+												<p>
+													<button class="button focus">Да</button>
+													<button class="button focus">Нет</button>
+												</p>
+											</div>
 										</div>
-										<div class="row_cell-6">
-											<select class="select">
-												<option value="1">Цифровой ввод</option>
-											</select>
+										<div class="call-forwarding_disable-block">
+											<div class="call-forwarding_switcher">
+												<button class="call-forwarding_switcher-label">Включить</button>
+												<span class="call-forwarding_switcher-status">Не работает</span>
+											</div>
 										</div>
-									</div>
-								</div>
-							</div>
-							<p class="h3">
-								Варианты
-								<button class="button focus right">Добавить цифру</button>
-							</p>
-							<div class="b-routing_schemes-nums">
-								<div class="b-unrolling">
-									<div class="b-unrolling_toggle-wrapper">
-			                            <input type="checkbox" class="b-unrolling_toggle hidden" id="schemes-num-1">
-			                            <label for="schemes-num-1">Цифра 1</label>
-			                      	</div>
-			                      	<button class="fa fa-trash"></button>
-			                      	<div class="b-unrolling_inner">
-			                      		<div class="variables">
-			                      			                    		<p>Сначала</p>
-				                      		<div class="table">
+										<div class="call-forwarding_switcher">
+											<button class="call-forwarding_switcher-label">Выключить</button>
+											<span class="call-forwarding_switcher-status">Работает</span>
+										</div>
+										<div class="b-routing_schemes">
+											<p class="h3">
+												Звонок поступил
+											</p>
+											<div class="table">
 												<div class="row">
 													<div class="row_cell">
 														<select class="select">
@@ -418,762 +446,2887 @@
 													<div class="row_cell">
 														<select class="select">
 															<option value="1">Не проигрывать в цикле</option>
-															<option value="2" selected>Воспроизводить в цикле</option>
+															<option value="2">Воспроизводить в цикле</option>
 														</select>
-													</div>
-													<div class="row_cell cell_push-up">
-														<button class="fa fa-arrow-up"></button>
-													</div>
-													<div class="row_cell cell_push-down">
-														<button class="fa fa-arrow-down"></button>
 													</div>
 												</div>
 											</div>
-				                      		<p>Затем</p>
-				                      		<div class="table">
-												<div class="row">
-													<div class="row_cell">
-														<select class="select">
-															<option value="1">Переадресация</option>
-														</select>
-													</div>
-													<div class="row_cell">
-														<select class="select">
-															<option value="1">На очередь &laquo;Техподдержка&raquo;</option>
-														</select>
-													</div>
-													<div class="row_cell empty">
-														&nbsp;
-													</div>
-													<div class="row_cell cell_push-up">
-														<button class="fa fa-arrow-up"></button>
-													</div>
-													<div class="row_cell cell_push-down">
-														<button class="fa fa-arrow-down"></button>
-													</div>
-												</div>
-											</div>
-				                      		<p>В ожидании ответа</p>
-				                      		<div class="table">
-												<div class="row">
-													<div class="row_cell">
-														<select class="select">
-															<option value="1">Включить мелодию</option>
-															<option value="2">Не включать мелодию</option>
-														</select>
-													</div>
-													<div class="row_cell cell_melody">
-														<select class="select">
-															<option value="1">Voice welcome</option>
-															<option value="2">Amelie</option>
-															<option value="3" selected>Sympho</option>
-														</select>
-														<span class="dropdown">
-															<div class="link dropdown-toggle">
-																<span class="fa fa-play-circle"></span>
+											<div class="b-routing_schemes adv">
+												<div class="adv_type">
+													<div class="table">
+														<div class="row">
+															<div class="row_cell-6">
+																<select class="select">
+																	<option value="1">Цифровое меню (IVR)</option>
+																</select>
 															</div>
-															<div class="dropdown-container">
-																<div class="dropdown-container_inner">
-																	<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+															<div class="row_cell-6">
+																<select class="select">
+																	<option value="1">Цифровой ввод</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+												<p class="h3">
+													Варианты
+													<button class="button focus right">Добавить цифру</button>
+												</p>
+												<div class="b-routing_schemes-nums">
+													<div class="b-unrolling">
+														<div class="b-unrolling_toggle-wrapper">
+								                            <input type="checkbox" class="b-unrolling_toggle hidden" id="schemes-num-1">
+								                            <label for="schemes-num-1">Цифра 1</label>
+								                      	</div>
+								                      	<button class="fa fa-trash"></button>
+								                      	<div class="b-unrolling_inner">
+								                      		<div class="variables">
+								                      			                    		<p>Сначала</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Включить мелодию</option>
+																				<option value="2">Не включать мелодию</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Voice welcome</option>
+																				<option value="2">Amelie</option>
+																				<option value="3">Sympho</option>
+																			</select>
+																			<span class="dropdown">
+																				<div class="link dropdown-toggle">
+																					<span class="fa fa-play-circle"></span>
+																				</div>
+																				<div class="dropdown-container">
+																					<div class="dropdown-container_inner">
+																						<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+																					</div>
+																				</div>
+																			</span>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не ожидать окончания</option>
+																				<option value="2">Ожидать окончания</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не проигрывать в цикле</option>
+																				<option value="2" selected>Воспроизводить в цикле</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
 																</div>
+									                      		<p>Затем</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Переадресация</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">На очередь &laquo;Техподдержка&raquo;</option>
+																			</select>
+																		</div>
+																		<div class="row_cell empty">
+																			&nbsp;
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+									                      		<p>В ожидании ответа</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Включить мелодию</option>
+																				<option value="2">Не включать мелодию</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Voice welcome</option>
+																				<option value="2">Amelie</option>
+																				<option value="3" selected>Sympho</option>
+																			</select>
+																			<span class="dropdown">
+																				<div class="link dropdown-toggle">
+																					<span class="fa fa-play-circle"></span>
+																				</div>
+																				<div class="dropdown-container">
+																					<div class="dropdown-container_inner">
+																						<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+																					</div>
+																				</div>
+																			</span>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не ожидать окончания</option>
+																				<option value="2">Ожидать окончания</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не проигрывать в цикле</option>
+																				<option value="2" selected>Воспроизводить в цикле</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+									                      		<p>Если ответа не было</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<span>Ждать ответ</span>
+																			<input type="text" class="text-input" value="120">
+																			<span>сек.</span>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Затем перенаправить</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Факс</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+								                      		</div>
+															<div class="btns">
+																<label class="button" for="file-upload-1">
+																	<span class="fa fa-download"></span>
+																	Загрузить мелодию
+																</label>
+																<input type="file" class="hidden" id="file-upload-1">
+																<button class="button focus">Добавить еще вариант</button>
 															</div>
-														</span>
+								                      	</div>
 													</div>
-													<div class="row_cell">
-														<select class="select">
-															<option value="1">Не ожидать окончания</option>
-															<option value="2">Ожидать окончания</option>
-														</select>
+												</div>
+												<div class="b-routing_schemes-nums">
+													<div class="b-unrolling">
+														<div class="b-unrolling_toggle-wrapper">
+								                            <input type="checkbox" class="b-unrolling_toggle hidden" id="schemes-num-2">
+								                            <label for="schemes-num-2">Цифра 2</label>
+								                      	</div>
+								                      	<button class="fa fa-trash"></button>
+								                      	<div class="b-unrolling_inner">
+								                      		<div class="variables">
+								                      			                    		<p>Сначала</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Включить мелодию</option>
+																				<option value="2">Не включать мелодию</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Voice welcome</option>
+																				<option value="2">Amelie</option>
+																				<option value="3">Sympho</option>
+																			</select>
+																			<span class="dropdown">
+																				<div class="link dropdown-toggle">
+																					<span class="fa fa-play-circle"></span>
+																				</div>
+																				<div class="dropdown-container">
+																					<div class="dropdown-container_inner">
+																						<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+																					</div>
+																				</div>
+																			</span>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не ожидать окончания</option>
+																				<option value="2">Ожидать окончания</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не проигрывать в цикле</option>
+																				<option value="2" selected>Воспроизводить в цикле</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+									                      		<p>Затем</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Переадресация</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">На очередь &laquo;Техподдержка&raquo;</option>
+																			</select>
+																		</div>
+																		<div class="row_cell empty">
+																			&nbsp;
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+									                      		<p>В ожидании ответа</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Включить мелодию</option>
+																				<option value="2">Не включать мелодию</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Voice welcome</option>
+																				<option value="2">Amelie</option>
+																				<option value="3" selected>Sympho</option>
+																			</select>
+																			<span class="dropdown">
+																				<div class="link dropdown-toggle">
+																					<span class="fa fa-play-circle"></span>
+																				</div>
+																				<div class="dropdown-container">
+																					<div class="dropdown-container_inner">
+																						<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+																					</div>
+																				</div>
+																			</span>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не ожидать окончания</option>
+																				<option value="2">Ожидать окончания</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не проигрывать в цикле</option>
+																				<option value="2" selected>Воспроизводить в цикле</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+									                      		<p>Если ответа не было</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<span>Ждать ответ</span>
+																			<input type="text" class="text-input" value="120">
+																			<span>сек.</span>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Затем перенаправить</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Факс</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+								                      		</div>
+															<div class="btns">
+																<label class="button" for="file-upload-1">
+																	<span class="fa fa-download"></span>
+																	Загрузить мелодию
+																</label>
+																<input type="file" class="hidden" id="file-upload-1">
+																<button class="button focus">Добавить еще вариант</button>
+															</div>
+								                      	</div>
 													</div>
-													<div class="row_cell">
-														<select class="select">
-															<option value="1">Не проигрывать в цикле</option>
-															<option value="2" selected>Воспроизводить в цикле</option>
-														</select>
-													</div>
-													<div class="row_cell cell_push-up">
-														<button class="fa fa-arrow-up"></button>
-													</div>
-													<div class="row_cell cell_push-down">
-														<button class="fa fa-arrow-down"></button>
+												</div>
+												<div class="b-routing_schemes-nums">
+													<div class="b-unrolling">
+														<div class="b-unrolling_toggle-wrapper">
+								                            <input type="checkbox" class="b-unrolling_toggle hidden" id="schemes-num-3">
+								                            <label for="schemes-num-3">Цифра 3</label>
+								                      	</div>
+								                      	<button class="fa fa-trash"></button>
+								                      	<div class="b-unrolling_inner">
+								                      		<div class="variables">
+								                      			<p>Сначала</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Включить мелодию</option>
+																				<option value="2">Не включать мелодию</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Voice welcome</option>
+																				<option value="2">Amelie</option>
+																				<option value="3">Sympho</option>
+																			</select>
+																			<span class="dropdown">
+																				<div class="link dropdown-toggle">
+																					<span class="fa fa-play-circle"></span>
+																				</div>
+																				<div class="dropdown-container">
+																					<div class="dropdown-container_inner">
+																						<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+																					</div>
+																				</div>
+																			</span>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не ожидать окончания</option>
+																				<option value="2">Ожидать окончания</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не проигрывать в цикле</option>
+																				<option value="2" selected>Воспроизводить в цикле</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+									                      		<p>Затем</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Переадресация</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">На очередь &laquo;Техподдержка&raquo;</option>
+																			</select>
+																		</div>
+																		<div class="row_cell empty">
+																			&nbsp;
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+									                      		<p>В ожидании ответа</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Включить мелодию</option>
+																				<option value="2">Не включать мелодию</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Voice welcome</option>
+																				<option value="2">Amelie</option>
+																				<option value="3" selected>Sympho</option>
+																			</select>
+																			<span class="dropdown">
+																				<div class="link dropdown-toggle">
+																					<span class="fa fa-play-circle"></span>
+																				</div>
+																				<div class="dropdown-container">
+																					<div class="dropdown-container_inner">
+																						<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+																					</div>
+																				</div>
+																			</span>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не ожидать окончания</option>
+																				<option value="2">Ожидать окончания</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не проигрывать в цикле</option>
+																				<option value="2" selected>Воспроизводить в цикле</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+									                      		<p>Если ответа не было</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<span>Ждать ответ</span>
+																			<input type="text" class="text-input" value="120">
+																			<span>сек.</span>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Затем перенаправить</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Факс</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+								                      		</div>
+															<div class="btns">
+																<label class="button" for="file-upload-1">
+																	<span class="fa fa-download"></span>
+																	Загрузить мелодию
+																</label>
+																<input type="file" class="hidden" id="file-upload-1">
+																<button class="button focus">Добавить еще вариант</button>
+															</div>
+								                      	</div>
 													</div>
 												</div>
 											</div>
-				                      		<p>Если ответа не было</p>
-				                      		<div class="table">
-												<div class="row">
-													<div class="row_cell">
-														<span>Ждать ответ</span>
-														<input type="text" class="text-input" value="120">
-														<span>сек.</span>
-													</div>
-													<div class="row_cell cell_melody">
-														<select class="select">
-															<option value="1">Затем перенаправить</option>
-														</select>
-													</div>
-													<div class="row_cell cell_melody">
-														<select class="select">
-															<option value="1">Факс</option>
-														</select>
-													</div>
-													<div class="row_cell cell_push-up">
-														<button class="fa fa-arrow-up"></button>
-													</div>
-													<div class="row_cell cell_push-down">
-														<button class="fa fa-arrow-down"></button>
+											<p class="h3">
+												Если ни один из пунктов цифрового меню не выбран
+											</p>
+					                  		<div class="variables">
+					                  			<p>Сначала</p>
+					                      		<div class="table">
+													<div class="row">
+														<div class="row_cell">
+															<select class="select">
+																<option value="1">Включить мелодию</option>
+																<option value="2">Не включать мелодию</option>
+															</select>
+														</div>
+														<div class="row_cell cell_melody">
+															<select class="select">
+																<option value="1">Voice welcome</option>
+																<option value="2">Amelie</option>
+																<option value="3">Sympho</option>
+															</select>
+															<span class="dropdown">
+																<div class="link dropdown-toggle">
+																	<span class="fa fa-play-circle"></span>
+																</div>
+																<div class="dropdown-container">
+																	<div class="dropdown-container_inner">
+																		<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+																	</div>
+																</div>
+															</span>
+														</div>
+														<div class="row_cell">
+															<select class="select">
+																<option value="1">Не ожидать окончания</option>
+																<option value="2">Ожидать окончания</option>
+															</select>
+														</div>
+														<div class="row_cell">
+															<select class="select">
+																<option value="1">Не проигрывать в цикле</option>
+																<option value="2" selected>Воспроизводить в цикле</option>
+															</select>
+														</div>
+														<div class="row_cell cell_push-up">
+															<button class="fa fa-arrow-up"></button>
+														</div>
+														<div class="row_cell cell_push-down">
+															<button class="fa fa-arrow-down"></button>
+														</div>
 													</div>
 												</div>
+					                      		<p>Затем</p>
+					                      		<div class="table">
+													<div class="row">
+														<div class="row_cell">
+															<select class="select">
+																<option value="1">Переадресация</option>
+															</select>
+														</div>
+														<div class="row_cell">
+															<select class="select">
+																<option value="1">На очередь &laquo;Техподдержка&raquo;</option>
+															</select>
+														</div>
+														<div class="row_cell empty">
+															&nbsp;
+														</div>
+														<div class="row_cell cell_push-up">
+															<button class="fa fa-arrow-up"></button>
+														</div>
+														<div class="row_cell cell_push-down">
+															<button class="fa fa-arrow-down"></button>
+														</div>
+													</div>
+												</div>
+					                      		<p>В ожидании ответа</p>
+					                      		<div class="table">
+													<div class="row">
+														<div class="row_cell">
+															<select class="select">
+																<option value="1">Включить мелодию</option>
+																<option value="2">Не включать мелодию</option>
+															</select>
+														</div>
+														<div class="row_cell cell_melody">
+															<select class="select">
+																<option value="1">Voice welcome</option>
+																<option value="2">Amelie</option>
+																<option value="3" selected>Sympho</option>
+															</select>
+															<span class="dropdown">
+																<div class="link dropdown-toggle">
+																	<span class="fa fa-play-circle"></span>
+																</div>
+																<div class="dropdown-container">
+																	<div class="dropdown-container_inner">
+																		<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+																	</div>
+																</div>
+															</span>
+														</div>
+														<div class="row_cell">
+															<select class="select">
+																<option value="1">Не ожидать окончания</option>
+																<option value="2">Ожидать окончания</option>
+															</select>
+														</div>
+														<div class="row_cell">
+															<select class="select">
+																<option value="1">Не проигрывать в цикле</option>
+																<option value="2" selected>Воспроизводить в цикле</option>
+															</select>
+														</div>
+														<div class="row_cell cell_push-up">
+															<button class="fa fa-arrow-up"></button>
+														</div>
+														<div class="row_cell cell_push-down">
+															<button class="fa fa-arrow-down"></button>
+														</div>
+													</div>
+												</div>
+					                      		<p>Если ответа не было</p>
+					                      		<div class="table">
+													<div class="row">
+														<div class="row_cell">
+															<span>Ждать ответ</span>
+															<input type="text" class="text-input" value="120">
+															<span>сек.</span>
+														</div>
+														<div class="row_cell cell_melody">
+															<select class="select">
+																<option value="1">Затем перенаправить</option>
+															</select>
+														</div>
+														<div class="row_cell cell_melody">
+															<select class="select">
+																<option value="1">Факс</option>
+															</select>
+														</div>
+														<div class="row_cell cell_push-up">
+															<button class="fa fa-arrow-up"></button>
+														</div>
+														<div class="row_cell cell_push-down">
+															<button class="fa fa-arrow-down"></button>
+														</div>
+													</div>
+												</div>
+					                  		</div>
+											<div class="btns">
+												<label class="button" for="file-upload-1">
+													<span class="fa fa-download"></span>
+													Загрузить мелодию
+												</label>
+												<input type="file" class="hidden" id="file-upload-1">
+												<button class="button focus">Добавить еще вариант</button>
 											</div>
-			                      		</div>
-										<div class="btns">
-											<label class="button" for="file-upload-1">
-												<span class="fa fa-download"></span>
-												Загрузить мелодию
-											</label>
-											<input type="file" class="hidden" id="file-upload-1">
-											<button class="button focus">Добавить еще вариант</button>
 										</div>
-			                      	</div>
-								</div>
-							</div>
-							<div class="b-routing_schemes-nums">
-								<div class="b-unrolling">
-									<div class="b-unrolling_toggle-wrapper">
-			                            <input type="checkbox" class="b-unrolling_toggle hidden" id="schemes-num-2">
-			                            <label for="schemes-num-2">Цифра 2</label>
-			                      	</div>
-			                      	<button class="fa fa-trash"></button>
-			                      	<div class="b-unrolling_inner">
-			                      		<div class="variables">
-			                      			                    		<p>Сначала</p>
-				                      		<div class="table">
-												<div class="row">
-													<div class="row_cell">
-														<select class="select">
-															<option value="1">Включить мелодию</option>
-															<option value="2">Не включать мелодию</option>
-														</select>
-													</div>
-													<div class="row_cell cell_melody">
-														<select class="select">
-															<option value="1">Voice welcome</option>
-															<option value="2">Amelie</option>
-															<option value="3">Sympho</option>
-														</select>
-														<span class="dropdown">
-															<div class="link dropdown-toggle">
-																<span class="fa fa-play-circle"></span>
-															</div>
-															<div class="dropdown-container">
-																<div class="dropdown-container_inner">
-																	<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
-																</div>
-															</div>
-														</span>
-													</div>
-													<div class="row_cell">
-														<select class="select">
-															<option value="1">Не ожидать окончания</option>
-															<option value="2">Ожидать окончания</option>
-														</select>
-													</div>
-													<div class="row_cell">
-														<select class="select">
-															<option value="1">Не проигрывать в цикле</option>
-															<option value="2" selected>Воспроизводить в цикле</option>
-														</select>
-													</div>
-													<div class="row_cell cell_push-up">
-														<button class="fa fa-arrow-up"></button>
-													</div>
-													<div class="row_cell cell_push-down">
-														<button class="fa fa-arrow-down"></button>
-													</div>
-												</div>
-											</div>
-				                      		<p>Затем</p>
-				                      		<div class="table">
-												<div class="row">
-													<div class="row_cell">
-														<select class="select">
-															<option value="1">Переадресация</option>
-														</select>
-													</div>
-													<div class="row_cell">
-														<select class="select">
-															<option value="1">На очередь &laquo;Техподдержка&raquo;</option>
-														</select>
-													</div>
-													<div class="row_cell empty">
-														&nbsp;
-													</div>
-													<div class="row_cell cell_push-up">
-														<button class="fa fa-arrow-up"></button>
-													</div>
-													<div class="row_cell cell_push-down">
-														<button class="fa fa-arrow-down"></button>
-													</div>
-												</div>
-											</div>
-				                      		<p>В ожидании ответа</p>
-				                      		<div class="table">
-												<div class="row">
-													<div class="row_cell">
-														<select class="select">
-															<option value="1">Включить мелодию</option>
-															<option value="2">Не включать мелодию</option>
-														</select>
-													</div>
-													<div class="row_cell cell_melody">
-														<select class="select">
-															<option value="1">Voice welcome</option>
-															<option value="2">Amelie</option>
-															<option value="3" selected>Sympho</option>
-														</select>
-														<span class="dropdown">
-															<div class="link dropdown-toggle">
-																<span class="fa fa-play-circle"></span>
-															</div>
-															<div class="dropdown-container">
-																<div class="dropdown-container_inner">
-																	<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
-																</div>
-															</div>
-														</span>
-													</div>
-													<div class="row_cell">
-														<select class="select">
-															<option value="1">Не ожидать окончания</option>
-															<option value="2">Ожидать окончания</option>
-														</select>
-													</div>
-													<div class="row_cell">
-														<select class="select">
-															<option value="1">Не проигрывать в цикле</option>
-															<option value="2" selected>Воспроизводить в цикле</option>
-														</select>
-													</div>
-													<div class="row_cell cell_push-up">
-														<button class="fa fa-arrow-up"></button>
-													</div>
-													<div class="row_cell cell_push-down">
-														<button class="fa fa-arrow-down"></button>
-													</div>
-												</div>
-											</div>
-				                      		<p>Если ответа не было</p>
-				                      		<div class="table">
-												<div class="row">
-													<div class="row_cell">
-														<span>Ждать ответ</span>
-														<input type="text" class="text-input" value="120">
-														<span>сек.</span>
-													</div>
-													<div class="row_cell cell_melody">
-														<select class="select">
-															<option value="1">Затем перенаправить</option>
-														</select>
-													</div>
-													<div class="row_cell cell_melody">
-														<select class="select">
-															<option value="1">Факс</option>
-														</select>
-													</div>
-													<div class="row_cell cell_push-up">
-														<button class="fa fa-arrow-up"></button>
-													</div>
-													<div class="row_cell cell_push-down">
-														<button class="fa fa-arrow-down"></button>
-													</div>
-												</div>
-											</div>
-			                      		</div>
-										<div class="btns">
-											<label class="button" for="file-upload-1">
-												<span class="fa fa-download"></span>
-												Загрузить мелодию
-											</label>
-											<input type="file" class="hidden" id="file-upload-1">
-											<button class="button focus">Добавить еще вариант</button>
-										</div>
-			                      	</div>
-								</div>
-							</div>
-							<div class="b-routing_schemes-nums">
-								<div class="b-unrolling">
-									<div class="b-unrolling_toggle-wrapper">
-			                            <input type="checkbox" class="b-unrolling_toggle hidden" id="schemes-num-3">
-			                            <label for="schemes-num-3">Цифра 3</label>
-			                      	</div>
-			                      	<button class="fa fa-trash"></button>
-			                      	<div class="b-unrolling_inner">
-			                      		<div class="variables">
-			                      			<p>Сначала</p>
-				                      		<div class="table">
-												<div class="row">
-													<div class="row_cell">
-														<select class="select">
-															<option value="1">Включить мелодию</option>
-															<option value="2">Не включать мелодию</option>
-														</select>
-													</div>
-													<div class="row_cell cell_melody">
-														<select class="select">
-															<option value="1">Voice welcome</option>
-															<option value="2">Amelie</option>
-															<option value="3">Sympho</option>
-														</select>
-														<span class="dropdown">
-															<div class="link dropdown-toggle">
-																<span class="fa fa-play-circle"></span>
-															</div>
-															<div class="dropdown-container">
-																<div class="dropdown-container_inner">
-																	<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
-																</div>
-															</div>
-														</span>
-													</div>
-													<div class="row_cell">
-														<select class="select">
-															<option value="1">Не ожидать окончания</option>
-															<option value="2">Ожидать окончания</option>
-														</select>
-													</div>
-													<div class="row_cell">
-														<select class="select">
-															<option value="1">Не проигрывать в цикле</option>
-															<option value="2" selected>Воспроизводить в цикле</option>
-														</select>
-													</div>
-													<div class="row_cell cell_push-up">
-														<button class="fa fa-arrow-up"></button>
-													</div>
-													<div class="row_cell cell_push-down">
-														<button class="fa fa-arrow-down"></button>
-													</div>
-												</div>
-											</div>
-				                      		<p>Затем</p>
-				                      		<div class="table">
-												<div class="row">
-													<div class="row_cell">
-														<select class="select">
-															<option value="1">Переадресация</option>
-														</select>
-													</div>
-													<div class="row_cell">
-														<select class="select">
-															<option value="1">На очередь &laquo;Техподдержка&raquo;</option>
-														</select>
-													</div>
-													<div class="row_cell empty">
-														&nbsp;
-													</div>
-													<div class="row_cell cell_push-up">
-														<button class="fa fa-arrow-up"></button>
-													</div>
-													<div class="row_cell cell_push-down">
-														<button class="fa fa-arrow-down"></button>
-													</div>
-												</div>
-											</div>
-				                      		<p>В ожидании ответа</p>
-				                      		<div class="table">
-												<div class="row">
-													<div class="row_cell">
-														<select class="select">
-															<option value="1">Включить мелодию</option>
-															<option value="2">Не включать мелодию</option>
-														</select>
-													</div>
-													<div class="row_cell cell_melody">
-														<select class="select">
-															<option value="1">Voice welcome</option>
-															<option value="2">Amelie</option>
-															<option value="3" selected>Sympho</option>
-														</select>
-														<span class="dropdown">
-															<div class="link dropdown-toggle">
-																<span class="fa fa-play-circle"></span>
-															</div>
-															<div class="dropdown-container">
-																<div class="dropdown-container_inner">
-																	<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
-																</div>
-															</div>
-														</span>
-													</div>
-													<div class="row_cell">
-														<select class="select">
-															<option value="1">Не ожидать окончания</option>
-															<option value="2">Ожидать окончания</option>
-														</select>
-													</div>
-													<div class="row_cell">
-														<select class="select">
-															<option value="1">Не проигрывать в цикле</option>
-															<option value="2" selected>Воспроизводить в цикле</option>
-														</select>
-													</div>
-													<div class="row_cell cell_push-up">
-														<button class="fa fa-arrow-up"></button>
-													</div>
-													<div class="row_cell cell_push-down">
-														<button class="fa fa-arrow-down"></button>
-													</div>
-												</div>
-											</div>
-				                      		<p>Если ответа не было</p>
-				                      		<div class="table">
-												<div class="row">
-													<div class="row_cell">
-														<span>Ждать ответ</span>
-														<input type="text" class="text-input" value="120">
-														<span>сек.</span>
-													</div>
-													<div class="row_cell cell_melody">
-														<select class="select">
-															<option value="1">Затем перенаправить</option>
-														</select>
-													</div>
-													<div class="row_cell cell_melody">
-														<select class="select">
-															<option value="1">Факс</option>
-														</select>
-													</div>
-													<div class="row_cell cell_push-up">
-														<button class="fa fa-arrow-up"></button>
-													</div>
-													<div class="row_cell cell_push-down">
-														<button class="fa fa-arrow-down"></button>
-													</div>
-												</div>
-											</div>
-			                      		</div>
-										<div class="btns">
-											<label class="button" for="file-upload-1">
-												<span class="fa fa-download"></span>
-												Загрузить мелодию
-											</label>
-											<input type="file" class="hidden" id="file-upload-1">
-											<button class="button focus">Добавить еще вариант</button>
-										</div>
-			                      	</div>
-								</div>
-							</div>
-						</div>
-						<p class="h3">
-							Если ни один из пунктов цифрового меню не выбран
-						</p>
-                  		<div class="variables">
-                  			<p>Сначала</p>
-                      		<div class="table">
-								<div class="row">
-									<div class="row_cell">
-										<select class="select">
-											<option value="1">Включить мелодию</option>
-											<option value="2">Не включать мелодию</option>
-										</select>
-									</div>
-									<div class="row_cell cell_melody">
-										<select class="select">
-											<option value="1">Voice welcome</option>
-											<option value="2">Amelie</option>
-											<option value="3">Sympho</option>
-										</select>
-										<span class="dropdown">
-											<div class="link dropdown-toggle">
-												<span class="fa fa-play-circle"></span>
-											</div>
-											<div class="dropdown-container">
-												<div class="dropdown-container_inner">
-													<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
-												</div>
-											</div>
-										</span>
-									</div>
-									<div class="row_cell">
-										<select class="select">
-											<option value="1">Не ожидать окончания</option>
-											<option value="2">Ожидать окончания</option>
-										</select>
-									</div>
-									<div class="row_cell">
-										<select class="select">
-											<option value="1">Не проигрывать в цикле</option>
-											<option value="2" selected>Воспроизводить в цикле</option>
-										</select>
-									</div>
-									<div class="row_cell cell_push-up">
-										<button class="fa fa-arrow-up"></button>
-									</div>
-									<div class="row_cell cell_push-down">
-										<button class="fa fa-arrow-down"></button>
-									</div>
-								</div>
-							</div>
-                      		<p>Затем</p>
-                      		<div class="table">
-								<div class="row">
-									<div class="row_cell">
-										<select class="select">
-											<option value="1">Переадресация</option>
-										</select>
-									</div>
-									<div class="row_cell">
-										<select class="select">
-											<option value="1">На очередь &laquo;Техподдержка&raquo;</option>
-										</select>
-									</div>
-									<div class="row_cell empty">
-										&nbsp;
-									</div>
-									<div class="row_cell cell_push-up">
-										<button class="fa fa-arrow-up"></button>
-									</div>
-									<div class="row_cell cell_push-down">
-										<button class="fa fa-arrow-down"></button>
-									</div>
-								</div>
-							</div>
-                      		<p>В ожидании ответа</p>
-                      		<div class="table">
-								<div class="row">
-									<div class="row_cell">
-										<select class="select">
-											<option value="1">Включить мелодию</option>
-											<option value="2">Не включать мелодию</option>
-										</select>
-									</div>
-									<div class="row_cell cell_melody">
-										<select class="select">
-											<option value="1">Voice welcome</option>
-											<option value="2">Amelie</option>
-											<option value="3" selected>Sympho</option>
-										</select>
-										<span class="dropdown">
-											<div class="link dropdown-toggle">
-												<span class="fa fa-play-circle"></span>
-											</div>
-											<div class="dropdown-container">
-												<div class="dropdown-container_inner">
-													<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
-												</div>
-											</div>
-										</span>
-									</div>
-									<div class="row_cell">
-										<select class="select">
-											<option value="1">Не ожидать окончания</option>
-											<option value="2">Ожидать окончания</option>
-										</select>
-									</div>
-									<div class="row_cell">
-										<select class="select">
-											<option value="1">Не проигрывать в цикле</option>
-											<option value="2" selected>Воспроизводить в цикле</option>
-										</select>
-									</div>
-									<div class="row_cell cell_push-up">
-										<button class="fa fa-arrow-up"></button>
-									</div>
-									<div class="row_cell cell_push-down">
-										<button class="fa fa-arrow-down"></button>
-									</div>
-								</div>
-							</div>
-                      		<p>Если ответа не было</p>
-                      		<div class="table">
-								<div class="row">
-									<div class="row_cell">
-										<span>Ждать ответ</span>
-										<input type="text" class="text-input" value="120">
-										<span>сек.</span>
-									</div>
-									<div class="row_cell cell_melody">
-										<select class="select">
-											<option value="1">Затем перенаправить</option>
-										</select>
-									</div>
-									<div class="row_cell cell_melody">
-										<select class="select">
-											<option value="1">Факс</option>
-										</select>
-									</div>
-									<div class="row_cell cell_push-up">
-										<button class="fa fa-arrow-up"></button>
-									</div>
-									<div class="row_cell cell_push-down">
-										<button class="fa fa-arrow-down"></button>
-									</div>
-								</div>
-							</div>
-                  		</div>
-						<div class="btns">
-							<label class="button" for="file-upload-1">
-								<span class="fa fa-download"></span>
-								Загрузить мелодию
-							</label>
-							<input type="file" class="hidden" id="file-upload-1">
-							<button class="button focus">Добавить еще вариант</button>
-						</div>
-					</div>
-					<div class="b-routing_black-and-white">
-						<p class="h3">
-							Номера-исключения (белый список)
-						</p>
-						<p>
-							Если номер внешнего абонента успешно определен и&nbsp;присутствует в&nbsp;белом списке, то&nbsp;система перенаправит звонок в&nbsp;соответствии указанными настройками.
-						</p>
-						<div class="black-and-white">
-							<table>
-								<tbody>
-									<tr>
-										<td>
-											+ 7 931 123-45-67
-										</td>
-										<td class="cell_redirect">
+										<div class="b-routing_black-and-white">
+											<p class="h3">
+												Номера-исключения (белый список)
+											</p>
 											<p>
-												Михаил Федорович (директор СтройВип)
+												Если номер внешнего абонента успешно определен и&nbsp;присутствует в&nbsp;белом списке, то&nbsp;система перенаправит звонок в&nbsp;соответствии указанными настройками.
 											</p>
-											<p class="to">
-												<span class="fa fa-share"></span>
-												Добавочный 112
-											</p>
-										</td>
-										<td class="cell_redact">
+											<div class="black-and-white">
+												<table>
+													<tbody>
+														<tr>
+															<td>
+																+ 7 931 123-45-67
+															</td>
+															<td class="cell_redirect">
+																<p>
+																	Михаил Федорович (директор СтройВип)
+																</p>
+																<p class="to">
+																	<span class="fa fa-share"></span>
+																	Добавочный 112
+																</p>
+															</td>
+															<td class="cell_redact">
+																<div class="dropdown">
+																	<button class="fa fa-pencil dropdown-toggle"></button>
+																	<div class="dropdown-container dropdown-container__top">
+																		<div class="dropdown-container_inner">
+																			<div class="dd-add-phone">
+																				<p class="dd-add-phone_title">
+																					Добавить номер телефона
+																				</p>
+																				<label for="add-phone">Введите номер телефона</label>
+																				<input type="text" class="text-input" value="+ 7 931 123-45-67">
+																				<div class="redirect-type">
+																					<p>
+																						Куда перенаправить указанный номер
+																					</p>
+																					<div>
+																						<input type="radio" class="radio" name="redirect-type-2" id="redirect-type-21"><label for="redirect-type-21">Очередь</label>
+																						<select class="select">
+																							<option value="1">Отдел продаж</option>
+																						</select>
+																					</div>
+																					<div>
+																						<input type="radio" class="radio" name="redirect-type-2" id="redirect-type-22" checked><label for="redirect-type-22">Добавочный номер</label>
+																						<select class="select">
+																							<option value="1">112</option>
+																						</select>
+																					</div>
+																				</div>
+																				<label for="redirect-commen">Комментарий</label>
+																				<textarea class="">Михаил Федорович (директор СтройВип)</textarea>
+																				<button class="button focus">Добавить</button>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</td>
+															<td class="cell_delete">
+																<button class="fa fa-close"></button>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																8 (812) 765-43-21
+															</td>
+															<td class="cell_redirect">
+																<p>
+																	Алексей Иванов (зам в СтройВип)
+																</p>
+																<p class="to">
+																	<span class="fa fa-share"></span>
+																	Коммерческий отдел
+																</p>
+															</td>
+															<td class="cell_redact">
+																<div class="dropdown">
+																	<button class="fa fa-pencil dropdown-toggle"></button>
+																	<div class="dropdown-container dropdown-container__top">
+																		<div class="dropdown-container_inner">
+																			<div class="dd-add-phone">
+																				<p class="dd-add-phone_title">
+																					Добавить номер телефона
+																				</p>
+																				<label for="add-phone">Введите номер телефона</label>
+																				<input type="text" class="text-input" value="8 (812) 765-43-21">
+																				<div class="redirect-type">
+																					<p>
+																						Куда перенаправить указанный номер
+																					</p>
+																					<div>
+																						<input type="radio" class="radio" name="redirect-type-3" id="redirect-type-31" checked><label for="redirect-type-31">Очередь</label>
+																						<select class="select">
+																							<option value="1">Отдел продаж</option>
+																							<option value="2" selected>Коммерческий отдел</option>
+																						</select>
+																					</div>
+																					<div>
+																						<input type="radio" class="radio" name="redirect-type-3" id="redirect-type-32"><label for="redirect-type-32">Добавочный номер</label>
+																						<select class="select">
+																							<option value="1">112</option>
+																						</select>
+																					</div>
+																				</div>
+																				<label for="redirect-commen">Комментарий</label>
+																				<textarea class="">Алексей Иванов (зам в СтройВип)</textarea>
+																				<button class="button focus">Добавить</button>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</td>
+															<td class="cell_delete">
+																<button class="fa fa-close"></button>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
 											<div class="dropdown">
-												<button class="fa fa-pencil dropdown-toggle"></button>
-												<div class="dropdown-container dropdown-container__top">
+												<button class="button dropdown-toggle">Добавить номер</button>
+												<div class="dropdown-container">
 													<div class="dropdown-container_inner">
 														<div class="dd-add-phone">
 															<p class="dd-add-phone_title">
-																Добавить номер телефона
+																Добавить номер телефона в белый список
 															</p>
 															<label for="add-phone">Введите номер телефона</label>
-															<input type="text" class="text-input" value="+ 7 931 123-45-67">
+															<input type="text" class="text-input">
 															<div class="redirect-type">
 																<p>
 																	Куда перенаправить указанный номер
 																</p>
 																<div>
-																	<input type="radio" class="radio" name="redirect-type-2" id="redirect-type-21"><label for="redirect-type-21">Очередь</label>
+																	<input type="radio" class="radio" name="redirect-type" id="redirect-type-1"><label for="redirect-type-1">Очередь</label>
 																	<select class="select">
 																		<option value="1">Отдел продаж</option>
 																	</select>
 																</div>
 																<div>
-																	<input type="radio" class="radio" name="redirect-type-2" id="redirect-type-22" checked><label for="redirect-type-22">Добавочный номер</label>
+																	<input type="radio" class="radio" name="redirect-type" id="redirect-type-2"><label for="redirect-type-2">Добавочный номер</label>
 																	<select class="select">
 																		<option value="1">112</option>
 																	</select>
 																</div>
 															</div>
-															<label for="redirect-commen">Комментарий</label>
-															<textarea class="">Михаил Федорович (директор СтройВип)</textarea>
 															<button class="button focus">Добавить</button>
 														</div>
 													</div>
 												</div>
 											</div>
-										</td>
-										<td class="cell_delete">
-											<button class="fa fa-close"></button>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											8 (812) 765-43-21
-										</td>
-										<td class="cell_redirect">
+										</div>
+										<button class="button focus">Сохранить</button>
+									</div>
+								</div>
+								<div class="call-forwarding_blocks-item">
+									<div class="call-forwarding_inner disabled">
+										<div class="forwarding-table">
+											<div class="forwarding-table_cell call-forwarding_desc-title">
+												Время работы:
+											</div>
+											<div class="forwarding-table_cell">
+												<div class="call-forwarding-period">
+													<div class="table">
+														<div class="row_cell-1">
+															<select class="select call-forwarding-period_period-select">
+																<option value="0">Ежедневно</option>
+																<option value="1">Раз в неделю</option>
+																<option value="2">По будням</option>
+																<option value="3">По выходным</option>
+																<option value="4" selected>Интервал</option>
+																<option value="5">Разные дни</option>
+															</select>
+														</div>
+														<div class="row_cell-11">
+															<div class="call-forwarding-period_period-selected">
+																<span class="routing-date_item">
+																	Пн.–Вс.
+																</span>
+															</div>
+															<div class="call-forwarding-period_period-selected">
+																<select class="select">
+																	<option value="1">Понедельник</option>
+																	<option value="2">Вторник</option>
+																	<option value="3">Среда</option>
+																	<option value="4">Четверг</option>
+																	<option value="5">Пятница</option>
+																	<option value="6">Суббота</option>
+																	<option value="7">Воскресение</option>
+																</select>
+															</div>
+															<div class="call-forwarding-period_period-selected">
+																<span class="routing-date_item">
+																	Пн.–Пт.
+																</span>
+															</div>
+															<div class="call-forwarding-period_period-selected">
+																<span class="routing-date_item">
+																	Сб.–Вск.
+																</span>
+															</div>
+															<div class="call-forwarding-period_period-selected selected">
+																c
+																<input type="text" class="text-input">
+																по
+																<input type="text" class="text-input">
+																<select class="select">
+																	<option value="1">января</option>
+																	<option value="1">февраля</option>
+																	<option value="1">марта</option>
+																	<option value="1">апреля</option>
+																	<option value="1">мая</option>
+																	<option value="1">июня</option>
+																	<option value="1">июля</option>
+																	<option value="1">августа</option>
+																	<option value="1">сентября</option>
+																	<option value="1">октября</option>
+																	<option value="1">ноября</option>
+																	<option value="1">декабря</option>
+																</select>
+															</div>
+															<div class="call-forwarding-period_period-selected">
+																<input type="text" class="text-input text-input__alternate-days">
+																<div class="right cl_grey_1">
+																	Формат заполнения: 01.01, 07.01, 12.01
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="call-forwarding-time">
+													<div class="call-forwarding-time_block disabled">
+														<label for="routing-date_time-from">с</label>
+														<select class="select" id="routing-date_time-from">
+															<option value="1">01:00</option>
+															<option value="2">02:00</option>
+															<option value="3">03:00</option>
+															<option value="4">04:00</option>
+															<option value="5">05:00</option>
+															<option value="6">06:00</option>
+															<option value="7">07:00</option>
+															<option value="8">08:00</option>
+															<option value="9">09:00</option>
+															<option value="10">10:00</option>
+															<option value="11">11:00</option>
+															<option value="12">12:00</option>
+															<option value="13">13:00</option>
+															<option value="14">14:00</option>
+															<option value="15">15:00</option>
+															<option value="16">16:00</option>
+															<option value="17">17:00</option>
+															<option value="18">18:00</option>
+															<option value="19">19:00</option>
+															<option value="20">20:00</option>
+															<option value="21">21:00</option>
+															<option value="22">22:00</option>
+															<option value="23">23:00</option>
+															<option value="24">00:00</option>
+														</select>
+														<label for="routing-date_time-to" id="routing-date_time-to">до</label>
+														<select class="select">
+															<option value="1">01:00</option>
+															<option value="2">02:00</option>
+															<option value="3">03:00</option>
+															<option value="4">04:00</option>
+															<option value="5">05:00</option>
+															<option value="6">06:00</option>
+															<option value="7">07:00</option>
+															<option value="8">08:00</option>
+															<option value="9">09:00</option>
+															<option value="10">10:00</option>
+															<option value="11">11:00</option>
+															<option value="12">12:00</option>
+															<option value="13">13:00</option>
+															<option value="14">14:00</option>
+															<option value="15">15:00</option>
+															<option value="16">16:00</option>
+															<option value="17">17:00</option>
+															<option value="18">18:00</option>
+															<option value="19">19:00</option>
+															<option value="20">20:00</option>
+															<option value="21">21:00</option>
+															<option value="22">22:00</option>
+															<option value="23">23:00</option>
+															<option value="24">00:00</option>
+														</select>
+													</div>
+													или
+													<input type="checkbox" class="checkbox call-forwarding-time_checkbox" id="any-time-1" checked>
+													<label class="call-forwarding-time_label" for="any-time-1">круглосуточно</label>
+												</div>
+											</div>
+										</div>
+										<div class="call-forwarding_delete-block">
+											<div class="content">
+												<p>
+													Вы уверены, что хотите удалить вкладку?
+												</p>
+												<p>
+													<button class="button focus">Да</button>
+													<button class="button focus">Нет</button>
+												</p>
+											</div>
+										</div>
+										<div class="call-forwarding_disable-block">
+											<div class="call-forwarding_switcher">
+												<button class="call-forwarding_switcher-label">Включить</button>
+												<span class="call-forwarding_switcher-status">Не работает</span>
+											</div>
+										</div>
+										<div class="call-forwarding_switcher">
+											<button class="call-forwarding_switcher-label">Выключить</button>
+											<span class="call-forwarding_switcher-status">Работает</span>
+										</div>
+										<div class="b-routing_schemes">
+											<p class="h3">
+												Звонок поступил
+											</p>
+											<div class="table">
+												<div class="row">
+													<div class="row_cell">
+														<select class="select">
+															<option value="1">Включить мелодию</option>
+															<option value="2">Не включать мелодию</option>
+														</select>
+													</div>
+													<div class="row_cell cell_melody">
+														<select class="select">
+															<option value="1">Voice welcome</option>
+															<option value="2">Amelie</option>
+															<option value="3">Sympho</option>
+														</select>
+														<span class="dropdown">
+															<div class="link dropdown-toggle">
+																<span class="fa fa-play-circle"></span>
+															</div>
+															<div class="dropdown-container">
+																<div class="dropdown-container_inner">
+																	<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+																</div>
+															</div>
+														</span>
+													</div>
+													<div class="row_cell">
+														<select class="select">
+															<option value="1">Не ожидать окончания</option>
+															<option value="2">Ожидать окончания</option>
+														</select>
+													</div>
+													<div class="row_cell">
+														<select class="select">
+															<option value="1">Не проигрывать в цикле</option>
+															<option value="2">Воспроизводить в цикле</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="b-routing_schemes adv">
+												<div class="adv_type">
+													<div class="table">
+														<div class="row">
+															<div class="row_cell-6">
+																<select class="select">
+																	<option value="1">Цифровое меню (IVR)</option>
+																</select>
+															</div>
+															<div class="row_cell-6">
+																<select class="select">
+																	<option value="1">Цифровой ввод</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+												<p class="h3">
+													Варианты
+													<button class="button focus right">Добавить цифру</button>
+												</p>
+												<div class="b-routing_schemes-nums">
+													<div class="b-unrolling">
+														<div class="b-unrolling_toggle-wrapper">
+								                            <input type="checkbox" class="b-unrolling_toggle hidden" id="schemes-num-1">
+								                            <label for="schemes-num-1">Цифра 1</label>
+								                      	</div>
+								                      	<button class="fa fa-trash"></button>
+								                      	<div class="b-unrolling_inner">
+								                      		<div class="variables">
+								                      			                    		<p>Сначала</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Включить мелодию</option>
+																				<option value="2">Не включать мелодию</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Voice welcome</option>
+																				<option value="2">Amelie</option>
+																				<option value="3">Sympho</option>
+																			</select>
+																			<span class="dropdown">
+																				<div class="link dropdown-toggle">
+																					<span class="fa fa-play-circle"></span>
+																				</div>
+																				<div class="dropdown-container">
+																					<div class="dropdown-container_inner">
+																						<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+																					</div>
+																				</div>
+																			</span>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не ожидать окончания</option>
+																				<option value="2">Ожидать окончания</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не проигрывать в цикле</option>
+																				<option value="2" selected>Воспроизводить в цикле</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+									                      		<p>Затем</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Переадресация</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">На очередь &laquo;Техподдержка&raquo;</option>
+																			</select>
+																		</div>
+																		<div class="row_cell empty">
+																			&nbsp;
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+									                      		<p>В ожидании ответа</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Включить мелодию</option>
+																				<option value="2">Не включать мелодию</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Voice welcome</option>
+																				<option value="2">Amelie</option>
+																				<option value="3" selected>Sympho</option>
+																			</select>
+																			<span class="dropdown">
+																				<div class="link dropdown-toggle">
+																					<span class="fa fa-play-circle"></span>
+																				</div>
+																				<div class="dropdown-container">
+																					<div class="dropdown-container_inner">
+																						<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+																					</div>
+																				</div>
+																			</span>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не ожидать окончания</option>
+																				<option value="2">Ожидать окончания</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не проигрывать в цикле</option>
+																				<option value="2" selected>Воспроизводить в цикле</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+									                      		<p>Если ответа не было</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<span>Ждать ответ</span>
+																			<input type="text" class="text-input" value="120">
+																			<span>сек.</span>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Затем перенаправить</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Факс</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+								                      		</div>
+															<div class="btns">
+																<label class="button" for="file-upload-1">
+																	<span class="fa fa-download"></span>
+																	Загрузить мелодию
+																</label>
+																<input type="file" class="hidden" id="file-upload-1">
+																<button class="button focus">Добавить еще вариант</button>
+															</div>
+								                      	</div>
+													</div>
+												</div>
+												<div class="b-routing_schemes-nums">
+													<div class="b-unrolling">
+														<div class="b-unrolling_toggle-wrapper">
+								                            <input type="checkbox" class="b-unrolling_toggle hidden" id="schemes-num-2">
+								                            <label for="schemes-num-2">Цифра 2</label>
+								                      	</div>
+								                      	<button class="fa fa-trash"></button>
+								                      	<div class="b-unrolling_inner">
+								                      		<div class="variables">
+								                      			                    		<p>Сначала</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Включить мелодию</option>
+																				<option value="2">Не включать мелодию</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Voice welcome</option>
+																				<option value="2">Amelie</option>
+																				<option value="3">Sympho</option>
+																			</select>
+																			<span class="dropdown">
+																				<div class="link dropdown-toggle">
+																					<span class="fa fa-play-circle"></span>
+																				</div>
+																				<div class="dropdown-container">
+																					<div class="dropdown-container_inner">
+																						<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+																					</div>
+																				</div>
+																			</span>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не ожидать окончания</option>
+																				<option value="2">Ожидать окончания</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не проигрывать в цикле</option>
+																				<option value="2" selected>Воспроизводить в цикле</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+									                      		<p>Затем</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Переадресация</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">На очередь &laquo;Техподдержка&raquo;</option>
+																			</select>
+																		</div>
+																		<div class="row_cell empty">
+																			&nbsp;
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+									                      		<p>В ожидании ответа</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Включить мелодию</option>
+																				<option value="2">Не включать мелодию</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Voice welcome</option>
+																				<option value="2">Amelie</option>
+																				<option value="3" selected>Sympho</option>
+																			</select>
+																			<span class="dropdown">
+																				<div class="link dropdown-toggle">
+																					<span class="fa fa-play-circle"></span>
+																				</div>
+																				<div class="dropdown-container">
+																					<div class="dropdown-container_inner">
+																						<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+																					</div>
+																				</div>
+																			</span>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не ожидать окончания</option>
+																				<option value="2">Ожидать окончания</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не проигрывать в цикле</option>
+																				<option value="2" selected>Воспроизводить в цикле</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+									                      		<p>Если ответа не было</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<span>Ждать ответ</span>
+																			<input type="text" class="text-input" value="120">
+																			<span>сек.</span>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Затем перенаправить</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Факс</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+								                      		</div>
+															<div class="btns">
+																<label class="button" for="file-upload-1">
+																	<span class="fa fa-download"></span>
+																	Загрузить мелодию
+																</label>
+																<input type="file" class="hidden" id="file-upload-1">
+																<button class="button focus">Добавить еще вариант</button>
+															</div>
+								                      	</div>
+													</div>
+												</div>
+												<div class="b-routing_schemes-nums">
+													<div class="b-unrolling">
+														<div class="b-unrolling_toggle-wrapper">
+								                            <input type="checkbox" class="b-unrolling_toggle hidden" id="schemes-num-3">
+								                            <label for="schemes-num-3">Цифра 3</label>
+								                      	</div>
+								                      	<button class="fa fa-trash"></button>
+								                      	<div class="b-unrolling_inner">
+								                      		<div class="variables">
+								                      			<p>Сначала</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Включить мелодию</option>
+																				<option value="2">Не включать мелодию</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Voice welcome</option>
+																				<option value="2">Amelie</option>
+																				<option value="3">Sympho</option>
+																			</select>
+																			<span class="dropdown">
+																				<div class="link dropdown-toggle">
+																					<span class="fa fa-play-circle"></span>
+																				</div>
+																				<div class="dropdown-container">
+																					<div class="dropdown-container_inner">
+																						<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+																					</div>
+																				</div>
+																			</span>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не ожидать окончания</option>
+																				<option value="2">Ожидать окончания</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не проигрывать в цикле</option>
+																				<option value="2" selected>Воспроизводить в цикле</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+									                      		<p>Затем</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Переадресация</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">На очередь &laquo;Техподдержка&raquo;</option>
+																			</select>
+																		</div>
+																		<div class="row_cell empty">
+																			&nbsp;
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+									                      		<p>В ожидании ответа</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Включить мелодию</option>
+																				<option value="2">Не включать мелодию</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Voice welcome</option>
+																				<option value="2">Amelie</option>
+																				<option value="3" selected>Sympho</option>
+																			</select>
+																			<span class="dropdown">
+																				<div class="link dropdown-toggle">
+																					<span class="fa fa-play-circle"></span>
+																				</div>
+																				<div class="dropdown-container">
+																					<div class="dropdown-container_inner">
+																						<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+																					</div>
+																				</div>
+																			</span>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не ожидать окончания</option>
+																				<option value="2">Ожидать окончания</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не проигрывать в цикле</option>
+																				<option value="2" selected>Воспроизводить в цикле</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+									                      		<p>Если ответа не было</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<span>Ждать ответ</span>
+																			<input type="text" class="text-input" value="120">
+																			<span>сек.</span>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Затем перенаправить</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Факс</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+								                      		</div>
+															<div class="btns">
+																<label class="button" for="file-upload-1">
+																	<span class="fa fa-download"></span>
+																	Загрузить мелодию
+																</label>
+																<input type="file" class="hidden" id="file-upload-1">
+																<button class="button focus">Добавить еще вариант</button>
+															</div>
+								                      	</div>
+													</div>
+												</div>
+											</div>
+											<p class="h3">
+												Если ни один из пунктов цифрового меню не выбран
+											</p>
+					                  		<div class="variables">
+					                  			<p>Сначала</p>
+					                      		<div class="table">
+													<div class="row">
+														<div class="row_cell">
+															<select class="select">
+																<option value="1">Включить мелодию</option>
+																<option value="2">Не включать мелодию</option>
+															</select>
+														</div>
+														<div class="row_cell cell_melody">
+															<select class="select">
+																<option value="1">Voice welcome</option>
+																<option value="2">Amelie</option>
+																<option value="3">Sympho</option>
+															</select>
+															<span class="dropdown">
+																<div class="link dropdown-toggle">
+																	<span class="fa fa-play-circle"></span>
+																</div>
+																<div class="dropdown-container">
+																	<div class="dropdown-container_inner">
+																		<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+																	</div>
+																</div>
+															</span>
+														</div>
+														<div class="row_cell">
+															<select class="select">
+																<option value="1">Не ожидать окончания</option>
+																<option value="2">Ожидать окончания</option>
+															</select>
+														</div>
+														<div class="row_cell">
+															<select class="select">
+																<option value="1">Не проигрывать в цикле</option>
+																<option value="2" selected>Воспроизводить в цикле</option>
+															</select>
+														</div>
+														<div class="row_cell cell_push-up">
+															<button class="fa fa-arrow-up"></button>
+														</div>
+														<div class="row_cell cell_push-down">
+															<button class="fa fa-arrow-down"></button>
+														</div>
+													</div>
+												</div>
+					                      		<p>Затем</p>
+					                      		<div class="table">
+													<div class="row">
+														<div class="row_cell">
+															<select class="select">
+																<option value="1">Переадресация</option>
+															</select>
+														</div>
+														<div class="row_cell">
+															<select class="select">
+																<option value="1">На очередь &laquo;Техподдержка&raquo;</option>
+															</select>
+														</div>
+														<div class="row_cell empty">
+															&nbsp;
+														</div>
+														<div class="row_cell cell_push-up">
+															<button class="fa fa-arrow-up"></button>
+														</div>
+														<div class="row_cell cell_push-down">
+															<button class="fa fa-arrow-down"></button>
+														</div>
+													</div>
+												</div>
+					                      		<p>В ожидании ответа</p>
+					                      		<div class="table">
+													<div class="row">
+														<div class="row_cell">
+															<select class="select">
+																<option value="1">Включить мелодию</option>
+																<option value="2">Не включать мелодию</option>
+															</select>
+														</div>
+														<div class="row_cell cell_melody">
+															<select class="select">
+																<option value="1">Voice welcome</option>
+																<option value="2">Amelie</option>
+																<option value="3" selected>Sympho</option>
+															</select>
+															<span class="dropdown">
+																<div class="link dropdown-toggle">
+																	<span class="fa fa-play-circle"></span>
+																</div>
+																<div class="dropdown-container">
+																	<div class="dropdown-container_inner">
+																		<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+																	</div>
+																</div>
+															</span>
+														</div>
+														<div class="row_cell">
+															<select class="select">
+																<option value="1">Не ожидать окончания</option>
+																<option value="2">Ожидать окончания</option>
+															</select>
+														</div>
+														<div class="row_cell">
+															<select class="select">
+																<option value="1">Не проигрывать в цикле</option>
+																<option value="2" selected>Воспроизводить в цикле</option>
+															</select>
+														</div>
+														<div class="row_cell cell_push-up">
+															<button class="fa fa-arrow-up"></button>
+														</div>
+														<div class="row_cell cell_push-down">
+															<button class="fa fa-arrow-down"></button>
+														</div>
+													</div>
+												</div>
+					                      		<p>Если ответа не было</p>
+					                      		<div class="table">
+													<div class="row">
+														<div class="row_cell">
+															<span>Ждать ответ</span>
+															<input type="text" class="text-input" value="120">
+															<span>сек.</span>
+														</div>
+														<div class="row_cell cell_melody">
+															<select class="select">
+																<option value="1">Затем перенаправить</option>
+															</select>
+														</div>
+														<div class="row_cell cell_melody">
+															<select class="select">
+																<option value="1">Факс</option>
+															</select>
+														</div>
+														<div class="row_cell cell_push-up">
+															<button class="fa fa-arrow-up"></button>
+														</div>
+														<div class="row_cell cell_push-down">
+															<button class="fa fa-arrow-down"></button>
+														</div>
+													</div>
+												</div>
+					                  		</div>
+											<div class="btns">
+												<label class="button" for="file-upload-1">
+													<span class="fa fa-download"></span>
+													Загрузить мелодию
+												</label>
+												<input type="file" class="hidden" id="file-upload-1">
+												<button class="button focus">Добавить еще вариант</button>
+											</div>
+										</div>
+										<div class="b-routing_black-and-white">
+											<p class="h3">
+												Номера-исключения (белый список)
+											</p>
 											<p>
-												Алексей Иванов (зам в СтройВип)
+												Если номер внешнего абонента успешно определен и&nbsp;присутствует в&nbsp;белом списке, то&nbsp;система перенаправит звонок в&nbsp;соответствии указанными настройками.
 											</p>
-											<p class="to">
-												<span class="fa fa-share"></span>
-												Коммерческий отдел
-											</p>
-										</td>
-										<td class="cell_redact">
+											<div class="black-and-white">
+												<table>
+													<tbody>
+														<tr>
+															<td>
+																+ 7 931 123-45-67
+															</td>
+															<td class="cell_redirect">
+																<p>
+																	Михаил Федорович (директор СтройВип)
+																</p>
+																<p class="to">
+																	<span class="fa fa-share"></span>
+																	Добавочный 112
+																</p>
+															</td>
+															<td class="cell_redact">
+																<div class="dropdown">
+																	<button class="fa fa-pencil dropdown-toggle"></button>
+																	<div class="dropdown-container dropdown-container__top">
+																		<div class="dropdown-container_inner">
+																			<div class="dd-add-phone">
+																				<p class="dd-add-phone_title">
+																					Добавить номер телефона
+																				</p>
+																				<label for="add-phone">Введите номер телефона</label>
+																				<input type="text" class="text-input" value="+ 7 931 123-45-67">
+																				<div class="redirect-type">
+																					<p>
+																						Куда перенаправить указанный номер
+																					</p>
+																					<div>
+																						<input type="radio" class="radio" name="redirect-type-2" id="redirect-type-21"><label for="redirect-type-21">Очередь</label>
+																						<select class="select">
+																							<option value="1">Отдел продаж</option>
+																						</select>
+																					</div>
+																					<div>
+																						<input type="radio" class="radio" name="redirect-type-2" id="redirect-type-22" checked><label for="redirect-type-22">Добавочный номер</label>
+																						<select class="select">
+																							<option value="1">112</option>
+																						</select>
+																					</div>
+																				</div>
+																				<label for="redirect-commen">Комментарий</label>
+																				<textarea class="">Михаил Федорович (директор СтройВип)</textarea>
+																				<button class="button focus">Добавить</button>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</td>
+															<td class="cell_delete">
+																<button class="fa fa-close"></button>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																8 (812) 765-43-21
+															</td>
+															<td class="cell_redirect">
+																<p>
+																	Алексей Иванов (зам в СтройВип)
+																</p>
+																<p class="to">
+																	<span class="fa fa-share"></span>
+																	Коммерческий отдел
+																</p>
+															</td>
+															<td class="cell_redact">
+																<div class="dropdown">
+																	<button class="fa fa-pencil dropdown-toggle"></button>
+																	<div class="dropdown-container dropdown-container__top">
+																		<div class="dropdown-container_inner">
+																			<div class="dd-add-phone">
+																				<p class="dd-add-phone_title">
+																					Добавить номер телефона
+																				</p>
+																				<label for="add-phone">Введите номер телефона</label>
+																				<input type="text" class="text-input" value="8 (812) 765-43-21">
+																				<div class="redirect-type">
+																					<p>
+																						Куда перенаправить указанный номер
+																					</p>
+																					<div>
+																						<input type="radio" class="radio" name="redirect-type-3" id="redirect-type-31" checked><label for="redirect-type-31">Очередь</label>
+																						<select class="select">
+																							<option value="1">Отдел продаж</option>
+																							<option value="2" selected>Коммерческий отдел</option>
+																						</select>
+																					</div>
+																					<div>
+																						<input type="radio" class="radio" name="redirect-type-3" id="redirect-type-32"><label for="redirect-type-32">Добавочный номер</label>
+																						<select class="select">
+																							<option value="1">112</option>
+																						</select>
+																					</div>
+																				</div>
+																				<label for="redirect-commen">Комментарий</label>
+																				<textarea class="">Алексей Иванов (зам в СтройВип)</textarea>
+																				<button class="button focus">Добавить</button>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</td>
+															<td class="cell_delete">
+																<button class="fa fa-close"></button>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
 											<div class="dropdown">
-												<button class="fa fa-pencil dropdown-toggle"></button>
-												<div class="dropdown-container dropdown-container__top">
+												<button class="button dropdown-toggle">Добавить номер</button>
+												<div class="dropdown-container">
 													<div class="dropdown-container_inner">
 														<div class="dd-add-phone">
 															<p class="dd-add-phone_title">
-																Добавить номер телефона
+																Добавить номер телефона в белый список
 															</p>
 															<label for="add-phone">Введите номер телефона</label>
-															<input type="text" class="text-input" value="8 (812) 765-43-21">
+															<input type="text" class="text-input">
 															<div class="redirect-type">
 																<p>
 																	Куда перенаправить указанный номер
 																</p>
 																<div>
-																	<input type="radio" class="radio" name="redirect-type-3" id="redirect-type-31" checked><label for="redirect-type-31">Очередь</label>
+																	<input type="radio" class="radio" name="redirect-type" id="redirect-type-1"><label for="redirect-type-1">Очередь</label>
 																	<select class="select">
 																		<option value="1">Отдел продаж</option>
-																		<option value="2" selected>Коммерческий отдел</option>
 																	</select>
 																</div>
 																<div>
-																	<input type="radio" class="radio" name="redirect-type-3" id="redirect-type-32"><label for="redirect-type-32">Добавочный номер</label>
+																	<input type="radio" class="radio" name="redirect-type" id="redirect-type-2"><label for="redirect-type-2">Добавочный номер</label>
 																	<select class="select">
 																		<option value="1">112</option>
 																	</select>
 																</div>
 															</div>
-															<label for="redirect-commen">Комментарий</label>
-															<textarea class="">Алексей Иванов (зам в СтройВип)</textarea>
 															<button class="button focus">Добавить</button>
 														</div>
 													</div>
 												</div>
 											</div>
-										</td>
-										<td class="cell_delete">
-											<button class="fa fa-close"></button>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<div class="dropdown">
-							<button class="button dropdown-toggle">Добавить номер</button>
-							<div class="dropdown-container">
-								<div class="dropdown-container_inner">
-									<div class="dd-add-phone">
-										<p class="dd-add-phone_title">
-											Добавить номер телефона в белый список
-										</p>
-										<label for="add-phone">Введите номер телефона</label>
-										<input type="text" class="text-input">
-										<div class="redirect-type">
-											<p>
-												Куда перенаправить указанный номер
-											</p>
-											<div>
-												<input type="radio" class="radio" name="redirect-type" id="redirect-type-1"><label for="redirect-type-1">Очередь</label>
-												<select class="select">
-													<option value="1">Отдел продаж</option>
-												</select>
+										</div>
+										<button class="button focus">Сохранить</button>
+									</div>
+								</div>
+								<div class="call-forwarding_blocks-item">
+									<div class="call-forwarding_inner">
+										<div class="forwarding-table">
+											<div class="forwarding-table_cell call-forwarding_desc-title">
+												Время работы:
 											</div>
-											<div>
-												<input type="radio" class="radio" name="redirect-type" id="redirect-type-2"><label for="redirect-type-2">Добавочный номер</label>
-												<select class="select">
-													<option value="1">112</option>
-												</select>
+											<div class="forwarding-table_cell">
+												<div class="call-forwarding-period">
+													<div class="table">
+														<div class="row_cell-1">
+															<select class="select call-forwarding-period_period-select">
+																<option value="0">Ежедневно</option>
+																<option value="1">Раз в неделю</option>
+																<option value="2">По будням</option>
+																<option value="3">По выходным</option>
+																<option value="4">Интервал</option>
+																<option value="5">Разные дни</option>
+															</select>
+														</div>
+														<div class="row_cell-11">
+															<div class="call-forwarding-period_period-selected selected">
+																<span class="routing-date_item">
+																	Пн.–Вс.
+																</span>
+															</div>
+															<div class="call-forwarding-period_period-selected">
+																<select class="select">
+																	<option value="1">Понедельник</option>
+																	<option value="2">Вторник</option>
+																	<option value="3">Среда</option>
+																	<option value="4">Четверг</option>
+																	<option value="5">Пятница</option>
+																	<option value="6">Суббота</option>
+																	<option value="7">Воскресение</option>
+																</select>
+															</div>
+															<div class="call-forwarding-period_period-selected">
+																<span class="routing-date_item">
+																	Пн.–Пт.
+																</span>
+															</div>
+															<div class="call-forwarding-period_period-selected">
+																<span class="routing-date_item">
+																	Сб.–Вск.
+																</span>
+															</div>
+															<div class="call-forwarding-period_period-selected">
+																c
+																<input type="text" class="text-input">
+																по
+																<input type="text" class="text-input">
+																<select class="select">
+																	<option value="1">января</option>
+																	<option value="1">февраля</option>
+																	<option value="1">марта</option>
+																	<option value="1">апреля</option>
+																	<option value="1">мая</option>
+																	<option value="1">июня</option>
+																	<option value="1">июля</option>
+																	<option value="1">августа</option>
+																	<option value="1">сентября</option>
+																	<option value="1">октября</option>
+																	<option value="1">ноября</option>
+																	<option value="1">декабря</option>
+																</select>
+															</div>
+															<div class="call-forwarding-period_period-selected">
+																<input type="text" class="text-input text-input__alternate-days">
+																<div class="right cl_grey_1">
+																	Формат заполнения: 01.01, 07.01, 12.01
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="call-forwarding-time">
+													<div class="call-forwarding-time_block">
+														<label for="routing-date_time-from">с</label>
+														<select class="select" id="routing-date_time-from">
+															<option value="1">01:00</option>
+															<option value="2">02:00</option>
+															<option value="3">03:00</option>
+															<option value="4">04:00</option>
+															<option value="5">05:00</option>
+															<option value="6">06:00</option>
+															<option value="7">07:00</option>
+															<option value="8">08:00</option>
+															<option value="9">09:00</option>
+															<option value="10">10:00</option>
+															<option value="11">11:00</option>
+															<option value="12">12:00</option>
+															<option value="13">13:00</option>
+															<option value="14">14:00</option>
+															<option value="15">15:00</option>
+															<option value="16">16:00</option>
+															<option value="17">17:00</option>
+															<option value="18">18:00</option>
+															<option value="19">19:00</option>
+															<option value="20">20:00</option>
+															<option value="21">21:00</option>
+															<option value="22">22:00</option>
+															<option value="23">23:00</option>
+															<option value="24">00:00</option>
+														</select>
+														<label for="routing-date_time-to" id="routing-date_time-to">до</label>
+														<select class="select">
+															<option value="1">01:00</option>
+															<option value="2">02:00</option>
+															<option value="3">03:00</option>
+															<option value="4">04:00</option>
+															<option value="5">05:00</option>
+															<option value="6">06:00</option>
+															<option value="7">07:00</option>
+															<option value="8">08:00</option>
+															<option value="9">09:00</option>
+															<option value="10">10:00</option>
+															<option value="11">11:00</option>
+															<option value="12">12:00</option>
+															<option value="13">13:00</option>
+															<option value="14">14:00</option>
+															<option value="15">15:00</option>
+															<option value="16">16:00</option>
+															<option value="17">17:00</option>
+															<option value="18">18:00</option>
+															<option value="19">19:00</option>
+															<option value="20">20:00</option>
+															<option value="21">21:00</option>
+															<option value="22">22:00</option>
+															<option value="23">23:00</option>
+															<option value="24">00:00</option>
+														</select>
+													</div>
+													или
+													<input type="checkbox" class="checkbox call-forwarding-time_checkbox" id="any-time-2">
+													<label class="call-forwarding-time_label" for="any-time-2">круглосуточно</label>
+												</div>
 											</div>
 										</div>
-										<button class="button focus">Добавить</button>
+										<div class="call-forwarding_delete-block">
+											<div class="content">
+												<p>
+													Вы уверены, что хотите удалить вкладку?
+												</p>
+												<p>
+													<button class="button focus">Да</button>
+													<button class="button focus">Нет</button>
+												</p>
+											</div>
+										</div>
+										<div class="call-forwarding_disable-block">
+											<div class="call-forwarding_switcher">
+												<button class="call-forwarding_switcher-label">Включить</button>
+												<span class="call-forwarding_switcher-status">Не работает</span>
+											</div>
+										</div>
+										<div class="call-forwarding_switcher">
+											<button class="call-forwarding_switcher-label">Выключить</button>
+											<span class="call-forwarding_switcher-status">Работает</span>
+										</div>
+										<div class="b-routing_schemes">
+											<p class="h3">
+												Звонок поступил
+											</p>
+											<div class="table">
+												<div class="row">
+													<div class="row_cell">
+														<select class="select">
+															<option value="1">Включить мелодию</option>
+															<option value="2">Не включать мелодию</option>
+														</select>
+													</div>
+													<div class="row_cell cell_melody">
+														<select class="select">
+															<option value="1">Voice welcome</option>
+															<option value="2">Amelie</option>
+															<option value="3">Sympho</option>
+														</select>
+														<span class="dropdown">
+															<div class="link dropdown-toggle">
+																<span class="fa fa-play-circle"></span>
+															</div>
+															<div class="dropdown-container">
+																<div class="dropdown-container_inner">
+																	<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+																</div>
+															</div>
+														</span>
+													</div>
+													<div class="row_cell">
+														<select class="select">
+															<option value="1">Не ожидать окончания</option>
+															<option value="2">Ожидать окончания</option>
+														</select>
+													</div>
+													<div class="row_cell">
+														<select class="select">
+															<option value="1">Не проигрывать в цикле</option>
+															<option value="2">Воспроизводить в цикле</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="b-routing_schemes adv">
+												<div class="adv_type">
+													<div class="table">
+														<div class="row">
+															<div class="row_cell-6">
+																<select class="select">
+																	<option value="1">Цифровое меню (IVR)</option>
+																</select>
+															</div>
+															<div class="row_cell-6">
+																<select class="select">
+																	<option value="1">Цифровой ввод</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+												<p class="h3">
+													Варианты
+													<button class="button focus right">Добавить цифру</button>
+												</p>
+												<div class="b-routing_schemes-nums">
+													<div class="b-unrolling">
+														<div class="b-unrolling_toggle-wrapper">
+								                            <input type="checkbox" class="b-unrolling_toggle hidden" id="schemes-num-1">
+								                            <label for="schemes-num-1">Цифра 1</label>
+								                      	</div>
+								                      	<button class="fa fa-trash"></button>
+								                      	<div class="b-unrolling_inner">
+								                      		<div class="variables">
+								                      			                    		<p>Сначала</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Включить мелодию</option>
+																				<option value="2">Не включать мелодию</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Voice welcome</option>
+																				<option value="2">Amelie</option>
+																				<option value="3">Sympho</option>
+																			</select>
+																			<span class="dropdown">
+																				<div class="link dropdown-toggle">
+																					<span class="fa fa-play-circle"></span>
+																				</div>
+																				<div class="dropdown-container">
+																					<div class="dropdown-container_inner">
+																						<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+																					</div>
+																				</div>
+																			</span>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не ожидать окончания</option>
+																				<option value="2">Ожидать окончания</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не проигрывать в цикле</option>
+																				<option value="2" selected>Воспроизводить в цикле</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+									                      		<p>Затем</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Переадресация</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">На очередь &laquo;Техподдержка&raquo;</option>
+																			</select>
+																		</div>
+																		<div class="row_cell empty">
+																			&nbsp;
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+									                      		<p>В ожидании ответа</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Включить мелодию</option>
+																				<option value="2">Не включать мелодию</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Voice welcome</option>
+																				<option value="2">Amelie</option>
+																				<option value="3" selected>Sympho</option>
+																			</select>
+																			<span class="dropdown">
+																				<div class="link dropdown-toggle">
+																					<span class="fa fa-play-circle"></span>
+																				</div>
+																				<div class="dropdown-container">
+																					<div class="dropdown-container_inner">
+																						<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+																					</div>
+																				</div>
+																			</span>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не ожидать окончания</option>
+																				<option value="2">Ожидать окончания</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не проигрывать в цикле</option>
+																				<option value="2" selected>Воспроизводить в цикле</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+									                      		<p>Если ответа не было</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<span>Ждать ответ</span>
+																			<input type="text" class="text-input" value="120">
+																			<span>сек.</span>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Затем перенаправить</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Факс</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+								                      		</div>
+															<div class="btns">
+																<label class="button" for="file-upload-1">
+																	<span class="fa fa-download"></span>
+																	Загрузить мелодию
+																</label>
+																<input type="file" class="hidden" id="file-upload-1">
+																<button class="button focus">Добавить еще вариант</button>
+															</div>
+								                      	</div>
+													</div>
+												</div>
+												<div class="b-routing_schemes-nums">
+													<div class="b-unrolling">
+														<div class="b-unrolling_toggle-wrapper">
+								                            <input type="checkbox" class="b-unrolling_toggle hidden" id="schemes-num-2">
+								                            <label for="schemes-num-2">Цифра 2</label>
+								                      	</div>
+								                      	<button class="fa fa-trash"></button>
+								                      	<div class="b-unrolling_inner">
+								                      		<div class="variables">
+								                      			                    		<p>Сначала</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Включить мелодию</option>
+																				<option value="2">Не включать мелодию</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Voice welcome</option>
+																				<option value="2">Amelie</option>
+																				<option value="3">Sympho</option>
+																			</select>
+																			<span class="dropdown">
+																				<div class="link dropdown-toggle">
+																					<span class="fa fa-play-circle"></span>
+																				</div>
+																				<div class="dropdown-container">
+																					<div class="dropdown-container_inner">
+																						<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+																					</div>
+																				</div>
+																			</span>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не ожидать окончания</option>
+																				<option value="2">Ожидать окончания</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не проигрывать в цикле</option>
+																				<option value="2" selected>Воспроизводить в цикле</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+									                      		<p>Затем</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Переадресация</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">На очередь &laquo;Техподдержка&raquo;</option>
+																			</select>
+																		</div>
+																		<div class="row_cell empty">
+																			&nbsp;
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+									                      		<p>В ожидании ответа</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Включить мелодию</option>
+																				<option value="2">Не включать мелодию</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Voice welcome</option>
+																				<option value="2">Amelie</option>
+																				<option value="3" selected>Sympho</option>
+																			</select>
+																			<span class="dropdown">
+																				<div class="link dropdown-toggle">
+																					<span class="fa fa-play-circle"></span>
+																				</div>
+																				<div class="dropdown-container">
+																					<div class="dropdown-container_inner">
+																						<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+																					</div>
+																				</div>
+																			</span>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не ожидать окончания</option>
+																				<option value="2">Ожидать окончания</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не проигрывать в цикле</option>
+																				<option value="2" selected>Воспроизводить в цикле</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+									                      		<p>Если ответа не было</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<span>Ждать ответ</span>
+																			<input type="text" class="text-input" value="120">
+																			<span>сек.</span>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Затем перенаправить</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Факс</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+								                      		</div>
+															<div class="btns">
+																<label class="button" for="file-upload-1">
+																	<span class="fa fa-download"></span>
+																	Загрузить мелодию
+																</label>
+																<input type="file" class="hidden" id="file-upload-1">
+																<button class="button focus">Добавить еще вариант</button>
+															</div>
+								                      	</div>
+													</div>
+												</div>
+												<div class="b-routing_schemes-nums">
+													<div class="b-unrolling">
+														<div class="b-unrolling_toggle-wrapper">
+								                            <input type="checkbox" class="b-unrolling_toggle hidden" id="schemes-num-3">
+								                            <label for="schemes-num-3">Цифра 3</label>
+								                      	</div>
+								                      	<button class="fa fa-trash"></button>
+								                      	<div class="b-unrolling_inner">
+								                      		<div class="variables">
+								                      			<p>Сначала</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Включить мелодию</option>
+																				<option value="2">Не включать мелодию</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Voice welcome</option>
+																				<option value="2">Amelie</option>
+																				<option value="3">Sympho</option>
+																			</select>
+																			<span class="dropdown">
+																				<div class="link dropdown-toggle">
+																					<span class="fa fa-play-circle"></span>
+																				</div>
+																				<div class="dropdown-container">
+																					<div class="dropdown-container_inner">
+																						<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+																					</div>
+																				</div>
+																			</span>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не ожидать окончания</option>
+																				<option value="2">Ожидать окончания</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не проигрывать в цикле</option>
+																				<option value="2" selected>Воспроизводить в цикле</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+									                      		<p>Затем</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Переадресация</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">На очередь &laquo;Техподдержка&raquo;</option>
+																			</select>
+																		</div>
+																		<div class="row_cell empty">
+																			&nbsp;
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+									                      		<p>В ожидании ответа</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Включить мелодию</option>
+																				<option value="2">Не включать мелодию</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Voice welcome</option>
+																				<option value="2">Amelie</option>
+																				<option value="3" selected>Sympho</option>
+																			</select>
+																			<span class="dropdown">
+																				<div class="link dropdown-toggle">
+																					<span class="fa fa-play-circle"></span>
+																				</div>
+																				<div class="dropdown-container">
+																					<div class="dropdown-container_inner">
+																						<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+																					</div>
+																				</div>
+																			</span>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не ожидать окончания</option>
+																				<option value="2">Ожидать окончания</option>
+																			</select>
+																		</div>
+																		<div class="row_cell">
+																			<select class="select">
+																				<option value="1">Не проигрывать в цикле</option>
+																				<option value="2" selected>Воспроизводить в цикле</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+									                      		<p>Если ответа не было</p>
+									                      		<div class="table">
+																	<div class="row">
+																		<div class="row_cell">
+																			<span>Ждать ответ</span>
+																			<input type="text" class="text-input" value="120">
+																			<span>сек.</span>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Затем перенаправить</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_melody">
+																			<select class="select">
+																				<option value="1">Факс</option>
+																			</select>
+																		</div>
+																		<div class="row_cell cell_push-up">
+																			<button class="fa fa-arrow-up"></button>
+																		</div>
+																		<div class="row_cell cell_push-down">
+																			<button class="fa fa-arrow-down"></button>
+																		</div>
+																	</div>
+																</div>
+								                      		</div>
+															<div class="btns">
+																<label class="button" for="file-upload-1">
+																	<span class="fa fa-download"></span>
+																	Загрузить мелодию
+																</label>
+																<input type="file" class="hidden" id="file-upload-1">
+																<button class="button focus">Добавить еще вариант</button>
+															</div>
+								                      	</div>
+													</div>
+												</div>
+											</div>
+											<p class="h3">
+												Если ни один из пунктов цифрового меню не выбран
+											</p>
+					                  		<div class="variables">
+					                  			<p>Сначала</p>
+					                      		<div class="table">
+													<div class="row">
+														<div class="row_cell">
+															<select class="select">
+																<option value="1">Включить мелодию</option>
+																<option value="2">Не включать мелодию</option>
+															</select>
+														</div>
+														<div class="row_cell cell_melody">
+															<select class="select">
+																<option value="1">Voice welcome</option>
+																<option value="2">Amelie</option>
+																<option value="3">Sympho</option>
+															</select>
+															<span class="dropdown">
+																<div class="link dropdown-toggle">
+																	<span class="fa fa-play-circle"></span>
+																</div>
+																<div class="dropdown-container">
+																	<div class="dropdown-container_inner">
+																		<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+																	</div>
+																</div>
+															</span>
+														</div>
+														<div class="row_cell">
+															<select class="select">
+																<option value="1">Не ожидать окончания</option>
+																<option value="2">Ожидать окончания</option>
+															</select>
+														</div>
+														<div class="row_cell">
+															<select class="select">
+																<option value="1">Не проигрывать в цикле</option>
+																<option value="2" selected>Воспроизводить в цикле</option>
+															</select>
+														</div>
+														<div class="row_cell cell_push-up">
+															<button class="fa fa-arrow-up"></button>
+														</div>
+														<div class="row_cell cell_push-down">
+															<button class="fa fa-arrow-down"></button>
+														</div>
+													</div>
+												</div>
+					                      		<p>Затем</p>
+					                      		<div class="table">
+													<div class="row">
+														<div class="row_cell">
+															<select class="select">
+																<option value="1">Переадресация</option>
+															</select>
+														</div>
+														<div class="row_cell">
+															<select class="select">
+																<option value="1">На очередь &laquo;Техподдержка&raquo;</option>
+															</select>
+														</div>
+														<div class="row_cell empty">
+															&nbsp;
+														</div>
+														<div class="row_cell cell_push-up">
+															<button class="fa fa-arrow-up"></button>
+														</div>
+														<div class="row_cell cell_push-down">
+															<button class="fa fa-arrow-down"></button>
+														</div>
+													</div>
+												</div>
+					                      		<p>В ожидании ответа</p>
+					                      		<div class="table">
+													<div class="row">
+														<div class="row_cell">
+															<select class="select">
+																<option value="1">Включить мелодию</option>
+																<option value="2">Не включать мелодию</option>
+															</select>
+														</div>
+														<div class="row_cell cell_melody">
+															<select class="select">
+																<option value="1">Voice welcome</option>
+																<option value="2">Amelie</option>
+																<option value="3" selected>Sympho</option>
+															</select>
+															<span class="dropdown">
+																<div class="link dropdown-toggle">
+																	<span class="fa fa-play-circle"></span>
+																</div>
+																<div class="dropdown-container">
+																	<div class="dropdown-container_inner">
+																		<div class="jp-player" data-file="/dev/mp3/Melanie Martinez - Carousel.mp3"></div>
+																	</div>
+																</div>
+															</span>
+														</div>
+														<div class="row_cell">
+															<select class="select">
+																<option value="1">Не ожидать окончания</option>
+																<option value="2">Ожидать окончания</option>
+															</select>
+														</div>
+														<div class="row_cell">
+															<select class="select">
+																<option value="1">Не проигрывать в цикле</option>
+																<option value="2" selected>Воспроизводить в цикле</option>
+															</select>
+														</div>
+														<div class="row_cell cell_push-up">
+															<button class="fa fa-arrow-up"></button>
+														</div>
+														<div class="row_cell cell_push-down">
+															<button class="fa fa-arrow-down"></button>
+														</div>
+													</div>
+												</div>
+					                      		<p>Если ответа не было</p>
+					                      		<div class="table">
+													<div class="row">
+														<div class="row_cell">
+															<span>Ждать ответ</span>
+															<input type="text" class="text-input" value="120">
+															<span>сек.</span>
+														</div>
+														<div class="row_cell cell_melody">
+															<select class="select">
+																<option value="1">Затем перенаправить</option>
+															</select>
+														</div>
+														<div class="row_cell cell_melody">
+															<select class="select">
+																<option value="1">Факс</option>
+															</select>
+														</div>
+														<div class="row_cell cell_push-up">
+															<button class="fa fa-arrow-up"></button>
+														</div>
+														<div class="row_cell cell_push-down">
+															<button class="fa fa-arrow-down"></button>
+														</div>
+													</div>
+												</div>
+					                  		</div>
+											<div class="btns">
+												<label class="button" for="file-upload-1">
+													<span class="fa fa-download"></span>
+													Загрузить мелодию
+												</label>
+												<input type="file" class="hidden" id="file-upload-1">
+												<button class="button focus">Добавить еще вариант</button>
+											</div>
+										</div>
+										<div class="b-routing_black-and-white">
+											<p class="h3">
+												Номера-исключения (белый список)
+											</p>
+											<p>
+												Если номер внешнего абонента успешно определен и&nbsp;присутствует в&nbsp;белом списке, то&nbsp;система перенаправит звонок в&nbsp;соответствии указанными настройками.
+											</p>
+											<div class="black-and-white">
+												<table>
+													<tbody>
+														<tr>
+															<td>
+																+ 7 931 123-45-67
+															</td>
+															<td class="cell_redirect">
+																<p>
+																	Михаил Федорович (директор СтройВип)
+																</p>
+																<p class="to">
+																	<span class="fa fa-share"></span>
+																	Добавочный 112
+																</p>
+															</td>
+															<td class="cell_redact">
+																<div class="dropdown">
+																	<button class="fa fa-pencil dropdown-toggle"></button>
+																	<div class="dropdown-container dropdown-container__top">
+																		<div class="dropdown-container_inner">
+																			<div class="dd-add-phone">
+																				<p class="dd-add-phone_title">
+																					Добавить номер телефона
+																				</p>
+																				<label for="add-phone">Введите номер телефона</label>
+																				<input type="text" class="text-input" value="+ 7 931 123-45-67">
+																				<div class="redirect-type">
+																					<p>
+																						Куда перенаправить указанный номер
+																					</p>
+																					<div>
+																						<input type="radio" class="radio" name="redirect-type-2" id="redirect-type-21"><label for="redirect-type-21">Очередь</label>
+																						<select class="select">
+																							<option value="1">Отдел продаж</option>
+																						</select>
+																					</div>
+																					<div>
+																						<input type="radio" class="radio" name="redirect-type-2" id="redirect-type-22" checked><label for="redirect-type-22">Добавочный номер</label>
+																						<select class="select">
+																							<option value="1">112</option>
+																						</select>
+																					</div>
+																				</div>
+																				<label for="redirect-commen">Комментарий</label>
+																				<textarea class="">Михаил Федорович (директор СтройВип)</textarea>
+																				<button class="button focus">Добавить</button>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</td>
+															<td class="cell_delete">
+																<button class="fa fa-close"></button>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																8 (812) 765-43-21
+															</td>
+															<td class="cell_redirect">
+																<p>
+																	Алексей Иванов (зам в СтройВип)
+																</p>
+																<p class="to">
+																	<span class="fa fa-share"></span>
+																	Коммерческий отдел
+																</p>
+															</td>
+															<td class="cell_redact">
+																<div class="dropdown">
+																	<button class="fa fa-pencil dropdown-toggle"></button>
+																	<div class="dropdown-container dropdown-container__top">
+																		<div class="dropdown-container_inner">
+																			<div class="dd-add-phone">
+																				<p class="dd-add-phone_title">
+																					Добавить номер телефона
+																				</p>
+																				<label for="add-phone">Введите номер телефона</label>
+																				<input type="text" class="text-input" value="8 (812) 765-43-21">
+																				<div class="redirect-type">
+																					<p>
+																						Куда перенаправить указанный номер
+																					</p>
+																					<div>
+																						<input type="radio" class="radio" name="redirect-type-3" id="redirect-type-31" checked><label for="redirect-type-31">Очередь</label>
+																						<select class="select">
+																							<option value="1">Отдел продаж</option>
+																							<option value="2" selected>Коммерческий отдел</option>
+																						</select>
+																					</div>
+																					<div>
+																						<input type="radio" class="radio" name="redirect-type-3" id="redirect-type-32"><label for="redirect-type-32">Добавочный номер</label>
+																						<select class="select">
+																							<option value="1">112</option>
+																						</select>
+																					</div>
+																				</div>
+																				<label for="redirect-commen">Комментарий</label>
+																				<textarea class="">Алексей Иванов (зам в СтройВип)</textarea>
+																				<button class="button focus">Добавить</button>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</td>
+															<td class="cell_delete">
+																<button class="fa fa-close"></button>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="dropdown">
+												<button class="button dropdown-toggle">Добавить номер</button>
+												<div class="dropdown-container">
+													<div class="dropdown-container_inner">
+														<div class="dd-add-phone">
+															<p class="dd-add-phone_title">
+																Добавить номер телефона в белый список
+															</p>
+															<label for="add-phone">Введите номер телефона</label>
+															<input type="text" class="text-input">
+															<div class="redirect-type">
+																<p>
+																	Куда перенаправить указанный номер
+																</p>
+																<div>
+																	<input type="radio" class="radio" name="redirect-type" id="redirect-type-1"><label for="redirect-type-1">Очередь</label>
+																	<select class="select">
+																		<option value="1">Отдел продаж</option>
+																	</select>
+																</div>
+																<div>
+																	<input type="radio" class="radio" name="redirect-type" id="redirect-type-2"><label for="redirect-type-2">Добавочный номер</label>
+																	<select class="select">
+																		<option value="1">112</option>
+																	</select>
+																</div>
+															</div>
+															<button class="button focus">Добавить</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<button class="button focus">Сохранить</button>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<button class="button focus">Сохранить</button>
 				</div>
 			</div>
 		</div>

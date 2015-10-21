@@ -249,9 +249,8 @@
 	}
 
 	&_main {
-		border-bottom: 1px solid $cl_grey_0;
-		margin: 0 -40px 50px;
-		padding: 0 40px 30px;
+		margin: 0 -40px 0;
+		padding: 0 40px 20px;
 
 		.row {
 			@include font-size(18);
