@@ -5,6 +5,10 @@
 		@include font-size(28);
 		display: inline-block;
 		margin: 22px 0 0 40px;
+		width: 112px;
+		height: 28px;
+		background: url('/img/sprite.png') no-repeat;
+		background-position: 0 -129px;
 	}
 
 	&-inner {
@@ -67,6 +71,8 @@
 					height: 24px;
 					background-position: -71px -34px;
 				}
+
+				&:hover:before { background-position: 0px -96px; }
 			}
 
 			&__mail {
@@ -77,6 +83,8 @@
 					height: 27px;
 					background-position: -94px -34px;
 				}
+
+				&:hover:before { background-position: -23px -96px; }
 			}
 
 			&__fax {
@@ -87,6 +95,8 @@
 					height: 26px;
 					background-position: -118px -34px;
 				}
+
+				&:hover:before { background-position: -47px -96px; }
 			}
 		}
 	}
@@ -165,7 +175,7 @@
 
 				&_inner {
 					&:before {
-						right: 73px;
+						right: 72px;
 						left: auto; 
 					}
 					&:after {

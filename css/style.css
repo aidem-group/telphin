@@ -3784,12 +3784,12 @@ table {
     border-color: #e7b60d; }
 
 .theme_default .header {
-  background-color: #399efc;
+  background-color: #fff;
   border-color: #b5c7e9; }
   .theme_default .header a {
-    color: #fff; }
+    color: #399efc; }
     .theme_default .header a:hover {
-      color: #fff; }
+      color: #000; }
   .theme_default .header-inner_status {
     color: #000;
     background-color: #fcec39; }
@@ -3797,31 +3797,31 @@ table {
       color: #fff;
       background-color: #df4d41; }
   .theme_default .header_notices-item {
-    border-color: #fff; }
+    border-color: #399efc; }
     .theme_default .header_notices-item:hover {
-      background-color: #2086E4; }
+      background-color: #fcec39;
+      border-color: #fcec39; }
   .theme_default .header_btn {
     border-left-color: #70b3f2; }
-    .theme_default .header_btn-favorite:hover, .theme_default .header_btn-favorite.active, .theme_default .header_btn-stat:hover, .theme_default .header_btn-stat.active, .theme_default .header_btn-user:hover, .theme_default .header_btn-user.active {
-      background-color: #2086E4; }
     .theme_default .header_btn-user-name {
-      color: #fff; }
+      color: #399efc; }
       .theme_default .header_btn-user-name:after {
-        border-right-color: #fff;
-        border-bottom-color: #fff; }
+        border-right-color: #399efc;
+        border-bottom-color: #399efc; }
     .theme_default .header_btn-user-status {
-      color: #0abc6f;
-      border-color: #0abc6f;
+      color: #6bbd33;
+      border-color: #6bbd33;
       background-color: #fff; }
       .theme_default .header_btn-user-status:before {
-        background-color: #0abc6f; }
+        background-color: #6bbd33; }
       .theme_default .header_btn-user-status.offline {
         color: #df4d41;
         border-color: #df4d41; }
         .theme_default .header_btn-user-status.offline:before {
           background-color: #df4d41; }
     .theme_default .header_btn-settings {
-      background-color: #fcec39; }
+      background-color: #fcec39;
+      border-left-color: #edf0f2; }
 
 .theme_default .footer {
   color: #9da2ab; }
@@ -3993,7 +3993,11 @@ table {
     font-size: 28px;
     font-size: 2.8rem;
     display: inline-block;
-    margin: 22px 0 0 40px; }
+    margin: 22px 0 0 40px;
+    width: 112px;
+    height: 28px;
+    background: url("/img/sprite.png") no-repeat;
+    background-position: 0 -129px; }
   .header-inner {
     float: right; }
     .header-inner_status {
@@ -4053,18 +4057,24 @@ table {
         width: 22px;
         height: 24px;
         background-position: -71px -34px; }
+      .header_notices-item__calls:hover:before {
+        background-position: 0px -96px; }
       .header_notices-item__mail:before {
         top: 8px;
         left: 10px;
         width: 23px;
         height: 27px;
         background-position: -94px -34px; }
+      .header_notices-item__mail:hover:before {
+        background-position: -23px -96px; }
       .header_notices-item__fax:before {
         top: 7px;
         left: 8px;
         width: 26px;
         height: 26px;
         background-position: -118px -34px; }
+      .header_notices-item__fax:hover:before {
+        background-position: -47px -96px; }
   .header_btn {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -4114,7 +4124,7 @@ table {
         right: -1px;
         left: auto; }
         .header_btn-user .dropdown-container_inner:before {
-          right: 73px;
+          right: 72px;
           left: auto; }
         .header_btn-user .dropdown-container_inner:after {
           right: 72px;

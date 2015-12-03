@@ -62,13 +62,13 @@ a, .link {
 }
 
 .header {
-	background-color: $cl_blue;
+	background-color: #fff;
 	border-color: #b5c7e9;
 
 	a {
-		color: #fff;
+		color: $cl_blue;
 
-		&:hover { color: #fff; }
+		&:hover { color: #000; }
 	}
 
 	&-inner_status {
@@ -83,35 +83,38 @@ a, .link {
 
 	&_notices {
 		&-item {
-			border-color: #fff;
+			border-color: $cl_blue;
 
-			&:hover { background-color: #2086E4; }
+			&:hover {
+				background-color: $cl_yellow;
+				border-color: $cl_yellow;
+			}
 		}
 	}
 
 	&_btn {
 		border-left-color: #70b3f2;
 
-		&-favorite, &-stat, &-user {
-			&:hover, &.active { background-color: #2086E4; }
-		}
+		// &-favorite, &-stat, &-user {
+		// 	&:hover, &.active { background-color: #2086E4; }
+		// }
 
 		&-user {
 			&-name {
-				color: #fff;
+				color: $cl_blue;
 
 				&:after {
-					border-right-color: #fff;
-					border-bottom-color: #fff;
+					border-right-color: $cl_blue;
+					border-bottom-color: $cl_blue;
 				}
 			}
 
 			&-status {
-				color: $cl_green;
-				border-color: $cl_green;
+				color: #6bbd33;
+				border-color: #6bbd33;
 				background-color: #fff;
 
-				&:before { background-color: $cl_green; }
+				&:before { background-color: #6bbd33; }
 
 				&.offline {
 					color: $cl_red;
@@ -122,7 +125,10 @@ a, .link {
 			}
 		}
 
-		&-settings { background-color: $cl_yellow; }
+		&-settings {
+			background-color: $cl_yellow;
+			border-left-color: #edf0f2;
+		}
 	}
 }
 
