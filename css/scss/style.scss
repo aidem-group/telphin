@@ -36,3 +36,29 @@
 @import 'page-stats';
 @import 'page-faq';
 @import 'call-forwarding';
+
+//table
+@import 'table/base';
+@import 'table/wr';
+@import 'table/btn';
+@import 'table/menu';
+@import 'table/nav';
+@import 'table/radio';
+@import 'table/option';
+@import 'table/options';
+@import 'table/dropdown';
+@import 'table/dropdown-menu';
+@import 'table/dropdown-toggle';
+@import 'table/link';
+@import 'table/tooltip';
+@import 'table/tooltip-input';
+@import 'table/tooltip-close';
+@import 'table/tooltip-btn';
+
+//efficiency
+@import 'efficiency/base';
+@import 'efficiency/header';
+
+//tooltip
+
+@import 'tooltipster';

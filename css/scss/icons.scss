@@ -74,4 +74,41 @@
 	&.offline-circle {
 		background-color: $cl_red;
 	}
+	//
+	&_phone-call-out,
+	&_phone-call-incoming {
+		width: 15px;
+		vertical-align: middle;
+		height: 15px;
+		background: url('/img/sprite-phone-call.png') no-repeat;
+	}
+	&_phone-call-out {
+		background-position: -20px 0;
+	}
+	&_phone-call-active,
+	&_phone-call-offline {
+		width: 12px;
+		height: 5px;
+		vertical-align: middle;
+		background: url('/img/sprite-phone-status.png') no-repeat;
+	}
+	&_phone-call-active {
+		background-position: -17px 0;
+	}
+	&_download,
+	&_settings {
+		vertical-align: middle;
+		background: url('/img/sprite-table-options.png') no-repeat;
+		width: 16px;
+		height: 16px;
+	}
+	&_settings {
+		background-position: -21px 0;
+	}
+	.btn:hover &_download{
+		background-position: 0 -21px;
+	}
+	.btn:hover &_settings {
+		background-position: -21px -21px;
+	}
 }

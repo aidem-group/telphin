@@ -1,0 +1,16 @@
+.efficiency-header {
+  @include clearfix;
+  max-width: 575px;
+  &__title {
+    margin-left: 20px;
+    font-size: em(36);
+    text-transform: uppercase;
+    float: left;
+  }
+  &__description {
+    float: right;
+    color: #9DA2AB;
+    font-size: em(16);
+    max-width: 260px;
+  }
+}

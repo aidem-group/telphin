@@ -1,0 +1,39 @@
+.table-radio {
+  color: #9da2ab;
+  cursor: pointer;
+  padding: 10px;
+  margin-right: 10px;
+  &__input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  &__toggle {
+    position: relative;
+  }
+  &__toggle:before {
+    content: '';
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: #B6BFCD;
+    border: 1px solid #FFF;
+    position: absolute;
+    left: 0;
+    border-radius: 50%;
+    top: -2.5px;
+    transition: left ease 0.4s;
+  }
+  &__input:checked + &__toggle:before{
+    left: 12px;
+    background-color: #399efc;
+  }
+  &__toggle {
+    width: 26px;
+    height: 10px;
+    border-radius: 4px;
+    background-color: #e0ebff;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,15 @@
+.table-dropdown-toggle {
+  background-color: transparent;
+  border: none;
+  margin: 0 10px;
+  padding: 10px;
+  cursor: pointer;
+  &_phone {
+    margin: 0;
+    padding: 0;
+    height: inherit;
+    line-height: inherit;
+    width: inherit;
+    visibility: hidden;
+  }
+}

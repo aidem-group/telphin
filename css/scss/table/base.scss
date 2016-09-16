@@ -1,0 +1,151 @@
+.table {
+  &_efficiency {
+    .th,
+    .td {
+      font-size: em(12);
+      line-height: em(16);
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid #ececec;
+    }
+    //th
+    .th {
+      padding: 10px 6px;
+    }
+    .th.first {
+      padding: 10px 20px;
+    }
+    //td
+    .td {
+      padding: 0 20px;
+      height: 60px;
+      color: #9da2ab;
+    }
+    .td.active {
+      .icon-chat {
+        color: #0abc6f;
+      }
+    }
+    .td.first {
+      color: #000000;
+      text-align: left;
+      padding-left: 35px;
+      padding-right: 5px;
+      white-space: nowrap;
+    }
+    // Кнопка телефона в статусе звонков
+    .td .phone-number {
+      white-space: nowrap;
+    }
+
+    .td .phone-owner.empty {
+      cursor: pointer;
+    }
+
+    .td .phone-btn:hover {
+      background-color: #f7f7f7;
+    }
+
+    .td .phone-btn .icon-phone {
+      color: #399efc;
+    }
+
+    //
+
+    .td.agent-status .add {
+      color: #0abc6f;
+    }
+
+    .td.call-status {
+      color: #9DA2AB;
+      white-space: nowrap;
+      position: relative;
+      padding-right: 29px;
+    }
+
+    .td.call-status .phone-btn {
+      display: block;
+      float: right;
+      border: none;
+      background: transparent;
+      position: absolute;
+      right: 0;
+      top: 0;
+      visibility: hidden;
+      height: 100%;
+      padding: 0;
+      width: 24px;
+      cursor: pointer;
+    }
+
+    .td.call-status .phone-btn:hover {
+      background-color: #f7f7f7;
+    }
+
+    .td.call-status:hover .phone-btn {
+      visibility: visible;
+    }
+
+    .td.call-status.free {
+      color: #000000;
+    }
+
+    .td.call-status .phone-number {
+      color: #000000;
+    }
+    //tr
+
+    .tr {
+      background-color: #ffffff;
+      display: none;
+      &:hover {
+        background-color: #f8fbff;
+      }
+      &_head {
+        display: table-row;
+        background-color: #fafafa;
+      }
+      &_head .th.first {
+        text-align: center;
+      }
+      &_head:hover {
+        background-color: #fafafa;
+      }
+      &_group {
+        display: table-row;
+        background-color: #f7faff;
+        cursor: pointer;
+      }
+      &_group:hover {
+        background-color: #f7faff;
+      }
+      &_group .td {
+        color: #000000;
+        font-weight: bold;
+      }
+      &_group .td.first {
+        padding-left: 20px;
+        font-weight: bold;
+      }
+      //Входящие звонки группы
+      &_group .td.incoming-calls {
+        color: #9da2ab;
+      }
+      &_group .td.incoming-calls .all {
+        color: #000000;
+      }
+      //Статус звонков группы
+      &_group .td.call-status {
+        color: #9da2ab;
+      }
+      &_group .td.call-status.active {
+        color: #fb8d35;
+      }
+      //Нормативы
+      .td.attention .norm,
+      &_group .td.attention .norm{
+        color: #df4d41;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.table-tooltip-close {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 11px;
+    vertical-align: middle;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAALBAMAAAC0QAErAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGFBMVEUAAACdoqudoqudoqudoqudoqudoqsAAAAIhJR2AAAAB3RSTlMAPXp4ebk/KCjlJQAAAAFiS0dEAIgFHUgAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAA7SURBVAjXYxBgYGBgZFAGkk4MTAYMLAoMQI4TkMvkAmQyMISCCBYlB7ACFSDTgYHJgcEFyFVhAOllAwB2wwO9OuO64gAAAABJRU5ErkJggg==');
+  }
+}

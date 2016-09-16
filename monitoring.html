@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/main.css">
+	<!--plugins-->
+	<link rel="stylesheet" href="/components/tooltipster-master/dist/css/tooltipster.bundle.min.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+<body class="body theme_default">
+	<div class="main-wrapper">
+		<header class="header">
+			<a class="header_logo" href="/"></a>
+			<div class="header-inner">
+				<div class="header_notices">
+					<a href="#" class="header_notices-item header_notices-item__calls">
+						<span class="header-inner_status">32</span>
+					</a>
+					<a href="#" class="header_notices-item header_notices-item__mail">
+						<span class="header-inner_status error"></span>
+					</a>
+					<a href="#" class="header_notices-item header_notices-item__fax">
+						<span class="header-inner_status">5</span>
+					</a>
+				</div>
+				<a href="#" class="header_btn header_btn-favorite">
+					<span class="header-inner_status">2</span>
+					Избранное
+				</a>
+				<a href="#" class="header_btn header_btn-stat">Статистика</a>
+				<div class="header_btn header_btn-user dropdown">
+					<span class="header_btn-user-status"></span>
+					<span class="header_btn-user-name dropdown-toggle">Константин</span>
+					<div class="dropdown-container">
+                        <div class="dropdown-container_inner">
+                        	<div class="b-tabs">
+                        		<div class="b-tabs_btns">
+                        			<button>Сотрудник</button>
+                            		<button>Настройки входа</button>
+                        		</div>
+                        		<div class="b-tabs_inner">
+                        			<div class="b-tabs_item">
+                        				<div class="form-line">
+                        					<label for="employee_name">Имя и&nbsp;фамилия</label>
+                        					<input type="text" class="text-input" name="employee_name" id="employee_name">
+                        				</div>
+                        				<div class="form-line">
+                        					<label for="employee_num">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+                        					<input type="text" class="text-input" name="employee_num" id="employee_num">
+                        				</div>
+                        				<div class="form-line">
+                        					<label for="employee_queue">Внутренний номер (от&nbsp;2 до&nbsp;5 цифр)</label>
+                        					<select class="select" name="employee_queue" id="employee_queue">
+                        						<option>Без очереди</option>
+                        					</select>
+                        				</div>
+                        				<div class="form-line">
+                        					<label for="employee_email">Электронная почта (для уведомлений и&nbsp;входа в&nbsp;АТС)</label>
+                        					<input type="text" class="text-input" name="employee_email" id="employee_email" value="aksenov@gmail.com">
+                        				</div>
+                        				<div class="form-line">
+                        					<label for="employee_comm">Комментарий о&nbsp;сотруднике</label>
+                        					<textarea name="employee_comm" id="employee_comm"></textarea>
+                        				</div>
+                        				<button class="button focus">Сохранить</button>
+                        			</div>
+                        			<div class="b-tabs_item">
+                        				<div class="form-line">
+                        					<label for="employee_login">Логин</label>
+                        					<input type="text" class="text-input" name="employee_login" id="employee_login" value="aksenov@gmail.com">
+                        				</div>
+                        				<div class="form-line">
+                        					<label for="employee_pass">Пароль для входа в&nbsp;АТС</label>
+                        					<input type="password" class="text-input" name="employee_pass" id="employee_pass">
+                        					<button class="button right">Сменить пароль</button>
+                        				</div>
+                        				<div class="form-line disabled">
+                        					<label for="employee_new-pass">Новый пароль</label>
+                        					<input type="password" class="text-input" name="employee_new-pass" id="employee_new-pass" disabled>
+                        				</div>
+                        				<button class="button focus">Сохранить</button>
+                        			</div>
+                        		</div>
+                        	</div>
+                        </div>
+                    </div>
+				</div>
+				<a href="#" class="header_btn header_btn-settings"></a>
+			</div>
+		</header>
+		<div class="p-main">
+			<!--<div class="p-main_header">-->
+				<!--<div class="p-main_header-logo">-->
+					<!--<img src="/dev/img/logo-aidem.jpg" alt="">-->
+				<!--</div>-->
+				<!--<h1>Последние события</h1>-->
+				<!--<div class="p-main_header-action">-->
+					<!--<div class="search-line left">-->
+						<!--<input type="text" class="search-line_input" placeholder="Номер телефона, добавочного номера или имя">-->
+						<!--<button class="search-line_button fa fa-search"></button>-->
+					<!--</div>-->
+					<!--<div class="page-switcher right">-->
+						<!--<button class="button">Данные</button>-->
+						<!--<button class="button active">Список событий</button>-->
+					<!--</div>-->
+				<!--</div>-->
+			<!--</div>-->
+			<!--<div class="b-content">-->
+				<!--<div class="period-switcher">-->
+					<!--<input type="radio" name="period-switcher" id="period-switcher_day" checked>-->
+					<!--<label for="period-switcher_day">Сегодня</label>-->
+					<!--<input type="radio" name="period-switcher" id="period-switcher_yesterday">-->
+					<!--<label for="period-switcher_yesterday">Вчера</label>-->
+					<!--<input type="radio" name="period-switcher" id="period-switcher_week">-->
+					<!--<label for="period-switcher_week">Неделя</label>-->
+					<!--<input type="radio" name="period-switcher" id="period-switcher_month">-->
+					<!--<label for="period-switcher_month">Месяц</label>-->
+					<!--<input type="radio" name="period-switcher" id="period-switcher_year">-->
+					<!--<label for="period-switcher_year">Год</label>-->
+				<!--</div>-->
+				<!--&lt;!&ndash;<div class="fe fe__event"></div>&ndash;&gt;-->
+			<!--</div>-->
+			<div class="efficiency">
+				<div class="efficiency__header">
+					<div class="efficiency-header">
+						<div class="efficiency-header__title">Мониторинг</div>
+						<div class="efficiency-header__description">Наблюдайте за эффективностью очередей и сотрудников</div>
+						<div class="efficiency-header__nav"></div>
+					</div>
+				</div>
+				<div class="efficiency__table">
+					<div class="table-wr">
+						<div class="table-wr__nav">
+							<div class="table-nav">
+								<div class="table-nav__title">Очереди и агенты</div>
+								<div class="table-nav__menu">
+									<ul class="table-menu">
+										<li class="table-menu__item">
+											<button class="table-btn active">Мониторинг</button>
+										</li>
+										<li class="table-menu__item">
+											<button class="table-btn">Дневная загрузка</button>
+										</li>
+										<li class="table-menu__item">
+											<button class="table-btn">Общая загрузка</button>
+										</li>
+									</ul>
+								</div>
+								<div class="table-nav__options">
+									<div class="table-options">
+										<div class="table-options__norm">
+											<label class="js-table-norm table-radio">Нормативы<input class="table-radio__input" type="checkbox"><span class="table-radio__toggle"></span></label>
+										</div>
+										<div class="table-options__download">
+											<div class="js-dropdown table-dropdown">
+												<button class="js-dropdown-toggle btn table-dropdown-toggle">
+													<span class="icon icon_download"></span>
+												</button>
+												<ul class="js-dropdown-menu table-dropdown-menu hidden">
+													<li class="table-dropdown-menu__item">
+														<a href="" target="_blank" class="table-link">
+															<span class="table-link__text">csv</span>
+														</a>
+													</li>
+													<li class="table-dropdown-menu__item">
+														<a href="" target="_blank" class="table-link">
+															<span class="table-link__text">xls</span>
+														</a>
+													</li>
+													<li class="table-dropdown-menu__separate"></li>
+													<li class="table-dropdown-menu__description">
+														Скачайте статистику в нужном формате
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="table-options__settings">
+											<button class="btn table-option">
+												<span class="icon icon_settings"></span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="table-wr__inner">
+							<table class="table table_efficiency">
+								<tr class="tr tr_head">
+									<th class="th first">Очереди&nbsp;и&nbsp;агенты</th>
+									<th class="th">Статус<br>агента</th>
+									<th class="th">Статус<br>звонков</th>
+									<th class="th">Статус<br>чата</th>
+									<th class="th">Исходящие<br>звонки<br> шт.</th>
+									<th class="th">Вх. звонки все/&nbsp;очередь/&nbsp;доб<br>шт.</th>
+									<th class="th">Исх.&nbsp;менее&nbsp;2&nbsp;мин Вх. менее 2 мин шт.</th>
+									<th class="th">Сред.&nbsp;время исходящих<br>мин</th>
+									<th class="th">Сред.&nbsp;время входящих<br>мин</th>
+									<th class="th">Общ. время разговоров<br>час</th>
+									<th class="th">Время<br>отсутствия<br>час</th>
+								</tr>
+								<tr class="js-tr-group tr tr_group" data-tr="sales">
+									<td class="td first active">Отдел продаж</td>
+									<td class="td">3/4</td>
+									<td class="td call-status active">7 в ожидании</td>
+									<td class="td">2/4</td>
+									<td class="td js-attention"><span class="norm">217</span></td>
+									<td class="td js-attention incoming-calls"><span class="all norm">458</span>/433/25</td>
+									<td class="td js-attention">
+										<span class="norm">0</span>/5
+									</td>
+									<td class="td js-attention"><span class="norm">03:20</span></td>
+									<td class="td js-attention"><span class="norm">03:57</span></td>
+									<td class="td js-attention"><span class="norm">14:23:40</span></td>
+									<td class="td">&nbsp;</td>
+								</tr>
+								<tr class="js-tr tr" data-tr="sales">
+									<td class="td first">Алексей Иванов</td>
+									<td class="td agent-status">
+										<div><span class="icon icon_phone-call-incoming"></span><span class="add">доб</span></div>
+										<div>01:12</div>
+									</td>
+									<td class="td call-status">
+										<div class="phone-number">+7 921 728-82-92</div>
+										<div class="phone-owner">Петр Васильевич</div>
+										<div class="js-dropdown table-dropdown table-dropdown_phone">
+											<button class="js-phone js-dropdown-toggle btn table-dropdown-toggle table-dropdown-toggle_phone phone-btn">
+												<i class="fa fa-phone icon-phone"></i>
+											</button>
+											<ul class="js-dropdown-menu table-dropdown-menu hidden">
+												<li class="table-dropdown-menu__item">
+													<a href="" target="_blank" class="table-link table-link_phone">
+														<span class="table-link__text">Конференция</span>
+														<span class="table-link__description">Слышат все</span>
+													</a>
+												</li>
+												<li class="table-dropdown-menu__item">
+													<a href="" target="_blank" class="table-link table-link_phone">
+														<span class="table-link__text">Сотрудник</span>
+														<span class="table-link__description">Слышит только сотрудник</span>
+													</a>
+												</li>
+												<li class="table-dropdown-menu__item">
+													<a href="" target="_blank" class="table-link table-link_phone">
+														<span class="table-link__text">Пассивно</span>
+														<span class="table-link__description">Не слышит никто</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</td>
+									<td class="td active"><i class="fa fa-comment-o icon-chat"></i></td>
+									<td class="td">18</td>
+									<td class="td">120/115/5</td>
+									<td class="td">0/5</td>
+									<td class="td">02:22</td>
+									<td class="td">02:44</td>
+									<td class="td">04:03:27</td>
+									<td class="td">0:03:40</td>
+								</tr>
+								<tr class="js-tr tr" data-tr="sales">
+									<td class="td first">Иван Гришан</td>
+									<td class="td agent-status">
+										<div><span class="icon icon_phone-call-incoming"></span></div>
+										<div>01:12</div>
+									</td>
+									<td class="td call-status">
+										<div class="phone-number">+7 921 728-82-92</div>
+										<div class="js-phone-owner phone-owner empty">Присвоить имя</div>
+										<div class="js-dropdown table-dropdown table-dropdown_phone">
+											<button class="js-dropdown-toggle js-phone btn table-dropdown-toggle table-dropdown-toggle_phone phone-btn">
+												<i class="fa fa-phone icon-phone"></i>
+											</button>
+											<ul class="js-dropdown-menu table-dropdown-menu hidden">
+												<li class="table-dropdown-menu__item">
+													<a href="" target="_blank" class="table-link table-link_phone">
+														<span class="table-link__text">Конференция</span>
+														<span class="table-link__description">Слышат все</span>
+													</a>
+												</li>
+												<li class="table-dropdown-menu__item">
+													<a href="" target="_blank" class="table-link table-link_phone">
+														<span class="table-link__text">Сотрудник</span>
+														<span class="table-link__description">Слышит только сотрудник</span>
+													</a>
+												</li>
+												<li class="table-dropdown-menu__item">
+													<a href="" target="_blank" class="table-link table-link_phone">
+														<span class="table-link__text">Пассивно</span>
+														<span class="table-link__description">Не слышит никто</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</td>
+									<td class="td active"><i class="fa fa-comment-o icon-chat"></i></td>
+									<td class="td">18</td>
+									<td class="td">120/115/5</td>
+									<td class="td">0/5</td>
+									<td class="td">02:22</td>
+									<td class="td">02:44</td>
+									<td class="td">04:03:27</td>
+									<td class="td">0:03:40</td>
+								</tr>
+								<tr class="js-tr tr" data-tr="sales">
+									<td class="td first">Владимир Петров</td>
+									<td class="td agent-status">
+										<div><span class="icon icon_phone-call-offline"></span></div>
+									</td>
+									<td class="td call-status">
+										<div class="phone-owner">Вышел в 17:45</div>
+										<button class="js-phone-free btn phone-btn">
+											<i class="fa fa-phone icon-phone"></i>
+										</button>
+									</td>
+									<td class="td"><i class="fa fa-comment-o icon-chat"></i></td>
+									<td class="td">18</td>
+									<td class="td">120/115/5</td>
+									<td class="td">0/5</td>
+									<td class="td">02:22</td>
+									<td class="td">02:44</td>
+									<td class="td">04:03:27</td>
+									<td class="td">0:03:40</td>
+								</tr>
+								<tr class="js-tr tr" data-tr="sales">
+									<td class="td first">Константин Федорович</td>
+									<td class="js-agent-status td agent-status">
+										<span class="icon icon_phone-call-active"></span>
+									</td>
+									<td class="td call-status free">
+										<div class="phone-owner">Свободен</div>
+										<button class="js-phone-free btn phone-btn">
+											<i class="fa fa-phone icon-phone"></i>
+										</button>
+									</td>
+									<td class="td"><i class="fa fa-comment-o icon-chat"></i></td>
+									<td class="td">18</td>
+									<td class="td">120/115/5</td>
+									<td class="td">0/5</td>
+									<td class="td">02:22</td>
+									<td class="td">02:44</td>
+									<td class="td">04:03:27</td>
+									<td class="td">0:03:40</td>
+								</tr>
+								<tr class="js-tr-group tr tr_group" data-tr="corporate">
+									<td class="td first active">Корп. отдел</td>
+									<td class="td">3/4</td>
+									<td class="td call-status">0 в ожидании</td>
+									<td class="td">2/4</td>
+									<td class="td">217</td>
+									<td class="td incoming-calls"><span class="all">458</span>/433/25</td>
+									<td class="td">0/5</td>
+									<td class="td">03:20</td>
+									<td class="td">03:57</td>
+									<td class="td">14:23:40</td>
+									<td class="td">&nbsp;</td>
+								</tr>
+								<tr class="js-tr tr" data-tr="corporate">
+									<td class="td first">Василий Терентьев</td>
+									<td class="td agent-status">
+										<div><span class="icon icon_phone-call-out"></span></div>
+										<div>01:12</div>
+									</td>
+									<td class="td call-status">
+										<div class="phone-number">+7 921 728-82-92</div>
+										<div class="js-phone-owner phone-owner empty">Присвоить имя</div>
+										<div class="js-dropdown table-dropdown table-dropdown_phone">
+											<button class="js-dropdown-toggle js-phone btn table-dropdown-toggle table-dropdown-toggle_phone phone-btn">
+												<i class="fa fa-phone icon-phone"></i>
+											</button>
+											<ul class="js-dropdown-menu table-dropdown-menu hidden">
+												<li class="table-dropdown-menu__item">
+													<a href="" target="_blank" class="table-link table-link_phone">
+														<span class="table-link__text">Конференция</span>
+														<span class="table-link__description">Слышат все</span>
+													</a>
+												</li>
+												<li class="table-dropdown-menu__item">
+													<a href="" target="_blank" class="table-link table-link_phone">
+														<span class="table-link__text">Сотрудник</span>
+														<span class="table-link__description">Слышит только сотрудник</span>
+													</a>
+												</li>
+												<li class="table-dropdown-menu__item">
+													<a href="" target="_blank" class="table-link table-link_phone">
+														<span class="table-link__text">Пассивно</span>
+														<span class="table-link__description">Не слышит никто</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</td>
+									<td class="td active"><i class="fa fa-comment-o icon-chat"></i></td>
+									<td class="td">18</td>
+									<td class="td">120/115/5</td>
+									<td class="td">0/5</td>
+									<td class="td">02:22</td>
+									<td class="td">02:44</td>
+									<td class="td">04:03:27</td>
+									<td class="td">0:03:40</td>
+								</tr>
+								<tr class="js-tr tr" data-tr="corporate">
+									<td class="td first">Стас Михайлов</td>
+									<td class="td agent-status">
+										<div><span class="icon icon_phone-call-active"></span></div>
+									</td>
+									<td class="td call-status free">
+										<div class="phone-owner">Свободен</div>
+										<button class="js-phone-free btn phone-btn">
+											<i class="fa fa-phone icon-phone"></i>
+										</button>
+									</td>
+									<td class="td"><i class="fa fa-comment-o icon-chat"></i></td>
+									<td class="td">18</td>
+									<td class="td">120/115/5</td>
+									<td class="td">0/5</td>
+									<td class="td">02:22</td>
+									<td class="td">02:44</td>
+									<td class="td">04:03:27</td>
+									<td class="td">0:03:40</td>
+								</tr>
+								<tr class="js-tr tr" data-tr="corporate">
+									<td class="td first">Михаил Миронов</td>
+									<td class="td agent-status">
+										<div><span class="icon icon_phone-call-active"></span></div>
+									</td>
+									<td class="td call-status free">
+										<div class="phone-owner">Свободен</div>
+										<button class="js-phone-free btn phone-btn">
+											<i class="fa fa-phone icon-phone"></i>
+										</button>
+									</td>
+									<td class="td"><i class="fa fa-comment-o icon-chat"></i></td>
+									<td class="td">18</td>
+									<td class="td">120/115/5</td>
+									<td class="td">0/5</td>
+									<td class="td">02:22</td>
+									<td class="td">02:44</td>
+									<td class="td">04:03:27</td>
+									<td class="td">0:03:40</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!--<div class="disk-space">-->
+		<!--<div class="disk-space_inner">-->
+			<!--<div class="disk-space_item disk-space_item__free" style="width: 100%;">Свободное место 10 ГБ</div>-->
+		<!--</div>-->
+	<!--</div>-->
+	<footer class="footer">
+		<span class="left"><span class="fa fa-copyright"></span> 2015 Виртуальная АТС</span>
+		<span class="left">Коммерческий отдел: (8 812) 123-45-67</span>
+		<span class="left">Техподдержка: (8 812) 765-43-21</span>
+		<a href="http://aidem.ru/" target="_blank" class="right">Design by <img src="/img/logo-aidem.png" alt="Aidem — проектирование и дизайн интерфейсов"></a>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="/js/scripts.js"></script>
+	<script src="/js/jsrender.min.js"></script>
+	<script src="/js/jquery.jplayer.min.js"></script>
+	<script src="/js/jquery.pickmeup.min.js"></script>
+	<script src="/js/jquery.formstyler.min.js"></script>
+	<script src="/components/tooltipster-master/dist/js/tooltipster.bundle.min.js"></script>
+	<!-- Templates -->
+	<script id="audioPlayer" type="text/x-jsrender">
+		<div id="jp_container_{{:id}}" class="jp-audio">
+			<div class="jp-duration-line">
+				<span class="jp-current-time"></span>/<span class="jp-duration"></span>
+			</div>
+			<div class="jp-controll-line">
+				<button class="jp-play fa fa-play"></button>
+				<button class="jp-pause fa fa-pause"></button>
+				<div class="jp-seek-bar">
+					<div class="jp-play-bar"></div>
+				</div>
+			</div>
+			<div class="jp-controll-line">
+				<button class="jp-mute fa fa-volume-up"></button>
+				<button class="jp-unmute fa fa-volume-off"></button>
+				<div class="jp-volume-bar">
+					<div class="jp-volume-bar-value"></div>
+				</div>
+			</div>
+		</div>
+	</script>
+</body>
+</html>

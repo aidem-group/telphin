@@ -1,15 +1,19 @@
-$(function(){
+$(function () {
     initPlayers();
     initTabsBlock();
     initPhoneFunc();
     initCallForwarding();
 
-	$('.dropdown-toggle').on('click', dropdown);
-	$('.header_btn-user-status').on('click', function(){$(this).toggleClass('offline');});
+    $('.dropdown-toggle').on('click', dropdown);
+    $('.header_btn-user-status').on('click', function () {
+        $(this).toggleClass('offline');
+    });
     $('#routing-date').on('change', selectRoutingPeriod);
     $(document).on('click', 'a[href*=#]', anchorLinksHandler);
     $(document).on('click', '.b-unrolling_toggle', unrollingBlock);
-    $('.b-filters_switcher').on('click', function(){ $(this).parent().toggleClass('short'); });
+    $('.b-filters_switcher').on('click', function () {
+        $(this).parent().toggleClass('short');
+    });
 
     $('.call-forwarding-period_period-select').on('change', selectCallForwardingPeriod);
     $('.call-forwarding-time_checkbox').on('change', callForwardingTime);
@@ -21,11 +25,10 @@ $(function(){
     $('.select').styler();
     $('.date').pickmeup({flat: true, mode: 'range', calendars: 2});
     $('.add-new-person').on('submit', checkPersonData);
-    $('.phone-mask').mask('7-999-999-99-99');
+    //$('.phone-mask').mask('7-999-999-99-99');
 });
 
-function callForwardingSwitch()
-{
+function callForwardingSwitch() {
     var obj = $(this);
     var cell = obj.closest('td');
     var parent = obj.closest('.dd-call-forwarding_main');
@@ -42,8 +45,7 @@ function callForwardingSwitch()
         .addClass('current');
 }
 
-function callForwardingEnableSwitch()
-{
+function callForwardingEnableSwitch() {
     var obj = $(this);
     var parent = obj.closest('.dd-call-forwarding_main');
     var item = obj.closest('.call-forwarding_blocks-item');
@@ -54,8 +56,7 @@ function callForwardingEnableSwitch()
     buttons.eq(item.index()).toggleClass('disabled');
 }
 
-function callForwardingScenarioSelect()
-{
+function callForwardingScenarioSelect() {
     var obj = $(this);
     var parent = obj.closest('.call-forwarding-scenario');
     var blocks = parent.find('.call-forwarding-scenario_scheme');
@@ -66,19 +67,19 @@ function callForwardingScenarioSelect()
         .addClass('selected');
 }
 
-function showDeleteBlockCallForwarding()
-{
+function showDeleteBlockCallForwarding() {
     var obj = $(this);
     var parent = obj.closest('.dd-call-forwarding_main');
     var deleteBlock = parent.find('.call-forwarding_delete-block');
     var closeButtons = deleteBlock.find('.button');
 
     deleteBlock.show();
-    closeButtons.bind('click', function(){ deleteBlock.hide(); });
+    closeButtons.bind('click', function () {
+        deleteBlock.hide();
+    });
 }
 
-function callForwardingTime()
-{
+function callForwardingTime() {
     var obj = $(this);
     var parent = obj.closest('.call-forwarding-time');
     var block = parent.find('.call-forwarding-time_block');
@@ -86,8 +87,7 @@ function callForwardingTime()
     obj.prop('checked') ? block.addClass('disabled') : block.removeClass('disabled');
 }
 
-function selectCallForwardingPeriod()
-{
+function selectCallForwardingPeriod() {
     var obj = $(this);
     var parent = obj.closest('.call-forwarding-period');
     var periods = parent.find('.call-forwarding-period_period-selected');
@@ -98,19 +98,19 @@ function selectCallForwardingPeriod()
         .addClass('selected');
 }
 
-function initCallForwarding()
-{
-    $('.dd-call-forwarding').each(function(i){
+function initCallForwarding() {
+    $('.dd-call-forwarding').each(function (i) {
         var obj = $(this);
         var mainBlock = obj.find('.dd-call-forwarding_main');
         var firstExpirienceBlock = obj.find('.dd-call-forwarding_fe');
 
-        obj.find('.enable-call-forwarding').bind('click', function(){ obj.addClass('enabled'); });
+        obj.find('.enable-call-forwarding').bind('click', function () {
+            obj.addClass('enabled');
+        });
     });
 }
 
-function checkPersonData()
-{
+function checkPersonData() {
     var template = $.templates("#personAdded");
     var htmlOutput = template.render({});
     $(this).parent().replaceWith(htmlOutput);
@@ -118,8 +118,7 @@ function checkPersonData()
     return false;
 }
 
-function selectRoutingPeriod()
-{
+function selectRoutingPeriod() {
     var self = $(this);
     var parent = self.closest('.routing-date');
     var variables = parent.find('.routing-date_variables > div');
@@ -130,30 +129,28 @@ function selectRoutingPeriod()
         .removeClass('hidden');
 }
 
-function unrollingBlock()
-{
+function unrollingBlock() {
     var toggle = $(this);
     var block = toggle.closest('.b-unrolling');
     var wrapper = toggle.parent();
     var hiddenBlock = block.children('.b-unrolling_inner');
     var unrollHeight = wrapper.outerHeight() + hiddenBlock.outerHeight();
 
-    if(block.hasClass('active')){
+    if (block.hasClass('active')) {
         hiddenBlock.css('z-index', 1);
         block.removeClass('active').css({overflow: 'hidden', 'min-height': 0});
     } else {
         $('.b-unrolling').removeClass('active').css('min-height', 0);
         block.addClass('active').css('min-height', unrollHeight);
-        setTimeout(function(){
+        setTimeout(function () {
             block.addClass('active').css('overflow', 'visible');
             hiddenBlock.css('z-index', 2);
         }, 200);
     }
 }
 
-function initPhoneFunc()
-{
-    $('.phone-func-place').each(function(i){
+function initPhoneFunc() {
+    $('.phone-func-place').each(function (i) {
         var block = $(this);
         var phone = block.data('phone');
         var name = block.data('name');
@@ -165,22 +162,20 @@ function initPhoneFunc()
     });
 }
 
-function initTabsBlock()
-{
-    $('.b-tabs').each(function(){
+function initTabsBlock() {
+    $('.b-tabs').each(function () {
         var block = $(this);
         var buttons = block.find('.b-tabs_btns').children();
         var tabs = block.find('.b-tabs_item');
 
-        buttons.bind('click', function(){
+        buttons.bind('click', function () {
             changeTab(buttons, tabs, $(this).index());
         });
 
         changeTab(buttons, tabs, 0);
     });
 
-    function changeTab( buttons, tabs, index )
-    {
+    function changeTab(buttons, tabs, index) {
         buttons
             .removeClass('button active')
             .addClass('link')
@@ -195,15 +190,14 @@ function initTabsBlock()
     }
 }
 
-function initPlayers()
-{
-    $('.jp-player').each(function(i){
+function initPlayers() {
+    $('.jp-player').each(function (i) {
         var player = $(this);
         var file = '';
         var template = '';
         var htmlOutput = '';
 
-        if(!player.next('.jp-audio').length) {
+        if (!player.next('.jp-audio').length) {
             file = player.data('file');
             template = $.templates("#audioPlayer");
             htmlOutput = template.render({id: i});
@@ -214,7 +208,7 @@ function initPlayers()
             ready: function () {
                 $(this).jPlayer('setMedia', {mp3: file});
             },
-            play: function() {
+            play: function () {
                 $(this).jPlayer('pauseOthers');
             },
             cssSelectorAncestor: '#jp_container_' + i
@@ -223,10 +217,9 @@ function initPlayers()
 }
 
 
-function anchorLinksHandler( e )
-{
-	if (anchor == '#') return false;
-	e.preventDefault();
+function anchorLinksHandler(e) {
+    if (anchor == '#') return false;
+    e.preventDefault();
 
     var anchor = $(this).attr('href');
 
@@ -235,8 +228,7 @@ function anchorLinksHandler( e )
     }, 1000);
 }
 
-function dropdown()
-{
+function dropdown() {
     var toggle = $(this);
     var wrapper = toggle.parent();
     var container = toggle.siblings('.dropdown-container');
@@ -248,13 +240,13 @@ function dropdown()
         height: $('.main-wrapper').innerHeight()
     }
 
-    var left = wrapper.offset().left - $('.main-wrapper').offset().left + wrapper.outerWidth()/2;
+    var left = wrapper.offset().left - $('.main-wrapper').offset().left + wrapper.outerWidth() / 2;
     var right = pageSize.width - left
-    var containerHalfWidth = container.outerWidth()/2;
+    var containerHalfWidth = container.outerWidth() / 2;
 
-    if(!container.hasClass('proc')){
-        $(document).bind('click', function(e){
-            if(!$(e.target).closest('.dropdown').length){
+    if (!container.hasClass('proc')) {
+        $(document).bind('click', function (e) {
+            if (!$(e.target).closest('.dropdown').length) {
                 wrapper.removeClass('active');
                 container.removeClass('open');
             }
@@ -263,14 +255,14 @@ function dropdown()
 
     container.removeClass('dropdown-container__right dropdown-container__left');
 
-    if(left < containerHalfWidth){
+    if (left < containerHalfWidth) {
         container.addClass('dropdown-container__left');
-    } else if(right < containerHalfWidth){
+    } else if (right < containerHalfWidth) {
         container.addClass('dropdown-container__right');
     }
 
-    if(container.offset().top + blockH > pageSize.height){
-        if(container.offset().top - blockH > 0){
+    if (container.offset().top + blockH > pageSize.height) {
+        if (container.offset().top - blockH > 0) {
             container.addClass('on-top');
             block.css({top: -blockH});
         } else {
@@ -278,11 +270,11 @@ function dropdown()
         }
     }
 
-    if(container.hasClass('open')) {
+    if (container.hasClass('open')) {
         wrapper.removeClass('active');
         container.removeClass('open');
     } else {
-        if(toggle.parents('.dropdown').length == 1){
+        if (toggle.parents('.dropdown').length == 1) {
             $('.dropdown-container.open').removeClass('open');
             $('.dropdown.active').removeClass('active');
         }
@@ -290,3 +282,149 @@ function dropdown()
         container.addClass('proc').toggleClass('open');
     }
 }
+//table attention
+function tableAttention() {
+    var $checkBtn = $('.js-table-norm'),
+        $checkBtnInput = $checkBtn.find('input'),
+        $checkTarget = $('.js-attention');
+    $checkBtn.on('change', function () {
+
+        if ($checkBtnInput.prop('checked') == true) {
+            $checkTarget.addClass('attention');
+        } else if ($checkBtnInput.prop('checked') == false && $checkBtn.mouseenter()) {
+            $checkTarget.addClass('attention');
+        }
+    });
+
+    $checkBtn.on({
+        mouseenter: function () {
+            if ($checkBtnInput.prop('checked') == false) {
+                $checkTarget.addClass('attention');
+            }
+        },
+        mouseleave: function () {
+            if ($checkBtnInput.prop('checked') == false) {
+                $checkTarget.removeClass('attention');
+            }
+        }
+    });
+}
+
+
+// table row
+function tableRow() {
+    var $trGroup = $('.js-tr-group');
+    $trGroup.on('click', function () {
+        var $this = $(this),
+            currentData = $this.data('tr');
+        $(".js-tr[data-tr = " + currentData + "]").fadeToggle(0);
+    });
+}
+
+
+(function ($) {
+    var defaults = {
+        container: '.js-dropdown',
+        toggle: '.js-dropdown-toggle',
+        menu: '.js-dropdown-menu',
+        event: 'click'
+    };
+
+    var methods = {
+        init: function (params) {
+
+            var options = $.extend({}, defaults, params);
+
+            var $toggle = $(options.toggle),
+                $body = $('body'),
+                $self = this;
+
+            return $self.on(options.event, function () {
+                var $container = $(this).closest(options.container),
+                    $menu = $container.find(options.menu);
+
+                $(options.container).removeClass('open');
+                $(options.menu).addClass('hidden');
+
+                $menu.removeClass('hidden');
+                $container.addClass('open');
+
+                $body.on(options.event + '.dropdown', function (e) {
+                    if (!$toggle.is(e.target) && $toggle.has(e.target).length == 0  && $(options.menu).has(e.target).length === 0 ) {
+                        $(options.menu).addClass('hidden');
+                        $(options.container).removeClass('open');
+                        $body.off(options.event + '.dropdown');
+                    }
+                });
+            });
+        }
+    };
+
+    $.fn.tableDropdown = function (method) {
+        if (methods[method]) {
+            return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
+        } else if (typeof method === 'object' || !method) {
+            return methods.init.apply(this, arguments);
+        } else {
+            $.error('Метод "' + method + '" не найден в плагине jQuery.tableDropdown');
+        }
+    };
+})(jQuery);
+
+$(document).ready(function(){
+    tableAttention();
+    tableRow();
+
+    $('.js-dropdown-toggle').tableDropdown();
+    $('.js-attention').tooltipster({
+        theme: 'table-tooltip-wr',
+        contentAsHTML: true,
+        arrow: false,
+        delay: 50,
+        content: '<div class="js-tooltip table-tooltip"><div class="js-tooltip-text table-tooltip__text">Норма не менее 1/1</div><div class="js-tooltip-triangle table-tooltip__triangle"></div></div>',
+        functionPosition: function(instance, helper, position){
+            position.coord.top += 20;
+            return position;
+        }
+    });
+    $('.js-phone').tooltipster({
+        theme: 'table-tooltip-wr',
+        contentAsHTML: true,
+        arrow: false,
+        delay: 50,
+        content: '<div class="js-tooltip table-tooltip table-tooltip_phone"><div class="js-tooltip-text table-tooltip__text">Позвонить</div><div class="js-tooltip-triangle table-tooltip__triangle"></div></div>'
+    });
+    $('.js-agent-status').tooltipster({
+        theme: 'table-tooltip-wr',
+        contentAsHTML: true,
+        arrow: false,
+        delay: 50,
+        content: '<div class="js-tooltip table-tooltip table-tooltip_queue"><div class="js-tooltip-text table-tooltip__text">Вывести из очереди</div><div class="js-tooltip-triangle table-tooltip__triangle"></div></div>',
+        functionPosition: function(instance, helper, position){
+            position.coord.top += 20;
+            return position;
+        }
+    });
+
+    $('.js-phone-owner').tooltipster({
+        theme: 'table-tooltip-wr',
+        contentAsHTML: true,
+        interactive: true,
+        arrow: false,
+        delay: 50,
+        side: 'right',
+        content: '<div class="js-tooltip table-tooltip table-tooltip_owner"><div class="table-tooltip__content"><input class="table-tooltip-input" type="text" placeholder="Имя абонента"><button class="table-tooltip-btn">Сохранить</button><button class="js-tooltip-close table-tooltip-close"></button></div><div class="js-tooltip-triangle table-tooltip__triangle"></div></div>',
+        functionReady: function () {
+            $('.js-tooltip-close').on('click', function () {
+                $('.js-phone-owner').tooltipster('close');
+            });
+        }
+    });
+    $('.js-phone-free').tooltipster({
+        theme: 'table-tooltip-wr',
+        contentAsHTML: true,
+        arrow: false,
+        delay: 50,
+        content: '<div class="js-tooltip table-tooltip table-tooltip_phone"><div class="js-tooltip-text table-tooltip__text">Позвонить агенту</div><div class="js-tooltip-triangle table-tooltip__triangle"></div></div>'
+    });
+});

@@ -1,0 +1,22 @@
+.table-link  {
+  display: block;
+  line-height: 30px;
+  padding: 0 10px;
+  &__text {
+    color: #000;
+    font-size: 14px;
+  }
+  &:hover {
+    background-color: #f8f8f9;
+  }
+  &__description {
+    line-height: 1.2;
+    font-size: 12px;
+    color: #9DA2AB;
+  }
+  &_phone &__text,
+  &_phone &__description {
+    display: block;
+    text-align: left;
+  }
+}

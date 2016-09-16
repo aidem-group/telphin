@@ -64,3 +64,11 @@
 	-ms-user-select: $mod;
 	user-select: $mod;
 }
+
+//
+
+$browser-context: 14; // Default
+
+@function em($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}em;
+}

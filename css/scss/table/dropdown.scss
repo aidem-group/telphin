@@ -1,0 +1,29 @@
+.table-dropdown {
+  position: relative;
+  &_phone {
+    display: block;
+    float: right;
+    border: none;
+    background: transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    padding: 0;
+    width: 24px;
+    cursor: pointer;
+  }
+  &.open:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  &.open .table-dropdown-toggle_phone{
+    visibility: visible;
+  }
+}
