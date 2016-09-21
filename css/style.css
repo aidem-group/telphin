@@ -6220,128 +6220,130 @@ table {
       padding-top: 9px;
       padding-right: 16px; }
 
-.table_efficiency .th,
-.table_efficiency .td {
-  font-size: 0.8571428571em;
-  line-height: 1.1428571429em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid #ececec; }
-
-.table_efficiency .th {
-  padding: 10px 6px; }
-
-.table_efficiency .th.first {
-  padding: 10px 20px; }
-
-.table_efficiency .td {
-  padding: 0 20px;
-  height: 60px;
-  color: #9da2ab; }
-
-.table_efficiency .td.active .icon-chat {
-  color: #0abc6f; }
-
-.table_efficiency .td.first {
-  color: #000000;
-  text-align: left;
-  padding-left: 35px;
-  padding-right: 5px;
-  white-space: nowrap; }
-
-.table_efficiency .td .phone-number {
-  white-space: nowrap; }
-
-.table_efficiency .td .phone-owner.empty {
-  cursor: pointer; }
-
-.table_efficiency .td .phone-btn:hover {
-  background-color: #f7f7f7; }
-
-.table_efficiency .td .phone-btn .icon-phone {
-  color: #399efc; }
-
-.table_efficiency .td.agent-status .add {
-  color: #0abc6f; }
-
-.table_efficiency .td.call-status {
-  color: #9DA2AB;
-  white-space: nowrap;
-  position: relative;
-  padding-right: 29px; }
-
-.table_efficiency .td.call-status .phone-btn {
-  display: block;
-  float: right;
-  border: none;
-  background: transparent;
-  position: absolute;
-  right: 0;
-  top: 0;
-  visibility: hidden;
-  height: 100%;
-  padding: 0;
-  width: 24px;
-  cursor: pointer; }
-
-.table_efficiency .td.call-status .phone-btn:hover {
-  background-color: #f7f7f7; }
-
-.table_efficiency .td.call-status:hover .phone-btn {
-  visibility: visible; }
-
-.table_efficiency .td.call-status.free {
-  color: #000000; }
-
-.table_efficiency .td.call-status .phone-number {
-  color: #000000; }
-
-.table_efficiency .tr {
-  background-color: #ffffff;
-  display: none; }
-  .table_efficiency .tr:hover {
-    background-color: #f8fbff; }
-  .table_efficiency .tr_head {
-    display: table-row;
-    background-color: #fafafa; }
-  .table_efficiency .tr_head .th.first {
-    text-align: center; }
-  .table_efficiency .tr_head:hover {
-    background-color: #fafafa; }
-  .table_efficiency .tr_group {
-    display: table-row;
-    background-color: #f7faff;
-    cursor: pointer; }
-  .table_efficiency .tr_group:hover {
-    background-color: #f7faff; }
-  .table_efficiency .tr_group .td {
+.table_efficiency {
+  table-layout: fixed; }
+  .table_efficiency .th,
+  .table_efficiency .td {
+    font-size: 12px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ececec; }
+  .table_efficiency .th {
+    padding: 10px 0;
+    line-height: 14px; }
+  .table_efficiency .th.w70 {
+    width: 70px; }
+  .table_efficiency .th.w80 {
+    width: 80px; }
+  .table_efficiency .th.w100 {
+    width: 100px; }
+  .table_efficiency .th.w120 {
+    width: 120px; }
+  .table_efficiency .th.w135 {
+    width: 135px; }
+  .table_efficiency .th.w150 {
+    width: 150px; }
+  .table_efficiency .th.first {
+    padding: 10px 20px; }
+  .table_efficiency .td {
+    line-height: 16px;
+    padding: 0 20px;
+    height: 60px;
+    color: #9da2ab; }
+  .table_efficiency .td.active .icon-chat {
+    color: #0abc6f; }
+  .table_efficiency .td.first {
     color: #000000;
-    font-weight: bold; }
-  .table_efficiency .tr_group .td.first {
-    padding-left: 20px;
-    font-weight: bold; }
-  .table_efficiency .tr_group .td.incoming-calls {
-    color: #9da2ab; }
-  .table_efficiency .tr_group .td.incoming-calls .all {
+    text-align: left;
+    padding-left: 35px;
+    padding-right: 5px;
+    white-space: nowrap; }
+  .table_efficiency .td .phone-number {
+    white-space: nowrap; }
+  .table_efficiency .td .phone-owner.empty {
+    cursor: pointer; }
+  .table_efficiency .td .phone-btn:hover {
+    background-color: #f7f7f7; }
+  .table_efficiency .td .phone-btn .icon-phone {
+    color: #399efc; }
+  .table_efficiency .td.agent-status,
+  .table_efficiency .td.call-status {
+    line-height: 20px; }
+  .table_efficiency .td.agent-status .add {
+    color: #0abc6f; }
+  .table_efficiency .td.call-status {
+    color: #9DA2AB;
+    white-space: nowrap;
+    position: relative;
+    padding-right: 29px; }
+  .table_efficiency .td .phone-btn {
+    display: block;
+    float: right;
+    border: none;
+    background: transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    height: 100%;
+    padding: 0;
+    width: 24px;
+    cursor: pointer; }
+  .table_efficiency .td.call-status .phone-btn:hover {
+    background-color: #edf4fd; }
+  .table_efficiency .td.call-status:hover .phone-btn {
+    visibility: visible; }
+  .table_efficiency .td.call-status.free {
     color: #000000; }
-  .table_efficiency .tr_group .td.call-status {
-    color: #9da2ab; }
-  .table_efficiency .tr_group .td.call-status.active {
-    color: #fb8d35; }
-  .table_efficiency .tr .td.attention .norm,
-  .table_efficiency .tr_group .td.attention .norm {
-    color: #df4d41; }
+  .table_efficiency .td.call-status .phone-number {
+    color: #000000; }
+  .table_efficiency .td .norm {
+    transition: color .2s ease; }
+  .table_efficiency .tr {
+    background-color: #ffffff;
+    display: none; }
+    .table_efficiency .tr:hover {
+      background-color: #f8fbff; }
+    .table_efficiency .tr_head {
+      display: table-row;
+      background-color: #fafafa; }
+    .table_efficiency .tr_head .th.first {
+      text-align: center; }
+    .table_efficiency .tr_head:hover {
+      background-color: #fafafa; }
+    .table_efficiency .tr_group {
+      display: table-row;
+      background-color: #f7faff;
+      cursor: pointer; }
+    .table_efficiency .tr_group:hover {
+      background-color: #f7faff; }
+    .table_efficiency .tr_group .td {
+      color: #000000;
+      font-weight: 500; }
+    .table_efficiency .tr_group .td.first {
+      padding-left: 20px; }
+    .table_efficiency .tr_group .td.incoming-calls {
+      color: #9da2ab; }
+    .table_efficiency .tr_group .td.incoming-calls .all {
+      color: #000000; }
+    .table_efficiency .tr_group .td.call-status {
+      color: #9da2ab; }
+    .table_efficiency .tr_group .td.call-status.active {
+      color: #fb8d35; }
+    .table_efficiency .tr .td.attention .norm,
+    .table_efficiency .tr_group .td.attention .norm {
+      color: #df4d41; }
 
-.table-wr {
-  border-radius: 6px;
-  border: 1px solid #ececec; }
+.table-wr__inner {
+  border-radius: 0 0 6px 6px;
+  border: 1px solid #ececec;
+  overflow: hidden; }
 
 .table-btn {
   color: #000;
   border: none;
   background-color: transparent;
   cursor: pointer;
-  position: relative;
   font-size: 1em;
   font-family: "Roboto";
   line-height: inherit;
@@ -6349,12 +6351,16 @@ table {
   margin: 0 5px; }
   .table-btn.active {
     color: #399EFC; }
-  .table-btn:hover:before, .table-btn.active:before {
+  .table-btn__text {
+    position: relative;
+    display: inline-block; }
+  .table-btn:hover .table-btn__text:before,
+  .table-btn.active .table-btn__text:before {
     content: '';
     display: block;
     background-color: #399efc;
     position: absolute;
-    top: 1px;
+    top: 0;
     left: 0;
     width: 100%;
     height: 2px; }
@@ -6399,15 +6405,15 @@ table {
   .table-radio__toggle:before {
     content: '';
     display: inline-block;
-    width: 13px;
-    height: 13px;
+    width: 12px;
+    height: 12px;
     background-color: #B6BFCD;
     border: 1px solid #FFF;
     position: absolute;
     left: 0;
     border-radius: 50%;
-    top: -2.5px;
-    transition: left ease 0.4s; }
+    top: -2px;
+    transition: left ease 0.2s; }
   .table-radio__input:checked + .table-radio__toggle:before {
     left: 12px;
     background-color: #399efc; }
@@ -6453,21 +6459,14 @@ table {
     width: 100%;
     height: 100%;
     cursor: pointer; }
-  .table-dropdown.open .table-dropdown-toggle_phone {
-    visibility: visible; }
 
 .table-dropdown-menu {
-  z-index: 1;
   padding: 10px 0;
-  position: absolute;
   line-height: 1.2;
-  max-width: 140px;
-  min-width: 140px;
+  width: 140px;
   text-align: center;
   white-space: normal;
-  left: 50%;
-  top: 100%;
-  margin: 0 0 0 -70px;
+  margin: 0;
   background-color: #FFF;
   -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.14);
   -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.14);
@@ -6481,11 +6480,7 @@ table {
     text-align: left;
     color: #9DA2AB; }
   .table-dropdown-menu_phone {
-    left: 0;
-    margin-left: 0;
-    top: 101%;
-    min-width: 200px;
-    max-width: 200px; }
+    width: 200px; }
 
 .table-dropdown-toggle {
   background-color: transparent;
@@ -6500,11 +6495,14 @@ table {
     line-height: inherit;
     width: inherit;
     visibility: hidden; }
+  .table-dropdown.open .table-dropdown-toggle_phone {
+    visibility: visible;
+    background-color: #f7f7f7; }
 
 .table-link {
   display: block;
-  line-height: 30px;
-  padding: 0 10px; }
+  line-height: 26px;
+  padding: 5px 10px; }
   .table-link__text {
     color: #000;
     font-size: 14px; }
@@ -6512,7 +6510,7 @@ table {
     background-color: #f8f8f9; }
   .table-link__description {
     line-height: 1.2;
-    font-size: 12px;
+    font-size: 11px;
     color: #9DA2AB; }
   .table-link_phone .table-link__text,
   .table-link_phone .table-link__description {
@@ -6529,7 +6527,15 @@ table {
   min-width: 100px; }
   .table-tooltip__text {
     text-align: center; }
-  .table-tooltip__triangle {
+  .table-tooltip_phone {
+    min-width: 0; }
+  .table-tooltip_owner {
+    background-color: #ffffff;
+    -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.14);
+    -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.14);
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.14); }
+  .table-tooltip:before {
+    content: '';
     display: inline-block;
     width: 0;
     height: 0;
@@ -6540,13 +6546,17 @@ table {
     bottom: -7px;
     left: 50%;
     margin-left: -6px; }
-  .table-tooltip_phone {
-    min-width: 0; }
-  .table-tooltip_owner {
-    background-color: #ffffff;
-    -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.14);
-    -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.14);
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.14); }
+  .table-tooltip_owner:before {
+    width: 14px;
+    height: 22px;
+    border: none;
+    top: 50%;
+    bottom: auto;
+    margin-top: -11px;
+    margin-left: auto;
+    left: -14px;
+    position: absolute;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAWCAMAAADHE10VAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAn1BMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg4OCHh4f19fXW1tb9/f0AAAAAAABZWVnx8fH////Hx8f7+/skJCTs7Oz+/v6+vr76+vrx8fH+/v7y8vL+/v7BwcH7+/vv7+/////Kysr7+/tqamry8vLZ2dn9/f2RkZH39/fi4uL///8AAADGmDlsAAAAM3RSTlMAAQIFBwsPBAYJDBAIDhIDEWwisVHmCg0Xlv471Q58+SfAW+9h8SnFgPo/2RicV+kltXITX7SfAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAAJhJREFUGNNt0NcSgjAQBVBIAkkwIjawo2Lvuv//b24KBGfM25nc2RYE9oUhoSyKvbiQSceLqqibOvS4QGV9J6o1GAKKYJDJJB6NAWwRlheT6Qw0MYmaLwAMsYpcrkqwxE+13gDU5GJbQZu7fYsYPhwb2lKnc03b6HJ11GOovLjdzRh+yMdT06/wesPvgh+3PiHG6d/jNKf7AtkUFlB6SLrDAAAAAElFTkSuQmCC"); }
 
 .table-tooltip-input {
   display: inline-block;
@@ -6589,6 +6599,13 @@ table {
   padding: 0 10px;
   margin: 0 10px; }
 
+.table-tooltip-wr .tooltipster-content {
+  overflow: hidden; }
+
+.table-tooltip-wr.tooltipster-sidetip .tooltipster-box {
+  background-color: transparent;
+  border: none; }
+
 .efficiency {
   padding-top: 20px; }
   .efficiency__table {
@@ -6604,13 +6621,11 @@ table {
     margin-left: 20px;
     font-size: 2.5714285714em;
     text-transform: uppercase;
-    float: left; }
+    float: left;
+    padding: 2px 0; }
   .efficiency-header__description {
     float: right;
     color: #9DA2AB;
     font-size: 1.1428571429em;
-    max-width: 260px; }
-
-.tooltipster-base.tooltipster-sidetip .tooltipster-box {
-  background-color: transparent;
-  border: none; }
+    max-width: 260px;
+    line-height: 20px; }

@@ -1,4 +1,7 @@
-.tooltipster-base {
+.table-tooltip-wr {
+  .tooltipster-content {
+    overflow: hidden;
+  }
   &.tooltipster-sidetip .tooltipster-box {
     background-color: transparent;
     border: none;

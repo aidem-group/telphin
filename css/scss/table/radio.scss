@@ -14,15 +14,15 @@
   &__toggle:before {
     content: '';
     display: inline-block;
-    width: 13px;
-    height: 13px;
+    width: 12px;
+    height: 12px;
     background-color: #B6BFCD;
     border: 1px solid #FFF;
     position: absolute;
     left: 0;
     border-radius: 50%;
-    top: -2.5px;
-    transition: left ease 0.4s;
+    top: -2px;
+    transition: left ease 0.2s;
   }
   &__input:checked + &__toggle:before{
     left: 12px;

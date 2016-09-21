@@ -12,4 +12,8 @@
     width: inherit;
     visibility: hidden;
   }
+  .table-dropdown.open &_phone{
+    visibility: visible;
+    background-color: #f7f7f7;
+  }
 }

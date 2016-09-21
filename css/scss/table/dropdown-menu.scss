@@ -1,15 +1,10 @@
 .table-dropdown-menu {
-  z-index: 1;
   padding: 10px 0;
-  position: absolute;
   line-height: 1.2;
-  max-width: 140px;
-  min-width: 140px;
+  width: 140px;
   text-align: center;
   white-space: normal;
-  left: 50%;
-  top: 100%;
-  margin: 0 0 0 -70px;
+  margin: 0;
   background-color: #FFF;
   -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.14);
   -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.14);
@@ -27,10 +22,6 @@
   }
 
   &_phone {
-    left: 0;
-    margin-left: 0;
-    top: 101%;
-    min-width: 200px;
-    max-width: 200px;
+    width: 200px;
   }
 }

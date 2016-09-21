@@ -141,13 +141,19 @@
 								<div class="table-nav__menu">
 									<ul class="table-menu">
 										<li class="table-menu__item">
-											<button class="table-btn active">Мониторинг</button>
+											<button class="table-btn active">
+												<span class="table-btn__text">Мониторинг</span>
+											</button>
 										</li>
 										<li class="table-menu__item">
-											<button class="table-btn">Дневная загрузка</button>
+											<button class="table-btn">
+												<span class="table-btn__text">Дневная загрузка</span>
+											</button>
 										</li>
 										<li class="table-menu__item">
-											<button class="table-btn">Общая загрузка</button>
+											<button class="table-btn">
+												<span class="table-btn__text">Общая загрузка</span>
+											</button>
 										</li>
 									</ul>
 								</div>
@@ -157,26 +163,10 @@
 											<label class="js-table-norm table-radio">Нормативы<input class="table-radio__input" type="checkbox"><span class="table-radio__toggle"></span></label>
 										</div>
 										<div class="table-options__download">
-											<div class="js-dropdown table-dropdown">
-												<button class="js-dropdown-toggle btn table-dropdown-toggle">
+											<div class="js-dropdown-download table-dropdown">
+												<button class="btn table-dropdown-toggle">
 													<span class="icon icon_download"></span>
 												</button>
-												<ul class="js-dropdown-menu table-dropdown-menu hidden">
-													<li class="table-dropdown-menu__item">
-														<a href="" target="_blank" class="table-link">
-															<span class="table-link__text">csv</span>
-														</a>
-													</li>
-													<li class="table-dropdown-menu__item">
-														<a href="" target="_blank" class="table-link">
-															<span class="table-link__text">xls</span>
-														</a>
-													</li>
-													<li class="table-dropdown-menu__separate"></li>
-													<li class="table-dropdown-menu__description">
-														Скачайте статистику в нужном формате
-													</li>
-												</ul>
 											</div>
 										</div>
 										<div class="table-options__settings">
@@ -191,17 +181,17 @@
 						<div class="table-wr__inner">
 							<table class="table table_efficiency">
 								<tr class="tr tr_head">
-									<th class="th first">Очереди&nbsp;и&nbsp;агенты</th>
-									<th class="th">Статус<br>агента</th>
-									<th class="th">Статус<br>звонков</th>
-									<th class="th">Статус<br>чата</th>
-									<th class="th">Исходящие<br>звонки<br> шт.</th>
-									<th class="th">Вх. звонки все/&nbsp;очередь/&nbsp;доб<br>шт.</th>
-									<th class="th">Исх.&nbsp;менее&nbsp;2&nbsp;мин Вх. менее 2 мин шт.</th>
-									<th class="th">Сред.&nbsp;время исходящих<br>мин</th>
-									<th class="th">Сред.&nbsp;время входящих<br>мин</th>
-									<th class="th">Общ. время разговоров<br>час</th>
-									<th class="th">Время<br>отсутствия<br>час</th>
+									<th class="th w135 first">Очереди&nbsp;и&nbsp;агенты</th>
+									<th class="th w80">Статус<br>агента</th>
+									<th class="th w150">Статус<br>звонков</th>
+									<th class="th w70">Статус<br>чата</th>
+									<th class="th w100">Исходящие<br>звонки<br> шт.</th>
+									<th class="th w120">Вх. звонки все/&nbsp;очередь/&nbsp;доб<br>шт.</th>
+									<th class="th w100">Исх.&nbsp;менее&nbsp;2&nbsp;мин Вх. менее 2 мин шт.</th>
+									<th class="th w100">Сред.&nbsp;время исходящих<br>мин</th>
+									<th class="th w80">Сред.&nbsp;время входящих<br>мин</th>
+									<th class="th w80">Общ. время разговоров<br>час</th>
+									<th class="th w80">Время<br>отсутствия<br>час</th>
 								</tr>
 								<tr class="js-tr-group tr tr_group" data-tr="sales">
 									<td class="td first active">Отдел продаж</td>
@@ -227,30 +217,10 @@
 									<td class="td call-status">
 										<div class="phone-number">+7 921 728-82-92</div>
 										<div class="phone-owner">Петр Васильевич</div>
-										<div class="js-dropdown table-dropdown table-dropdown_phone">
-											<button class="js-phone js-dropdown-toggle btn table-dropdown-toggle table-dropdown-toggle_phone phone-btn">
+										<div class="js-dropdown-phone table-dropdown table-dropdown_phone">
+											<button class="js-phone btn table-dropdown-toggle table-dropdown-toggle_phone phone-btn">
 												<i class="fa fa-phone icon-phone"></i>
 											</button>
-											<ul class="js-dropdown-menu table-dropdown-menu hidden">
-												<li class="table-dropdown-menu__item">
-													<a href="" target="_blank" class="table-link table-link_phone">
-														<span class="table-link__text">Конференция</span>
-														<span class="table-link__description">Слышат все</span>
-													</a>
-												</li>
-												<li class="table-dropdown-menu__item">
-													<a href="" target="_blank" class="table-link table-link_phone">
-														<span class="table-link__text">Сотрудник</span>
-														<span class="table-link__description">Слышит только сотрудник</span>
-													</a>
-												</li>
-												<li class="table-dropdown-menu__item">
-													<a href="" target="_blank" class="table-link table-link_phone">
-														<span class="table-link__text">Пассивно</span>
-														<span class="table-link__description">Не слышит никто</span>
-													</a>
-												</li>
-											</ul>
 										</div>
 									</td>
 									<td class="td active"><i class="fa fa-comment-o icon-chat"></i></td>
@@ -271,30 +241,10 @@
 									<td class="td call-status">
 										<div class="phone-number">+7 921 728-82-92</div>
 										<div class="js-phone-owner phone-owner empty">Присвоить имя</div>
-										<div class="js-dropdown table-dropdown table-dropdown_phone">
-											<button class="js-dropdown-toggle js-phone btn table-dropdown-toggle table-dropdown-toggle_phone phone-btn">
+										<div class="js-dropdown-phone table-dropdown table-dropdown_phone">
+											<button class="js-phone btn table-dropdown-toggle table-dropdown-toggle_phone phone-btn">
 												<i class="fa fa-phone icon-phone"></i>
 											</button>
-											<ul class="js-dropdown-menu table-dropdown-menu hidden">
-												<li class="table-dropdown-menu__item">
-													<a href="" target="_blank" class="table-link table-link_phone">
-														<span class="table-link__text">Конференция</span>
-														<span class="table-link__description">Слышат все</span>
-													</a>
-												</li>
-												<li class="table-dropdown-menu__item">
-													<a href="" target="_blank" class="table-link table-link_phone">
-														<span class="table-link__text">Сотрудник</span>
-														<span class="table-link__description">Слышит только сотрудник</span>
-													</a>
-												</li>
-												<li class="table-dropdown-menu__item">
-													<a href="" target="_blank" class="table-link table-link_phone">
-														<span class="table-link__text">Пассивно</span>
-														<span class="table-link__description">Не слышит никто</span>
-													</a>
-												</li>
-											</ul>
 										</div>
 									</td>
 									<td class="td active"><i class="fa fa-comment-o icon-chat"></i></td>
@@ -368,30 +318,10 @@
 									<td class="td call-status">
 										<div class="phone-number">+7 921 728-82-92</div>
 										<div class="js-phone-owner phone-owner empty">Присвоить имя</div>
-										<div class="js-dropdown table-dropdown table-dropdown_phone">
-											<button class="js-dropdown-toggle js-phone btn table-dropdown-toggle table-dropdown-toggle_phone phone-btn">
+										<div class="js-dropdown-phone table-dropdown table-dropdown_phone">
+											<button class="js-phone btn table-dropdown-toggle table-dropdown-toggle_phone phone-btn">
 												<i class="fa fa-phone icon-phone"></i>
 											</button>
-											<ul class="js-dropdown-menu table-dropdown-menu hidden">
-												<li class="table-dropdown-menu__item">
-													<a href="" target="_blank" class="table-link table-link_phone">
-														<span class="table-link__text">Конференция</span>
-														<span class="table-link__description">Слышат все</span>
-													</a>
-												</li>
-												<li class="table-dropdown-menu__item">
-													<a href="" target="_blank" class="table-link table-link_phone">
-														<span class="table-link__text">Сотрудник</span>
-														<span class="table-link__description">Слышит только сотрудник</span>
-													</a>
-												</li>
-												<li class="table-dropdown-menu__item">
-													<a href="" target="_blank" class="table-link table-link_phone">
-														<span class="table-link__text">Пассивно</span>
-														<span class="table-link__description">Не слышит никто</span>
-													</a>
-												</li>
-											</ul>
 										</div>
 									</td>
 									<td class="td active"><i class="fa fa-comment-o icon-chat"></i></td>

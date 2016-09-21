@@ -1,22 +1,42 @@
 .table {
   &_efficiency {
+    table-layout: fixed;
     .th,
     .td {
-      font-size: em(12);
-      line-height: em(16);
+      font-size: 12px;
       text-align: center;
       vertical-align: middle;
       border: 1px solid #ececec;
     }
     //th
     .th {
-      padding: 10px 6px;
+      padding: 10px 0;
+      line-height: 14px;
+    }
+    .th.w70 {
+      width: 70px;
+    }
+    .th.w80 {
+      width: 80px;
+    }
+    .th.w100 {
+      width: 100px;
+    }
+    .th.w120 {
+      width: 120px;
+    }
+    .th.w135 {
+      width: 135px;
+    }
+    .th.w150 {
+      width: 150px;
     }
     .th.first {
       padding: 10px 20px;
     }
     //td
     .td {
+      line-height: 16px;
       padding: 0 20px;
       height: 60px;
       color: #9da2ab;
@@ -51,6 +71,10 @@
     }
 
     //
+    .td.agent-status,
+    .td.call-status {
+      line-height: 20px;
+    }
 
     .td.agent-status .add {
       color: #0abc6f;
@@ -63,7 +87,7 @@
       padding-right: 29px;
     }
 
-    .td.call-status .phone-btn {
+    .td .phone-btn {
       display: block;
       float: right;
       border: none;
@@ -79,7 +103,7 @@
     }
 
     .td.call-status .phone-btn:hover {
-      background-color: #f7f7f7;
+      background-color: #edf4fd;
     }
 
     .td.call-status:hover .phone-btn {
@@ -92,6 +116,10 @@
 
     .td.call-status .phone-number {
       color: #000000;
+    }
+
+    .td .norm {
+      transition: color .2s ease;
     }
     //tr
 
@@ -121,11 +149,10 @@
       }
       &_group .td {
         color: #000000;
-        font-weight: bold;
+        font-weight: 500;
       }
       &_group .td.first {
         padding-left: 20px;
-        font-weight: bold;
       }
       //Входящие звонки группы
       &_group .td.incoming-calls {

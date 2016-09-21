@@ -1,7 +1,7 @@
 .table-link  {
   display: block;
-  line-height: 30px;
-  padding: 0 10px;
+  line-height: 26px;
+  padding: 5px 10px;
   &__text {
     color: #000;
     font-size: 14px;
@@ -11,7 +11,7 @@
   }
   &__description {
     line-height: 1.2;
-    font-size: 12px;
+    font-size: 11px;
     color: #9DA2AB;
   }
   &_phone &__text,

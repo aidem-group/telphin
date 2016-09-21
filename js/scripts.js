@@ -321,67 +321,16 @@ function tableRow() {
     });
 }
 
-
-(function ($) {
-    var defaults = {
-        container: '.js-dropdown',
-        toggle: '.js-dropdown-toggle',
-        menu: '.js-dropdown-menu',
-        event: 'click'
-    };
-
-    var methods = {
-        init: function (params) {
-
-            var options = $.extend({}, defaults, params);
-
-            var $toggle = $(options.toggle),
-                $body = $('body'),
-                $self = this;
-
-            return $self.on(options.event, function () {
-                var $container = $(this).closest(options.container),
-                    $menu = $container.find(options.menu);
-
-                $(options.container).removeClass('open');
-                $(options.menu).addClass('hidden');
-
-                $menu.removeClass('hidden');
-                $container.addClass('open');
-
-                $body.on(options.event + '.dropdown', function (e) {
-                    if (!$toggle.is(e.target) && $toggle.has(e.target).length == 0  && $(options.menu).has(e.target).length === 0 ) {
-                        $(options.menu).addClass('hidden');
-                        $(options.container).removeClass('open');
-                        $body.off(options.event + '.dropdown');
-                    }
-                });
-            });
-        }
-    };
-
-    $.fn.tableDropdown = function (method) {
-        if (methods[method]) {
-            return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
-        } else if (typeof method === 'object' || !method) {
-            return methods.init.apply(this, arguments);
-        } else {
-            $.error('Метод "' + method + '" не найден в плагине jQuery.tableDropdown');
-        }
-    };
-})(jQuery);
-
 $(document).ready(function(){
     tableAttention();
     tableRow();
 
-    $('.js-dropdown-toggle').tableDropdown();
     $('.js-attention').tooltipster({
         theme: 'table-tooltip-wr',
         contentAsHTML: true,
         arrow: false,
         delay: 50,
-        content: '<div class="js-tooltip table-tooltip"><div class="js-tooltip-text table-tooltip__text">Норма не менее 1/1</div><div class="js-tooltip-triangle table-tooltip__triangle"></div></div>',
+        content: '<div class="js-tooltip table-tooltip"><div class="js-tooltip-text table-tooltip__text">Норма не менее 1/1</div></div>',
         functionPosition: function(instance, helper, position){
             position.coord.top += 20;
             return position;
@@ -392,14 +341,14 @@ $(document).ready(function(){
         contentAsHTML: true,
         arrow: false,
         delay: 50,
-        content: '<div class="js-tooltip table-tooltip table-tooltip_phone"><div class="js-tooltip-text table-tooltip__text">Позвонить</div><div class="js-tooltip-triangle table-tooltip__triangle"></div></div>'
+        content: '<div class="js-tooltip table-tooltip table-tooltip_phone"><div class="js-tooltip-text table-tooltip__text">Позвонить</div></div>'
     });
     $('.js-agent-status').tooltipster({
         theme: 'table-tooltip-wr',
         contentAsHTML: true,
         arrow: false,
         delay: 50,
-        content: '<div class="js-tooltip table-tooltip table-tooltip_queue"><div class="js-tooltip-text table-tooltip__text">Вывести из очереди</div><div class="js-tooltip-triangle table-tooltip__triangle"></div></div>',
+        content: '<div class="js-tooltip table-tooltip table-tooltip_queue"><div class="js-tooltip-text table-tooltip__text">Вывести из очереди</div></div>',
         functionPosition: function(instance, helper, position){
             position.coord.top += 20;
             return position;
@@ -412,12 +361,17 @@ $(document).ready(function(){
         interactive: true,
         arrow: false,
         delay: 50,
+        trigger: 'click',
         side: 'right',
         content: '<div class="js-tooltip table-tooltip table-tooltip_owner"><div class="table-tooltip__content"><input class="table-tooltip-input" type="text" placeholder="Имя абонента"><button class="table-tooltip-btn">Сохранить</button><button class="js-tooltip-close table-tooltip-close"></button></div><div class="js-tooltip-triangle table-tooltip__triangle"></div></div>',
         functionReady: function () {
             $('.js-tooltip-close').on('click', function () {
                 $('.js-phone-owner').tooltipster('close');
             });
+        },
+        functionPosition: function(instance, helper, position){
+            position.coord.top -= 10;
+            return position;
         }
     });
     $('.js-phone-free').tooltipster({
@@ -425,6 +379,72 @@ $(document).ready(function(){
         contentAsHTML: true,
         arrow: false,
         delay: 50,
-        content: '<div class="js-tooltip table-tooltip table-tooltip_phone"><div class="js-tooltip-text table-tooltip__text">Позвонить агенту</div><div class="js-tooltip-triangle table-tooltip__triangle"></div></div>'
+        content: '<div class="js-tooltip table-tooltip table-tooltip_phone"><div class="js-tooltip-text table-tooltip__text">Позвонить агенту</div></div>'
+    });
+
+    $('.js-dropdown-phone').tooltipster({
+        theme: 'table-tooltip-wr',
+        contentAsHTML: true,
+        arrow: false,
+        interactive: true,
+        side: 'bottom',
+        trigger: 'click',
+        delay: 50,
+        content: '<ul class="table-dropdown-menu table-dropdown-menu_phone">'+
+        '<li class="table-dropdown-menu__item">' +
+        '<a href="" target="_blank" class="table-link table-link_phone">' +
+        '<span class="table-link__text">Конференция</span>' +
+        '<span class="table-link__description">Слышат все</span>'+
+        '</a>'+
+        '</li>'+
+        '<li class="table-dropdown-menu__item">'+
+        '<a href="" target="_blank" class="table-link table-link_phone">'+
+        '<span class="table-link__text">Суфлер</span>'+
+        '<span class="table-link__description">Слышит только сотрудник</span></a></li>'+
+        '<li class="table-dropdown-menu__item">'+
+        '<a href="" target="_blank" class="table-link table-link_phone">' +
+        '<span class="table-link__text">Пассивно</span>' +
+        '<span class="table-link__description">Не слышит никто</span>' +
+        '</a></li></ul>',
+        functionPosition: function(instance, helper, position){
+            position.coord.left += 90;
+            position.coord.top -= 10;
+            return position;
+        },
+        functionReady: function (instance) {
+            $(instance.elementOrigin()).addClass('open');
+        },
+        functionAfter: function (instance) {
+            $(instance.elementOrigin()).removeClass('open');
+        }
+    });
+    $('.js-dropdown-download').tooltipster({
+        theme: 'table-tooltip-wr',
+        contentAsHTML: true,
+        arrow: false,
+        interactive: true,
+        side: 'bottom',
+        trigger: 'click',
+        delay: 50,
+        content: '<ul class="table-dropdown-menu">'+
+        '<li class="table-dropdown-menu__item">' +
+        '<a href="" target="_blank" class="table-link">' +
+        '<span class="table-link__text">csv</span>' +
+        '</a>'+
+        '</li>'+
+        '<li class="table-dropdown-menu__item">'+
+        '<a href="" target="_blank" class="table-link">'+
+        '<span class="table-link__text">xls</span>'+
+        '</a>'+
+        '</li>'+
+        '<li class="table-dropdown-menu__separate"></li>'+
+        '<li class="table-dropdown-menu__description">'+
+        'Скачайте статистику в нужном формате'+
+        '</li>'+
+        '</ul>',
+        functionPosition: function(instance, helper, position){
+            position.coord.top -= 30;
+            return position;
+        }
     });
 });

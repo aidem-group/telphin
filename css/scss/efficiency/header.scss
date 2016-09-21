@@ -6,11 +6,13 @@
     font-size: em(36);
     text-transform: uppercase;
     float: left;
+    padding: 2px 0;
   }
   &__description {
     float: right;
     color: #9DA2AB;
     font-size: em(16);
     max-width: 260px;
+    line-height: 20px;
   }
 }
