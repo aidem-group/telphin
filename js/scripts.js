@@ -385,7 +385,7 @@ $(document).ready(function(){
         contentAsHTML: true,
         arrow: false,
         delay: 50,
-        content: '<div class="js-tooltip table-tooltip table-tooltip_phone"><div class="js-tooltip-text table-tooltip__text">Позвонить агенту</div></div>'
+        content: '<div class="js-tooltip table-tooltip table-tooltip_phone"><div class="js-tooltip-text table-tooltip__text">Позвонить&nbsp;агенту</div></div>'
     });
 
     $('.js-dropdown-phone').tooltipster({
