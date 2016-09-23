@@ -126,6 +126,17 @@
     .tr {
       background-color: #ffffff;
       display: none;
+      .th {
+        border-top-color: transparent;
+      }
+      .th:first-child,
+      .td:first-child{
+        border-left-width: 0;
+      }
+      .th:last-child,
+      .td:last-child {
+        border-right-width: 0;
+      }
       &:hover {
         background-color: #f8fbff;
       }

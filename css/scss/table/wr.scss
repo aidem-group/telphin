@@ -1,7 +1,9 @@
 .table-wr {
   &__inner {
+    border-width: 1px 1px 0 1px;
+    border-color: #ececec;
+    border-style: solid;
     border-radius: 0 0 6px 6px;
-    border: 1px solid #ececec;
     overflow: hidden;
   }
 }

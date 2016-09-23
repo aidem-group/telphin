@@ -330,11 +330,17 @@ $(document).ready(function(){
         contentAsHTML: true,
         arrow: false,
         delay: 50,
-        content: '<div class="js-tooltip table-tooltip"><div class="js-tooltip-text table-tooltip__text">Норма не менее 1/1</div></div>',
+        content: '<div class="js-tooltip table-tooltip"><div class="js-tooltip-text table-tooltip__text">Норма не более 1/1</div></div>',
         functionPosition: function(instance, helper, position){
             position.coord.top += 20;
             return position;
         }
+        //Функция для передачи данных при помощи data
+        //functionReady: function (instance) {
+        //    var dataTitle = $(instance.elementOrigin()).data('tooltip');
+        //    console.log(dataTitle);
+        //    $(instance.elementTooltip()).find('.js-tooltip-text').text(dataTitle);
+        //}
     });
     $('.js-phone').tooltipster({
         theme: 'table-tooltip-wr',
@@ -439,7 +445,7 @@ $(document).ready(function(){
         '</li>'+
         '<li class="table-dropdown-menu__separate"></li>'+
         '<li class="table-dropdown-menu__description">'+
-        'Скачайте статистику в нужном формате'+
+        'Скачайте статистику в&nbsp;нужном формате'+
         '</li>'+
         '</ul>',
         functionPosition: function(instance, helper, position){

@@ -9,6 +9,10 @@
   border-radius: 3px;
   padding-left: 12px;
   opacity: 0.8;
-  color: #B6BFCD;
+  color: #000000;
   font-size: 12px;
+  &::-webkit-input-placeholder {color:#B6BFCD;}
+  &::-moz-placeholder          {color:#B6BFCD;}/* Firefox 19+ */
+  &:-moz-placeholder           {color:#B6BFCD;}/* Firefox 18- */
+  &:-ms-input-placeholder      {color:#B6BFCD;}
 }
