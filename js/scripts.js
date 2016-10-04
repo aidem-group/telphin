@@ -453,4 +453,83 @@ $(document).ready(function(){
             return position;
         }
     });
+
+    $('.js-offers-btn').tooltipster({
+        theme: 'table-tooltip-wr',
+        contentAsHTML: true,
+        arrow: false,
+        interactive: true,
+        side: 'top',
+        trigger: 'click',
+        delay: 50,
+        content: '<div class="js-form-offer-wr form-wr">'+
+        '<form class="js-form-offer form form_offer">'+
+        '<div class="form__close"> <button class="js-form-offer-close btn btn-close"></button> </div>'+
+        '<div class="form__description"> <div class="form-description form-group"> Напишите нам о найденных ошибкахили предложите недостающий функционал.Это поможет сделать систему лучше. </div></div>'+
+        '<div class="form__label"> <div class="form-label form-group"> <input type="text" placeholder="E-mail" class="form-label__input"> </div> </div>'+
+        '<div class="form__label"> <div class="form-label form-group"> <textarea rows="3" placeholder="Сообщение" class="form-label__textarea"></textarea></div></div>'+
+        '<div class="form__btn"> <button class="js-form-offer-submit btn form-btn"> <span class="form-btn__text">Отправить</span> </button> </div>'+
+        '</form>'+
+        '<div class="js-form-offer-success form form_offer form_success">'+
+        '<div class="form__close"> <button class="js-form-offer-close btn btn-close"></button> </div>'+
+        '<div class="form__title"> <div class="form-title text-center form-group">Спасибо</div> </div>'+
+        '<div class="form__description"> <div class="form-description text-center"> Мы рассмотрим ваше сообщение<br> и внедрим изменения. </div></div>'+
+        '<div class="form__btn"> <button class="js-form-offer-close btn form-btn"> <span class="form-btn__text">Закрыть</span> </button> </div></div>'+
+        '</div>',
+        functionReady: function (instance) {
+            $('.js-form-offer-submit').on('click', function (e) {
+                e.preventDefault();
+                var $formOffer = $('.js-form-offer'),
+                    $formOfferSuccess =$('.js-form-offer-success');
+                $formOffer.css('visibility','hidden');
+                $formOfferSuccess.css('height',$formOffer.outerHeight());
+                $formOfferSuccess.fadeIn(300);
+            });
+            $('.js-form-offer-close').on('click', function (e) {
+                e.preventDefault();
+                $(instance.elementOrigin()).tooltipster('close');
+            })
+        }
+    });
+    // Modal options
+    var $modalOptions = $('.js-modal-options'),
+        $stat = $modalOptions.find('.js-modal-stat'),
+        $norm = $modalOptions.find('.js-modal-norm'),
+        $statView = $modalOptions.find('.js-modal-stat-view'),
+        $normView = $modalOptions.find('.js-modal-norm-view');
+    $stat.on('click', function () {
+        $norm.removeClass('active');
+        $(this).addClass('active');
+        $normView.addClass('hidden');
+        $statView.removeClass('hidden');
+    });
+    $norm.on('click', function () {
+        $stat.removeClass('active');
+        $(this).addClass('active');
+        $statView.addClass('hidden');
+        $normView.removeClass('hidden');
+    });
+
+    $('.js-options-btn').on('click', function () {
+        $('.js-modal-options').modal({
+            fadeDuration: 100
+        });
+        $('.jquery-modal').css({'z-index':2,'background-color':'rgba(0,0,0,.3)'});
+    });
+    $('.js-modal-close').on('click', function () {
+        $.modal.close();
+    });
+
+    // sortable for modal options
+    var el = document.getElementById('items');
+    var sortable = Sortable.create(el, {
+        draggable: '.js-sortable-item'
+    });
+    var $sortableItem = $('.js-sortable-item');
+    $sortableItem.on('mouseenter', function () {
+       $(this).addClass('active')
+    });
+    $sortableItem.on('mouseleave', function () {
+        $(this).removeClass('active')
+    });
 });

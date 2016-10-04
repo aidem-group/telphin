@@ -1,5 +1,12 @@
 @charset 'UTF-8';
 
+//common
+
+@import 'common/layout';
+
+
+//default
+
 @import 'variables';
 @import 'mixins';
 
@@ -59,3 +66,25 @@
 //efficiency
 @import 'efficiency/base';
 @import 'efficiency/header';
+
+//offers
+
+@import 'offers/text';
+@import 'offers/btn';
+
+//modal
+
+@import 'modal/base';
+@import 'modal/header';
+@import 'modal/separate';
+
+//form
+@import 'form/base';
+@import 'form/group';
+@import 'form/btn';
+@import 'form/label';
+@import 'form/title';
+@import 'form/description';
+@import 'form/wr';
+@import 'form/list';
+@import 'form/radio';

@@ -5,10 +5,13 @@
 	<title></title>
 	<meta name="description" content="">
 	<meta name="keywords" content="">
-	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/main.css">
-	<!--plugins-->
+
+	<!--components-->
 	<link rel="stylesheet" href="/components/tooltipster-master/dist/css/tooltipster.bundle.min.css">
+	<link rel="stylesheet" href="/components/jquery-modal/jquery.modal.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+
+	<!--plugins-->
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
 </head>
@@ -28,9 +31,13 @@
 						<span class="header-inner_status">5</span>
 					</a>
 				</div>
-				<a href="#" class="header_btn header_btn-favorite">
-					<span class="header-inner_status">2</span>
-					Избранное
+				<!--<a href="#" class="header_btn header_btn-favorite">-->
+					<!--<span class="header-inner_status">2</span>-->
+					<!--Избранное-->
+				<!--</a>-->
+				<a href="#" class="header_btn header_btn-monitoring">
+					<!--<span class="header-inner_status">2</span>-->
+					Мониторинг
 				</a>
 				<a href="#" class="header_btn header_btn-stat">Статистика</a>
 				<div class="header_btn header_btn-user dropdown">
@@ -133,6 +140,45 @@
 						<div class="efficiency-header__nav"></div>
 					</div>
 				</div>
+				<div class="efficiency__period clearfix">
+					<div class="table-nav table-nav_period">
+						<div class="table-nav__title">Период</div>
+						<div class="table-nav__menu">
+							<ul class="table-menu">
+								<li class="table-menu__item">
+									<button class="table-btn active">
+										<span class="table-btn__text">Сегодня</span>
+									</button>
+								</li>
+								<li class="table-menu__item">
+									<button class="table-btn">
+										<span class="table-btn__text">Вчера</span>
+									</button>
+								</li>
+								<li class="table-menu__item">
+									<button class="table-btn">
+										<span class="table-btn__text">Неделя</span>
+									</button>
+								</li>
+								<li class="table-menu__item">
+									<button class="table-btn">
+										<span class="table-btn__text">Месяц</span>
+									</button>
+								</li>
+								<li class="table-menu__item">
+									<button class="table-btn">
+										<span class="table-btn__text">Год</span>
+									</button>
+								</li>
+								<li class="table-menu__item">
+									<button class="table-btn">
+										<span class="table-btn__text">23 июл 2016</span>
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 				<div class="efficiency__table">
 					<div class="table-wr">
 						<div class="table-wr__nav">
@@ -170,7 +216,7 @@
 											</div>
 										</div>
 										<div class="table-options__settings">
-											<button class="btn table-option">
+											<button class="js-options-btn btn table-option">
 												<span class="icon icon_settings"></span>
 											</button>
 										</div>
@@ -377,6 +423,12 @@
 						</div>
 					</div>
 				</div>
+				<div class="efficiency__offers">
+					<div class="offers text-center">
+						<span class="offers-text">Есть предложения по работе с мониторингом — </span>
+						<button class="js-offers-btn btn offers-btn">напишите нам</button>
+					</div>
+				</div>
 			</div>
 
 		</div>
@@ -392,6 +444,276 @@
 		<span class="left">Техподдержка: (8 812) 765-43-21</span>
 		<a href="http://aidem.ru/" target="_blank" class="right">Design by <img src="/img/logo-aidem.png" alt="Aidem — проектирование и дизайн интерфейсов"></a>
 	</footer>
+	<!--modals-->
+	<div class="js-modal-options modal modal_settings" style="display: none">
+		<div class="modal__nav">
+			<div class="modal-nav">
+				<div class="table-nav table-nav_settings">
+					<div class="table-nav__title">Настройки</div>
+					<div class="table-nav__menu">
+						<ul class="table-menu">
+							<li class="table-menu__item">
+								<button class="js-modal-stat table-btn active">
+									<span class="table-btn__text">Статистика</span>
+								</button>
+							</li>
+							<li class="table-menu__item">
+								<button class="js-modal-norm table-btn">
+									<span class="table-btn__text">Нормативы</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+					<div class="table-nav__close">
+						<button class="js-modal-close btn btn-close btn-close_md"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="js-modal-stat-view modal__tab active">
+			<div class="modal-separate"></div>
+			<div class="modal-header">
+				<div class="modal-header__title">Очереди</div>
+				<div class="modal-header__description">Вы можете настроить порядок очередей, выключать их отображение
+					и указывать режим работы очереди, нужный для учёта дневной статистики.</div>
+			</div>
+			<div class="modal-separate"></div>
+			<div class="modal-content">
+				<form class="form form_settings">
+					<div class="form__list">
+						<ul id="items" class="js-form-list-sortable form-list form-list_bordered form-list_sortable form-list_sortable-3">
+							<li class="form-list__separate"></li>
+							<li class="form-list__separate"></li>
+							<li class="form-list__separate"></li>
+							<li class="js-sortable-item form-list__item">
+								<label class="form-label form-label_option form-label_sortable">
+									<input type="checkbox" class="form-label__check">
+									<span class="form-label__toggle"></span>
+									<span class="form-label__text">&nbsp;Отдел продаж</span>
+								</label>
+								<label class="form-label form-label_option form-label_option-md form-label_sortable">
+									<input type="text" class="form-label__input" value="08">
+									<span class="form-label__subtext">&nbsp;:&nbsp;</span>
+									<input type="text" class="form-label__input" value="00">
+									<span class="form-label__subtext">&nbsp;—&nbsp;</span>
+									<input type="text" class="form-label__input" value="19">
+									<span class="form-label__subtext">&nbsp;:&nbsp;</span>
+									<input type="text" class="form-label__input" value="00">
+								</label>
+							</li>
+							<li class="js-sortable-item form-list__item">
+								<label class="form-label form-label_option form-label_sortable">
+									<input type="checkbox" class="form-label__check">
+									<span class="form-label__toggle"></span>
+									<span class="form-label__text">&nbsp;Корп. отдел</span>
+								</label>
+								<label class="form-label form-label_option form-label_option-md form-label_sortable">
+									<input type="text" class="form-label__input" value="00">
+									<span class="form-label__subtext">&nbsp;:&nbsp;</span>
+									<input type="text" class="form-label__input" value="00">
+									<span class="form-label__subtext">&nbsp;—&nbsp;</span>
+									<input type="text" class="form-label__input" value="00">
+									<span class="form-label__subtext">&nbsp;:&nbsp;</span>
+									<input type="text" class="form-label__input" value="00">
+								</label>
+							</li>
+							<li class="js-sortable-item form-list__item">
+								<label class="form-label form-label_option form-label_sortable">
+									<input type="checkbox" class="form-label__check">
+									<span class="form-label__toggle"></span>
+									<span class="form-label__text">&nbsp;Тех. поддержка</span>
+								</label>
+								<label class="form-label form-label_option form-label_option-md form-label_sortable">
+									<input type="text" class="form-label__input" value="00">
+									<span class="form-label__subtext">&nbsp;:&nbsp;</span>
+									<input type="text" class="form-label__input" value="00">
+									<span class="form-label__subtext">&nbsp;—&nbsp;</span>
+									<input type="text" class="form-label__input" value="00">
+									<span class="form-label__subtext">&nbsp;:&nbsp;</span>
+									<input type="text" class="form-label__input" value="00">
+								</label>
+							</li>
+						</ul>
+					</div>
+
+					<div class="form__list">
+						<ul class="form-list">
+							<li class="form-list__title">Глобальная статистика</li>
+							<li class="form-list__item">
+								<label class="form-radio">
+									<input class="form-radio__input" type="radio" name="optradio">Сверху
+									<span class="form-radio__toggle"></span>
+								</label>
+							</li>
+							<li class="form-list__item">
+								<label class="form-radio">
+									<input class="form-radio__input" type="radio" name="optradio">Снизу
+									<span class="form-radio__toggle"></span>
+								</label>
+							</li>
+							<li class="form-list__item">
+								<label class="form-radio">
+									<input class="form-radio__input" type="radio" name="optradio">Не показывать
+									<span class="form-radio__toggle"></span>
+								</label>
+
+							</li>
+						</ul>
+					</div>
+					<div class="form__btn">
+						<button class="btn form-btn">
+						<span class="form-btn__text">
+							Сохранить
+						</span>
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="js-modal-norm-view modal__tab hidden">
+			<div class="modal-separate"></div>
+			<div class="modal-header">
+				<div class="modal-header__title">Нормативы</div>
+				<div class="modal-header__description">Указывваются значения за день</div>
+			</div>
+			<div class="modal-separate"></div>
+			<div class="modal-content">
+				<form class="form form_settings">
+					<div class="form__list">
+						<ul class="form-list form-list_bordered">
+							<li class="form-list__item">
+								<label class="form-label form-label_option form-label_option-lg">
+									<input type="checkbox" class="form-label__check">
+									<span class="form-label__toggle"></span>
+									<span class="form-label__text">&nbsp;Исходящих</span>
+									<a href="#" class="form-label__link">не менее&nbsp;</a>
+									<input type="text" class="form-label__input" value="250">
+									<span class="form-label__subtext">&nbsp;шт.</span>
+								</label>
+							</li>
+							<li class="form-list__separate"></li>
+							<li class="form-list__item">
+								<label class="form-label form-label_option form-label_option-lg">
+									<input type="checkbox" class="form-label__check">
+									<span class="form-label__toggle"></span>
+									<span class="form-label__text">&nbsp;Входящих</span>
+									<a href="#" class="form-label__link">не менее&nbsp;</a>
+									<input type="text" class="form-label__input" value="500">
+									<span class="form-label__subtext">&nbsp;шт.</span>
+								</label>
+							</li>
+							<li class="form-list__separate"></li>
+							<li class="form-list__item">
+								<label class="form-label form-label_option form-label_option-md">
+									<span class="form-label__text">Исходящих менее&nbsp;</span>
+									<input type="text" class="form-label__input" value="02">
+									<span class="form-label__text">&nbsp;:&nbsp;</span>
+									<input type="text" class="form-label__input" value="00">
+									<span class="form-label__text">&nbsp;минут</span>
+								</label>
+								<label class="form-label form-label_option">
+									<input type="checkbox" class="form-label__check">
+									<span class="form-label__toggle"></span>
+									<a href="#" class="form-label__link">&nbsp;не более&nbsp;</a>
+									<input type="text" class="form-label__input" value="5">
+									<span class="form-label__subtext">&nbsp;шт.</span>
+								</label>
+							</li>
+							<li class="form-list__separate"></li>
+							<li class="form-list__item">
+								<label class="form-label form-label_option form-label_option-md">
+									<span class="form-label__text">Входящих менее&nbsp;</span>
+									<input type="text" class="form-label__input" value="02">
+									<span class="form-label__text">&nbsp;:&nbsp;</span>
+									<input type="text" class="form-label__input" value="00">
+									<span class="form-label__text">&nbsp;минут</span>
+								</label>
+								<label class="form-label form-label_option">
+									<input type="checkbox" class="form-label__check">
+									<span class="form-label__toggle"></span>
+									<a href="#" class="form-label__link">&nbsp;не более&nbsp;</a>
+									<input type="text" class="form-label__input" value="5">
+									<span class="form-label__subtext">&nbsp;шт.</span>
+								</label>
+							</li>
+							<li class="form-list__separate"></li>
+							<li class="form-list__item">
+								<label class="form-label form-label_option">
+									<input type="checkbox" class="form-label__check">
+									<span class="form-label__toggle"></span>
+									<span class="form-label__text">&nbsp;Среднее время исходящих&nbsp;</span>
+									<a href="#" class="form-label__link">не более&nbsp;</a>
+									<input type="text" class="form-label__input" value="04">
+									<span class="form-label__text">&nbsp;:&nbsp;</span>
+									<input type="text" class="form-label__input" value="00">
+									<span class="form-label__subtext">&nbsp;минут</span>
+								</label>
+							</li>
+							<li class="form-list__separate"></li>
+							<li class="form-list__item">
+								<label class="form-label form-label_option">
+									<input type="checkbox" class="form-label__check">
+									<span class="form-label__toggle"></span>
+									<span class="form-label__text">&nbsp;Среднее время входящих&nbsp;</span>
+									<a href="#" class="form-label__link">не менее&nbsp;</a>
+									<input type="text" class="form-label__input" value="04">
+									<span class="form-label__text">&nbsp;:&nbsp;</span>
+									<input type="text" class="form-label__input" value="00">
+									<span class="form-label__subtext">&nbsp;минут</span>
+								</label>
+							</li>
+							<li class="form-list__separate"></li>
+							<li class="form-list__item">
+								<label class="form-label form-label_option">
+									<input type="checkbox" class="form-label__check">
+									<span class="form-label__toggle"></span>
+									<span class="form-label__text">&nbsp;Время отсутствия не более&nbsp;</span>
+									<input type="text" class="form-label__input" value="5">
+									<span class="form-label__text">&nbsp;:&nbsp;</span>
+									<input type="text" class="form-label__input" value="00">
+									<span class="form-label__text">&nbsp;:&nbsp;</span>
+									<input type="text" class="form-label__input" value="00">
+									<span class="form-label__subtext">&nbsp;часов</span>
+								</label>
+							</li>
+							<li class="form-list__separate"></li>
+							<li class="form-list__item">
+								<label class="form-label form-label_option">
+									<input type="checkbox" class="form-label__check">
+									<span class="form-label__toggle"></span>
+									<span class="form-label__text">&nbsp;Общее время разговора&nbsp;</span>
+									<input type="text" class="form-label__input" value="1">
+									<span class="form-label__text">&nbsp;:&nbsp;</span>
+									<input type="text" class="form-label__input" value="00">
+									<span class="form-label__text">&nbsp;:&nbsp;</span>
+									<input type="text" class="form-label__input" value="00">
+									<span class="form-label__subtext">&nbsp;часов</span>
+								</label>
+							</li>
+							<li class="form-list__separate"></li>
+							<li class="form-list__item">
+								<label class="form-label form-label_option form-label_option-md">
+									<span class="form-label__text">&nbsp;Среднее время ожидания в очереди не более&nbsp;</span>
+									<input type="text" class="form-label__input" value="60">
+									<span class="form-label__subtext">&nbsp;секунд</span>
+								</label>
+							</li>
+							<li class="form-list__separate"></li>
+						</ul>
+					</div>
+					<div class="form__btn">
+						<button class="btn form-btn">
+						<span class="form-btn__text">
+							Сохранить
+						</span>
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		</div>
+
+	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="/js/scripts.js"></script>
 	<script src="/js/jsrender.min.js"></script>
@@ -399,6 +721,8 @@
 	<script src="/js/jquery.pickmeup.min.js"></script>
 	<script src="/js/jquery.formstyler.min.js"></script>
 	<script src="/components/tooltipster-master/dist/js/tooltipster.bundle.min.js"></script>
+	<script src="/components/jquery-modal/jquery.modal.min.js"></script>
+	<script src="/components/sortable/Sortable.min.js"></script>
 	<!-- Templates -->
 	<script id="audioPlayer" type="text/x-jsrender">
 		<div id="jp_container_{{:id}}" class="jp-audio">

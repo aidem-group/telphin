@@ -1,0 +1,16 @@
+.modal-header {
+  padding: 25px 0 10px 0;
+  &__title,
+  &__description {
+    padding: 0 40px;
+  }
+  &__title {
+    color: #000;
+    font-size: 18px;
+  }
+  &__description {
+    margin-top: 10px;
+    color: #9DA2AB;
+    font-size: 12px;
+  }
+}

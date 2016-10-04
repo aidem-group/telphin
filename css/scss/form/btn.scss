@@ -1,0 +1,14 @@
+.form-btn {
+  background-color: #399EFC;
+  border: 1px solid #399EFC;
+  border-radius: 16px;
+  padding: 6.5px 12px;
+  &__text {
+    color: #ffffff;
+    font-size: 14px;
+  }
+  &:hover {
+    background-color: #fb8d35;
+    border-color: #fb8d35;
+  }
+}

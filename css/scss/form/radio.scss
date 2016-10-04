@@ -1,0 +1,36 @@
+.form-radio {
+  font-size: 14px;
+  color: #000000;
+  margin: 0;
+  padding-left: 20px;
+  position: relative;
+  cursor: pointer;
+  &__input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  &__toggle {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #ECECEC;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+  }
+  &__input:checked ~ &__toggle {
+    border-color: #399efc;
+  }
+  &__input:checked ~ &__toggle:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #399efc;
+    top: 3px;
+    left: 3px;
+  }
+}

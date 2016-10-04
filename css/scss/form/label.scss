@@ -1,0 +1,83 @@
+.form-label {
+  .theme_default  &__input,
+  .theme_default  &__textarea {
+    width: 100%;
+    @include box-sizing;
+    border: 1px solid #ECECEC;
+    border-radius: 4px;
+    font-size: 14px;
+    padding-left: 11px;
+  }
+  &__input {
+    height: 35px;
+  }
+  &__text {
+    color: #000000;
+  }
+  &__check {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    visibility: hidden;
+  }
+  &__toggle {
+    display: inline-block;
+    border-radius: 3px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ececec;
+    vertical-align: middle;
+    cursor: pointer;
+    position: relative;
+  }
+  &__check:checked ~ &__toggle {
+    border-color: #399EFC;
+  }
+  &__check:checked ~ &__toggle:before {
+    font-family: FontAwesome;
+    position: absolute;
+    top: 3.5px;
+    left: 3.5px;
+    color: #399EFC;
+    font-size: 11px;
+    content: '\f00c';
+    display: inline-block;
+    line-height: 1;
+  }
+  &_sortable {
+    width: 50%;
+    float: left;
+  }
+  &_sortable &__toggle {
+    margin-right: 10px;
+  }
+
+  &_option {
+    line-height: 25px;
+  }
+  &_option &__subtext {
+    color: #B6BFCD;
+  }
+  &_option &__text,
+  &_option &__subtext,
+  &_option &__input,
+  &_option &__link{
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &_option &__input{
+    width: 30px;
+    height: 25px;
+    padding: 0;
+    text-align: center;
+  }
+  &_option-md &__input{
+    width: 40px;
+  }
+  &_option-lg &__input{
+    width: 50px;
+  }
+
+}

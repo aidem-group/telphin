@@ -1,0 +1,35 @@
+.form {
+  position: relative;
+  &__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  &_offer {
+    padding: 30px 20px 20px 20px;
+    width: 290px;
+    background-color: #FFF;
+    -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.14);
+    -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.14);
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.14);
+  }
+  &__btn {
+    text-align: center;
+  }
+  &_success {
+    padding-top: 85px;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  &_success &__btn {
+    margin-top: 25px;
+  }
+  &_settings {
+    padding-bottom: 30px;
+  }
+  &_settings &__btn{
+    margin-top: 30px;
+  }
+}

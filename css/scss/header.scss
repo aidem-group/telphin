@@ -104,7 +104,11 @@
 	&_btn {
 		@include user-select;
 
-		&-favorite, &-stat, &-user-name, &-settings {
+		.theme_default .header &-monitoring {
+			color: #fb8d35;
+		}
+
+		&-favorite, &-stat, &-user-name, &-settings, &-monitoring {
 			position: relative;
 
 			&:before {
@@ -113,7 +117,7 @@
 			}
 		}
 
-		&-favorite, &-stat, &-user {
+		&-favorite, &-stat, &-user, &-monitoring {
 			&:before {
 				display: inline-block;
 				position: relative;
@@ -145,6 +149,16 @@
 			}
 
 			&:hover:before { background-position: -36px -33px; }
+		}
+
+		&-monitoring {
+			&:before {
+				width: 32px;
+				height: 32px;
+				background-position: -37px -162px;
+			}
+
+			&:hover:before { background-position: 0px -162px; }
 		}
 
 		&-user {
