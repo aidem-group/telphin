@@ -1,0 +1,11 @@
+.chart-list {
+  border-radius: 0 0 6px 6px;
+  border: 1px solid #ececec;
+  background-color: #ffffff;
+  &_stats {
+    @include clearfix();
+  }
+  &_stats &__item {
+    float: left;
+  }
+}

@@ -1,0 +1,27 @@
+.chart-content {
+  > div {
+    display: inline-block;
+    margin-top: 30px;
+  }
+  svg {
+    overflow: visible!important;
+  }
+  &_gauge {
+    margin: 0 auto 0 auto;
+    position: relative;
+    top: 22px;
+  }
+  &_gauge g > text[text-anchor="middle"] {
+    font-size: 12px;
+    fill: #B6BFCD;
+    text-transform: none;
+  }
+  &_gauge g > g >text[text-anchor="middle"] {
+    font-size: 18px;
+    fill: #000000;
+  }
+  &_gauge text[text-anchor="start"],
+  &_gauge text[text-anchor="end"] {
+    display: none;
+  }
+}

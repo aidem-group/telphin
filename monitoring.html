@@ -423,6 +423,94 @@
 						</div>
 					</div>
 				</div>
+				<div class="efficiency__stats">
+					<div class="stats">
+						<div class="stats__nav">
+							<div class="table-nav table-nav_stat">
+								<div class="table-nav__title">Глобальная статистика</div>
+								<div class="table-nav__menu">
+									<ul class="table-menu">
+										<li class="table-menu__item">
+											<button class="js-btn-stat js-btn-stat-sale table-btn active">
+												<span class="table-btn__text">Отдел продаж</span>
+											</button>
+										</li>
+										<li class="table-menu__item">
+											<button class="js-btn-stat js-btn-stat-corporate table-btn">
+												<span class="table-btn__text">Корпоративный отдел</span>
+											</button>
+										</li>
+										<li class="table-menu__item">
+											<button class="js-btn-stat js-btn-stat-garanty table-btn">
+												<span class="table-btn__text">Отдел гарантии</span>
+											</button>
+										</li>
+										<li class="table-menu__item">
+											<button class="js-btn-stat-other table-btn table-btn_select">
+												<span class="table-btn__text">Еще</span>
+												<span class="table-btn__icon">
+													<i class="fa fa-angle-down" aria-hidden="true"></i>
+												</span>
+											</button>
+										</li>
+										<li class="table-menu__item">
+											<button class="js-btn-stat-phones table-btn table-btn_select">
+												<span class="table-btn__text">8 800 800-82-92</span>
+												<span class="table-btn__icon">
+													<i class="fa fa-angle-down" aria-hidden="true"></i>
+												</span>
+											</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="stats__charts">
+							<div class="chart-list chart-list_stats">
+								<div class="chart-list__item">
+									<div class="chart-stat chart-stat_br">
+										<div class="chart-stat__title">
+											Среднее время ожидания в очереди
+										</div>
+										<div class="chart-stat__content">
+											<div id="gaugechartStat" class="chart-content chart-content_gauge" style="width: 182px; height: 182px;"></div>
+										</div>
+									</div>
+								</div>
+								<div class="chart-list__item">
+									<div class="chart-stat chart-stat_br">
+										<div class="chart-stat__title">
+											Принятые/непринятые звонки
+										</div>
+										<div class="chart-stat__content">
+											<div id="piechartStatCalls" class="chart-content"></div>
+										</div>
+									</div>
+								</div>
+								<div class="chart-list__item">
+									<div class="chart-stat chart-stat_br">
+										<div class="chart-stat__title">
+											Принятые звонки
+										</div>
+										<div class="chart-stat__content">
+											<div id="piechart2"  class="chart-content"></div>
+										</div>
+									</div>
+								</div>
+								<div class="chart-list__item">
+									<div class="chart-stat">
+										<div class="chart-stat__title">
+											Принятые звонки
+										</div>
+										<div class="chart-stat__content">
+											<div id="piechart3"  class="chart-content"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="efficiency__offers">
 					<div class="offers text-center">
 						<span class="offers-text">Есть предложения по работе с мониторингом — </span>
@@ -723,6 +811,9 @@
 	<script src="/components/tooltipster-master/dist/js/tooltipster.bundle.min.js"></script>
 	<script src="/components/jquery-modal/jquery.modal.min.js"></script>
 	<script src="/components/sortable/Sortable.min.js"></script>
+	<!--charts-->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="js/charts.js"></script>
 	<!-- Templates -->
 	<script id="audioPlayer" type="text/x-jsrender">
 		<div id="jp_container_{{:id}}" class="jp-audio">

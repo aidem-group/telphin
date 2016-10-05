@@ -1,0 +1,22 @@
+.chart-stat {
+  width: 286px;
+  height: 260px;
+  text-align: center;
+  position: relative;
+  &__title {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+  }
+  &_br:after {
+    display: block;
+    height: 80%;
+    width: 1px;
+    background-color: #ececec;
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: 0;
+  }
+}
