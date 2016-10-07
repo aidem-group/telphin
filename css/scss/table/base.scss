@@ -186,4 +186,12 @@
       }
     }
   }
+  &_efficiency-daily {
+    .tr {
+      display: table-row;
+      &_group {
+        cursor: default;
+      }
+    }
+  }
 }

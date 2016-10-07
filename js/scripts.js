@@ -432,22 +432,7 @@ $(document).ready(function(){
         side: 'bottom',
         trigger: 'click',
         delay: 50,
-        content: '<ul class="table-dropdown-menu">'+
-        '<li class="table-dropdown-menu__item">' +
-        '<a href="" target="_blank" class="table-link">' +
-        '<span class="table-link__text">csv</span>' +
-        '</a>'+
-        '</li>'+
-        '<li class="table-dropdown-menu__item">'+
-        '<a href="" target="_blank" class="table-link">'+
-        '<span class="table-link__text">xls</span>'+
-        '</a>'+
-        '</li>'+
-        '<li class="table-dropdown-menu__separate"></li>'+
-        '<li class="table-dropdown-menu__description">'+
-        'Скачайте статистику в&nbsp;нужном формате'+
-        '</li>'+
-        '</ul>',
+        content: $(".js-tooltip-content[data-tooltip-content='dropdown-download']").html(),
         functionPosition: function(instance, helper, position){
             position.coord.top -= 30;
             return position;
@@ -462,33 +447,71 @@ $(document).ready(function(){
         side: 'top',
         trigger: 'click',
         delay: 50,
-        content: '<div class="js-form-offer-wr form-wr">'+
-        '<form class="js-form-offer form form_offer">'+
-        '<div class="form__close"> <button class="js-form-offer-close btn btn-close"></button> </div>'+
-        '<div class="form__description"> <div class="form-description form-group"> Напишите нам о найденных ошибкахили предложите недостающий функционал.Это поможет сделать систему лучше. </div></div>'+
-        '<div class="form__label"> <div class="form-label form-group"> <input type="text" placeholder="E-mail" class="form-label__input"> </div> </div>'+
-        '<div class="form__label"> <div class="form-label form-group"> <textarea rows="3" placeholder="Сообщение" class="form-label__textarea"></textarea></div></div>'+
-        '<div class="form__btn"> <button class="js-form-offer-submit btn form-btn"> <span class="form-btn__text">Отправить</span> </button> </div>'+
-        '</form>'+
-        '<div class="js-form-offer-success form form_offer form_success">'+
-        '<div class="form__close"> <button class="js-form-offer-close btn btn-close"></button> </div>'+
-        '<div class="form__title"> <div class="form-title text-center form-group">Спасибо</div> </div>'+
-        '<div class="form__description"> <div class="form-description text-center"> Мы рассмотрим ваше сообщение<br> и внедрим изменения. </div></div>'+
-        '<div class="form__btn"> <button class="js-form-offer-close btn form-btn"> <span class="form-btn__text">Закрыть</span> </button> </div></div>'+
-        '</div>',
+        content: $(".js-tooltip-content[data-tooltip-content='offers-btn']").html(),
         functionReady: function (instance) {
+            var $formOffer = $(instance.elementTooltip()).find('.js-form-offer'),
+                $formOfferSuccess =$(instance.elementTooltip()).find('.js-form-offer-success');
             $('.js-form-offer-submit').on('click', function (e) {
                 e.preventDefault();
-                var $formOffer = $('.js-form-offer'),
-                    $formOfferSuccess =$('.js-form-offer-success');
-                $formOffer.css('visibility','hidden');
                 $formOfferSuccess.css('height',$formOffer.outerHeight());
+                $formOffer.css('visibility','hidden');
                 $formOfferSuccess.fadeIn(300);
             });
             $('.js-form-offer-close').on('click', function (e) {
                 e.preventDefault();
                 $(instance.elementOrigin()).tooltipster('close');
             })
+        }
+    });
+    $('.js-btn-stat-other').tooltipster({
+        theme: 'table-tooltip-wr',
+        contentAsHTML: true,
+        arrow: false,
+        interactive: true,
+        side: 'bottom',
+        trigger: 'click',
+        delay: 50,
+        content: $(".js-tooltip-content[data-tooltip-content='stat-other']").html(),
+        functionPosition: function(instance, helper, position){
+            position.coord.top -= 30;
+            position.coord.left -= -56;
+
+            return position;
+        },
+        functionReady: function (instance) {
+            //
+        }
+    });
+    $('.js-btn-stat-phones').tooltipster({
+        theme: 'table-tooltip-wr',
+        contentAsHTML: true,
+        arrow: false,
+        interactive: true,
+        side: 'bottom',
+        trigger: 'click',
+        delay: 50,
+        content: $(".js-tooltip-content[data-tooltip-content='stat-phones']").html(),
+        functionPosition: function(instance, helper, position){
+            position.coord.top -= 30;
+            position.coord.left -= -14;
+
+            return position;
+        },
+        functionReady: function (instance) {
+            //
+        }
+    });
+    $('.js-link-opt-count').tooltipster({
+        theme: 'table-tooltip-wr',
+        contentAsHTML: true,
+        arrow: false,
+        interactive: true,
+        side: 'bottom',
+        trigger: 'click',
+        delay: 50,
+        content: $(".js-tooltip-content[data-tooltip-content='opt-count']").html(),
+        functionReady: function (instance) {
+            //
         }
     });
     // Modal options
@@ -532,4 +555,94 @@ $(document).ready(function(){
     $sortableItem.on('mouseleave', function () {
         $(this).removeClass('active')
     });
+
+    //Monitoring table tabs
+    var $monitoringTab = $('.js-monitoring-tab'),
+        $tableNavPeriod = $('.js-table-nav-period'),
+        $tableBtnPeriod = $tableNavPeriod.find('.js-table-btn');
+    //Переключение таблиц мониторинга
+    $monitoringTab.on('click', function () {
+        var $this = $(this),
+            $tableMonitorng = $('.js-table-monitoring'),
+            $tableNavOption = $('.js-table-nav-option');
+
+        //Скрытие кнопок загрузки и нормативов при условии активации дневной или общей загрузки
+        if($this.data('table')=='monitoring-daily'||$this.data('table') == 'monitoring-overall') {
+            $tableNavOption.addClass('hidden');
+        } else {
+            $tableNavOption.removeClass('hidden');
+        }
+
+        //Деактивация кнопок навигации по периодам при условии активации дневной загрузки
+        if($this.data('table') == 'monitoring-daily') {
+            $tableNavPeriod.find("[data-period = 'week'],[data-period = 'month'],[data-period = 'year']").addClass('disabled');
+        }else {
+            $tableBtnPeriod.removeClass('disabled');
+        }
+
+        //Скрыть все таблицы
+        $tableMonitorng.addClass('hidden');
+
+        //Показать текущую таблицу
+        $(".js-table-monitoring[data-table='" + $this.data('table') +"']").removeClass('hidden');
+        //Убрать класс active со всех кнопок навигации таблиц
+        $monitoringTab.removeClass('active');
+
+        //Добавить класс active для нажатой кнопки
+        $this.addClass('active');
+    });
+    $tableBtnPeriod.on('click', function () {
+        var $this = $(this);
+        //Если активна кнопка навигации по периодам со значениями 'неделя', 'месяц','год'
+        if($this.data('period') == 'week'|| $this.data('period') == 'month'||$this.data('period') == 'year') {
+
+            //Деактивация кнопки навигации по таблицам 'Дневная нагрузка'
+            $(".js-monitoring-tab[data-table='monitoring-daily']").addClass('disabled');
+
+            //Скрытие календаря одинарного
+            $tableNavPeriod.find("[data-period='calendar-single']").addClass('hidden');
+
+            //Показ календаря двойного
+            $tableNavPeriod.find("[data-period='calendar-double']").removeClass('hidden');
+        } else if($this.data('period') == 'today'|| $this.data('period') == 'yesterday'){
+
+            //Активация кнопки навигации по таблицам 'Дневная нагрузка'
+            $(".js-monitoring-tab[data-table='monitoring-daily']").removeClass('disabled');
+
+            //Скрытие календаря двойного
+            $tableNavPeriod.find("[data-period='calendar-double']").addClass('hidden');
+
+            //Показ календаря одинарного
+            $tableNavPeriod.find("[data-period='calendar-single']").removeClass('hidden');
+        }
+        //Убрать класс  'active' у всех кнопок навигации по периодам
+        $tableBtnPeriod.removeClass('active');
+
+        //Активировать текущую кнопку навигации по периодам если на ней нет флага disable
+        if($this.not('.disabled')){
+            $this.addClass('active');
+        }
+    });
+
+    $tableNavPeriod.find("[data-period='calendar-single']").tooltipster({
+        theme: 'table-tooltip-wr',
+        contentAsHTML: true,
+        arrow: false,
+        interactive: true,
+        side: 'bottom',
+        trigger: 'click',
+        delay: 50,
+        content:'<div><img src="../img/calendar/calendar-small.png" alt=""></div>'
+    });
+    $tableNavPeriod.find("[data-period='calendar-double']").tooltipster({
+        theme: 'table-tooltip-wr',
+        contentAsHTML: true,
+        arrow: false,
+        interactive: true,
+        side: 'bottom',
+        trigger: 'click',
+        delay: 50,
+        content:'<div><img src="../img/calendar/calendar-big.png" alt=""></div>'
+    });
+    
 });
