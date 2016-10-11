@@ -31,6 +31,9 @@
     .th.w150 {
       width: 150px;
     }
+    .th.w662 {
+      width: 662px;
+    }
     .th.first {
       padding: 10px 20px;
     }
@@ -52,6 +55,14 @@
       padding-left: 35px;
       padding-right: 5px;
       white-space: nowrap;
+    }
+    .td.timeline {
+      padding: 0;
+    }
+    .td.timeline {
+      .time-bar-item {
+        line-height: 61px;
+      }
     }
     // Кнопка телефона в статусе звонков
     .td .phone-number {
@@ -127,6 +138,7 @@
       background-color: #ffffff;
       display: none;
       .th {
+        height: 42px;
         border-top-color: transparent;
       }
       .th:first-child,
@@ -186,7 +198,7 @@
       }
     }
   }
-  &_efficiency-daily {
+  &_efficiency-timeline {
     .tr {
       display: table-row;
       &_group {

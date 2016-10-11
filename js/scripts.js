@@ -455,7 +455,7 @@ $(document).ready(function(){
                 e.preventDefault();
                 $formOfferSuccess.css('height',$formOffer.outerHeight());
                 $formOffer.css('visibility','hidden');
-                $formOfferSuccess.fadeIn(300);
+                $formOfferSuccess.show();
             });
             $('.js-form-offer-close').on('click', function (e) {
                 e.preventDefault();
@@ -514,6 +514,409 @@ $(document).ready(function(){
             //
         }
     });
+
+    //charts
+    var $btnStat = $('.js-btn-stat'),
+        $btnStatSale = $('.js-btn-stat-sale'),
+        $btnStatCorporate = $('.js-btn-stat-corporate'),
+        $btnStatGaranty = $('.js-btn-stat-garanty');
+    google.charts.load('current', {'packages':['corechart','gauge','line']});
+    google.charts.setOnLoadCallback(drawChartStatCalls);
+    google.charts.setOnLoadCallback(drawChartStatInCalls);
+    google.charts.setOnLoadCallback(drawChartStatOutCalls);
+    google.charts.setOnLoadCallback(drawChartStatWaitGauge);
+
+    //График принятых/непринятых звонков
+    function drawChartStatCalls() {
+
+        var dataSale = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['Work',     30],
+            ['Eat',      70]
+        ]);
+
+        var dataCorporate = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['Work',     20],
+            ['Eat',      80]
+        ]);
+
+        var dataGaranty = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['Work',     50],
+            ['Eat',      50]
+        ]);
+
+        var options = {
+            width: '165',
+            height: '165',
+            chartArea:{left:0,top:0,width:'100%',height:'100%'},
+            pieHole: 0.5,
+            legend: {position:'none'},
+            colors:['#df4d41','#0abc6e'],
+            tooltip: {ignoreBounds: true},
+            fontSize: 12
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechartStatCalls'));
+
+        chart.draw(dataSale, options);
+        $btnStatSale.on('click', function () {
+            $btnStat.removeClass('active');
+            $(this).addClass('active');
+            chart.draw(dataSale, options);
+        });
+        $btnStatCorporate.on('click', function () {
+            $btnStat.removeClass('active');
+            $(this).addClass('active');
+            chart.draw(dataCorporate, options);
+        });
+        $btnStatGaranty.on('click', function () {
+            $btnStat.removeClass('active');
+            $(this).addClass('active');
+            chart.draw(dataGaranty, options);
+        });
+    }
+
+    //График принятых звонков
+    function drawChartStatInCalls() {
+
+        var dataSale = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['Work',     20],
+            ['Eat',      45],
+            ['Other',      35]
+        ]);
+        var dataCorporate = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['Work',     10],
+            ['Eat',      90]
+        ]);
+
+        var dataGaranty = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['Work',     90],
+            ['Eat',      10]
+        ]);
+
+
+        var options = {
+            colors:['#bbc3d1','#68cda1','#0abc6f'],
+            width: '165',
+            height: '165',
+            chartArea:{left:0,top:0,width:'100%',height:'100%'},
+            pieHole: 0.5,
+            legend: {position:'none'},
+            tooltip: {ignoreBounds: true},
+            fontSize: 12
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechartStatInCalls'));
+
+        chart.draw(dataSale, options);
+        $btnStatSale.on('click', function () {
+            $btnStat.removeClass('active');
+            $(this).addClass('active');
+            chart.draw(dataSale, options);
+        });
+        $btnStatCorporate.on('click', function () {
+            $btnStat.removeClass('active');
+            $(this).addClass('active');
+            chart.draw(dataCorporate, options);
+        });
+        $btnStatGaranty.on('click', function () {
+            $btnStat.removeClass('active');
+            $(this).addClass('active');
+            chart.draw(dataGaranty, options);
+        });
+    }
+
+    //График непринятых звонков
+    function drawChartStatOutCalls() {
+
+        var dataSale = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['Отключился агент',     45],
+            ['Eat',      20],
+            ['Other',      35]
+        ]);
+        var dataCorporate = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['Work',     30],
+            ['Eat',      70]
+        ]);
+
+        var dataGaranty = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['Work',     60],
+            ['Eat',      40]
+        ]);
+
+
+        var options = {
+            width: '165',
+            height: '165',
+            chartArea:{left:0,top:0,width:'100%',height:'100%'},
+            pieHole: 0.5,
+            legend: {position:'none'},
+            tooltip: {ignoreBounds: true},
+            fontSize: 12,
+            colors:['#ea8e86','#b6bfcd','#df4d41']
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechartStatOutCalls'));
+
+        chart.draw(dataSale, options);
+        $btnStatSale.on('click', function () {
+            $btnStat.removeClass('active');
+            $(this).addClass('active');
+            chart.draw(dataSale, options);
+        });
+        $btnStatCorporate.on('click', function () {
+            $btnStat.removeClass('active');
+            $(this).addClass('active');
+            chart.draw(dataCorporate, options);
+        });
+        $btnStatGaranty.on('click', function () {
+            $btnStat.removeClass('active');
+            $(this).addClass('active');
+            chart.draw(dataGaranty, options);
+        });
+    }
+
+    //График среднее время ожидания в очереди спидометр
+    function drawChartStatWaitGauge() {
+
+        var dataSale = google.visualization.arrayToDataTable([
+            ['Label', 'Value'],
+            ['секунд', 60]
+        ]);
+        var dataCorporate = google.visualization.arrayToDataTable([
+            ['Label', 'Value'],
+            ['секунд', 40]
+        ]);
+        var dataGaranty = google.visualization.arrayToDataTable([
+            ['Label', 'Value'],
+            ['секунд', 30]
+        ]);
+
+        var options = {
+            redFrom: 60, redTo: 80,
+            minorTicks: 5,
+            min: 0,
+            max: 80
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById('gaugechartStat'));
+        chart.draw(dataSale, options);
+
+
+        var gaugeInterval = setInterval(function() {
+            dataSale.setValue(0, 1, 40 + Math.round(60 * Math.random()));
+            chart.draw(dataSale, options);
+        }, 5000);
+        $btnStatSale.on('click', function () {
+            $btnStat.removeClass('active');
+            $(this).addClass('active');
+            chart.draw(dataSale, options);
+            clearInterval(gaugeInterval);
+            gaugeInterval = setInterval(function() {
+                dataSale.setValue(0, 1, 40 + Math.round(60 * Math.random()));
+                chart.draw(dataSale, options);
+            }, 1000);
+        });
+        $btnStatCorporate.on('click', function () {
+            $btnStat.removeClass('active');
+            $(this).addClass('active');
+            chart.draw(dataCorporate, options);
+            clearInterval(gaugeInterval);
+            gaugeInterval = setInterval(function() {
+                dataCorporate.setValue(0, 1, 40 + Math.round(60 * Math.random()));
+                chart.draw(dataCorporate, options);
+            }, 10000);
+        });
+        $btnStatGaranty.on('click', function () {
+            $btnStat.removeClass('active');
+            $(this).addClass('active');
+            chart.draw(dataGaranty, options);
+            clearInterval(gaugeInterval);
+            gaugeInterval = setInterval(function() {
+                dataGaranty.setValue(0, 1, 40 + Math.round(60 * Math.random()));
+                chart.draw(dataGaranty, options);
+            }, 5000);
+        });
+    }
+
+    //График среднее время ожидания в очереди линейный
+    function drawChartStatWaitLine() {
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('number', 'Вторник');
+        data.addColumn('number', 'Секунд');
+
+        data.addRows([
+            [0, 90],   [10, 80], [20, 80], [30, 65], [40, 60]
+        ]);
+
+        var options = {
+            hAxis: {
+                title: '',
+                textPosition: 'none'
+            },
+            vAxis: {
+                title: ''
+            },
+            series: [
+                {color: '#318bdf', visibleInLegend: false}
+            ]
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('linechartStat'));
+        chart.draw(data, options);
+    }
+
+    //График звонков в таблице
+
+    function drawTimelineDaily(){
+        var data = {
+            legends: {
+                callout: {
+                    name: 'Исходящий',
+                    class: 'callout'
+                },
+                callin: {
+                    name: 'Входящий',
+                    class: 'callin'
+                },
+                callinadd: {
+                    name: 'Входящий на доб.',
+                    class: 'callinadd'
+                },
+                free: {
+                    name: 'Свободен',
+                    class: 'free'
+                },
+                offline: {
+                    name: 'Офлайн',
+                    class:'offline'
+                }
+            },
+            lines: {
+                'user1': [
+                    ['callout', '07:00', '8:00'],
+                    ['callin', '11:00', '11:30'],
+                    ['callinadd', '11:30', '11:50'],
+                    ['free', '11:50', '12:40'],
+                    ['callinadd', '12:40', '13:50'],
+                    ['callout', '13:50', '14:00']
+                ],
+                'user2': [
+                    ['callin', '09:00', '10:50'],
+                    ['callout', '10:50', '11:50'],
+                    ['free', '11:50', '12:00'],
+                    ['callinadd', '12:30', '13:50']
+                ],
+                'user3': [
+                    ['callinadd', '07:20', '08:50'],
+                    ['free', '09:30', '10:00'],
+                    ['callinadd', '10:00', '11:50'],
+                    ['callout', '12:20', '12:50'],
+                    ['callin', '12:50', '14:00'],
+                    ['callout', '14:20', '15:00']
+                ]
+            }
+        };
+
+        var timeLineChart = $('.js-timeline-daily').glavwebTimeLineChart(data, {
+            timeBarSelector:   '.time-bar',
+            legendBarSelector: '.legend-bar',
+            step:              60,
+            width:             682
+        });
+
+        timeLineChart.drawLegendBar();
+        timeLineChart.drawTimeBar();
+        timeLineChart.drawLines();
+        /**
+         * Custom selectors
+         */
+        // timeLineChart.drawLegendBar('.legend-top');
+        // timeLineChart.drawTimeBar('.time-bar-bottom');
+        // timeLine.drawLine('user1', '.user-1');
+    }
+
+    drawTimelineDaily();
+
+    function drawTimelineOverall(){
+        var data = {
+            legends: {
+                callout: {
+                    name: 'Исходящий',
+                    class: 'callout'
+                },
+                callin: {
+                    name: 'Входящий',
+                    class: 'callin'
+                },
+                callinadd: {
+                    name: 'Входящий на доб.',
+                    class: 'callinadd'
+                },
+                free: {
+                    name: 'Свободен',
+                    class: 'free'
+                },
+                offline: {
+                    name: 'Офлайн',
+                    class:'offline'
+                }
+            },
+            lines: {
+                'user1': [
+                    ['callout', '07:00', '8:00'],
+                    ['callin', '11:00', '11:30'],
+                    ['callinadd', '11:30', '11:50'],
+                    ['free', '11:50', '12:40'],
+                    ['callinadd', '12:40', '13:50'],
+                    ['callout', '13:50', '14:00']
+                ],
+                'user2': [
+                    ['callin', '09:00', '10:50'],
+                    ['callout', '10:50', '11:50'],
+                    ['free', '11:50', '12:00'],
+                    ['callinadd', '12:30', '13:50']
+                ],
+                'user3': [
+                    ['callinadd', '07:20', '08:50'],
+                    ['free', '09:30', '10:00'],
+                    ['callinadd', '10:00', '11:50'],
+                    ['callout', '12:20', '12:50'],
+                    ['callin', '12:50', '14:00'],
+                    ['callout', '14:20', '15:00']
+                ]
+            }
+        };
+
+        var timeLineChart = $('.js-timeline-overall').glavwebTimeLineChart(data, {
+            timeBarSelector:   '.time-bar',
+            legendBarSelector: '.legend-bar',
+            step:              60,
+            width:             682
+        });
+
+        timeLineChart.drawLegendBar();
+        timeLineChart.drawTimeBar();
+        timeLineChart.drawLines();
+        /**
+         * Custom selectors
+         */
+        // timeLineChart.drawLegendBar('.legend-top');
+        // timeLineChart.drawTimeBar('.time-bar-bottom');
+        // timeLine.drawLine('user1', '.user-1');
+    }
+
+    drawTimelineOverall();
+
     // Modal options
     var $modalOptions = $('.js-modal-options'),
         $stat = $modalOptions.find('.js-modal-stat'),
@@ -591,10 +994,18 @@ $(document).ready(function(){
         //Добавить класс active для нажатой кнопки
         $this.addClass('active');
     });
+
+    var $chartGauge = $('.js-chart-gauge'),
+        $chartLine = $('.js-chart-line');
     $tableBtnPeriod.on('click', function () {
         var $this = $(this);
         //Если активна кнопка навигации по периодам со значениями 'неделя', 'месяц','год'
         if($this.data('period') == 'week'|| $this.data('period') == 'month'||$this.data('period') == 'year') {
+            //Удаление спидометра
+            $chartGauge.hide().empty();
+            //Отрисовка линейного графика
+            $chartLine.show();
+            google.charts.setOnLoadCallback(drawChartStatWaitLine);
 
             //Деактивация кнопки навигации по таблицам 'Дневная нагрузка'
             $(".js-monitoring-tab[data-table='monitoring-daily']").addClass('disabled');
@@ -605,7 +1016,11 @@ $(document).ready(function(){
             //Показ календаря двойного
             $tableNavPeriod.find("[data-period='calendar-double']").removeClass('hidden');
         } else if($this.data('period') == 'today'|| $this.data('period') == 'yesterday'){
-
+            //Удаление линейного графика
+            $chartLine.hide().empty();
+            //Отрисовка спидометра
+            $chartGauge.show();
+            google.charts.setOnLoadCallback(drawChartStatWaitGauge);
             //Активация кнопки навигации по таблицам 'Дневная нагрузка'
             $(".js-monitoring-tab[data-table='monitoring-daily']").removeClass('disabled');
 

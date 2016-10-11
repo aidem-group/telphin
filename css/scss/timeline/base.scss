@@ -1,0 +1,93 @@
+.timeline-wr {
+  .time-bar {
+    height: inherit;
+  }
+  .time-line {
+    height: 24px;
+  }
+  .timeline-item {
+    height: 24px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    &_callout {
+      background-color: #0abc6f;
+    }
+    &_callin {
+      background-color: #399efc;
+    }
+    &_callinadd {
+      background-color: #318bdf;
+    }
+    &_free {
+      background-color: #ffffff;
+    }
+    &_unknown {
+      background-color: #b6bfcd;
+      box-shadow: none;
+    }
+  }
+  .time-bar-item {
+    color: #9DA2AB;
+    font-size: 12px;
+    &:after {
+      content: '';
+      display: block;
+      height: 100000%;
+      width: 1px;
+      background-color: #ececec;
+      position: absolute;
+      left: 50%;
+    }
+    &:first-child,
+    &:last-child {
+      width: auto!important;
+    }
+    &:first-child:after,
+    &:last-child:after {
+      display: none;
+    }
+    &:first-child {
+      margin-left: auto!important;
+      left: 10px!important;
+    }
+    &:last-child {
+      margin-left: auto!important;
+      left: auto!important;
+      right: 10px!important;
+    }
+  }
+  .legend-bar {
+    text-align: left;
+  }
+  .legend-item {
+    margin: 0 10px;
+    font-size: 11px;
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 14px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+    &_callout:before {
+      background-color: #0abc6f;
+    }
+    &_callin:before {
+      background-color: #399efc;
+    }
+    &_callinadd:before {
+      background-color: #318bdf;
+    }
+    &_free:before {
+      background-color: #ffffff;
+      border: 1px solid #ECECEC;
+    }
+    &_offline:before,
+    &_unknown:before {
+      background-color: #b6bfcd;
+    }
+  }
+}

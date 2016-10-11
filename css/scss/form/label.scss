@@ -8,8 +8,17 @@
     font-size: 14px;
     padding-left: 11px;
   }
+  .theme_default &__textarea {
+    padding: 10px 11px 11px 11px;
+    resize: none;
+  }
   &__input {
     height: 35px;
+  }
+  &__input[type=number]::-webkit-inner-spin-button,
+  &__input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
   &__text {
     color: #000000;
@@ -30,6 +39,7 @@
     vertical-align: middle;
     cursor: pointer;
     position: relative;
+    margin-right: 5px;
   }
   &__check:checked ~ &__toggle {
     border-color: #399EFC;

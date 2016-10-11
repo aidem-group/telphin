@@ -6,8 +6,8 @@
     top: 0;
   }
   &_offer {
-    padding: 30px 20px 20px 20px;
-    width: 290px;
+    padding: 25px 20px 20px 20px;
+    width: 250px;
     background-color: #FFF;
     -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.14);
     -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.14);
@@ -15,6 +15,11 @@
   }
   &__btn {
     text-align: center;
+  }
+  &__separate {
+    width: 100%;
+    height: 1px;
+    background-color: #ececec;
   }
   &_success {
     padding-top: 85px;
@@ -30,6 +35,6 @@
     padding-bottom: 30px;
   }
   &_settings &__btn{
-    margin-top: 30px;
+    padding-top: 30px;
   }
 }

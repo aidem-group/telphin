@@ -37,6 +37,9 @@
     border: none;
     border-radius: 0;
   }
+  &_settings &__title {
+    line-height: 66px;
+  }
   &_stat &__title,
   &_settings &__title {
     color: #000000;
