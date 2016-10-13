@@ -11,19 +11,19 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    &_callout {
+    &-callout {
       background-color: #0abc6f;
     }
-    &_callin {
+    &-callin {
       background-color: #399efc;
     }
-    &_callinadd {
+    &-callinadd {
       background-color: #318bdf;
     }
-    &_free {
+    &-free {
       background-color: #ffffff;
     }
-    &_unknown {
+    &-unknown {
       background-color: #b6bfcd;
       box-shadow: none;
     }
@@ -31,10 +31,8 @@
   .time-bar-item {
     color: #9DA2AB;
     font-size: 12px;
-    &:after {
-      content: '';
+    .time-bar-line {
       display: block;
-      height: 100000%;
       width: 1px;
       background-color: #ececec;
       position: absolute;

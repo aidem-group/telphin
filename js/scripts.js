@@ -313,11 +313,12 @@ function tableAttention() {
 
 // table row
 function tableRow() {
-    var $trGroup = $('.js-tr-group');
+    var $mainTable = $('.js-table-monitoring[data-table=monitoring-main]'),
+        $trGroup = $mainTable.find('.js-tr-group');
     $trGroup.on('click', function () {
         var $this = $(this),
             currentData = $this.data('tr');
-        $(".js-tr[data-tr = " + currentData + "]").fadeToggle(0);
+        $mainTable.find(".js-tr[data-tr = " + currentData + "]").fadeToggle(0);
     });
 }
 
@@ -439,6 +440,7 @@ $(document).ready(function(){
         }
     });
 
+
     $('.js-offers-btn').tooltipster({
         theme: 'table-tooltip-wr',
         contentAsHTML: true,
@@ -446,7 +448,8 @@ $(document).ready(function(){
         interactive: true,
         side: 'top',
         trigger: 'click',
-        delay: 50,
+        delay: 200,
+        animationDuration: 200,
         content: $(".js-tooltip-content[data-tooltip-content='offers-btn']").html(),
         functionReady: function (instance) {
             var $formOffer = $(instance.elementTooltip()).find('.js-form-offer'),
@@ -520,7 +523,7 @@ $(document).ready(function(){
         $btnStatSale = $('.js-btn-stat-sale'),
         $btnStatCorporate = $('.js-btn-stat-corporate'),
         $btnStatGaranty = $('.js-btn-stat-garanty');
-    google.charts.load('current', {'packages':['corechart','gauge','line']});
+    google.charts.load('current', {'packages':['corechart','gauge','line'],'language': 'ru' });
     google.charts.setOnLoadCallback(drawChartStatCalls);
     google.charts.setOnLoadCallback(drawChartStatInCalls);
     google.charts.setOnLoadCallback(drawChartStatOutCalls);
@@ -528,7 +531,6 @@ $(document).ready(function(){
 
     //График принятых/непринятых звонков
     function drawChartStatCalls() {
-
         var dataSale = google.visualization.arrayToDataTable([
             ['Task', 'Hours per Day'],
             ['Work',     30],
@@ -554,7 +556,9 @@ $(document).ready(function(){
             pieHole: 0.5,
             legend: {position:'none'},
             colors:['#df4d41','#0abc6e'],
-            tooltip: {ignoreBounds: true},
+            tooltip: {
+                ignoreBounds: true
+            },
             fontSize: 12
         };
 
@@ -751,11 +755,15 @@ $(document).ready(function(){
     function drawChartStatWaitLine() {
 
         var data = new google.visualization.DataTable();
-        data.addColumn('number', 'Вторник');
+        data.addColumn('date', '');
         data.addColumn('number', 'Секунд');
 
         data.addRows([
-            [0, 90],   [10, 80], [20, 80], [30, 65], [40, 60]
+            [new Date(2015, 3, 30), 90],
+            [new Date(2015, 4, 30), 80],
+            [new Date(2015, 5, 30), 80],
+            [new Date(2015, 6, 30), 65],
+            [new Date(2015, 7, 30), 60]
         ]);
 
         var options = {
@@ -766,6 +774,9 @@ $(document).ready(function(){
             vAxis: {
                 title: ''
             },
+            chartArea: {
+              width: 230
+            },
             series: [
                 {color: '#318bdf', visibleInLegend: false}
             ]
@@ -775,147 +786,6 @@ $(document).ready(function(){
         chart.draw(data, options);
     }
 
-    //График звонков в таблице
-
-    function drawTimelineDaily(){
-        var data = {
-            legends: {
-                callout: {
-                    name: 'Исходящий',
-                    class: 'callout'
-                },
-                callin: {
-                    name: 'Входящий',
-                    class: 'callin'
-                },
-                callinadd: {
-                    name: 'Входящий на доб.',
-                    class: 'callinadd'
-                },
-                free: {
-                    name: 'Свободен',
-                    class: 'free'
-                },
-                offline: {
-                    name: 'Офлайн',
-                    class:'offline'
-                }
-            },
-            lines: {
-                'user1': [
-                    ['callout', '07:00', '8:00'],
-                    ['callin', '11:00', '11:30'],
-                    ['callinadd', '11:30', '11:50'],
-                    ['free', '11:50', '12:40'],
-                    ['callinadd', '12:40', '13:50'],
-                    ['callout', '13:50', '14:00']
-                ],
-                'user2': [
-                    ['callin', '09:00', '10:50'],
-                    ['callout', '10:50', '11:50'],
-                    ['free', '11:50', '12:00'],
-                    ['callinadd', '12:30', '13:50']
-                ],
-                'user3': [
-                    ['callinadd', '07:20', '08:50'],
-                    ['free', '09:30', '10:00'],
-                    ['callinadd', '10:00', '11:50'],
-                    ['callout', '12:20', '12:50'],
-                    ['callin', '12:50', '14:00'],
-                    ['callout', '14:20', '15:00']
-                ]
-            }
-        };
-
-        var timeLineChart = $('.js-timeline-daily').glavwebTimeLineChart(data, {
-            timeBarSelector:   '.time-bar',
-            legendBarSelector: '.legend-bar',
-            step:              60,
-            width:             682
-        });
-
-        timeLineChart.drawLegendBar();
-        timeLineChart.drawTimeBar();
-        timeLineChart.drawLines();
-        /**
-         * Custom selectors
-         */
-        // timeLineChart.drawLegendBar('.legend-top');
-        // timeLineChart.drawTimeBar('.time-bar-bottom');
-        // timeLine.drawLine('user1', '.user-1');
-    }
-
-    drawTimelineDaily();
-
-    function drawTimelineOverall(){
-        var data = {
-            legends: {
-                callout: {
-                    name: 'Исходящий',
-                    class: 'callout'
-                },
-                callin: {
-                    name: 'Входящий',
-                    class: 'callin'
-                },
-                callinadd: {
-                    name: 'Входящий на доб.',
-                    class: 'callinadd'
-                },
-                free: {
-                    name: 'Свободен',
-                    class: 'free'
-                },
-                offline: {
-                    name: 'Офлайн',
-                    class:'offline'
-                }
-            },
-            lines: {
-                'user1': [
-                    ['callout', '07:00', '8:00'],
-                    ['callin', '11:00', '11:30'],
-                    ['callinadd', '11:30', '11:50'],
-                    ['free', '11:50', '12:40'],
-                    ['callinadd', '12:40', '13:50'],
-                    ['callout', '13:50', '14:00']
-                ],
-                'user2': [
-                    ['callin', '09:00', '10:50'],
-                    ['callout', '10:50', '11:50'],
-                    ['free', '11:50', '12:00'],
-                    ['callinadd', '12:30', '13:50']
-                ],
-                'user3': [
-                    ['callinadd', '07:20', '08:50'],
-                    ['free', '09:30', '10:00'],
-                    ['callinadd', '10:00', '11:50'],
-                    ['callout', '12:20', '12:50'],
-                    ['callin', '12:50', '14:00'],
-                    ['callout', '14:20', '15:00']
-                ]
-            }
-        };
-
-        var timeLineChart = $('.js-timeline-overall').glavwebTimeLineChart(data, {
-            timeBarSelector:   '.time-bar',
-            legendBarSelector: '.legend-bar',
-            step:              60,
-            width:             682
-        });
-
-        timeLineChart.drawLegendBar();
-        timeLineChart.drawTimeBar();
-        timeLineChart.drawLines();
-        /**
-         * Custom selectors
-         */
-        // timeLineChart.drawLegendBar('.legend-top');
-        // timeLineChart.drawTimeBar('.time-bar-bottom');
-        // timeLine.drawLine('user1', '.user-1');
-    }
-
-    drawTimelineOverall();
 
     // Modal options
     var $modalOptions = $('.js-modal-options'),

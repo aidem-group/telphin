@@ -17,7 +17,7 @@
     background-color: #ececec;
   }
   &__title {
-    padding-top: 30px;
+    padding-top: 15px;
     font-size: 18px;
     color: #000000;
     margin-bottom: 5px;
@@ -25,6 +25,9 @@
   &_bordered &__title,
   &_bordered &__item {
     padding: 15px 40px;
+  }
+  &_sortable &__item {
+    background-color: #ffffff;
   }
   &_sortable &__item:before {
     content: '';

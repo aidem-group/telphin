@@ -6780,7 +6780,8 @@ table {
 .offers-btn {
   font-size: 1em;
   cursor: pointer;
-  color: #399efc; }
+  color: #399efc;
+  padding: 0; }
 
 .modal {
   background-color: #FFF;
@@ -6901,8 +6902,7 @@ table {
   border: 1px solid #ececec;
   vertical-align: middle;
   cursor: pointer;
-  position: relative;
-  margin-right: 5px; }
+  position: relative; }
 
 .form-label__check:checked ~ .form-label__toggle {
   border-color: #399EFC; }
@@ -6924,6 +6924,9 @@ table {
 
 .form-label_sortable .form-label__toggle {
   margin-right: 10px; }
+
+.form-label__text.w125 {
+  width: 125px; }
 
 .form-label_option {
   line-height: 25px; }
@@ -6950,6 +6953,9 @@ table {
 
 .form-label_option-lg .form-label__input {
   width: 50px; }
+
+.form-label + .form-label .form-label__check {
+  margin-left: 5px; }
 
 .form-title {
   font-size: 16px;
@@ -6981,13 +6987,15 @@ table {
     height: 1px;
     background-color: #ececec; }
   .form-list__title {
-    padding-top: 30px;
+    padding-top: 15px;
     font-size: 18px;
     color: #000000;
     margin-bottom: 5px; }
   .form-list_bordered .form-list__title,
   .form-list_bordered .form-list__item {
     padding: 15px 40px; }
+  .form-list_sortable .form-list__item {
+    background-color: #ffffff; }
   .form-list_sortable .form-list__item:before {
     content: '';
     position: absolute;
@@ -7114,25 +7122,23 @@ table {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
-  .timeline-wr .timeline-item_callout {
+  .timeline-wr .timeline-item-callout {
     background-color: #0abc6f; }
-  .timeline-wr .timeline-item_callin {
+  .timeline-wr .timeline-item-callin {
     background-color: #399efc; }
-  .timeline-wr .timeline-item_callinadd {
+  .timeline-wr .timeline-item-callinadd {
     background-color: #318bdf; }
-  .timeline-wr .timeline-item_free {
+  .timeline-wr .timeline-item-free {
     background-color: #ffffff; }
-  .timeline-wr .timeline-item_unknown {
+  .timeline-wr .timeline-item-unknown {
     background-color: #b6bfcd;
     box-shadow: none; }
 
 .timeline-wr .time-bar-item {
   color: #9DA2AB;
   font-size: 12px; }
-  .timeline-wr .time-bar-item:after {
-    content: '';
+  .timeline-wr .time-bar-item .time-bar-line {
     display: block;
-    height: 100000%;
     width: 1px;
     background-color: #ececec;
     position: absolute;
@@ -7173,3 +7179,26 @@ table {
     border: 1px solid #ECECEC; }
   .timeline-wr .legend-item_offline:before, .timeline-wr .legend-item_unknown:before {
     background-color: #b6bfcd; }
+
+.timeline-tooltip {
+  color: #B6BFCD;
+  position: relative;
+  font-size: 12px;
+  background-color: #f4f5f7;
+  border-radius: 4px;
+  padding: 5px 10px;
+  white-space: nowrap; }
+  .timeline-tooltip__time {
+    color: #000000; }
+  .timeline-tooltip:before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-style: solid;
+    border-width: 7px 6px 0 6px;
+    border-color: #f4f5f7 transparent transparent transparent;
+    bottom: -7px;
+    left: 50%;
+    margin-left: -6px; }
