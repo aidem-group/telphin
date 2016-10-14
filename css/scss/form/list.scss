@@ -53,6 +53,7 @@
   }
   &_sortable-3 &__separate {
     position: absolute;
+    z-index: 1;
     top: 33.3%;
   }
   &_sortable-3 &__separate + &__separate {
