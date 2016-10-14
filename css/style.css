@@ -7017,6 +7017,7 @@ table {
     visibility: visible; }
   .form-list_sortable-3 .form-list__separate {
     position: absolute;
+    z-index: 1;
     top: 33.3%; }
   .form-list_sortable-3 .form-list__separate + .form-list__separate {
     top: 66.6%; }
