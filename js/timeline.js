@@ -12,7 +12,6 @@
         }
 
         var r = convertMinsToHrsMins(85);
-        console.log(r);
 
         //График звонков в таблице
 
@@ -37,8 +36,19 @@
         }
 
         //
-        //Добавление в график временных отрезков для пользователей
-        function addUser(timeline, group) {
+        //Добавление в график временных отрезков для пользователей для графика Daily
+        function addUserDaily(timeline, group) {
+            var $timeline = $(timeline);
+            var i = 1;
+            $timeline.find(".js-tr[data-tr='" + group + "']").find('.td.timeline').each(function () {
+                $(this).append("<div data-timeline='user-" + group + i++ + "' class='time-line'></div>")
+            });
+        }
+
+        //
+
+        //Добавление в график временных отрезков для пользователей для графика Overall
+        function addUserOverall(timeline, group) {
             var $timeline = $(timeline);
             var i = 1;
             $timeline.find(".js-tr[data-tr='" + group + "']").find('.td.timeline').each(function () {
@@ -109,7 +119,7 @@
             };
 
             addTimeBar('.js-timeline-daily', group);
-            addUser('.js-timeline-daily', group);
+            addUserDaily('.js-timeline-daily', group);
             var timeLineChart = $('.js-timeline-daily').glavwebTimeLineChart(data, {
                 timeBarSelector: '.time-bar[data-time-bar=' + group + ']',
                 legendBarSelector: '.legend-bar',
@@ -119,13 +129,18 @@
 
             timeLineChart.drawLegendBar();
             timeLineChart.drawTimeBar();
-            timeLineChart.drawLines();
+            //timeLineChart.drawLines();
             /**
              * Custom selectors
              */
                 // timeLineChart.drawLegendBar('.legend-top');
                 // timeLineChart.drawTimeBar('.time-bar-bottom');
                 // timeLine.drawLine('user1', '.user-1');
+
+            timeLineChart.drawLine('user1', '[data-timeline=user-sales1]');
+            timeLineChart.drawLine('user2', '[data-timeline=user-sales2]');
+            timeLineChart.drawLine('user3', '[data-timeline=user-sales3]');
+            timeLineChart.drawLine('user4', '[data-timeline=user-sales4]');
             addTimeBarLine(group);
         }
 
@@ -183,7 +198,7 @@
                 }
             };
             addTimeBar('.js-timeline-daily', group);
-            addUser('.js-timeline-daily', group);
+            addUserDaily('.js-timeline-daily', group);
             var timeLineChart = $('.js-timeline-daily').glavwebTimeLineChart(data, {
                 timeBarSelector: '.time-bar[data-time-bar=' + group + ']',
                 legendBarSelector: '.legend-bar',
@@ -193,13 +208,16 @@
 
             timeLineChart.drawLegendBar();
             timeLineChart.drawTimeBar();
-            timeLineChart.drawLines();
+            //timeLineChart.drawLines();
             /**
              * Custom selectors
              */
                 // timeLineChart.drawLegendBar('.legend-top');
                 // timeLineChart.drawTimeBar('.time-bar-bottom');
                 // timeLine.drawLine('user1', '.user-1');
+            timeLineChart.drawLine('user1', '[data-timeline=user-corporate1]');
+            timeLineChart.drawLine('user2', '[data-timeline=user-corporate2]');
+            timeLineChart.drawLine('user3', '[data-timeline=user-corporate3]');
             addTimeBarLine(group);
         }
 
@@ -259,7 +277,7 @@
             };
 
             addCommonGrouped('.js-timeline-overall', group);
-            addUser('.js-timeline-overall', group);
+            addUserOverall('.js-timeline-overall', group);
             var timeLineChart = $('.js-timeline-overall').glavwebTimeLineChart(data, {
                 timeBarSelector: '.time-bar[data-time-bar=' + group + ']',
                 legendBarSelector: '.legend-bar',
@@ -270,7 +288,13 @@
             timeLineChart.drawLegendBar();
             timeLineChart.drawTimeBar();
             timeLineChart.drawLines();
-            timeLineChart.drawGroupedLinesByLegend('desc');
+            timeLineChart.drawGroupedLinesByLegend('legend', {
+                callout: 5,
+                callin: 4,
+                callinadd : 3,
+                free: 2,
+                unknown: 1
+            });
             timeLineChart.drawLineCommonGroupedByLegend('.common-grouped[data-common-grouped=' + group + ']', 'desc');
             /**
              * Custom selectors
@@ -278,6 +302,7 @@
             // timeLineChart.drawLegendBar('.legend-top');
             // timeLineChart.drawTimeBar('.time-bar-bottom');
             // timeLine.drawLine('user1', '.user-1');
+
         }
 
         drawTimelineOverallSales('sales');
@@ -343,7 +368,7 @@
             };
 
             addCommonGrouped('.js-timeline-overall', group);
-            addUser('.js-timeline-overall', group);
+            addUserOverall('.js-timeline-overall', group);
 
             var timeLineChart = $('.js-timeline-overall').glavwebTimeLineChart(data, {
                 timeBarSelector: '.time-bar[data-time-bar=' + group + ']',
@@ -355,7 +380,13 @@
             timeLineChart.drawLegendBar();
             timeLineChart.drawTimeBar();
             timeLineChart.drawLines();
-            timeLineChart.drawGroupedLinesByLegend('desc');
+            timeLineChart.drawGroupedLinesByLegend('legend', {
+                 callout: 5,
+                 callin: 4,
+                 callinadd : 3,
+                 free: 2,
+                 unknown: 1
+             });
             timeLineChart.drawLineCommonGroupedByLegend('.common-grouped[data-common-grouped=' + group + ']', 'desc');
             /**
              * Custom selectors
@@ -368,16 +399,48 @@
 
         drawTimelineOverallCorporate('corporate');
 
+        $('.js-timeline-daily').find('.timeline-item').tooltipster({
+            theme: 'table-tooltip-wr',
+            contentAsHTML: true,
+            arrow: false,
+            side: 'top',
+            delay: 50,
+            animationDuration: 200,
+            minWidth: 265,
+            content: '<div class="timeline-tooltip timeline-tooltip_daily"><span class="js-timeline-tooltip-text timeline-tooltip__text">Исходящие</span><span class="js-timeline-tooltip-time timeline-tooltip__time" >4:55:03 ч</span><br><span class="js-timeline-tooltip-number timeline-tooltip__number"></span><span class="js-timeline-tooltip-name timeline-tooltip__name"></span></div>',
+            functionReady: function (instance) {
+                var $tooltip = $(instance.elementTooltip()),
+                    $trigger = $(instance.elementOrigin()),
+                    $time = $trigger.data('timeline-start-time'),
+                    $legend = $trigger.data('timeline-legend'),
+                    $number = $trigger.closest('.js-tr').find('.phone-number').text(),
+                    $name = $trigger.closest('.js-tr').find('.td.first').text(),
+                    $legendBar = $('.js-timeline-overall').find('.legend-bar');
+                $tooltip.find('.js-timeline-tooltip-time').text('в ' + $time);
+                $tooltip.find('.js-timeline-tooltip-name').text($name);
+                console.log($number);
+                if($number == '') {
+                    $tooltip.find('.js-timeline-tooltip-number').remove();
+                } else {
+                    $tooltip.find('.js-timeline-tooltip-number').text($number);
+
+                }
+                if($legend == 'unknown') {
+                    $tooltip.find('.js-timeline-tooltip-text').text('Офлайн');
+                }else {
+                    $tooltip.find('.js-timeline-tooltip-text').text($legendBar.find(".legend-item_"+$legend+"").text());
+                }
+            }
+        });
+
         $('.js-timeline-overall').find('.timeline-item').tooltipster({
             theme: 'table-tooltip-wr',
             contentAsHTML: true,
             arrow: false,
-            interactive: true,
             side: 'top',
-            trigger: 'click',
             delay: 50,
+            animationDuration: 200,
             minWidth: 'auto',
-            //content: '<div class="timeline-tooltip"><div>Исходящие</div><div>4:55:03 ч</div></div>',
             content: '<div class="timeline-tooltip"><div class="js-timeline-tooltip-text timeline-tooltip__text">Исходящие</div><div class="js-timeline-tooltip-time timeline-tooltip__time" >4:55:03 ч</div></div>',
             functionReady: function (instance) {
                 var $tooltip = $(instance.elementTooltip()),

@@ -331,6 +331,7 @@ $(document).ready(function(){
         contentAsHTML: true,
         arrow: false,
         delay: 50,
+        animationDuration: 200,
         content: '<div class="js-tooltip table-tooltip"><div class="js-tooltip-text table-tooltip__text">Норма не более 1/1</div></div>',
         functionPosition: function(instance, helper, position){
             position.coord.top += 20;
@@ -348,6 +349,7 @@ $(document).ready(function(){
         contentAsHTML: true,
         arrow: false,
         delay: 50,
+        animationDuration: 200,
         content: '<div class="js-tooltip table-tooltip table-tooltip_phone"><div class="js-tooltip-text table-tooltip__text">Позвонить</div></div>'
     });
     $('.js-agent-status').tooltipster({
@@ -355,6 +357,7 @@ $(document).ready(function(){
         contentAsHTML: true,
         arrow: false,
         delay: 50,
+        animationDuration: 200,
         content: '<div class="js-tooltip table-tooltip table-tooltip_queue"><div class="js-tooltip-text table-tooltip__text">Вывести из очереди</div></div>',
         functionPosition: function(instance, helper, position){
             position.coord.top += 20;
@@ -368,6 +371,7 @@ $(document).ready(function(){
         interactive: true,
         arrow: false,
         delay: 50,
+        animationDuration: 200,
         trigger: 'click',
         side: 'right',
         content: '<div class="js-tooltip table-tooltip table-tooltip_owner"><div class="table-tooltip__content"><input class="table-tooltip-input" type="text" placeholder="Имя абонента"><button class="table-tooltip-btn">Сохранить</button><button class="js-tooltip-close table-tooltip-close"></button></div><div class="js-tooltip-triangle table-tooltip__triangle"></div></div>',
@@ -386,6 +390,7 @@ $(document).ready(function(){
         contentAsHTML: true,
         arrow: false,
         delay: 50,
+        animationDuration: 200,
         content: '<div class="js-tooltip table-tooltip table-tooltip_phone"><div class="js-tooltip-text table-tooltip__text">Позвонить&nbsp;агенту</div></div>'
     });
 
@@ -397,6 +402,7 @@ $(document).ready(function(){
         side: 'bottom',
         trigger: 'click',
         delay: 50,
+        animationDuration: 200,
         content: '<ul class="table-dropdown-menu table-dropdown-menu_phone">'+
         '<li class="table-dropdown-menu__item">' +
         '<a href="" target="_blank" class="table-link table-link_phone">' +
@@ -433,6 +439,7 @@ $(document).ready(function(){
         side: 'bottom',
         trigger: 'click',
         delay: 50,
+        animationDuration: 200,
         content: $(".js-tooltip-content[data-tooltip-content='dropdown-download']").html(),
         functionPosition: function(instance, helper, position){
             position.coord.top -= 30;
@@ -474,6 +481,7 @@ $(document).ready(function(){
         side: 'bottom',
         trigger: 'click',
         delay: 50,
+        animationDuration: 200,
         content: $(".js-tooltip-content[data-tooltip-content='stat-other']").html(),
         functionPosition: function(instance, helper, position){
             position.coord.top -= 30;
@@ -493,6 +501,7 @@ $(document).ready(function(){
         side: 'bottom',
         trigger: 'click',
         delay: 50,
+        animationDuration: 200,
         content: $(".js-tooltip-content[data-tooltip-content='stat-phones']").html(),
         functionPosition: function(instance, helper, position){
             position.coord.top -= 30;
@@ -512,6 +521,7 @@ $(document).ready(function(){
         side: 'bottom',
         trigger: 'click',
         delay: 50,
+        animationDuration: 200,
         content: $(".js-tooltip-content[data-tooltip-content='opt-count']").html(),
         functionReady: function (instance) {
             //
@@ -808,7 +818,7 @@ $(document).ready(function(){
 
     $('.js-options-btn').on('click', function () {
         $('.js-modal-options').modal({
-            fadeDuration: 100
+            fadeDuration: 0
         });
         $('.jquery-modal').css({'z-index':2,'background-color':'rgba(0,0,0,.3)'});
     });
@@ -917,6 +927,7 @@ $(document).ready(function(){
         side: 'bottom',
         trigger: 'click',
         delay: 50,
+        animationDuration: 200,
         content:'<div><img src="../img/calendar/calendar-small.png" alt=""></div>'
     });
     $tableNavPeriod.find("[data-period='calendar-double']").tooltipster({
@@ -927,6 +938,7 @@ $(document).ready(function(){
         side: 'bottom',
         trigger: 'click',
         delay: 50,
+        animationDuration: 200,
         content:'<div><img src="../img/calendar/calendar-big.png" alt=""></div>'
     });
     
