@@ -6278,6 +6278,8 @@ table {
     width: 662px; }
   .table_efficiency .th.first {
     padding: 10px 20px; }
+  .table_efficiency .th .table-units {
+    color: #B6BFCD; }
   .table_efficiency .td {
     line-height: 16px;
     padding: 0 20px;
@@ -6303,6 +6305,8 @@ table {
     background-color: #f7f7f7; }
   .table_efficiency .td .phone-btn .icon-phone {
     color: #399efc; }
+  .table_efficiency .td.agent-status.tooltipstered:hover {
+    cursor: pointer; }
   .table_efficiency .td.agent-status,
   .table_efficiency .td.call-status {
     line-height: 20px; }
@@ -6491,7 +6495,8 @@ table {
   .table-nav_period {
     float: left;
     border-radius: 6px;
-    border-width: 1px; }
+    border-width: 1px;
+    line-height: 60px; }
   .table-nav_period .table-nav__title {
     font-size: 14px;
     text-transform: none; }
@@ -6537,6 +6542,7 @@ table {
   .table-radio__toggle {
     width: 26px;
     height: 10px;
+    margin-left: 10px;
     border-radius: 4px;
     background-color: #e0ebff;
     display: inline-block;
@@ -6618,7 +6624,7 @@ table {
     visibility: hidden; }
   .table-dropdown.open .table-dropdown-toggle_phone {
     visibility: visible;
-    background-color: #f7f7f7; }
+    background-color: #edf4fd; }
 
 .table-link {
   display: block;
@@ -6744,7 +6750,8 @@ table {
   border: none; }
 
 .efficiency {
-  padding-top: 20px; }
+  padding-top: 20px;
+  width: 1180px; }
   .efficiency__period {
     margin-top: 40px; }
   .efficiency__table {
@@ -6755,7 +6762,7 @@ table {
     margin-top: 20px; }
 
 .efficiency-header {
-  max-width: 575px; }
+  max-width: 555px; }
   .efficiency-header:after {
     display: block;
     content: '';
@@ -6877,6 +6884,9 @@ table {
   padding: 10px 11px 11px 11px;
   resize: none; }
 
+.theme_default .form-label__textarea:focus {
+  border-color: #ececec; }
+
 .form-label__input {
   height: 35px; }
 
@@ -6921,9 +6931,6 @@ table {
 .form-label_sortable {
   width: 50%;
   float: left; }
-
-.form-label_sortable .form-label__toggle {
-  margin-right: 10px; }
 
 .form-label__text.w125 {
   width: 125px; }
@@ -6989,8 +6996,7 @@ table {
   .form-list__title {
     padding-top: 15px;
     font-size: 18px;
-    color: #000000;
-    margin-bottom: 5px; }
+    color: #000000; }
   .form-list_bordered .form-list__title,
   .form-list_bordered .form-list__item {
     padding: 15px 40px; }
@@ -7168,7 +7174,7 @@ table {
     width: 8px;
     height: 14px;
     vertical-align: middle;
-    margin-right: 5px; }
+    margin: 0 5px 2px 0; }
   .timeline-wr .legend-item_callout:before {
     background-color: #0abc6f; }
   .timeline-wr .legend-item_callin:before {

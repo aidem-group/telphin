@@ -12,6 +12,9 @@
     padding: 10px 11px 11px 11px;
     resize: none;
   }
+  .theme_default &__textarea:focus {
+    border-color: #ececec;
+  }
   &__input {
     height: 35px;
   }
@@ -58,9 +61,6 @@
   &_sortable {
     width: 50%;
     float: left;
-  }
-  &_sortable &__toggle {
-    margin-right: 10px;
   }
 
   &__text.w125{

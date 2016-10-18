@@ -1,6 +1,19 @@
 (function ($) {
     $(document).ready(function () {
 
+        function convertMinsToHrsMins (minutes) {
+            var h = Math.floor(minutes / 60);
+            var m = minutes % 60;
+
+            h = h < 10 ? '0' + h : h;
+            m = m < 10 ? '0' + m : m;
+
+            return h + ':' + m;
+        }
+
+        var r = convertMinsToHrsMins(85);
+        console.log(r);
+
         //График звонков в таблице
 
         //Добавление в график общего временного отрезка пользователей
@@ -101,7 +114,7 @@
                 timeBarSelector: '.time-bar[data-time-bar=' + group + ']',
                 legendBarSelector: '.legend-bar',
                 step: 60,
-                width: 682
+                width: 683
             });
 
             timeLineChart.drawLegendBar();
@@ -175,7 +188,7 @@
                 timeBarSelector: '.time-bar[data-time-bar=' + group + ']',
                 legendBarSelector: '.legend-bar',
                 step: 60,
-                width: 682
+                width: 683
             });
 
             timeLineChart.drawLegendBar();
@@ -251,7 +264,7 @@
                 timeBarSelector: '.time-bar[data-time-bar=' + group + ']',
                 legendBarSelector: '.legend-bar',
                 step: 60,
-                width: 682
+                width: 683
             });
 
             timeLineChart.drawLegendBar();
@@ -336,7 +349,7 @@
                 timeBarSelector: '.time-bar[data-time-bar=' + group + ']',
                 legendBarSelector: '.legend-bar',
                 step: 60,
-                width: 682
+                width: 683
             });
 
             timeLineChart.drawLegendBar();
@@ -372,7 +385,7 @@
                     $time = $trigger.data('timeline-total-minutes'),
                     $legend = $trigger.data('timeline-legend'),
                     $legendBar = $('.js-timeline-overall').find('.legend-bar');
-                $tooltip.find('.js-timeline-tooltip-time').text($time);
+                $tooltip.find('.js-timeline-tooltip-time').text(convertMinsToHrsMins($time) + ' ч');
 
                 if($legend == 'unknown') {
                     $tooltip.find('.js-timeline-tooltip-text').text('Офлайн');

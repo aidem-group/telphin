@@ -37,6 +37,9 @@
     .th.first {
       padding: 10px 20px;
     }
+    .th .table-units {
+      color: #B6BFCD;
+    }
     //td
     .td {
       line-height: 16px;
@@ -82,6 +85,9 @@
     }
 
     //
+    .td.agent-status.tooltipstered:hover {
+      cursor: pointer;
+    }
     .td.agent-status,
     .td.call-status {
       line-height: 20px;

@@ -693,15 +693,15 @@ $(document).ready(function(){
 
         var dataSale = google.visualization.arrayToDataTable([
             ['Label', 'Value'],
-            ['секунд', 60]
+            ['секунды', 60]
         ]);
         var dataCorporate = google.visualization.arrayToDataTable([
             ['Label', 'Value'],
-            ['секунд', 40]
+            ['секунды', 40]
         ]);
         var dataGaranty = google.visualization.arrayToDataTable([
             ['Label', 'Value'],
-            ['секунд', 30]
+            ['секунды', 30]
         ]);
 
         var options = {
