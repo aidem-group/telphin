@@ -418,7 +418,6 @@
                     $legendBar = $('.js-timeline-overall').find('.legend-bar');
                 $tooltip.find('.js-timeline-tooltip-time').text('в ' + $time);
                 $tooltip.find('.js-timeline-tooltip-name').text($name);
-                console.log($number);
                 if($number == '') {
                     $tooltip.find('.js-timeline-tooltip-number').remove();
                 } else {
