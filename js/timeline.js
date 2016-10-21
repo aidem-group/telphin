@@ -295,7 +295,13 @@
                 free: 2,
                 unknown: 1
             });
-            timeLineChart.drawLineCommonGroupedByLegend('.common-grouped[data-common-grouped=' + group + ']', 'desc');
+            timeLineChart.drawLineCommonGroupedByLegend('.common-grouped[data-common-grouped=' + group + ']', 'legend',{
+                callout: 5,
+                callin: 4,
+                callinadd : 3,
+                free: 2,
+                unknown: 1
+            });
             /**
              * Custom selectors
              */
@@ -387,7 +393,13 @@
                  free: 2,
                  unknown: 1
              });
-            timeLineChart.drawLineCommonGroupedByLegend('.common-grouped[data-common-grouped=' + group + ']', 'desc');
+            timeLineChart.drawLineCommonGroupedByLegend('.common-grouped[data-common-grouped=' + group + ']', 'legend', {
+                callout: 5,
+                callin: 4,
+                callinadd : 3,
+                free: 2,
+                unknown: 1
+            });
             /**
              * Custom selectors
              */
