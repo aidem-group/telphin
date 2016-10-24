@@ -391,7 +391,7 @@ $(document).ready(function(){
         arrow: false,
         delay: 50,
         animationDuration: 200,
-        content: '<div class="js-tooltip table-tooltip table-tooltip_phone"><div class="js-tooltip-text table-tooltip__text">Позвонить&nbsp;агенту</div></div>'
+        content: '<div class="js-tooltip table-tooltip table-tooltip_phone"><div class="js-tooltip-text table-tooltip__text">Подключться&nbsp;к&nbsp;разговору</div></div>'
     });
 
     $('.js-dropdown-phone').tooltipster({
@@ -543,20 +543,8 @@ $(document).ready(function(){
     function drawChartStatCalls() {
         var dataSale = google.visualization.arrayToDataTable([
             ['Task', 'Hours per Day'],
-            ['Work',     30],
-            ['Eat',      70]
-        ]);
-
-        var dataCorporate = google.visualization.arrayToDataTable([
-            ['Task', 'Hours per Day'],
-            ['Work',     20],
-            ['Eat',      80]
-        ]);
-
-        var dataGaranty = google.visualization.arrayToDataTable([
-            ['Task', 'Hours per Day'],
-            ['Work',     50],
-            ['Eat',      50]
+            ['Непринятые',     30],
+            ['Принятые',      70]
         ]);
 
         var options = {
@@ -580,16 +568,6 @@ $(document).ready(function(){
             $(this).addClass('active');
             chart.draw(dataSale, options);
         });
-        $btnStatCorporate.on('click', function () {
-            $btnStat.removeClass('active');
-            $(this).addClass('active');
-            chart.draw(dataCorporate, options);
-        });
-        $btnStatGaranty.on('click', function () {
-            $btnStat.removeClass('active');
-            $(this).addClass('active');
-            chart.draw(dataGaranty, options);
-        });
     }
 
     //График принятых звонков
@@ -597,20 +575,9 @@ $(document).ready(function(){
 
         var dataSale = google.visualization.arrayToDataTable([
             ['Task', 'Hours per Day'],
-            ['Work',     20],
-            ['Eat',      45],
-            ['Other',      35]
-        ]);
-        var dataCorporate = google.visualization.arrayToDataTable([
-            ['Task', 'Hours per Day'],
-            ['Work',     10],
-            ['Eat',      90]
-        ]);
-
-        var dataGaranty = google.visualization.arrayToDataTable([
-            ['Task', 'Hours per Day'],
-            ['Work',     90],
-            ['Eat',      10]
+            ['Переведено',     20],
+            ['Отключился агент',      45],
+            ['Отключился звонящий',      35]
         ]);
 
 
@@ -633,16 +600,6 @@ $(document).ready(function(){
             $(this).addClass('active');
             chart.draw(dataSale, options);
         });
-        $btnStatCorporate.on('click', function () {
-            $btnStat.removeClass('active');
-            $(this).addClass('active');
-            chart.draw(dataCorporate, options);
-        });
-        $btnStatGaranty.on('click', function () {
-            $btnStat.removeClass('active');
-            $(this).addClass('active');
-            chart.draw(dataGaranty, options);
-        });
     }
 
     //График непринятых звонков
@@ -650,20 +607,9 @@ $(document).ready(function(){
 
         var dataSale = google.visualization.arrayToDataTable([
             ['Task', 'Hours per Day'],
-            ['Отключился агент',     45],
-            ['Eat',      20],
-            ['Other',      35]
-        ]);
-        var dataCorporate = google.visualization.arrayToDataTable([
-            ['Task', 'Hours per Day'],
-            ['Work',     30],
-            ['Eat',      70]
-        ]);
-
-        var dataGaranty = google.visualization.arrayToDataTable([
-            ['Task', 'Hours per Day'],
-            ['Work',     60],
-            ['Eat',      40]
+            ['Покинули по таймингу',     45],
+            ['Переведено',      20],
+            ['Отказ звонящего',      35]
         ]);
 
 
@@ -685,16 +631,6 @@ $(document).ready(function(){
             $btnStat.removeClass('active');
             $(this).addClass('active');
             chart.draw(dataSale, options);
-        });
-        $btnStatCorporate.on('click', function () {
-            $btnStat.removeClass('active');
-            $(this).addClass('active');
-            chart.draw(dataCorporate, options);
-        });
-        $btnStatGaranty.on('click', function () {
-            $btnStat.removeClass('active');
-            $(this).addClass('active');
-            chart.draw(dataGaranty, options);
         });
     }
 
