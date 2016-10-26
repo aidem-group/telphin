@@ -108,6 +108,10 @@
 			color: #fb8d35;
 		}
 
+		.theme_default .header &-monitoring:hover {
+			color: #399efc;
+		}
+
 		&-favorite, &-stat, &-user-name, &-settings, &-monitoring {
 			position: relative;
 

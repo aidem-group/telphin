@@ -352,7 +352,10 @@ $(document).ready(function(){
         animationDuration: 200,
         content: '<div class="js-tooltip table-tooltip table-tooltip_phone"><div class="js-tooltip-text table-tooltip__text">Позвонить</div></div>'
     });
-    $('.js-agent-status').tooltipster({
+
+
+    var $agentStatus = $('.js-agent-status');
+    $agentStatus.tooltipster({
         theme: 'table-tooltip-wr',
         contentAsHTML: true,
         arrow: false,
@@ -363,6 +366,14 @@ $(document).ready(function(){
             position.coord.top += 20;
             return position;
         }
+    });
+    $agentStatus.on('click.agentOut', function () {
+        var $this = $(this),
+            dt = new Date(),
+            time = dt.getHours() + ":" + (dt.getMinutes() < 10 ? '0' : '') + dt.getMinutes();
+        $this.html('').append("<div>Выведен в&nbsp;"+time+"</div>");
+        $this.tooltipster('destroy');
+        $this.off('click.agentOut');
     });
 
     $('.js-phone-owner').tooltipster({
@@ -877,5 +888,8 @@ $(document).ready(function(){
         animationDuration: 200,
         content:'<div><img src="../img/calendar/calendar-big.png" alt=""></div>'
     });
-    
+    $('body').on('click.preloaderoff', function () {
+        $('.js-efficiency-preloader').remove();
+        $(this).off('click.preloaderoff');
+    });
 });

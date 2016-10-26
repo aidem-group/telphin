@@ -66,6 +66,8 @@
 //efficiency
 @import 'efficiency/base';
 @import 'efficiency/header';
+@import 'efficiency/cap';
+@import 'efficiency/preloader';
 
 //offers
 
@@ -101,3 +103,8 @@
 
 //stats
 @import  'stats/base';
+
+//cap
+
+@import 'cap/title';
+@import 'cap/btn';

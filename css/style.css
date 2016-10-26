@@ -4102,6 +4102,8 @@ table {
     user-select: none; }
     .theme_default .header .header_btn-monitoring {
       color: #fb8d35; }
+    .theme_default .header .header_btn-monitoring:hover {
+      color: #399efc; }
     .header_btn-favorite, .header_btn-stat, .header_btn-user-name, .header_btn-settings, .header_btn-monitoring {
       position: relative; }
       .header_btn-favorite:before, .header_btn-stat:before, .header_btn-user-name:before, .header_btn-settings:before, .header_btn-monitoring:before {
@@ -6310,6 +6312,8 @@ table {
   .table_efficiency .td.agent-status,
   .table_efficiency .td.call-status {
     line-height: 20px; }
+  .table_efficiency .td.agent-status {
+    padding: 0; }
   .table_efficiency .td.agent-status .add {
     color: #0abc6f; }
   .table_efficiency .td.call-status {
@@ -6390,11 +6394,13 @@ table {
     cursor: default; }
 
 .table-wr__inner {
+  position: relative;
   border-width: 1px 1px 0 1px;
   border-color: #ececec;
   border-style: solid;
   border-radius: 0 0 6px 6px;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 100%; }
 
 .table-btn {
   color: #000;
@@ -6768,6 +6774,8 @@ table {
     margin-top: 40px; }
   .efficiency__stats {
     margin-top: 20px; }
+  .efficiency__cap {
+    margin-top: 40px; }
 
 .efficiency-header {
   max-width: 555px; }
@@ -6787,6 +6795,32 @@ table {
     font-size: 1.1428571429em;
     max-width: 260px;
     line-height: 20px; }
+
+.efficiency-cap {
+  display: table;
+  width: 100%;
+  height: 603px;
+  border: 1px solid #ececec;
+  border-radius: 4px;
+  background-color: #fafafa; }
+  .efficiency-cap__content {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle; }
+
+.efficiency-preloader {
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 1; }
+  .efficiency-preloader__img {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin-top: -41px; }
 
 .offers-text {
   font-size: 1em;
@@ -7237,4 +7271,25 @@ table {
   border-radius: 0 0 6px 6px;
   border: 1px solid #ececec;
   background-color: #ffffff;
-  text-align: center; }
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.cap-title {
+  width: 540px;
+  margin: 0 auto;
+  color: #9DA2AB;
+  font-family: "Arial";
+  font-size: 16px;
+  line-height: 27px; }
+
+.cap-btn {
+  border-radius: 16px;
+  background-color: #399EFC;
+  padding: 8px 30px;
+  margin-top: 35px; }
+  .cap-btn__text {
+    color: #FFF;
+    font-family: "Arial";
+    font-size: 14px; }
