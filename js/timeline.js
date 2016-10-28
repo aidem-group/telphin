@@ -1,17 +1,22 @@
 (function ($) {
     $(document).ready(function () {
 
-        function convertMinsToHrsMins (minutes) {
-            var h = Math.floor(minutes / 60);
-            var m = minutes % 60;
-
-            h = h < 10 ? '0' + h : h;
-            m = m < 10 ? '0' + m : m;
-
-            return h + ':' + m;
+        function countSecondsBetweenDates(startTime, endTime) {
+            return Math.abs(endTime - startTime) / 1000;
         }
 
-        var r = convertMinsToHrsMins(85);
+        function convertSecToHrsMinsSec (totalSec, type) {
+            var hours = parseInt( totalSec / 3600 ) % 24;
+            var minutes = parseInt( totalSec / 60 ) % 60;
+            var seconds = totalSec % 60;
+            if(type == 'hm') {
+                var result = (hours < 10 ? "0" + hours : hours) + ":" + (minutes < 10 ? "0" + minutes : minutes);
+                return result;
+            }else {
+                var result = (hours < 10 ? "0" + hours : hours) + ":" + (minutes < 10 ? "0" + minutes : minutes)+ ":" + (seconds  < 10 ? "0" + seconds : seconds);
+                return result;
+            }
+        }
 
         //График звонков в таблице
 
@@ -41,7 +46,7 @@
             var $timeline = $(timeline);
             var i = 1;
             $timeline.find(".js-tr[data-tr='" + group + "']").find('.td.timeline').each(function () {
-                $(this).append("<div data-timeline='user-" + group + i++ + "' class='time-line'></div>")
+                $(this).append("<div style='width: 728px'><div data-timeline='"+ group +"User" + i++ + "' class='time-line'></div></div>")
             });
         }
 
@@ -52,7 +57,7 @@
             var $timeline = $(timeline);
             var i = 1;
             $timeline.find(".js-tr[data-tr='" + group + "']").find('.td.timeline').each(function () {
-                $(this).append("<div data-timeline='user" + i++ + "' class='time-line'></div>")
+                $(this).append("<div data-timeline='"+ group +"User" + i++ + "' class='time-line'></div>")
             });
         }
 
@@ -85,21 +90,21 @@
                     }
                 },
                 lines: {
-                    'user1': [
-                        ['callout', '07:00', '8:00'],
+                    'salesUser1': [
+                        ['callout', '07:00:15', '8:00'],
                         ['callin', '11:00', '11:30'],
                         ['callinadd', '11:30', '11:50'],
                         ['free', '11:50', '12:40'],
                         ['callinadd', '12:40', '13:50'],
                         ['callout', '13:50', '14:00']
                     ],
-                    'user2': [
+                    'salesUser2': [
                         ['callin', '09:00', '10:50'],
                         ['callout', '10:50', '11:50'],
                         ['free', '11:50', '12:00'],
                         ['callinadd', '12:30', '13:50']
                     ],
-                    'user3': [
+                    'salesUser3': [
                         ['callinadd', '07:20', '08:50'],
                         ['free', '09:30', '10:00'],
                         ['callinadd', '10:00', '11:50'],
@@ -107,7 +112,7 @@
                         ['callin', '12:50', '14:00'],
                         ['callout', '14:20', '15:00']
                     ],
-                    'user4': [
+                    'salesUser4': [
                         ['callout', '07:00', '8:00'],
                         ['callin', '11:00', '11:30'],
                         ['callinadd', '11:30', '11:50'],
@@ -124,12 +129,12 @@
                 timeBarSelector: '.time-bar[data-time-bar=' + group + ']',
                 legendBarSelector: '.legend-bar',
                 step: 60,
-                width: 683
+                width: 728
             });
 
             timeLineChart.drawLegendBar();
             timeLineChart.drawTimeBar();
-            //timeLineChart.drawLines();
+            timeLineChart.drawLines();
             /**
              * Custom selectors
              */
@@ -137,10 +142,6 @@
                 // timeLineChart.drawTimeBar('.time-bar-bottom');
                 // timeLine.drawLine('user1', '.user-1');
 
-            timeLineChart.drawLine('user1', '[data-timeline=user-sales1]');
-            timeLineChart.drawLine('user2', '[data-timeline=user-sales2]');
-            timeLineChart.drawLine('user3', '[data-timeline=user-sales3]');
-            timeLineChart.drawLine('user4', '[data-timeline=user-sales4]');
             addTimeBarLine(group);
         }
 
@@ -173,7 +174,7 @@
                     }
                 },
                 lines: {
-                    'user1': [
+                    'corporateUser1': [
                         ['callout', '06:00', '8:00'],
                         ['callin', '11:00', '11:30'],
                         ['callinadd', '11:30', '11:50'],
@@ -181,13 +182,13 @@
                         ['callinadd', '12:40', '13:50'],
                         ['callout', '13:50', '14:00']
                     ],
-                    'user2': [
+                    'corporateUser2': [
                         ['callin', '09:00', '10:50'],
                         ['callout', '10:50', '11:50'],
                         ['free', '11:50', '12:00'],
                         ['callinadd', '12:30', '13:50']
                     ],
-                    'user3': [
+                    'corporateUser3': [
                         ['callinadd', '07:20', '08:50'],
                         ['free', '09:30', '10:00'],
                         ['callinadd', '10:00', '11:50'],
@@ -203,21 +204,18 @@
                 timeBarSelector: '.time-bar[data-time-bar=' + group + ']',
                 legendBarSelector: '.legend-bar',
                 step: 60,
-                width: 683
+                width: 728
             });
 
             timeLineChart.drawLegendBar();
             timeLineChart.drawTimeBar();
-            //timeLineChart.drawLines();
+            timeLineChart.drawLines();
             /**
              * Custom selectors
              */
                 // timeLineChart.drawLegendBar('.legend-top');
                 // timeLineChart.drawTimeBar('.time-bar-bottom');
                 // timeLine.drawLine('user1', '.user-1');
-            timeLineChart.drawLine('user1', '[data-timeline=user-corporate1]');
-            timeLineChart.drawLine('user2', '[data-timeline=user-corporate2]');
-            timeLineChart.drawLine('user3', '[data-timeline=user-corporate3]');
             addTimeBarLine(group);
         }
 
@@ -251,7 +249,7 @@
                     }
                 },
                 lines: {
-                    'user1': [
+                    'salesUser1': [
                         ['callout', '07:00', '8:00'],
                         ['callin', '11:00', '11:30'],
                         ['callinadd', '11:30', '11:50'],
@@ -259,13 +257,21 @@
                         ['callinadd', '12:40', '13:50'],
                         ['callout', '13:50', '14:00']
                     ],
-                    'user2': [
+                    'salesUser2': [
                         ['callin', '09:00', '10:50'],
                         ['callout', '10:50', '11:50'],
                         ['free', '11:50', '12:00'],
                         ['callinadd', '12:30', '13:50']
                     ],
-                    'user3': [
+                    'salesUser3': [
+                        ['callinadd', '07:20', '08:50'],
+                        ['free', '09:30', '10:00'],
+                        ['callinadd', '10:00', '11:50'],
+                        ['callout', '12:20', '12:50'],
+                        ['callin', '12:50', '14:00'],
+                        ['callout', '14:20', '15:00']
+                    ],
+                    'salesUser4': [
                         ['callinadd', '07:20', '08:50'],
                         ['free', '09:30', '10:00'],
                         ['callinadd', '10:00', '11:50'],
@@ -282,7 +288,7 @@
                 timeBarSelector: '.time-bar[data-time-bar=' + group + ']',
                 legendBarSelector: '.legend-bar',
                 step: 60,
-                width: 683
+                width: 728
             });
 
             timeLineChart.drawLegendBar();
@@ -340,35 +346,27 @@
                     }
                 },
                 lines: {
-                    'user1': [
-                        ['callout', '07:00', '8:00'],
+                    'corporateUser1': [
+                        ['callout', '07:00:00', '8:00'],
                         ['callin', '11:00', '11:30'],
                         ['callinadd', '11:30', '11:50'],
                         ['free', '11:50', '12:40'],
                         ['callinadd', '12:40', '13:50'],
                         ['callout', '13:50', '14:00']
                     ],
-                    'user2': [
+                    'corporateUser2': [
                         ['callin', '10:30', '10:50'],
                         ['callout', '10:50', '11:50'],
                         ['free', '11:50', '12:00'],
                         ['callinadd', '12:30', '13:50']
                     ],
-                    'user3': [
-                        ['callinadd', '07:20', '09:00'],
+                    'corporateUser3': [
+                        ['callinadd', '07:20', '08:50'],
                         ['free', '09:30', '10:00'],
                         ['callinadd', '10:00', '11:50'],
                         ['callout', '12:20', '12:50'],
                         ['callin', '12:50', '14:00'],
                         ['callout', '14:20', '15:00']
-                    ],
-                    'user4': [
-                        ['callout', '07:00', '8:00'],
-                        ['callin', '11:00', '11:30'],
-                        ['callinadd', '11:30', '11:50'],
-                        ['free', '11:50', '12:40'],
-                        ['callinadd', '12:40', '13:50'],
-                        ['callout', '13:50', '14:00']
                     ]
                 }
             };
@@ -380,7 +378,7 @@
                 timeBarSelector: '.time-bar[data-time-bar=' + group + ']',
                 legendBarSelector: '.legend-bar',
                 step: 60,
-                width: 683
+                width: 728
             });
 
             timeLineChart.drawLegendBar();
@@ -423,23 +421,36 @@
             functionReady: function (instance) {
                 var $tooltip = $(instance.elementTooltip()),
                     $trigger = $(instance.elementOrigin()),
-                    $time = $trigger.data('timeline-start-time'),
-                    $legend = $trigger.data('timeline-legend'),
+                    timeStart = $trigger.data('timeline-start-time'),
+                    timeEnd = $trigger.data('timeline-end-time'),
+                    legend = $trigger.data('timeline-legend'),
                     $number = $trigger.closest('.js-tr').find('.phone-number').text(),
                     $name = $trigger.closest('.js-tr').find('.td.first').text(),
-                    $legendBar = $('.js-timeline-overall').find('.legend-bar');
-                $tooltip.find('.js-timeline-tooltip-time').text('в ' + $time);
+                    $legendBar = $('.js-timeline-overall').find('.legend-bar'),
+
+                    startTimeParse = timeStart.split(':'),
+                    endTimeParse   = timeEnd.split(':'),
+
+                    convertStartTime = new Date(1970, 0, 1, startTimeParse[0], startTimeParse[1], (startTimeParse[2] !== undefined ? startTimeParse[2] : 0)),
+                    convertEndTime   = new Date(1970, 0, 1, endTimeParse[0], endTimeParse[1], (endTimeParse[2] !== undefined ? endTimeParse[2] : 0)),
+
+                    timeDuration = convertSecToHrsMinsSec(countSecondsBetweenDates(convertStartTime, convertEndTime), 'hm');
+
+
+
+                $tooltip.find('.js-timeline-tooltip-time').text('в ' + timeStart + ', ' + timeDuration + ' мин');
                 $tooltip.find('.js-timeline-tooltip-name').text($name);
+
                 if($number == '') {
                     $tooltip.find('.js-timeline-tooltip-number').remove();
                 } else {
-                    $tooltip.find('.js-timeline-tooltip-number').text($number);
+                    $tooltip.find('.js-timeline-tooltip-number').text($number + ',');
 
                 }
-                if($legend == 'unknown') {
+                if(legend == 'unknown') {
                     $tooltip.find('.js-timeline-tooltip-text').text('Офлайн');
                 }else {
-                    $tooltip.find('.js-timeline-tooltip-text').text($legendBar.find(".legend-item_"+$legend+"").text());
+                    $tooltip.find('.js-timeline-tooltip-text').text($legendBar.find(".legend-item_"+legend+"").text());
                 }
             }
         });
@@ -451,15 +462,14 @@
             side: 'top',
             delay: 50,
             animationDuration: 200,
-            minWidth: 'auto',
             content: '<div class="timeline-tooltip"><div class="js-timeline-tooltip-text timeline-tooltip__text">Исходящие</div><div class="js-timeline-tooltip-time timeline-tooltip__time" >4:55:03 ч</div></div>',
             functionReady: function (instance) {
                 var $tooltip = $(instance.elementTooltip()),
                     $trigger = $(instance.elementOrigin()),
-                    $time = $trigger.data('timeline-total-minutes'),
+                    $time = $trigger.data('timeline-total-seconds'),
                     $legend = $trigger.data('timeline-legend'),
                     $legendBar = $('.js-timeline-overall').find('.legend-bar');
-                $tooltip.find('.js-timeline-tooltip-time').text(convertMinsToHrsMins($time) + ' ч');
+                $tooltip.find('.js-timeline-tooltip-time').text(convertSecToHrsMinsSec($time) + ' ч');
 
                 if($legend == 'unknown') {
                     $tooltip.find('.js-timeline-tooltip-text').text('Офлайн');

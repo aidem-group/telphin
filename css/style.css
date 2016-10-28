@@ -6264,20 +6264,22 @@ table {
   .table_efficiency .th {
     padding: 10px 0;
     line-height: 14px; }
-  .table_efficiency .th.w70 {
-    width: 70px; }
-  .table_efficiency .th.w80 {
-    width: 80px; }
-  .table_efficiency .th.w100 {
-    width: 100px; }
-  .table_efficiency .th.w120 {
-    width: 120px; }
-  .table_efficiency .th.w135 {
-    width: 135px; }
+  .table_efficiency .th.w89 {
+    width: 89px; }
+  .table_efficiency .th.w99 {
+    width: 99px; }
+  .table_efficiency .th.w104 {
+    width: 104px; }
+  .table_efficiency .th.w109 {
+    width: 109px; }
+  .table_efficiency .th.w132 {
+    width: 132px; }
+  .table_efficiency .th.w149 {
+    width: 149px; }
   .table_efficiency .th.w150 {
     width: 150px; }
-  .table_efficiency .th.w659 {
-    width: 659px; }
+  .table_efficiency .th.w728 {
+    width: 728px; }
   .table_efficiency .th.first {
     padding: 10px 20px; }
   .table_efficiency .th .table-units {
@@ -7273,7 +7275,7 @@ table {
   background-color: #ffffff;
   text-align: center;
   position: relative;
-  width: 100%;
+  width: 1178px;
   height: 100%; }
 
 .cap-title {

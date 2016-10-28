@@ -64,7 +64,7 @@
     GlavwebTimeLineChart.prototype.setWidth = function (width) {
         this.width = width;
 
-        this.minuteWidth             = Math.round(parseFloat(width / this.getAllMinutes()) * 100) / 100;
+        this.minuteWidth             = parseFloat(width / this.getAllMinutes());
         this.timeBarStepPositionLeft = 0;
     };
 
@@ -102,17 +102,17 @@
 
         // Get grouped object
         var groupByLegend = {};
-        var legend, startTime, endTime, diffMinutes;
+        var legend, startTime, endTime, diffSeconds;
         $.each(line, function (key, timePie) {
             legend      = timePie[0];
             startTime   = timePie[1];
             endTime     = timePie[2];
-            diffMinutes = self.countMinutesBetweenDates(startTime, endTime);
+            diffSeconds = self.countSecondsBetweenDates(startTime, endTime);
 
             if (groupByLegend[legend] === undefined) {
-                groupByLegend[legend] = diffMinutes;
+                groupByLegend[legend] = diffSeconds;
             } else {
-                groupByLegend[legend] += diffMinutes;
+                groupByLegend[legend] += diffSeconds;
             }
         });
 
@@ -122,7 +122,7 @@
         for (item in groupByLegend) {
             orderedArray.push({
                 'legend'       : item,
-                'totalMinutes' : groupByLegend[item]
+                'totalSeconds' : groupByLegend[item]
             });
         }
 
@@ -131,14 +131,14 @@
             switch (orderDirection) {
                 case 'desc':
                     orderedArray.sort(function(a, b) {
-                        return b.totalMinutes - a.totalMinutes;
+                        return b.totalSeconds - a.totalSeconds;
                     });
 
                     break;
 
                 case 'asc':
                     orderedArray.sort(function(a, b) {
-                        return a.totalMinutes - b.totalMinutes;
+                        return a.totalSeconds - b.totalSeconds;
                     });
 
                     break;
@@ -185,13 +185,13 @@
             var groupedLine  = self.groupLineByLegend(line, orderDirection, legendWeight);
 
             $.each(groupedLine, function (key, timePie) {
-                var legend = timePie['legend'];
-                var minutes = timePie['totalMinutes'];
+                var legend  = timePie['legend'];
+                var seconds = timePie['totalSeconds'];
 
                 if (commonGrouped[legend] !== undefined) {
-                    commonGrouped[legend] += minutes;
+                    commonGrouped[legend] += seconds;
                 } else {
-                    commonGrouped[legend] = minutes;
+                    commonGrouped[legend] = seconds;
                 }
             });
         });
@@ -337,8 +337,8 @@
      * @returns {string}
      */
     GlavwebTimeLineChart.prototype.getHtmlTimeBarStep = function (date, countMinutes, positionLeft) {
-        var hoursAndMinutesString = this.formatHoursAndMinutes(date);
-        var timeBarStepWidth      = Math.round(parseFloat(countMinutes * this.getMinuteWidth()) * 100) / 100;
+        var hoursAndMinutesString = this.formatDayToString(date, false);
+        var timeBarStepWidth      = Math.round(parseFloat(countMinutes * this.getMinuteWidth()) * 10000) / 10000;
 
         if (positionLeft === undefined) {
             positionLeft = this.timeBarStepPositionLeft;
@@ -385,12 +385,12 @@
             var startTime   = timePie[1];
             var endTime     = timePie[2];
             var diffMinutes = self.countMinutesBetweenDates(startTime, endTime);
-            var width       = Math.round(parseFloat(diffMinutes * minuteWidth) * 100) / 100;
+            var width       = Math.round(parseFloat(diffMinutes * minuteWidth) * 10000) / 10000;
 
             html += '<span ' +
                 'data-timeline-legend="' + legend + '" ' +
-                'data-timeline-start-time="' + self.formatHoursAndMinutes(startTime) + '" ' +
-                'data-timeline-end-time="' + self.formatHoursAndMinutes(endTime) + '" ' +
+                'data-timeline-start-time="' + self.formatDayToString(startTime) + '" ' +
+                'data-timeline-end-time="' + self.formatDayToString(endTime) + '" ' +
                 'class="timeline-item timeline-item-' + legend + '" ' +
                 'style="width: ' + width + 'px; display: inline-block;"' +
                 '></span>';
@@ -441,15 +441,16 @@
         var groupedLine  = this.groupLineByLegend(line, orderDirection, legendWeight);
 
         var html  = '';
-        var legend, totalMinutes, width;
+        var legend, totalSeconds, totalMinutes, width;
         $.each(groupedLine, function (key, timePie) {
             legend       = timePie['legend']
-            totalMinutes = timePie['totalMinutes'];
-            width        = Math.round(parseFloat(totalMinutes * minuteWidth) * 100) / 100;
+            totalSeconds = timePie['totalSeconds'];
+            totalMinutes = parseFloat(totalSeconds / 60);
+            width        = Math.round(parseFloat(totalMinutes * minuteWidth) * 10000) / 10000;
 
             html += '<span ' +
                 'data-timeline-legend="' + legend + '" ' +
-                'data-timeline-total-minutes="' + totalMinutes + '" ' +
+                'data-timeline-total-seconds="' + totalSeconds + '" ' +
                 'class="timeline-item timeline-item-' + legend + '" ' +
                 'style="width: ' + width + 'px; display: inline-block;"' +
                 '></span>';
@@ -483,13 +484,14 @@
 
         var html  = '';
 
-        var legend, totalMinutes, width;
-        $.each(commonGrouped, function (legend, totalMinutes) {
-            width = Math.round(parseFloat(totalMinutes * minuteWidth) * 100) / 100;
+        var legend, totalSeconds, totalMinutes, totalMinutesRound, width;
+        $.each(commonGrouped, function (legend, totalSeconds) {
+            totalMinutes = parseFloat(totalSeconds / 60);
+            width = Math.round(parseFloat(totalMinutes * minuteWidth) * 10000) / 10000;
 
             html += '<span ' +
                 'data-timeline-legend="' + legend + '" ' +
-                'data-timeline-total-minutes="' + totalMinutes + '" ' +
+                'data-timeline-total-seconds="' + totalSeconds + '" ' +
                 'class="timeline-item timeline-item-' + legend + '" ' +
                 'style="width: ' + width + 'px; display: inline-block;"' +
                 '></span>';
@@ -525,8 +527,8 @@
                 startTimeParse = slice[1].split(':');
                 endTimeParse   = slice[2].split(':');
 
-                sliceStartTime = new Date(1970, 0, 1, startTimeParse[0], startTimeParse[1]);
-                sliceEndTime   = new Date(1970, 0, 1, endTimeParse[0], endTimeParse[1]);
+                sliceStartTime = new Date(1970, 0, 1, startTimeParse[0], startTimeParse[1], (startTimeParse[2] !== undefined ? startTimeParse[2] : 0));
+                sliceEndTime   = new Date(1970, 0, 1, endTimeParse[0], endTimeParse[1], (endTimeParse[2] !== undefined ? endTimeParse[2] : 0));
 
                 if (!slicePrevEndTime) {
                     if (startTime && sliceStartTime > startTime) {
@@ -589,8 +591,8 @@
                 startTimeParse = slice[1].split(':');
                 endTimeParse   = slice[2].split(':');
 
-                sliceStartTime = new Date(1970, 0, 1, startTimeParse[0], startTimeParse[1]);
-                sliceEndTime   = new Date(1970, 0, 1, endTimeParse[0], endTimeParse[1]);
+                sliceStartTime = new Date(1970, 0, 1, startTimeParse[0], startTimeParse[1], (startTimeParse[2] !== undefined ? startTimeParse[2] : 0));
+                sliceEndTime   = new Date(1970, 0, 1, endTimeParse[0], endTimeParse[1], (endTimeParse[2] !== undefined ? endTimeParse[2] : 0));
 
                 // Define start time
                 if (!startTime) {
@@ -621,10 +623,16 @@
      * Format hours and minutes
      *
      * @param {Date} date
+     * @param {boolean} supportSeconds
      * @returns {string}
      */
-    GlavwebTimeLineChart.prototype.formatHoursAndMinutes = function (date) {
-        return ('0' + date.getHours()).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2);
+    GlavwebTimeLineChart.prototype.formatDayToString = function (date, supportSeconds) {
+        supportSeconds = supportSeconds === undefined ? true : false;
+
+        return ('0' + date.getHours()).slice(-2) +
+            ':' + ('0' + date.getMinutes()).slice(-2) +
+            (supportSeconds ? (':' + ('0' + date.getSeconds()).slice(-2)) : '')
+            ;
     };
 
     /**
@@ -666,6 +674,18 @@
     GlavwebTimeLineChart.prototype.countMinutesBetweenDates = function (startTime, endTime)
     {
         return Math.abs(endTime - startTime) / 60000;
+    };
+
+    /**
+     * Count minutes
+     *
+     * @param {Date} startTime
+     * @param {Date} endTime
+     * @returns {number}
+     */
+    GlavwebTimeLineChart.prototype.countSecondsBetweenDates = function (startTime, endTime)
+    {
+        return Math.abs(endTime - startTime) / 1000;
     };
 
     /**

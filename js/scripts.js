@@ -350,7 +350,7 @@ $(document).ready(function(){
         arrow: false,
         delay: 50,
         animationDuration: 200,
-        content: '<div class="js-tooltip table-tooltip table-tooltip_phone"><div class="js-tooltip-text table-tooltip__text">Позвонить</div></div>'
+        content: '<div class="js-tooltip table-tooltip table-tooltip_phone"><div class="js-tooltip-text table-tooltip__text">Подключиться к разговору</div></div>'
     });
 
 
@@ -371,7 +371,9 @@ $(document).ready(function(){
         var $this = $(this),
             dt = new Date(),
             time = dt.getHours() + ":" + (dt.getMinutes() < 10 ? '0' : '') + dt.getMinutes();
-        $this.html('').append("<div>Выведен в&nbsp;"+time+"</div>");
+        $this.html('<span class="icon icon_phone-call-offline"></span>');
+        $this.closest('.js-tr').find('.call-status').removeClass('free');
+        $this.closest('.js-tr').find('.phone-owner').text("Выведен в "+time+"");
         $this.tooltipster('destroy');
         $this.off('click.agentOut');
     });
@@ -402,7 +404,7 @@ $(document).ready(function(){
         arrow: false,
         delay: 50,
         animationDuration: 200,
-        content: '<div class="js-tooltip table-tooltip table-tooltip_phone"><div class="js-tooltip-text table-tooltip__text">Подключться&nbsp;к&nbsp;разговору</div></div>'
+        content: '<div class="js-tooltip table-tooltip table-tooltip_phone"><div class="js-tooltip-text table-tooltip__text">Позвонить</div></div>'
     });
 
     $('.js-dropdown-phone').tooltipster({
