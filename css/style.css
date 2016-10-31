@@ -7291,6 +7291,8 @@ table {
   background-color: #399EFC;
   padding: 8px 30px;
   margin-top: 35px; }
+  .cap-btn:hover {
+    background-color: #fb8d35; }
   .cap-btn__text {
     color: #FFF;
     font-family: "Arial";
