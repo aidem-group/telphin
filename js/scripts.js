@@ -890,8 +890,13 @@ $(document).ready(function(){
         animationDuration: 200,
         content:'<div><img src="../img/calendar/calendar-big.png" alt=""></div>'
     });
+    $(window).load(function () {
+        $('.js-efficiency-preloader').addClass('load');
+    });
+
     $('body').on('click.preloaderoff', function () {
         $('.js-efficiency-preloader').remove();
         $(this).off('click.preloaderoff');
     });
+
 });

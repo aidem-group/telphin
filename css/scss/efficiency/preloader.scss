@@ -5,11 +5,16 @@
   background-color: rgba(255,255,255,.7);
   z-index: 1;
   &__img {
+    opacity: 0;
     text-align: center;
     position: absolute;
     left: 0;
     right: 0;
     top: 50%;
     margin-top: -41px;
+    transition: opacity ease 1s;
+  }
+  &.load &__img {
+    opacity: 1;
   }
 }

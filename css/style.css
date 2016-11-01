@@ -6817,12 +6817,16 @@ table {
   background-color: rgba(255, 255, 255, 0.7);
   z-index: 1; }
   .efficiency-preloader__img {
+    opacity: 0;
     text-align: center;
     position: absolute;
     left: 0;
     right: 0;
     top: 50%;
-    margin-top: -41px; }
+    margin-top: -41px;
+    transition: opacity ease 1s; }
+  .efficiency-preloader.load .efficiency-preloader__img {
+    opacity: 1; }
 
 .offers-text {
   font-size: 1em;
