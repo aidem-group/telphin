@@ -891,7 +891,7 @@ $(document).ready(function(){
         content:'<div><img src="../img/calendar/calendar-big.png" alt=""></div>'
     });
     $(window).load(function () {
-        $('.js-efficiency-preloader').addClass('load');
+        $('.js-efficiency-preloader-img').append('<img src="../img/loader.gif"  alt="">');
     });
 
     $('body').on('click.preloaderoff', function () {
